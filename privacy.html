@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy | GPS Logger</title>
+  <meta name="description" content="Privacy policy for GPS Logger — what location data the app handles, where it goes, and the choices you have.">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#287743">
+  <link rel="canonical" href="https://northforceapps.github.io/gpslogger/privacy.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/icon.png">
+  <link rel="apple-touch-icon" href="assets/icon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header" id="top">
+    <div class="shell nav">
+      <a class="brand" href="index.html" aria-label="GPS Logger home">
+        <img src="assets/icon.png" alt="" width="46" height="46">
+        <span><b>GPS Logger</b><small>Private route recorder &amp; atlas</small></span>
+      </a>
+      <nav class="nav-links" id="navlinks" aria-label="Primary">
+        <a class="navlink" href="index.html">Home</a>
+        <a class="navlink" href="index.html#features">Features</a>
+        <a class="btn btn-primary" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger">Get it on Google Play</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="section">
+    <div class="shell">
+      <article class="prose">
+        <h1>Privacy Policy for GPS Logger</h1>
+        <p><em>Last updated: May 23, 2026</em></p>
+        <p>GPS Logger is a private GPS track recording app published by NorthforceApps. This policy explains what data the app handles, how it is used, and what choices you have.</p>
+        <p>Contact: <span id="support-email-privacy">northforceapps [at] protonmail [dot] com</span></p>
+
+        <h2>Summary</h2>
+        <p>GPS Logger records location tracks only when you start a recording. You can also import GPX files that you choose. Track data is stored on your device so you can view your history, see your route on a map, and export GPX or KML files. The app does not sell your personal data.</p>
+
+        <h2>Data the App Handles</h2>
+
+        <h3>Location Data</h3>
+        <p>When you start a recording, GPS Logger collects precise location data, including latitude, longitude, timestamp, altitude, speed, bearing, and accuracy. When you import a GPX file, the app reads the track points in that file. This data is used to create your track history, calculate distance and speed, show your route, and export route files.</p>
+        <p>GPS Logger requests background location access so recording can continue when the app is not visible, the screen is off, or you switch to another app. If you enable auto-start after reboot, background location also lets the app start a new recording after your phone restarts or powers back on. Location recording stops when you stop the track.</p>
+
+        <h3>Track History</h3>
+        <p>The app stores track names, start and end times, duration, distance, point count, maximum speed, and related track points in the app database on your device.</p>
+
+        <h3>App Settings</h3>
+        <p>The app stores settings on your device, such as tracking mode, daily track-split time, automatic atlas thresholds, auto-start after reboot, share code, self-hosted upload URL, optional API key, and Pro/lifetime feature settings.</p>
+
+        <h3>Where Your Location Data Goes</h3>
+
+        <h3>Optional Live Sharing (App Cloud)</h3>
+        <p>If you enable live sharing to the App Cloud, GPS Logger transmits your <strong>current position</strong> so admitted app users with your share code can follow you on a live map. The transmitted data includes latitude, longitude, timestamp, speed, bearing, accuracy, and an anonymous account identifier.</p>
+        <p>Your current position is <strong>overwritten in place</strong> while sharing is active — only the current App Cloud position is stored. An anonymous account identifier remains associated with your share code to prevent another user from taking control of that code after your live position is removed. The app uses anonymous Firebase Authentication to identify the broadcaster and each follower app install, enforce your active follower limit (1–20 app installs), and let you reset the share code to revoke access.</p>
+        <p>We partner with industry-leading cloud infrastructure providers to host this feature. Currently, our core backend uses <strong>Google Firebase</strong>. These providers act strictly as data processors and do not use your location data for any purpose other than running the app's features at our direction. To maintain performance, security, and cost-efficiency, we reserve the right to migrate to alternative reputable providers (such as Amazon Web Services, Google Cloud Platform, or Microsoft Azure) at any time, under equivalent or stricter privacy and security standards.</p>
+        <p>Data is encrypted in transit (HTTPS/TLS). Your current position is removed when you stop broadcasting and, as a privacy safeguard, any position left behind by a device that does not disconnect cleanly is automatically and permanently deleted within <strong>7 days</strong>. The anonymous share-code ownership identifier remains associated with that code to prevent hijacking.</p>
+
+        <h3>Optional Self-Hosted Sharing (Your Own Server)</h3>
+        <p>If you enable the lifetime "Your own server" option and enter a server URL, GPS Logger sends your current position directly to that URL as a small JSON object. This data bypasses our cloud infrastructure entirely; it is routed solely to the destination you provide, and we have no oversight, access, or liability for how that server stores or processes it. The payload may include a share code, latitude, longitude, timestamp, speed, bearing, and accuracy. If you enter an API key, it is sent as an <code>X-Api-Key</code> request header.</p>
+        <p>You are responsible for the server URL you configure. If you do not configure self-hosted sharing, GPS Logger does not use this feature.</p>
+
+        <h3>Purchases</h3>
+        <p>GPS Logger uses Google Play Billing for Pro subscriptions and a lifetime unlock. Purchase processing is handled by Google Play. The app receives purchase status so it can unlock paid features, but it does not receive your full payment card details.</p>
+
+        <h3>Analytics and Diagnostics</h3>
+        <p>GPS Logger includes Firebase Analytics and Firebase Crashlytics. These services may collect app-instance identifiers, device or other identifiers, app interactions, in-app purchase events, approximate location derived from masked IP address, crash logs, and diagnostic information. This data is used to understand app usage, diagnose crashes, improve performance, and maintain app quality.</p>
+        <p>The app may also log events such as track started, track stopped, track exported, upgrade tapped, and upgrade completed. These events do not intentionally include your precise GPS coordinates.</p>
+
+        <h3>Maps</h3>
+        <p>GPS Logger uses Google Maps components to display routes. Google Maps and Google Play services may process technical data needed to provide map functionality under Google's applicable terms and privacy practices.</p>
+
+        <h2>How Data Is Used</h2>
+        <p>GPS Logger uses data to:</p>
+        <ul>
+          <li>Record GPS tracks that you start.</li>
+          <li>Show current and saved routes in the app.</li>
+          <li>Calculate track statistics such as distance, duration, speed, and point count.</li>
+          <li>Import GPX files that you select and export tracks as GPX or KML files.</li>
+          <li>Provide optional live sharing when enabled by you.</li>
+          <li>Provide optional self-hosted upload when configured by you.</li>
+          <li>Unlock and verify Pro/lifetime purchases through Google Play.</li>
+          <li>Improve reliability, diagnose crashes, and understand basic app usage.</li>
+        </ul>
+
+        <h2>Sharing and Disclosure</h2>
+        <p>GPS Logger does not sell your personal data.</p>
+        <p>Data may be shared or transmitted in these cases:</p>
+        <ul>
+          <li>You choose to export or share a GPX or KML file through Android's share sheet.</li>
+          <li>You enable App Cloud live sharing, which relays your current location through our cloud infrastructure (currently Google Firebase) to users who know your share code.</li>
+          <li>You enable self-hosted sharing and provide a server URL.</li>
+          <li>Google Play processes purchase information for Pro/lifetime unlocks.</li>
+          <li>Firebase Analytics and Crashlytics process analytics, crash, diagnostic, and identifier data.</li>
+          <li>Google Maps and Google Play services process data needed to display maps and provide location-related services.</li>
+          <li>Data may be disclosed if required by law or to protect legal rights, safety, or security.</li>
+        </ul>
+
+        <h2>Data Storage and Retention</h2>
+        <p>Track history and settings are stored on your device. Tracks remain stored until you delete them, uninstall the app, or clear the app's data. Export files are created in the app cache for sharing and may be removed by the app or the Android system.</p>
+        <p>Android backup may back up app data depending on your device settings and Google account backup settings. You can manage Android backup in your device settings.</p>
+        <p>For App Cloud live sharing, your current position is overwritten as you move; no history trail is retained. Your position is removed when you stop broadcasting, and any position left by an unclean disconnect is automatically and permanently deleted within 7 days. An anonymous share-code ownership identifier remains stored to prevent code hijacking.</p>
+        <p>Firebase Analytics, Crashlytics, the App Cloud live-sharing backend, Google Play, Google Maps, and any self-hosted server you configure may have their own retention practices.</p>
+
+        <h2>Your Choices</h2>
+        <p>You can:</p>
+        <ul>
+          <li>Start and stop recording at any time.</li>
+          <li>Pause and resume an active recording.</li>
+          <li>Deny location permissions, although recording will not work without location access.</li>
+          <li>Delete saved tracks in the app.</li>
+          <li>Turn off live sharing.</li>
+          <li>Disable or leave blank the self-hosted upload server URL.</li>
+          <li>Clear app data or uninstall the app to remove locally stored app data from your device.</li>
+          <li>Manage Android backup and app permissions in your device settings.</li>
+        </ul>
+
+        <h2>Children's Privacy</h2>
+        <p>GPS Logger is not directed to children. Do not use the app to collect or share another person's location without appropriate permission.</p>
+
+        <h2>Security</h2>
+        <p>GPS Logger uses Android app storage for local data. Data transmitted to Firebase, Google services, Google Play, and HTTPS self-hosted upload URLs is encrypted in transit by those services or protocols. If you configure a non-HTTPS self-hosted upload URL, your data may not be encrypted in transit to that server.</p>
+        <p>No method of storage or transmission is completely secure.</p>
+
+        <h2>Changes to This Policy</h2>
+        <p>This policy may be updated when the app or its data practices change. The updated policy will show a new "Last updated" date.</p>
+
+        <h2>Contact</h2>
+        <p>For privacy questions, contact NorthforceApps at the support address above.</p>
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="shell footer-grid">
+      <div>
+        <div class="brand"><img src="assets/icon.png" alt="" width="40" height="40"><span><b>GPS Logger</b></span></div>
+        <p>Private route recorder &amp; personal journey map for Android.</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="index.html#features">Features</a>
+        <a href="index.html#pricing">Pricing</a>
+        <a href="https://github.com/NorthforceApps/gpslogger">GitHub</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
