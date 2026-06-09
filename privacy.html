@@ -34,12 +34,12 @@
     <div class="shell">
       <article class="prose">
         <h1>Privacy Policy for GPS Logger</h1>
-        <p><em>Last updated: May 23, 2026</em></p>
+        <p><em>Last updated: June 9, 2026</em></p>
         <p>GPS Logger is a private GPS track recording app published by NorthforceApps. This policy explains what data the app handles, how it is used, and what choices you have.</p>
         <p>Contact: <span id="support-email-privacy">northforceapps [at] protonmail [dot] com</span></p>
 
         <h2>Summary</h2>
-        <p>GPS Logger records location tracks only when you start a recording. You can also import GPX files that you choose. Track data is stored on your device so you can view your history, see your route on a map, and export GPX or KML files. The app does not sell your personal data.</p>
+        <p>GPS Logger records location tracks when you start a recording, or when you enable auto-start after reboot and your phone restarts. You can also import GPX files that you choose. Track data is stored on your device so you can view your history, see your route on a map, and export GPX or KML files. The app does not sell your personal data.</p>
 
         <h2>Data the App Handles</h2>
 
@@ -51,7 +51,7 @@
         <p>The app stores track names, start and end times, duration, distance, point count, maximum speed, and related track points in the app database on your device.</p>
 
         <h3>App Settings</h3>
-        <p>The app stores settings on your device, such as tracking mode, daily track-split time, automatic atlas thresholds, auto-start after reboot, share code, self-hosted upload URL, optional API key, and Pro/lifetime feature settings.</p>
+        <p>The app stores settings on your device, such as tracking mode, display preferences, auto-start after reboot, live-sharing destination, share code, self-hosted server URL, optional API key, and Pro/lifetime feature settings.</p>
 
         <h3>Where Your Location Data Goes</h3>
 
@@ -62,7 +62,7 @@
         <p>Data is encrypted in transit (HTTPS/TLS). Your current position is removed when you stop broadcasting and, as a privacy safeguard, any position left behind by a device that does not disconnect cleanly is automatically and permanently deleted within <strong>7 days</strong>. The anonymous share-code ownership identifier remains associated with that code to prevent hijacking.</p>
 
         <h3>Optional Self-Hosted Sharing (Your Own Server)</h3>
-        <p>If you enable the lifetime "Your own server" option and enter a server URL, GPS Logger sends your current position directly to that URL as a small JSON object. This data bypasses our cloud infrastructure entirely; it is routed solely to the destination you provide, and we have no oversight, access, or liability for how that server stores or processes it. The payload may include a share code, latitude, longitude, timestamp, speed, bearing, and accuracy. If you enter an API key, it is sent as an <code>X-Api-Key</code> request header.</p>
+        <p>If you enable the lifetime "Your own server" option and enter a server URL, GPS Logger sends your current live position directly to that URL as a small JSON object while sharing is active. This data bypasses our cloud infrastructure entirely; it is routed solely to the destination you provide, and we have no oversight, access, or liability for how that server stores or processes it. The payload may include a share code, latitude, longitude, timestamp, speed, bearing, and accuracy. If you enter an API key, it is sent as an <code>X-Api-Key</code> request header.</p>
         <p>You are responsible for the server URL you configure. If you do not configure self-hosted sharing, GPS Logger does not use this feature.</p>
 
         <h3>Purchases</h3>
@@ -103,7 +103,7 @@
 
         <h2>Data Storage and Retention</h2>
         <p>Track history and settings are stored on your device. Tracks remain stored until you delete them, uninstall the app, or clear the app's data. Export files are created in the app cache for sharing and may be removed by the app or the Android system.</p>
-        <p>Android backup may back up app data depending on your device settings and Google account backup settings. You can manage Android backup in your device settings.</p>
+        <p>Android backup may back up app settings depending on your device settings and Google account backup settings. GPS Logger excludes the local track database and live-share device identity from Android cloud backup. You can manage Android backup in your device settings.</p>
         <p>For App Cloud live sharing, your current position is overwritten as you move; no history trail is retained. Your position is removed when you stop broadcasting, and any position left by an unclean disconnect is automatically and permanently deleted within 7 days. An anonymous share-code ownership identifier remains stored to prevent code hijacking.</p>
         <p>Firebase Analytics, Crashlytics, the App Cloud live-sharing backend, Google Play, Google Maps, and any self-hosted server you configure may have their own retention practices.</p>
 
