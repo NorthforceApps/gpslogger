@@ -119,7 +119,7 @@ h2.display { font-size: clamp(2.1rem, 4.2vw, 3.6rem); max-width: 18ch; }
   background: url("assets/atlas-motif.svg") center top / cover no-repeat;
   opacity: 0.5; mask-image: linear-gradient(180deg, #000 60%, transparent);
 }
-.hero-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: clamp(28px, 4vw, 56px); align-items: center; }
+.hero-grid { display: grid; grid-template-columns: 1fr 1.08fr; gap: clamp(28px, 4vw, 56px); align-items: center; }
 .hero h1 { font-family: var(--serif); font-weight: 600; color: var(--forest-deep); font-size: clamp(2.9rem, 6.4vw, 5.4rem); line-height: 0.96; letter-spacing: -0.015em; margin: 6px 0 20px; }
 .hero .lead { max-width: 52ch; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin: 28px 0 22px; }
@@ -128,7 +128,7 @@ h2.display { font-size: clamp(2.1rem, 4.2vw, 3.6rem); max-width: 18ch; }
 .trust svg { width: 18px; height: 18px; color: var(--forest); flex: none; }
 
 .hero-visual { position: relative; display: grid; justify-items: center; }
-.hero-feature { width: min(100%, 560px); height: auto; border-radius: 22px; border: 1px solid var(--line); box-shadow: var(--shadow); }
+.hero-feature { width: min(100%, 620px); height: auto; border-radius: 22px; border: 1px solid var(--line); box-shadow: var(--shadow); }
 .proof {
   position: absolute; right: -6px; bottom: -26px;
   background: var(--panel); border: 1px solid var(--line); border-radius: 20px; padding: 16px 20px;

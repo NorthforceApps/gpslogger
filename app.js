@@ -7,7 +7,7 @@
      this single value and every CTA button updates automatically. The same URL
      is also hard-coded as each button's href so links work without JS too. */
   const PLAY_URL = "https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger";
-  const YT_ID = "W50bCcvKR2I";
+  const YT_ID = "NSOkPpQ0TaY";
   const EMAIL_USER = "northforceapps";
   const EMAIL_HOST = "protonmail.com";
 

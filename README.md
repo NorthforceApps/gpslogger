@@ -25,12 +25,12 @@ accessible (skip link, focus rings, reduced-motion support).
 ## Two values to confirm (both in `app.js`, top of file)
 ```js
 const PLAY_URL = "https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger";
-const YT_ID    = "W50bCcvKR2I";   // the promo video
+const YT_ID    = "NSOkPpQ0TaY";   // the promo video
 ```
 - **`PLAY_URL`** is GPS Logger's own (app-specific) Play link. Every CTA button is wired to it,
   so when the listing is live you confirm/replace this **one line**. (Each button also has the
   same URL hard-coded as its `href`, so links work even with JS disabled.)
-- **`YT_ID`** is your uploaded tour video (https://youtu.be/W50bCcvKR2I). The page shows a
+- **`YT_ID`** is your uploaded tour video (https://youtu.be/NSOkPpQ0TaY). The page shows a
   branded poster and only loads the YouTube player on click.
 
 ## Assets are generated — don't hand-edit `assets/`
@@ -57,7 +57,7 @@ here (the site streams it from YouTube); it stays in `marketing/out/` as the del
 > Quick local preview: `python3 -m http.server -d playstore/website 8000` → http://localhost:8000
 
 ## Before publishing — checklist
-- [x] Promo video uploaded to YouTube (`W50bCcvKR2I`) and embedded.
+- [x] Promo video uploaded to YouTube (`NSOkPpQ0TaY`) and embedded.
 - [ ] Confirm/replace `PLAY_URL` in `app.js` once the Play listing is live.
 - [ ] Confirm the support email (currently `northforceapps@protonmail.com`, set in `app.js`).
 - [ ] Fill the developer name / contact `TODO:` placeholders in `playstore/privacy_policy.md`
