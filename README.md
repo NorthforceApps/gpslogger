@@ -82,6 +82,28 @@ here (the site streams it from YouTube); it stays in `marketing/out/` as the del
 
 > Quick local preview: `python3 -m http.server -d playstore/website 8000` → http://localhost:8000
 
+## Search Console sitemap
+For the GitHub Pages project site, use a URL-prefix property for:
+
+```text
+https://northforceapps.github.io/gpslogger/
+```
+
+Then submit:
+
+```text
+sitemap.xml
+```
+
+The absolute sitemap URL is:
+
+```text
+https://northforceapps.github.io/gpslogger/sitemap.xml
+```
+
+Do not submit this as `https://northforceapps.github.io/sitemap.xml`; that root path belongs to
+the organization/user GitHub Pages site, not this project site.
+
 ## Before publishing — checklist
 - [x] Promo video uploaded to YouTube (`NSOkPpQ0TaY`) and embedded.
 - [ ] Confirm/replace `PLAY_URL` in `app.js` once the Play listing is live.
