@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>How to Record and Export GPX Tracks on Android</title>
-  <meta name="description" content="Record a GPS route on Android, keep tracking with the screen off, review your route history, and export GPX or KML files from GPS Logger.">
+  <title>AndroidでGPS軌跡を記録してGPXを書き出す方法</title>
+  <meta name="description" content="AndroidでGPSルートを記録する方法。画面オフの状態でもバックグラウンドで追跡を継続し、ルート履歴を確認して、GPS Loggerから高精度なGPXまたはKMLファイルを書き出せます。">
   <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#287743">
   <link rel="canonical" href="https://northforceapps.github.io/gpslogger/ja/how-to-record-export-gpx-android.html">
@@ -19,39 +19,67 @@
   <link rel="stylesheet" href="../styles.css">
   <link rel="icon" type="image/png" href="../assets/icon.png">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"HowTo","name":"How to record and export GPX tracks on Android","description":"Record a route with GPS Logger and export it as GPX or KML.","step":[{"@type":"HowToStep","name":"Install GPS Logger","text":"Install GPS Logger: Private Tracker from Google Play."},{"@type":"HowToStep","name":"Allow location access","text":"Allow location permission so routes can record, including background location if you want tracking with the screen off."},{"@type":"HowToStep","name":"Start recording","text":"Open the app and press the record control before a walk, hike, ride, run or drive."},{"@type":"HowToStep","name":"Stop and save","text":"Stop recording when done. The app saves route, distance, duration and speed on your device."},{"@type":"HowToStep","name":"Export GPX or KML","text":"Open a saved track and export it as GPX or KML, or create an all-history GPX ZIP backup."}],"tool":[{"@type":"HowToTool","name":"Android phone"},{"@type":"HowToTool","name":"GPS Logger: Private Tracker"}],"totalTime":"PT5M"}
+  {"@context":"https://schema.org","@type":"HowTo","name":"AndroidでGPS軌跡を記録してGPXを書き出す方法","description":"GPS Loggerでルートを記録し、GPXまたはKMLとして書き出す手順。","step":[{"@type":"HowToStep","name":"GPS Loggerのインストール","text":"Google Playから「GPS Logger: プライベートトラッカー」をインストールします。"},{"@type":"HowToStep","name":"位置情報へのアクセス許可","text":"ルートを正確に記録するために位置情報の権限を許可します。画面オフの状態でバックグラウンド追跡を行う場合は、「常に許可」を選択してください。"},{"@type":"HowToStep","name":"記録の開始","text":"アプリを開き、ウォーキング、ハイキング、サイクリング、ランニング、またはドライブに出かける前に記録ボタンを押します。"},{"@type":"HowToStep","name":"停止と保存","text":"アクティビティが終了したら記録を停止します。アプリはルート、距離、所要時間、速度をデバイス内に安全に保存します。"},{"@type":"HowToStep","name":"GPXまたはKMLの書き出し","text":"保存された軌跡を開き、GPXまたはKMLファイルとして書き出すか、すべての履歴をまとめてZIP形式のバックアップとして書き出します。"}],"tool":[{"@type":"HowToTool","name":"Android スマートフォン"},{"@type":"HowToTool","name":"GPS Logger: Private Tracker"}],"totalTime":"PT5M"}
   </script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="header" id="top"><div class="shell nav"><a class="brand" href="index.html"><img src="../assets/icon.png" alt="" width="46" height="46"><span><b>GPS Logger</b><small>Private route recorder &amp; atlas</small></span></a><nav class="nav-links" id="navlinks"><a class="navlink" href="guides.html">Guides</a><a class="navlink" href="index.html#features">Features</a><a class="navlink" href="privacy.html">Privacy</a><div class="lang-switch" aria-label="Language"><a href="../en/how-to-record-export-gpx-android.html" hreflang="en" lang="en">EN</a><a href="../de/how-to-record-export-gpx-android.html" hreflang="de" lang="de">DE</a><a href="../es/how-to-record-export-gpx-android.html" hreflang="es" lang="es">ES</a><a href="../fr/how-to-record-export-gpx-android.html" hreflang="fr" lang="fr">FR</a><a href="../pt/how-to-record-export-gpx-android.html" hreflang="pt" lang="pt">PT</a><a href="../ja/how-to-record-export-gpx-android.html" hreflang="ja" lang="ja" aria-current="true">JA</a><a href="../hi/how-to-record-export-gpx-android.html" hreflang="hi" lang="hi">HI</a></div><a class="btn btn-primary" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger">Get it on Google Play</a></nav><button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button></div></header>
-  <main id="main" class="article-main">
-    <article class="shell prose article">
-      <p class="eyebrow">GPX tutorial</p>
-      <h1>How to record and export GPX tracks on Android</h1>
-      <p class="lead">GPX is a portable route file format used by mapping apps, outdoor tools, GIS software and trip archives. GPS Logger records routes on Android, saves them on your device, then exports GPX or KML when you need a copy.</p>
-      <figure class="article-shot"><img src="../assets/ss-recording.png" alt="GPS Logger Android recording screen with live map and route stats" loading="lazy"><figcaption>Start a recording, keep phone in pocket, stop when trip is done.</figcaption></figure>
-      <h2>1. Install GPS Logger</h2>
-      <p>Install <a data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger">GPS Logger: Private Tracker</a> from Google Play. No account is needed to record routes.</p>
-      <h2>2. Allow location permissions</h2>
-      <p>GPS recording needs location permission. Background location lets recording continue when the app is not visible, screen is off, or optional auto-start after reboot is enabled. Android also shows a foreground notification while recording.</p>
-      <h2>3. Record your route</h2>
-      <p>Tap record before a walk, hike, cycle ride, commute, run, road trip or field survey. GPS Logger stores route points, distance, duration and speed locally on your phone.</p>
-      <h2>4. Stop and review</h2>
-      <p>When done, stop recording. Your route appears in history with a map, stats, speed view, calendar entry and places/country atlas context. Free users see latest 10 tracks in app history; older saved tracks stay on device unless deleted.</p>
-      <h2>5. Export GPX or KML</h2>
-      <p>Open a saved track, choose export, then save or share a GPX or KML file through Android. You can also create a whole-history GPX ZIP backup. Single-track export uses full stored resolution for every tier.</p>
-      <p>Testing a mapping workflow before your first recording? Download a small <a href="../downloads/sample-gpslogger-city-walk.gpx">sample GPX city walk</a>.</p>
-      <h2>Next guides</h2>
+  <a class="skip-link" href="#main">メインコンテンツへスキップ</a>
+  <header class="header" id="top">
+    <div class="shell nav">
+      <a class="brand" href="index.html"><img src="../assets/icon.png" alt="" width="46" height="46"><span><b>GPS Logger</b><small>プライベートなルート記録とアトラス</small></span></a>
+      <nav class="nav-links" id="navlinks" aria-label="メイン">
+        <a class="navlink" href="index.html#features">機能</a>
+        <a class="navlink" href="guides.html">ガイド</a>
+        <a class="navlink" href="index.html#pricing">料金</a>
+        <a class="navlink" href="privacy.html">プライバシー</a>
+        <details class="lang-menu">
+          <summary aria-label="言語"><span class="lang-current"><span class="flag" aria-hidden="true">🇯🇵</span><span>日本語</span></span><span class="lang-caret" aria-hidden="true">▾</span></summary>
+          <div class="lang-menu-list">
+          <a class="lang-option" href="../en/how-to-record-export-gpx-android.html" hreflang="en" lang="en"><span class="flag" aria-hidden="true">🇺🇸</span><span>English</span></a>
+          <a class="lang-option" href="../de/how-to-record-export-gpx-android.html" hreflang="de" lang="de"><span class="flag" aria-hidden="true">🇩🇪</span><span>Deutsch</span></a>
+          <a class="lang-option" href="../es/how-to-record-export-gpx-android.html" hreflang="es" lang="es"><span class="flag" aria-hidden="true">🇪🇸</span><span>Español</span></a>
+          <a class="lang-option" href="../fr/how-to-record-export-gpx-android.html" hreflang="fr" lang="fr"><span class="flag" aria-hidden="true">🇫🇷</span><span>Français</span></a>
+          <a class="lang-option" href="../pt/how-to-record-export-gpx-android.html" hreflang="pt" lang="pt"><span class="flag" aria-hidden="true">🇧🇷</span><span>Português</span></a>
+          <a class="lang-option" href="../ja/how-to-record-export-gpx-android.html" hreflang="ja" lang="ja" aria-current="true"><span class="flag" aria-hidden="true">🇯🇵</span><span>日本語</span></a>
+          <a class="lang-option" href="../hi/how-to-record-export-gpx-android.html" hreflang="hi" lang="hi"><span class="flag" aria-hidden="true">🇮🇳</span><span>हिन्दी</span></a>
+          </div>
+        </details>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="メニュー" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </header>
+  <main id="main" class="section">
+    <article class="shell prose">
+      <h1>AndroidでGPS軌跡を記録してGPXを書き出す方法</h1>
+      <p class="lead">ハイキングのルートを保存したいときや、サイクリングの行程を記録したいとき、Androidデバイスがあれば簡単に高精度なログを作成できます。このガイドでは、完全なプライバシーを保ちながらGPSトラッキングを行い、GPXやKMLファイルを出力する手順を解説します。</p>
+
+      <h2>1. アプリのセットアップ</h2>
+      <p>まずは Google Play から公式の <strong>GPS Logger</strong> をダウンロードしてインストールします。広告やアプリ内アカウント登録は不要で、インストール後すぐに使い始めることができます。</p>
+
+      <h2>2. バックグラウンド位置情報の許可</h2>
+      <p>アプリが画面オフの状態や、他のアプリ（地図など）を開いているときでもバックグラウンドでGPS軌跡を記録し続けるには、Androidの位置情報権限を「常に許可」に設定する必要があります。これにより、ポケットやバックパックにスマートフォンを入れたままでも、途切れることなく正確な追跡が可能になります。</p>
+
+      <h2>3. 最初のルート記録を開始する</h2>
+      <p>出発前にアプリを開き、緑色の記録（開始）ボタンをタップします。ステータスバーに通知が表示され、追跡が有効になっていることを確認できます。屋外に出てGPS衛星を捕捉すると、リアルタイムに現在の移動ルートが描かれ始めます。</p>
+
+      <h2>4. 保存と履歴の確認</h2>
+      <p>目的地に到着したら、停止ボタンを押してルートを保存します。データは即座にお客様のデバイス内の安全なローカルデータベースに保存されます。いつでも過去の履歴を振り返り、合計距離、所要時間、平均速度、最高速度などを確認することができます。古い軌跡データは、ご自身の手で削除しない限りデバイス内に残り続けます。</p>
+
+      <h2>5. GPXまたはKMLの書き出し</h2>
+      <p>保存された軌跡（トラック）を開き、共有またはエクスポートオプションから「GPX」または「KML」を選択してAndroidシステム経由で保存・共有します。また、すべての履歴をまとめて一つのZIP形式のバックアップとして書き出すことも可能です。無料プラン・有料プランに関わらず、単一トラックの書き出しは常に妥協のない最高解像度（全ドット数）で行われます。</p>
+      <p>実際の記録を始める前に、マッピングソフトや各種ツールへのインポートの流れをテストしてみたいですか？こちらの小さな<a href="../downloads/sample-gpslogger-city-walk.gpx">街歩きのサンプルのGPXファイル</a>をダウンロードしてテストにご利用ください。</p>
+
+      <h2>おすすめのガイド</h2>
       <ul>
-        <li><a href="offline-gps-logging-privacy.html">Why offline GPS logging matters for privacy</a></li>
-        <li><a href="gpx-openstreetmap-qgis.html">Use GPX logs with OpenStreetMap and QGIS</a></li>
-        <li><a href="gps-logger-vs-strava.html">GPS Logger vs Strava and social fitness apps</a></li>
+        <li><a href="offline-gps-logging-privacy.html">なぜオフラインでのGPSログ記録がプライバシーにおいて重要なのか</a></li>
+        <li><a href="gpx-openstreetmap-qgis.html">GPXログをOpenStreetMapやQGISで活用する</a></li>
+        <li><a href="gps-logger-vs-strava.html">GPS Logger と Strava やフィットネスSNSアプリの比較</a></li>
       </ul>
-      <p><a class="btn btn-primary" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger">Install GPS Logger for Android</a></p>
+      <p><a class="btn btn-primary" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger">Android版 GPS Logger をインストール</a></p>
     </article>
   </main>
-  <footer class="footer"><div class="shell footer-grid"><p>GPS Logger: Private Tracker</p><nav class="footer-links"><a href="guides.html">Guides</a><a href="index.html">Home</a><a href="privacy.html">Privacy</a></nav></div></footer>
-  <script src="../app.js"></script>
+  <footer class="footer"><div class="shell footer-grid"><p>GPS Logger: プライベートトラッカー</p><nav class="footer-links"><a href="guides.html">ガイド</a><a href="index.html">ホーム</a><a href="privacy.html">プライバシー</a></nav></div></footer>
 </body>
 </html>

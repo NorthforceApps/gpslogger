@@ -107,19 +107,32 @@ h2.display { font-size: clamp(2.1rem, 4.2vw, 3.6rem); max-width: 18ch; }
 .brand b { font-family: var(--serif); font-weight: 600; font-size: 1.4rem; color: var(--forest-deep); line-height: 1; }
 .brand span { display: flex; flex-direction: column; }
 .brand small { color: var(--muted); font-size: 0.76rem; }
-.nav-links { display: flex; align-items: center; gap: 26px; }
+.nav-links { display: flex; align-items: center; gap: 26px; margin-left: auto; }
 .nav-links a.navlink { font-weight: 600; color: var(--ink-soft); font-size: 0.96rem; }
 .nav-links a.navlink:hover { color: var(--forest-deep); }
 .nav-toggle { display: none; }
-.lang-switch {
-  display: inline-flex; align-items: center; gap: 2px; padding: 4px;
-  border: 1px solid var(--line); border-radius: 999px; background: rgba(255,255,255,0.55);
+.lang-menu { position: relative; margin-left: 4px; }
+.lang-menu summary {
+  list-style: none; display: inline-flex; align-items: center; justify-content: space-between; gap: 10px;
+  min-width: 164px; height: 42px; padding: 0 14px; border: 1px solid var(--line);
+  border-radius: 999px; background: rgba(255,255,255,0.72); color: var(--ink-soft); cursor: pointer;
+  font-weight: 600;
 }
-.lang-switch a {
-  display: inline-grid; place-items: center; min-width: 32px; height: 30px; border-radius: 999px;
-  font-size: 0.74rem; font-weight: 800; color: var(--ink-soft);
+.lang-menu summary::-webkit-details-marker { display: none; }
+.lang-current { display: inline-flex; align-items: center; gap: 10px; white-space: nowrap; }
+.lang-menu .flag { font-size: 1rem; line-height: 1; }
+.lang-caret { font-size: 0.82rem; color: var(--muted); }
+.lang-menu[open] .lang-caret { transform: rotate(180deg); }
+.lang-menu-list {
+  position: absolute; top: calc(100% + 10px); right: 0; min-width: 220px; padding: 10px;
+  border: 1px solid var(--line); border-radius: 18px; background: var(--panel); box-shadow: var(--shadow-md);
+  display: grid; gap: 4px;
 }
-.lang-switch a[aria-current="true"], .lang-switch a:hover { background: var(--forest); color: #fff; }
+.lang-option {
+  display: flex; align-items: center; gap: 12px; min-height: 42px; padding: 0 12px;
+  border-radius: 12px; color: var(--ink-soft); font-weight: 600;
+}
+.lang-option:hover, .lang-option[aria-current="true"] { background: rgba(40,119,67,0.12); color: var(--forest-deep); }
 .locale-top { margin-bottom: 24px; }
 
 /* ---------- hero ---------- */
@@ -138,9 +151,9 @@ h2.display { font-size: clamp(2.1rem, 4.2vw, 3.6rem); max-width: 18ch; }
 .trust svg { width: 18px; height: 18px; color: var(--forest); flex: none; }
 
 .hero-visual { position: relative; display: grid; justify-items: center; }
-.hero-feature { width: min(100%, 620px); height: auto; border-radius: 22px; border: 1px solid var(--line); box-shadow: var(--shadow); }
+.hero-feature { width: min(100%, 560px); height: auto; border-radius: 22px; border: 1px solid var(--line); box-shadow: var(--shadow); }
 .proof {
-  position: absolute; right: -6px; bottom: -26px;
+  position: absolute; left: -26px; bottom: 26px;
   background: var(--panel); border: 1px solid var(--line); border-radius: 20px; padding: 16px 20px;
   box-shadow: var(--shadow-md); max-width: 290px;
 }
@@ -313,6 +326,7 @@ h2.display { font-size: clamp(2.1rem, 4.2vw, 3.6rem); max-width: 18ch; }
 @media (max-width: 1040px) {
   .hero-grid { grid-template-columns: 1fr; }
   .hero-visual { margin-top: 10px; }
+  .hero-feature { width: min(100%, 620px); }
   .proof { position: static; max-width: none; margin-top: 16px; }
   .strip { grid-template-columns: repeat(2, 1fr); }
   .features, .tiers, .steps, .guide-grid { grid-template-columns: 1fr 1fr; }
@@ -327,7 +341,9 @@ h2.display { font-size: clamp(2.1rem, 4.2vw, 3.6rem); max-width: 18ch; }
     background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius-sm);
     padding: 18px; box-shadow: var(--shadow-md);
   }
-  .nav-links.open .lang-switch { justify-content: center; }
+  .lang-menu { margin-left: 0; }
+  .lang-menu summary { width: 100%; }
+  .lang-menu-list { position: static; min-width: 0; margin-top: 10px; box-shadow: none; }
   .nav-toggle { display: inline-flex; align-items: center; justify-content: center; width: 46px; height: 46px; border-radius: 12px; border: 1px solid var(--line); background: var(--panel); }
   .nav-toggle svg { width: 22px; height: 22px; color: var(--forest-deep); }
   .strip, .features, .tiers, .steps, .vibe-grid, .screens, .guide-grid { grid-template-columns: 1fr; }

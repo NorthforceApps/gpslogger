@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Data Deletion | GPS Logger</title>
-  <meta name="description" content="How to delete your GPS Logger data — local tracks, App Cloud live shares, self-hosted uploads, and analytics.">
+  <title>Eliminación de datos | GPS Logger</title>
+  <meta name="description" content="Cómo eliminar tus datos de GPS Logger: rutas locales, transmisiones en vivo en App Cloud, subidas a servidor propio y datos de análisis.">
   <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#287743">
   <link rel="canonical" href="https://northforceapps.github.io/gpslogger/es/data-deletion.html">
@@ -26,63 +26,70 @@
 <body>
   <header class="header" id="top">
     <div class="shell nav">
-      <a class="brand" href="index.html" aria-label="GPS Logger home">
+      <a class="brand" href="index.html" aria-label="Inicio de GPS Logger">
         <img src="../assets/icon.png" alt="" width="46" height="46">
-        <span><b>GPS Logger</b><small>Private route recorder &amp; atlas</small></span>
+        <span><b>GPS Logger</b><small>Grabador de rutas privado y atlas</small></span>
       </a>
-      <nav class="nav-links" id="navlinks" aria-label="Primary">
-        <a class="navlink" href="index.html">Home</a>
-        <a class="navlink" href="index.html#features">Features</a>
-        <div class="lang-switch" aria-label="Language">
-          <a href="../en/data-deletion.html" hreflang="en" lang="en">EN</a>
-          <a href="../de/data-deletion.html" hreflang="de" lang="de">DE</a>
-          <a href="../es/data-deletion.html" hreflang="es" lang="es" aria-current="true">ES</a>
-          <a href="../fr/data-deletion.html" hreflang="fr" lang="fr">FR</a>
-          <a href="../pt/data-deletion.html" hreflang="pt" lang="pt">PT</a>
-          <a href="../ja/data-deletion.html" hreflang="ja" lang="ja">JA</a>
-          <a href="../hi/data-deletion.html" hreflang="hi" lang="hi">HI</a>
-        </div>
-        <a class="btn btn-primary" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger">Get it on Google Play</a>
+      <nav class="nav-links" id="navlinks" aria-label="Principal">
+        <a class="navlink" href="index.html#features">Funciones</a>
+        <a class="navlink" href="guides.html">Guías</a>
+        <a class="navlink" href="index.html#pricing">Precios</a>
+        <a class="navlink" href="privacy.html">Privacidad</a>
+        <details class="lang-menu">
+          <summary aria-label="Idioma"><span class="lang-current"><span class="flag" aria-hidden="true">🇪🇸</span><span>Español</span></span><span class="lang-caret" aria-hidden="true">▾</span></summary>
+          <div class="lang-menu-list">
+          <a class="lang-option" href="../en/data-deletion.html" hreflang="en" lang="en"><span class="flag" aria-hidden="true">🇺🇸</span><span>English</span></a>
+          <a class="lang-option" href="../de/data-deletion.html" hreflang="de" lang="de"><span class="flag" aria-hidden="true">🇩🇪</span><span>Deutsch</span></a>
+          <a class="lang-option" href="../es/data-deletion.html" hreflang="es" lang="es" aria-current="true"><span class="flag" aria-hidden="true">🇪🇸</span><span>Español</span></a>
+          <a class="lang-option" href="../fr/data-deletion.html" hreflang="fr" lang="fr"><span class="flag" aria-hidden="true">🇫🇷</span><span>Français</span></a>
+          <a class="lang-option" href="../pt/data-deletion.html" hreflang="pt" lang="pt"><span class="flag" aria-hidden="true">🇧🇷</span><span>Português</span></a>
+          <a class="lang-option" href="../ja/data-deletion.html" hreflang="ja" lang="ja"><span class="flag" aria-hidden="true">🇯🇵</span><span>日本語</span></a>
+          <a class="lang-option" href="../hi/data-deletion.html" hreflang="hi" lang="hi"><span class="flag" aria-hidden="true">🇮🇳</span><span>हिन्दी</span></a>
+          </div>
+        </details>
       </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Menú" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
     </div>
   </header>
 
   <main id="main" class="section">
     <div class="shell">
       <article class="prose">
-        <h1>Data Deletion for GPS Logger</h1>
-        <p><em>Last updated: June 12, 2026</em></p>
-        <p>GPS Logger stores your recorded tracks on your device by default. NorthforceApps does not receive or store your private track history. This page explains how to delete each kind of data the app handles.</p>
-        <p>Contact: <span id="support-email-deletion">northforceapps [at] protonmail [dot] com</span></p>
+        <h1>Eliminación de datos en GPS Logger</h1>
+        <p><em>Última actualización: 12 de junio de 2026</em></p>
+        <p>De forma predeterminada, GPS Logger guarda las rutas que grabas en tu dispositivo. NorthforceApps no recibe ni almacena tu historial de rutas privado. Esta página explica cómo eliminar cada tipo de dato que gestiona la aplicación.</p>
+        <p>Contacto: <span id="support-email-deletion">northforceapps [at] protonmail [dot] com</span></p>
 
-        <h2>Local Data (Your Device)</h2>
-        <p>Your track history, track points, and app settings live in the app database on your device. To remove them:</p>
+        <h2>Datos locales (tu dispositivo)</h2>
+        <p>Tu historial de rutas, los puntos de ruta y los ajustes de la aplicación se encuentran en la base de datos de la aplicación, en tu dispositivo. Para eliminarlos:</p>
         <ul>
-          <li>Delete individual tracks in the app.</li>
-          <li>Clear app storage in Android Settings &rarr; Apps &rarr; GPS Logger &rarr; Storage.</li>
-          <li>Uninstall the app to remove all locally stored data.</li>
+          <li>Elimina rutas concretas dentro de la aplicación.</li>
+          <li>Borra el almacenamiento de la aplicación en Ajustes de Android &rarr; Aplicaciones &rarr; GPS Logger &rarr; Almacenamiento.</li>
+          <li>Desinstala la aplicación para eliminar todos los datos guardados localmente.</li>
         </ul>
 
-        <h2>Live Sharing (App Cloud)</h2>
-        <p>When live sharing is active, only your <strong>current position</strong> is stored in the App Cloud and overwritten in place. There is no server-side location trail.</p>
+        <h2>Transmisión en vivo (App Cloud)</h2>
+        <p>Cuando la transmisión en vivo está activa, solo se almacena tu <strong>posición actual</strong> en App Cloud, y se sobrescribe en el mismo lugar. No hay ningún rastro de ubicación en el servidor.</p>
         <ul>
-          <li>To delete the current App Cloud live position, open GPS Logger and stop live sharing.</li>
-          <li>To revoke a share code and delete that cloud share record, open Settings and reset/rotate the share code. This deletes the old tracker node and revokes existing followers.</li>
-          <li>Stale live positions are automatically deleted within <strong>7 days</strong>, and stale viewer slots within <strong>10 minutes</strong>, by a scheduled cleanup task.</li>
+          <li>Para eliminar la posición en vivo actual de App Cloud, abre GPS Logger y detén la transmisión en vivo.</li>
+          <li>Para revocar un código para compartir y eliminar ese registro de transmisión en la nube, abre los Ajustes y restablece o renueva el código. Esto elimina el nodo de rastreo antiguo y revoca a los seguidores actuales.</li>
+          <li>Las posiciones en vivo obsoletas se eliminan automáticamente en un plazo de <strong>7 días</strong>, y los puestos de espectador obsoletos en un plazo de <strong>10 minutos</strong>, mediante una tarea de limpieza programada.</li>
         </ul>
 
-        <h2>Self-Hosted Sharing (Your Own Server)</h2>
-        <p>If you configure a self-hosted HTTPS server URL, your current position is sent only to that server. NorthforceApps never receives it. Delete this data from your own server, and disable or blank the upload URL in Settings to stop further sending.</p>
+        <h2>Transmisión en servidor propio (tu propio servidor)</h2>
+        <p>Si configuras la URL de un servidor HTTPS propio, tu posición actual se envía únicamente a ese servidor. NorthforceApps nunca la recibe. Elimina estos datos de tu propio servidor y desactiva o deja en blanco la URL de subida en los Ajustes para detener cualquier envío posterior.</p>
 
-        <h2>Analytics and Crash Diagnostics</h2>
+        <h2>Análisis y diagnóstico de fallos</h2>
         <ul>
-          <li>You can turn off anonymous analytics and crash reporting in Settings &rarr; About.</li>
-          <li>Opting out stops future collection. Diagnostic data already processed in aggregate form may not identify you personally.</li>
-          <li>For deletion questions about diagnostics, contact us at the support address above.</li>
+          <li>Puedes desactivar el análisis anónimo y los informes de fallos en Ajustes &rarr; Acerca de.</li>
+          <li>Al desactivarlo, se detiene la recopilación futura. Los datos de diagnóstico ya procesados de forma agregada podrían no identificarte personalmente.</li>
+          <li>Para consultas sobre la eliminación de datos de diagnóstico, escríbenos a la dirección de soporte indicada arriba.</li>
         </ul>
 
-        <h2>Requesting Deletion</h2>
-        <p>Most data is local-only or deleted automatically by stopping a share, resetting the share code, or stale purge. For any remaining deletion request that the in-app controls cannot handle, email NorthforceApps at the support address above and we will action it where technically possible.</p>
+        <h2>Solicitar la eliminación</h2>
+        <p>La mayoría de los datos son únicamente locales o se eliminan automáticamente al detener una transmisión, restablecer el código para compartir o mediante la limpieza de datos obsoletos. Para cualquier otra solicitud de eliminación que los controles dentro de la aplicación no puedan gestionar, escribe a NorthforceApps a la dirección de soporte indicada arriba y la atenderemos siempre que sea técnicamente posible.</p>
       </article>
     </div>
   </main>
@@ -91,12 +98,12 @@
     <div class="shell footer-grid">
       <div>
         <div class="brand"><img src="../assets/icon.png" alt="" width="40" height="40"><span><b>GPS Logger</b></span></div>
-        <p>Private route recorder &amp; personal journey map for Android.</p>
+        <p>Grabador de rutas privado y mapa de viajes personal para Android.</p>
       </div>
-      <nav class="footer-links" aria-label="Footer">
-        <a href="index.html">Home</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="data-deletion.html">Delete data</a>
+      <nav class="footer-links" aria-label="Pie de página">
+        <a href="index.html">Inicio</a>
+        <a href="privacy.html">Privacidad</a>
+        <a href="data-deletion.html">Eliminar datos</a>
       </nav>
     </div>
   </footer>

@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Use GPX Logs with OpenStreetMap and QGIS</title>
-  <meta name="description" content="Export GPX tracks from Android and use them for OpenStreetMap checks, QGIS mapping, trip archives, route analysis and personal atlas workflows.">
+  <title>GPX-Logs mit OpenStreetMap und QGIS nutzen</title>
+  <meta name="description" content="Exportiere GPX-Tracks von Android und nutze sie für OpenStreetMap-Prüfungen, QGIS-Kartierung, Reisearchive, Routenanalyse und persönliche Atlas-Workflows.">
   <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#287743">
   <link rel="canonical" href="https://northforceapps.github.io/gpslogger/de/gpx-openstreetmap-qgis.html">
@@ -18,38 +18,63 @@
   <link rel="alternate" hreflang="x-default" href="https://northforceapps.github.io/gpslogger/en/gpx-openstreetmap-qgis.html">
   <link rel="stylesheet" href="../styles.css">
   <link rel="icon" type="image/png" href="../assets/icon.png">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Use GPX logs with OpenStreetMap and QGIS","description":"Practical workflows for GPX track export, mapping, OSM checks and GIS analysis.","author":{"@type":"Organization","name":"NorthforceApps"},"publisher":{"@type":"Organization","name":"NorthforceApps"},"mainEntityOfPage":"https://northforceapps.github.io/gpslogger/de/gpx-openstreetmap-qgis.html"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"GPX-Logs mit OpenStreetMap und QGIS nutzen","description":"Praktische Workflows für GPX-Track-Export, Kartierung, OSM-Prüfungen und GIS-Analyse.","author":{"@type":"Organization","name":"NorthforceApps"},"publisher":{"@type":"Organization","name":"NorthforceApps"},"mainEntityOfPage":"https://northforceapps.github.io/gpslogger/de/gpx-openstreetmap-qgis.html"}</script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="header" id="top"><div class="shell nav"><a class="brand" href="index.html"><img src="../assets/icon.png" alt="" width="46" height="46"><span><b>GPS Logger</b><small>Private route recorder &amp; atlas</small></span></a><nav class="nav-links" id="navlinks"><a class="navlink" href="guides.html">Guides</a><a class="navlink" href="index.html#features">Features</a><a class="navlink" href="privacy.html">Privacy</a><div class="lang-switch" aria-label="Language"><a href="../en/gpx-openstreetmap-qgis.html" hreflang="en" lang="en">EN</a><a href="../de/gpx-openstreetmap-qgis.html" hreflang="de" lang="de" aria-current="true">DE</a><a href="../es/gpx-openstreetmap-qgis.html" hreflang="es" lang="es">ES</a><a href="../fr/gpx-openstreetmap-qgis.html" hreflang="fr" lang="fr">FR</a><a href="../pt/gpx-openstreetmap-qgis.html" hreflang="pt" lang="pt">PT</a><a href="../ja/gpx-openstreetmap-qgis.html" hreflang="ja" lang="ja">JA</a><a href="../hi/gpx-openstreetmap-qgis.html" hreflang="hi" lang="hi">HI</a></div><a class="btn btn-primary" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger">Get it on Google Play</a></nav><button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button></div></header>
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+  <header class="header" id="top">
+    <div class="shell nav">
+      <a class="brand" href="index.html"><img src="../assets/icon.png" alt="" width="46" height="46"><span><b>GPS Logger</b><small>Privater Routen-Rekorder &amp; Atlas</small></span></a>
+      <nav class="nav-links" id="navlinks" aria-label="Primär">
+        <a class="navlink" href="index.html#features">Funktionen</a>
+        <a class="navlink" href="guides.html">Anleitungen</a>
+        <a class="navlink" href="index.html#pricing">Preise</a>
+        <a class="navlink" href="privacy.html">Datenschutz</a>
+        <details class="lang-menu">
+          <summary aria-label="Sprache"><span class="lang-current"><span class="flag" aria-hidden="true">🇩🇪</span><span>Deutsch</span></span><span class="lang-caret" aria-hidden="true">▾</span></summary>
+          <div class="lang-menu-list">
+          <a class="lang-option" href="../en/gpx-openstreetmap-qgis.html" hreflang="en" lang="en"><span class="flag" aria-hidden="true">🇺🇸</span><span>English</span></a>
+          <a class="lang-option" href="../de/gpx-openstreetmap-qgis.html" hreflang="de" lang="de" aria-current="true"><span class="flag" aria-hidden="true">🇩🇪</span><span>Deutsch</span></a>
+          <a class="lang-option" href="../es/gpx-openstreetmap-qgis.html" hreflang="es" lang="es"><span class="flag" aria-hidden="true">🇪🇸</span><span>Español</span></a>
+          <a class="lang-option" href="../fr/gpx-openstreetmap-qgis.html" hreflang="fr" lang="fr"><span class="flag" aria-hidden="true">🇫🇷</span><span>Français</span></a>
+          <a class="lang-option" href="../pt/gpx-openstreetmap-qgis.html" hreflang="pt" lang="pt"><span class="flag" aria-hidden="true">🇧🇷</span><span>Português</span></a>
+          <a class="lang-option" href="../ja/gpx-openstreetmap-qgis.html" hreflang="ja" lang="ja"><span class="flag" aria-hidden="true">🇯🇵</span><span>日本語</span></a>
+          <a class="lang-option" href="../hi/gpx-openstreetmap-qgis.html" hreflang="hi" lang="hi"><span class="flag" aria-hidden="true">🇮🇳</span><span>हिन्दी</span></a>
+          </div>
+        </details>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Menü" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </header>
   <main id="main" class="article-main">
     <article class="shell prose article">
-      <p class="eyebrow">Mapping workflow</p>
-      <h1>Use GPX logs with OpenStreetMap and QGIS</h1>
-      <p class="lead">GPX tracks are useful beyond fitness. They can support OpenStreetMap checks, QGIS analysis, travel records, field work, route comparison and long-term personal archives.</p>
-      <h2>Record clean tracks</h2>
-      <p>Start GPS Logger before moving, keep phone with a clear sky view when possible, then stop after the route ends. For repeated paths, multiple GPX tracks can help confirm trail shape or road access.</p>
-      <h2>Export portable files</h2>
-      <p>Export a saved track as GPX for mapping tools or KML for map viewers. For long-term backup, create a whole-history GPX ZIP from the app. You can also download a small <a href="../downloads/sample-gpslogger-city-walk.gpx">sample GPX file</a> to test import steps.</p>
-      <h2>OpenStreetMap use cases</h2>
+      <p class="eyebrow">Mapping-Workflow</p>
+      <h1>GPX-Logs mit OpenStreetMap und QGIS nutzen</h1>
+      <p class="lead">GPX-Tracks sind über den Fitnessbereich hinaus nützlich. Sie eignen sich für OpenStreetMap-Prüfungen, QGIS-Analysen, Reiseaufzeichnungen, Feldarbeit, Routenvergleiche und langfristige persönliche Archive.</p>
+      <h2>Saubere Tracks aufzeichnen</h2>
+      <p>Starte GPS Logger, bevor du losgehst, halte das Handy nach Möglichkeit mit freier Sicht zum Himmel und stoppe nach dem Ende der Route. Bei wiederholten Wegen helfen mehrere GPX-Tracks, den Verlauf eines Pfades oder die Zugänglichkeit einer Straße zu bestätigen.</p>
+      <h2>Portable Dateien exportieren</h2>
+      <p>Exportiere einen gespeicherten Track als GPX für Karten-Tools oder als KML für Kartenbetrachter. Für eine langfristige Sicherung erstellst du in der App ein GPX-ZIP des gesamten Verlaufs. Du kannst auch eine kleine <a href="../downloads/sample-gpslogger-city-walk.gpx">GPX-Beispieldatei</a> herunterladen, um die Importschritte zu testen.</p>
+      <h2>Anwendungsfälle für OpenStreetMap</h2>
       <ul>
-        <li>Check whether paths, tracks or roads exist where expected.</li>
-        <li>Compare repeated traces before editing map geometry.</li>
-        <li>Keep private evidence for later mapping sessions.</li>
+        <li>Prüfen, ob Pfade, Wege oder Straßen dort existieren, wo sie erwartet werden.</li>
+        <li>Wiederholte Aufzeichnungen vergleichen, bevor du Kartengeometrie bearbeitest.</li>
+        <li>Private Belege für spätere Mapping-Sitzungen aufbewahren.</li>
       </ul>
-      <h2>QGIS use cases</h2>
+      <h2>Anwendungsfälle für QGIS</h2>
       <ul>
-        <li>Load GPX as vector layers for route analysis.</li>
-        <li>Style tracks by trip, date or purpose after import.</li>
-        <li>Compare commutes, hikes, survey walks or travel days.</li>
+        <li>GPX als Vektorebenen für die Routenanalyse laden.</li>
+        <li>Tracks nach Tour, Datum oder Zweck stylen, nachdem du sie importiert hast.</li>
+        <li>Arbeitswege, Wanderungen, Erhebungsgänge oder Reisetage vergleichen.</li>
       </ul>
-      <h2>Keep privacy in mind</h2>
-      <p>GPX files can reveal home, work and routine locations. Trim or avoid sharing sensitive parts. For private logging principles, read <a href="offline-gps-logging-privacy.html">why offline GPS logging matters</a>.</p>
-      <p><a class="btn btn-primary" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger">Record GPX on Android</a></p>
+      <h2>Behalte den Datenschutz im Blick</h2>
+      <p>GPX-Dateien können Zuhause, Arbeitsplatz und Routineorte verraten. Schneide sensible Teile heraus oder teile sie gar nicht erst. Grundsätze für privates Logging findest du unter <a href="offline-gps-logging-privacy.html">Warum Offline-GPS-Logging wichtig ist</a>.</p>
+      <p><a class="btn btn-primary" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger">GPX unter Android aufzeichnen</a></p>
     </article>
   </main>
-  <footer class="footer"><div class="shell footer-grid"><p>GPS Logger: Private Tracker</p><nav class="footer-links"><a href="guides.html">Guides</a><a href="index.html">Home</a><a href="privacy.html">Privacy</a></nav></div></footer>
+  <footer class="footer"><div class="shell footer-grid"><p>GPS Logger: Privater Tracker</p><nav class="footer-links"><a href="guides.html">Anleitungen</a><a href="index.html">Startseite</a><a href="privacy.html">Datenschutz</a></nav></div></footer>
   <script src="../app.js"></script>
 </body>
 </html>

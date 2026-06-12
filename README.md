@@ -64,6 +64,7 @@ const YT_ID    = "NSOkPpQ0TaY";   // the promo video
 |----------|--------|
 | `icon.png` | `playstore/assets/icon/icon.png` |
 | `feature_graphic.png` | `marketing/out/feature_graphic_1024x500.png` |
+| `feature_graphic_square.png` | `marketing/out/feature_graphic_square_1024.png` |
 | `atlas-motif.svg` | `marketing/design-system/atlas-motif.svg` |
 | `usecase-0X-*.jpg` | `marketing/out/usecase-*.png` → optimized JPG |
 | `comic.jpg` | `marketing/out/comic-how-to.png` → optimized JPG |
