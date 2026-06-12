@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Data Deletion | GPS Logger</title>
-  <meta name="description" content="How to delete your GPS Logger data — local tracks, App Cloud live shares, self-hosted uploads, and analytics.">
+  <title>डेटा हटाना | GPS Logger</title>
+  <meta name="description" content="GPS Logger का डेटा कैसे हटाएँ — लोकल ट्रैक्स, App Cloud लाइव शेयर, अपने सर्वर पर अपलोड और एनालिटिक्स।">
   <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#287743">
   <link rel="canonical" href="https://northforceapps.github.io/gpslogger/hi/data-deletion.html">
@@ -26,9 +26,9 @@
 <body>
   <header class="header" id="top">
     <div class="shell nav">
-      <a class="brand" href="index.html" aria-label="GPS Logger home">
+      <a class="brand" href="index.html" aria-label="GPS Logger होम">
         <img src="../assets/icon.png" alt="" width="46" height="46">
-        <span><b>GPS Logger</b><small>Private route recorder &amp; atlas</small></span>
+        <span><b>GPS Logger</b><small>प्राइवेट रूट ट्रैकर और एटलस</small></span>
       </a>
       <nav class="nav-links" id="navlinks" aria-label="मुख्य">
         <a class="navlink" href="index.html#features">फ़ीचर्स</a>
@@ -57,39 +57,39 @@
   <main id="main" class="section">
     <div class="shell">
       <article class="prose">
-        <h1>Data Deletion for GPS Logger</h1>
-        <p><em>Last updated: June 12, 2026</em></p>
-        <p>GPS Logger stores your recorded tracks on your device by default. NorthforceApps does not receive or store your private track history. This page explains how to delete each kind of data the app handles.</p>
-        <p>Contact: <span id="support-email-deletion">northforceapps [at] protonmail [dot] com</span></p>
+        <h1>GPS Logger के लिए डेटा हटाना</h1>
+        <p><em>अंतिम अपडेट: 12 जून 2026</em></p>
+        <p>डिफ़ॉल्ट रूप से GPS Logger आपके रिकॉर्ड किए गए ट्रैक्स को आपके डिवाइस पर सेव करता है। NorthforceApps आपकी निजी ट्रैक हिस्ट्री को न प्राप्त करता है और न स्टोर करता है। यह पेज बताता है कि ऐप द्वारा संभाले जाने वाले हर तरह के डेटा को कैसे हटाया जाए।</p>
+        <p>संपर्क: <span id="support-email-deletion">northforceapps [at] protonmail [dot] com</span></p>
 
-        <h2>Local Data (Your Device)</h2>
-        <p>Your track history, track points, and app settings live in the app database on your device. To remove them:</p>
+        <h2>लोकल डेटा (आपका डिवाइस)</h2>
+        <p>आपकी ट्रैक हिस्ट्री, ट्रैक पॉइंट्स और ऐप सेटिंग्स आपके डिवाइस के ऐप डेटाबेस में रहती हैं। उन्हें हटाने के लिए:</p>
         <ul>
-          <li>Delete individual tracks in the app.</li>
-          <li>Clear app storage in Android Settings &rarr; Apps &rarr; GPS Logger &rarr; Storage.</li>
-          <li>Uninstall the app to remove all locally stored data.</li>
+          <li>ऐप में अलग-अलग ट्रैक्स हटाएँ।</li>
+          <li>Android Settings &rarr; Apps &rarr; GPS Logger &rarr; Storage में जाकर ऐप स्टोरेज साफ़ करें।</li>
+          <li>लोकल सेव किए गए सभी डेटा को हटाने के लिए ऐप अनइंस्टॉल करें।</li>
         </ul>
 
-        <h2>Live Sharing (App Cloud)</h2>
-        <p>When live sharing is active, only your <strong>current position</strong> is stored in the App Cloud and overwritten in place. There is no server-side location trail.</p>
+        <h2>लाइव शेयरिंग (App Cloud)</h2>
+        <p>जब लाइव शेयरिंग चालू होती है, तो App Cloud में केवल आपकी <strong>मौजूदा लोकेशन</strong> स्टोर होती है और उसी जगह रिप्लेस होती रहती है। सर्वर-साइड लोकेशन हिस्ट्री नहीं रखी जाती।</p>
         <ul>
-          <li>To delete the current App Cloud live position, open GPS Logger and stop live sharing.</li>
-          <li>To revoke a share code and delete that cloud share record, open Settings and reset/rotate the share code. This deletes the old tracker node and revokes existing followers.</li>
-          <li>Stale live positions are automatically deleted within <strong>7 days</strong>, and stale viewer slots within <strong>10 minutes</strong>, by a scheduled cleanup task.</li>
+          <li>App Cloud की मौजूदा लाइव लोकेशन हटाने के लिए GPS Logger खोलें और लाइव शेयरिंग बंद करें।</li>
+          <li>शेयर कोड रद्द करने और क्लाउड शेयर रिकॉर्ड हटाने के लिए Settings खोलें और शेयर कोड को रीसेट/बदलें। इससे पुराना ट्रैकर नोड हट जाता है और मौजूदा दर्शकों का एक्सेस समाप्त हो जाता है।</li>
+          <li>पुरानी लाइव लोकेशन अपने आप <strong>7 दिनों</strong> में हट जाती है, और पुराने viewer slots <strong>10 मिनट</strong> में क्लीनअप टास्क द्वारा हट जाते हैं।</li>
         </ul>
 
-        <h2>Self-Hosted Sharing (Your Own Server)</h2>
-        <p>If you configure a self-hosted HTTPS server URL, your current position is sent only to that server. NorthforceApps never receives it. Delete this data from your own server, and disable or blank the upload URL in Settings to stop further sending.</p>
+        <h2>सेल्फ-होस्टेड शेयरिंग (आपका अपना सर्वर)</h2>
+        <p>यदि आप अपना HTTPS सर्वर URL कॉन्फ़िगर करते हैं, तो आपकी मौजूदा लोकेशन केवल उसी सर्वर पर भेजी जाती है। NorthforceApps इसे कभी प्राप्त नहीं करता। इस डेटा को अपने सर्वर से हटाएँ, और आगे भेजना रोकने के लिए Settings में अपलोड URL को डिसेबल करें या खाली छोड़ दें।</p>
 
-        <h2>Analytics and Crash Diagnostics</h2>
+        <h2>एनालिटिक्स और क्रैश डायग्नोस्टिक्स</h2>
         <ul>
-          <li>You can turn off anonymous analytics and crash reporting in Settings &rarr; About.</li>
-          <li>Opting out stops future collection. Diagnostic data already processed in aggregate form may not identify you personally.</li>
-          <li>For deletion questions about diagnostics, contact us at the support address above.</li>
+          <li>आप Settings &rarr; About में जाकर बेनामी एनालिटिक्स और क्रैश रिपोर्टिंग बंद कर सकते हैं।</li>
+          <li>ऑप्ट-आउट करने पर भविष्य का डेटा संग्रह बंद हो जाता है। जो डायग्नोस्टिक डेटा पहले से समेकित रूप में प्रोसेस हो चुका है, वह व्यक्तिगत पहचान नहीं कर सकता।</li>
+          <li>डायग्नोस्टिक्स से जुड़े डेटा हटाने के सवालों के लिए ऊपर दिए गए सपोर्ट एड्रेस पर संपर्क करें।</li>
         </ul>
 
-        <h2>Requesting Deletion</h2>
-        <p>Most data is local-only or deleted automatically by stopping a share, resetting the share code, or stale purge. For any remaining deletion request that the in-app controls cannot handle, email NorthforceApps at the support address above and we will action it where technically possible.</p>
+        <h2>डेटा हटाने का अनुरोध</h2>
+        <p>अधिकांश डेटा या तो लोकल-ओनली है या शेयर बंद करने, शेयर कोड रीसेट करने या stale purge के ज़रिए अपने आप हट जाता है। यदि कोई ऐसा हटाने का अनुरोध बचता है जिसे ऐप के कंट्रोल्स से पूरा नहीं किया जा सकता, तो ऊपर दिए गए सपोर्ट एड्रेस पर NorthforceApps को ईमेल करें और जहाँ तकनीकी रूप से संभव होगा वहाँ हम कार्रवाई करेंगे।</p>
       </article>
     </div>
   </main>
@@ -98,12 +98,12 @@
     <div class="shell footer-grid">
       <div>
         <div class="brand"><img src="../assets/icon.png" alt="" width="40" height="40"><span><b>GPS Logger</b></span></div>
-        <p>Private route recorder &amp; personal journey map for Android.</p>
+        <p>Android के लिए प्राइवेट रूट ट्रैकर और पर्सनल जर्नी मैप।</p>
       </div>
-      <nav class="footer-links" aria-label="Footer">
-        <a href="index.html">Home</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="data-deletion.html">Delete data</a>
+      <nav class="footer-links" aria-label="फ़ुटर">
+        <a href="index.html">होम</a>
+        <a href="privacy.html">प्राइवेसी</a>
+        <a href="data-deletion.html">डेटा हटाएँ</a>
       </nav>
     </div>
   </footer>
