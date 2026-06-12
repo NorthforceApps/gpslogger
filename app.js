@@ -68,7 +68,7 @@
 
   /* email obfuscation */
   const addr = `${EMAIL_USER}@${EMAIL_HOST}`;
-  ["support-email-home", "support-email-privacy"].forEach((id) => {
+  ["support-email-home", "support-email-privacy", "support-email-deletion"].forEach((id) => {
     const t = document.getElementById(id);
     if (!t) return;
     const a = document.createElement("a");
