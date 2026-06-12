@@ -34,12 +34,12 @@
     <div class="shell">
       <article class="prose">
         <h1>Privacy Policy for GPS Logger</h1>
-        <p><em>Last updated: June 9, 2026</em></p>
+        <p><em>Last updated: June 12, 2026</em></p>
         <p>GPS Logger is a private GPS track recording app published by NorthforceApps. This policy explains what data the app handles, how it is used, and what choices you have.</p>
         <p>Contact: <span id="support-email-privacy">northforceapps [at] protonmail [dot] com</span></p>
 
         <h2>Summary</h2>
-        <p>GPS Logger records location tracks when you start a recording, or when you enable auto-start after reboot and your phone restarts. You can also import GPX files that you choose. Track data is stored on your device so you can view your history, see your route on a map, and export GPX or KML files. The app does not sell your personal data.</p>
+        <p>GPS Logger records location tracks when you start a recording, or when you enable auto-start after reboot and your phone restarts. You can also import GPX files that you choose. Track data is stored on your device so you can view your history, see your route on a map, and export GPX or KML files. The app does not sell your personal data or share it with third parties.</p>
 
         <h2>Data the App Handles</h2>
 
@@ -58,8 +58,8 @@
         <h3>Optional Live Sharing (App Cloud)</h3>
         <p>If you enable live sharing to the App Cloud, GPS Logger transmits your <strong>current position</strong> so admitted app users with your share code can follow you on a live map. The transmitted data includes latitude, longitude, timestamp, speed, bearing, accuracy, and an anonymous account identifier.</p>
         <p>Your current position is <strong>overwritten in place</strong> while sharing is active — only the current App Cloud position is stored. An anonymous account identifier remains associated with your share code to prevent another user from taking control of that code after your live position is removed. The app uses anonymous Firebase Authentication to identify the broadcaster and each follower app install, enforce your active follower limit (1–20 app installs), and let you reset the share code to revoke access.</p>
-        <p>We partner with industry-leading cloud infrastructure providers to host this feature. Currently, our core backend uses <strong>Google Firebase</strong>. These providers act strictly as data processors and do not use your location data for any purpose other than running the app's features at our direction. To maintain performance, security, and cost-efficiency, we reserve the right to migrate to alternative reputable providers (such as Amazon Web Services, Google Cloud Platform, or Microsoft Azure) at any time, under equivalent or stricter privacy and security standards.</p>
-        <p>Data is encrypted in transit (HTTPS/TLS). Your current position is removed when you stop broadcasting and, as a privacy safeguard, any position left behind by a device that does not disconnect cleanly is automatically and permanently deleted within <strong>7 days</strong>. The anonymous share-code ownership identifier remains associated with that code to prevent hijacking.</p>
+        <p>App Cloud currently runs on <strong>Google Firebase</strong>, which acts as our service provider for this feature. Firebase is used only to relay the live position you choose to share and to enforce share-code ownership and follower limits. We do not sell or share your location data with third parties.</p>
+        <p>Data is encrypted in transit (HTTPS/TLS). Your current position and transient follower-presence records are removed when you stop broadcasting. If you reset your share code, the old App Cloud share record is deleted and existing followers lose access immediately. As a privacy safeguard, any position left behind by a device that does not disconnect cleanly is automatically and permanently deleted within <strong>7 days</strong>. The anonymous share-code ownership identifier remains associated with your current code to prevent hijacking.</p>
 
         <h3>Optional Self-Hosted Sharing (Your Own Server)</h3>
         <p>If you enable the lifetime "Your own server" option and enter a server URL, GPS Logger sends your current live position directly to that URL as a small JSON object while sharing is active. This data bypasses our cloud infrastructure entirely; it is routed solely to the destination you provide, and we have no oversight, access, or liability for how that server stores or processes it. The payload may include a share code, latitude, longitude, timestamp, speed, bearing, and accuracy. If you enter an API key, it is sent as an <code>X-Api-Key</code> request header.</p>
@@ -89,23 +89,23 @@
         </ul>
 
         <h2>Sharing and Disclosure</h2>
-        <p>GPS Logger does not sell your personal data.</p>
-        <p>Data may be shared or transmitted in these cases:</p>
+        <p>GPS Logger does not sell your personal data or share it with third parties.</p>
+        <p>Data may be transmitted only in these cases:</p>
         <ul>
           <li>You choose to export or share a GPX or KML file through Android's share sheet.</li>
-          <li>You enable App Cloud live sharing, which relays your current location through our cloud infrastructure (currently Google Firebase) to users who know your share code.</li>
+          <li>You enable App Cloud live sharing, which relays your current location through Firebase, our service provider, to admitted app users who know your share code.</li>
           <li>You enable self-hosted sharing and provide a server URL.</li>
           <li>Google Play processes purchase information for Pro/lifetime unlocks.</li>
-          <li>Firebase Analytics and Crashlytics process analytics, crash, diagnostic, and identifier data.</li>
-          <li>Google Maps and Google Play services process data needed to display maps and provide location-related services.</li>
+          <li>Firebase Analytics and Crashlytics process analytics, crash, diagnostic, and identifier data as service providers for app quality.</li>
+          <li>Google Maps and Google Play services process data needed to display maps, provide location-related services, and process purchases.</li>
           <li>Data may be disclosed if required by law or to protect legal rights, safety, or security.</li>
         </ul>
 
         <h2>Data Storage and Retention</h2>
         <p>Track history and settings are stored on your device. Tracks remain stored until you delete them, uninstall the app, or clear the app's data. Export files are created in the app cache for sharing and may be removed by the app or the Android system.</p>
         <p>Android backup may back up app settings depending on your device settings and Google account backup settings. GPS Logger excludes the local track database and live-share device identity from Android cloud backup. You can manage Android backup in your device settings.</p>
-        <p>For App Cloud live sharing, your current position is overwritten as you move; no history trail is retained. Your position is removed when you stop broadcasting, and any position left by an unclean disconnect is automatically and permanently deleted within 7 days. An anonymous share-code ownership identifier remains stored to prevent code hijacking.</p>
-        <p>Firebase Analytics, Crashlytics, the App Cloud live-sharing backend, Google Play, Google Maps, and any self-hosted server you configure may have their own retention practices.</p>
+        <p>For App Cloud live sharing, your current position is overwritten as you move; no history trail is retained. Your position and transient follower-presence records are removed when you stop broadcasting. Resetting your share code deletes the old App Cloud share record and revokes existing followers. Any position left by an unclean disconnect is automatically and permanently deleted within 7 days. An anonymous share-code ownership identifier remains stored for your current code to prevent code hijacking.</p>
+        <p>Firebase Analytics, Crashlytics, Google Play, Google Maps, and any self-hosted server you configure may have their own retention practices for the service-provider processing they perform.</p>
 
         <h2>Your Choices</h2>
         <p>You can:</p>
@@ -115,6 +115,7 @@
           <li>Deny location permissions, although recording will not work without location access.</li>
           <li>Delete saved tracks in the app.</li>
           <li>Turn off live sharing.</li>
+          <li>Reset your share code to delete the old App Cloud share record and revoke existing followers.</li>
           <li>Disable or leave blank the self-hosted upload server URL.</li>
           <li>Clear app data or uninstall the app to remove locally stored app data from your device.</li>
           <li>Manage Android backup and app permissions in your device settings.</li>
@@ -124,7 +125,7 @@
         <p>GPS Logger is not directed to children. Do not use the app to collect or share another person's location without appropriate permission.</p>
 
         <h2>Security</h2>
-        <p>GPS Logger uses Android app storage for local data. Data transmitted to Firebase, Google services, Google Play, and HTTPS self-hosted upload URLs is encrypted in transit by those services or protocols. If you configure a non-HTTPS self-hosted upload URL, your data may not be encrypted in transit to that server.</p>
+        <p>GPS Logger uses Android app storage for local data. Data transmitted to Firebase, Google services, Google Play, and self-hosted upload URLs is encrypted in transit by those services or protocols. Release builds require HTTPS for self-hosted upload URLs.</p>
         <p>No method of storage or transmission is completely secure.</p>
 
         <h2>Changes to This Policy</h2>
