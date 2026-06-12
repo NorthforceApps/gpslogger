@@ -221,6 +221,38 @@ h2.display { font-size: clamp(2.1rem, 4.2vw, 3.6rem); max-width: 18ch; }
 .panel p { margin: 0; color: var(--ink-soft); }
 .panel a { color: var(--forest-deep); text-decoration: underline; text-underline-offset: 0.18em; }
 
+/* ---------- guide hub / articles ---------- */
+.guide-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.guide-card {
+  background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 26px; box-shadow: var(--shadow-sm);
+}
+.guide-card .guide-kicker {
+  margin: 0 0 10px; color: var(--amber-deep); text-transform: uppercase;
+  letter-spacing: 0.13em; font-size: 0.72rem; font-weight: 700;
+}
+.guide-card h2, .guide-card h3 { font-size: 1.15rem; line-height: 1.22; color: var(--forest-deep); margin-bottom: 10px; }
+.guide-card a { text-decoration: underline; text-decoration-thickness: 0.08em; text-underline-offset: 0.18em; }
+.guide-card p { margin: 0; color: var(--ink-soft); font-size: 0.94rem; }
+.guide-more { margin: 22px 0 0; font-weight: 700; }
+.guide-more a { color: var(--forest-deep); text-decoration: underline; text-underline-offset: 0.18em; }
+.article-main { min-height: 70vh; }
+.article-hero h1, .article h1 {
+  font-family: var(--serif); font-weight: 600; color: var(--forest-deep);
+  font-size: clamp(2.4rem, 5vw, 4.4rem); line-height: 0.98; max-width: 15ch;
+}
+.article-hero .lead { max-width: 68ch; }
+.article { padding-top: clamp(40px, 7vw, 84px); padding-bottom: clamp(52px, 8vw, 96px); }
+.article .lead { max-width: 70ch; }
+.article a:not(.btn) { color: var(--forest-deep); text-decoration: underline; text-underline-offset: 0.18em; }
+.article-shot {
+  margin: 34px 0; border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--panel); box-shadow: var(--shadow-sm); overflow: hidden;
+}
+.article-shot img { width: min(100%, 420px); margin-inline: auto; }
+.article-shot.wide img { width: min(100%, 620px); }
+.article-shot figcaption { padding: 14px 18px; color: var(--muted); font-size: 0.9rem; text-align: center; }
+
 /* ---------- FAQ ---------- */
 .faq { display: grid; gap: 12px; max-width: 880px; }
 .faq details { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 4px 22px; box-shadow: var(--shadow-sm); }
@@ -273,7 +305,7 @@ h2.display { font-size: clamp(2.1rem, 4.2vw, 3.6rem); max-width: 18ch; }
   .hero-visual { margin-top: 10px; }
   .proof { position: static; max-width: none; margin-top: 16px; }
   .strip { grid-template-columns: repeat(2, 1fr); }
-  .features, .tiers, .steps { grid-template-columns: 1fr 1fr; }
+  .features, .tiers, .steps, .guide-grid { grid-template-columns: 1fr 1fr; }
   .screens { grid-template-columns: repeat(3, 1fr); }
   .split { grid-template-columns: 1fr; }
 }
@@ -287,6 +319,6 @@ h2.display { font-size: clamp(2.1rem, 4.2vw, 3.6rem); max-width: 18ch; }
   }
   .nav-toggle { display: inline-flex; align-items: center; justify-content: center; width: 46px; height: 46px; border-radius: 12px; border: 1px solid var(--line); background: var(--panel); }
   .nav-toggle svg { width: 22px; height: 22px; color: var(--forest-deep); }
-  .strip, .features, .tiers, .steps, .vibe-grid, .screens { grid-template-columns: 1fr; }
+  .strip, .features, .tiers, .steps, .vibe-grid, .screens, .guide-grid { grid-template-columns: 1fr; }
   .hero-actions .btn { flex: 1; }
 }

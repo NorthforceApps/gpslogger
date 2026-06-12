@@ -7,19 +7,27 @@ in the app's warm "explorer atlas" identity (bone parchment, forest green, amber
 - **GitHub repo (target):** https://github.com/NorthforceApps/gpslogger
 
 Pure HTML/CSS/JS, no framework or build step. Sections: hero · value strip · "vibe"
-use-case gallery · YouTube tour · how-it-works comic · features · screenshots · Free/Pro/
-Lifetime pricing · privacy & reliability · FAQ · CTA. Scroll-reveal animations, sticky nav,
-mobile menu, click-to-load YouTube (fast first paint), full OG/Twitter/JSON-LD metadata,
-accessible (skip link, focus rings, reduced-motion support).
+use-case gallery · YouTube tour · how-it-works comic · features · screenshots · SEO guide
+hub · Free/Pro/Lifetime pricing · privacy & reliability · FAQ · CTA. Scroll-reveal
+animations, sticky nav, mobile menu, click-to-load YouTube (fast first paint), full
+OG/Twitter/JSON-LD metadata, sitemap, localized mini landing pages, accessible (skip link,
+focus rings, reduced-motion support).
 
 ## Files
 | File | Purpose |
 |------|---------|
 | `index.html` | Landing page |
+| `guides.html` | SEO guide hub for GPS logging topics |
+| `how-to-record-export-gpx-android.html` | Tutorial targeting GPX recording/export searches |
+| `gps-logger-vs-strava.html` | Comparison article for private logger vs social fitness intent |
+| `offline-gps-logging-privacy.html` | Privacy-focused informational article |
+| `gpx-openstreetmap-qgis.html` | GPX mapping workflow article |
+| `de.html`, `es.html`, `fr.html`, `pt.html`, `ja.html` | Localized mini landing pages with hreflang |
 | `privacy.html` | Privacy policy (from `playstore/privacy_policy.md`) |
 | `styles.css` | Stylesheet |
 | `app.js` | Play-link config, scroll-reveal, YouTube facade, mobile nav, email |
 | `robots.txt`, `sitemap.xml` | SEO |
+| `downloads/sample-gpslogger-city-walk.gpx` | Synthetic GPX example for tutorials |
 | `assets/` | Icon, feature graphic, motif, video poster, comic, vibe gallery, screenshots |
 
 ## Two values to confirm (both in `app.js`, top of file)
