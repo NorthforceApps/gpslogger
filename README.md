@@ -22,13 +22,30 @@ focus rings, reduced-motion support).
 | `gps-logger-vs-strava.html` | Comparison article for private logger vs social fitness intent |
 | `offline-gps-logging-privacy.html` | Privacy-focused informational article |
 | `gpx-openstreetmap-qgis.html` | GPX mapping workflow article |
-| `de.html`, `es.html`, `fr.html`, `pt.html`, `ja.html` | Localized mini landing pages with hreflang |
+| `de.html`, `es.html`, `fr.html`, `pt.html`, `ja.html`, `hi.html` | Legacy locale redirects to directory URLs |
+| `en/`, `de/`, `es/`, `fr/`, `pt/`, `ja/`, `hi/` | Full locale directory structure; every locale has the same pages |
 | `privacy.html` | Privacy policy (from `playstore/privacy_policy.md`) |
 | `styles.css` | Stylesheet |
 | `app.js` | Play-link config, scroll-reveal, YouTube facade, mobile nav, email |
 | `robots.txt`, `sitemap.xml` | SEO |
 | `downloads/sample-gpslogger-city-walk.gpx` | Synthetic GPX example for tutorials |
 | `assets/` | Icon, feature graphic, motif, video poster, comic, vibe gallery, screenshots |
+
+## Localization structure
+Canonical content now lives under language directories:
+
+- `en/` — source English copy
+- `de/` — German translation target
+- `es/` — Spanish translation target
+- `fr/` — French translation target
+- `pt/` — Portuguese translation target
+- `ja/` — Japanese translation target
+- `hi/` — Hindi translation target, added for India / large Android market reach
+
+Every locale directory has the same file names and URL slugs. Translate copy in place, but keep
+the slugs, asset paths, Play links, canonical URLs, and reciprocal `hreflang` blocks intact.
+The root-level pages remain for compatibility and canonicalize to `en/`; the sitemap lists the
+locale directory URLs only.
 
 ## Two values to confirm (both in `app.js`, top of file)
 ```js
