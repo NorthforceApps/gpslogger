@@ -77,4 +77,14 @@
     a.className = "support-link";
     t.replaceWith(a);
   });
+
+  /* sticky mobile cta logic */
+  const stickyCta = document.getElementById("stickyCta");
+  if (stickyCta) {
+    const checkScroll = () => {
+      stickyCta.classList.toggle("visible", window.scrollY > 400);
+    };
+    checkScroll();
+    window.addEventListener("scroll", checkScroll, { passive: true });
+  }
 })();
