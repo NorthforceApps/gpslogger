@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GPS Logger — Grabador de rutas privado y mapa de viajes personal para Android</title>
+  <meta name="description" content="GPS Logger registra tus caminatas, excursiones, viajes y trayectos de forma privada en tu teléfono, construye un atlas de por vida de todos los lugares en los que has estado, comparte tu ubicación en vivo solo cuando tú quieras y exporta GPX o KML sin restricciones. Tu ruta. Tus datos.">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#287743">
+  <link rel="canonical" href="https://northforceapps.github.io/gpslogger/es/">
+  <link rel="alternate" hreflang="en" href="https://northforceapps.github.io/gpslogger/">
+  <link rel="alternate" hreflang="de" href="https://northforceapps.github.io/gpslogger/de/">
+  <link rel="alternate" hreflang="es" href="https://northforceapps.github.io/gpslogger/es/">
+  <link rel="alternate" hreflang="fr" href="https://northforceapps.github.io/gpslogger/fr/">
+  <link rel="alternate" hreflang="pt" href="https://northforceapps.github.io/gpslogger/pt/">
+  <link rel="alternate" hreflang="ja" href="https://northforceapps.github.io/gpslogger/ja/">
+  <link rel="alternate" hreflang="hi" href="https://northforceapps.github.io/gpslogger/hi/">
+  <link rel="alternate" hreflang="x-default" href="https://northforceapps.github.io/gpslogger/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../assets/icon.png">
+  <link rel="apple-touch-icon" href="../assets/icon.png">
+  <link rel="stylesheet" href="../styles.css">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="GPS Logger — Grabador de rutas privado y mapa de viajes personal">
+  <meta property="og:description" content="Registra rutas de forma privada, crea un atlas de por vida, comparte tu ubicación en vivo solo cuando quieras y exporta sin restricciones. Tu ruta. Tus datos.">
+  <meta property="og:url" content="https://northforceapps.github.io/gpslogger/es/">
+  <meta property="og:image" content="https://northforceapps.github.io/gpslogger/assets/es/feature_graphic.png">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="500">
+  <meta property="og:site_name" content="GPS Logger">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="GPS Logger — Grabador de rutas privado">
+  <meta name="twitter:description" content="Tu ruta. Tus datos. Un mapa de viajes privado que tú controlas.">
+  <meta name="twitter:image" content="https://northforceapps.github.io/gpslogger/assets/es/feature_graphic.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "GPS Logger: Rastreador Privado",
+    "applicationCategory": "TravelApplication",
+    "operatingSystem": "Android",
+    "description": "Un grabador de rutas GPS privado y mapa de viajes personal. Graba rutas en tu dispositivo, revívelas en un mapa, crea un atlas de por vida, comparte tu posición en vivo solo cuando quieras y exporta GPX o KML sin restricciones.",
+    "image": "https://northforceapps.github.io/gpslogger/assets/es/feature_graphic.png",
+    "url": "https://northforceapps.github.io/gpslogger/es/",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Organization", "name": "NorthforceApps" },
+    "video": {
+      "@type": "VideoObject",
+      "name": "GPS Logger — Recorrido de 30 segundos",
+      "description": "Desde tu primer toque hasta un atlas de por vida de todos los lugares en los que has estado.",
+      "thumbnailUrl": "https://i.ytimg.com/vi/NSOkPpQ0TaY/maxresdefault.jpg",
+      "contentUrl": "https://youtu.be/NSOkPpQ0TaY",
+      "embedUrl": "https://www.youtube.com/embed/NSOkPpQ0TaY",
+      "uploadDate": "2026-05-29"
+    }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <header class="header" id="top">
+    <div class="shell nav">
+      <a class="brand" href="#top" aria-label="Inicio de GPS Logger">
+        <img src="../assets/icon.png" alt="" width="46" height="46">
+        <span><b>GPS Logger</b><small>Grabador de rutas privado y atlas</small></span>
+      </a>
+      <nav class="nav-links" id="navlinks" aria-label="Principal">
+        <a class="navlink" href="#why">Por qué</a>
+        <a class="navlink" href="#tour">Tour</a>
+        <a class="navlink" href="#features">Funciones</a>
+        <a class="navlink" href="guides.html">Guías</a>
+        <a class="navlink" href="#pricing">Precios</a>
+        <a class="navlink" href="privacy.html">Privacidad</a>
+        <details class="lang-menu">
+          <summary aria-label="Idioma"><span class="lang-current"><span class="flag" aria-hidden="true">🇪🇸</span><span>Español</span></span><span class="lang-caret" aria-hidden="true">▾</span></summary>
+          <div class="lang-menu-list">
+          <a class="lang-option" href="../index.html" hreflang="en" lang="en"><span class="flag" aria-hidden="true">🇺🇸</span><span>English</span></a>
+          <a class="lang-option" href="../de/index.html" hreflang="de" lang="de"><span class="flag" aria-hidden="true">🇩🇪</span><span>Deutsch</span></a>
+          <a class="lang-option" href="../es/index.html" hreflang="es" lang="es" aria-current="true"><span class="flag" aria-hidden="true">🇪🇸</span><span>Español</span></a>
+          <a class="lang-option" href="../fr/index.html" hreflang="fr" lang="fr"><span class="flag" aria-hidden="true">🇫🇷</span><span>Français</span></a>
+          <a class="lang-option" href="../pt/index.html" hreflang="pt" lang="pt"><span class="flag" aria-hidden="true">🇧🇷</span><span>Português</span></a>
+          <a class="lang-option" href="../ja/index.html" hreflang="ja" lang="ja"><span class="flag" aria-hidden="true">🇯🇵</span><span>日本語</span></a>
+          <a class="lang-option" href="../hi/index.html" hreflang="hi" lang="hi"><span class="flag" aria-hidden="true">🇮🇳</span><span>हिन्दी</span></a>
+          </div>
+        </details>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Menú" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero section-tight">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="shell hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Mapa de viajes privado · Grabador GPS</p>
+          <h1>Tu ruta.<br>Tus datos<span class="pin">.</span></h1>
+          <p class="lead">
+            GPS Logger registra tus caminatas, excursiones, viajes y trayectos de forma privada en tu teléfono. Revive cada viaje en un mapa, observa cómo toma forma un atlas de por vida de todos los lugares en los que has estado y comparte tu posición en vivo solo cuando quieras; luego exporta lo que sea como GPX o KML, sin restricciones.
+          </p>
+          <div class="hero-actions">
+            <a class="play-badge" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger" aria-label="Get it on Google Play"><img src="../assets/badge-es.svg" alt="Get it on Google Play" style="height:60px;width:auto;display:block"></a>
+            <a class="btn btn-ghost btn-lg" href="#tour">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+              Mira el recorrido de 30 seg.
+            </a>
+          </div>
+          <ul class="trust">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Las rutas permanecen en tu dispositivo</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>Sin restricciones — exporta cuando quieras</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Registra solo cuando tú lo activas</li>
+          </ul>
+        </div>
+        <div class="hero-visual">
+          <img class="hero-feature" src="../assets/es/feature_graphic_square.png" alt="Mapa de viajes de por vida de GPS Logger con ruta, pines e indicador de grabación" width="1024" height="1024">
+          </div>
+      </div>
+    </section>
+
+    <!-- VALUE STRIP -->
+    <section class="section-tight">
+      <div class="shell strip">
+        <div class="chip" data-reveal>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <h3>Privado por diseño</h3><p>Registrado y almacenado en tu dispositivo — nada sale a menos que tú lo elijas.</p>
+        </div>
+        <div class="chip" data-reveal>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3 3 6v15l6-3 6 3 6-3V3l-6 3-6-3z"/><path d="M9 3v15M15 6v15"/></svg>
+          <h3>Tu atlas a través del tiempo</h3><p>Cada viaje construye un mapa de por vida, un calendario y los lugares a los que vuelves.</p>
+        </div>
+        <div class="chip" data-reveal>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7"/><path d="M12 3v13M7 11l5 5 5-5"/></svg>
+          <h3>Exportación sin restricciones</h3><p>GPX y KML por trayecto, además de una copia de seguridad ZIP de todo el historial. Siempre portátil.</p>
+        </div>
+        <div class="chip" data-reveal>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg>
+          <h3>Adaptable y confiable</h3><p>El rastreo consciente del movimiento mantiene bajo el consumo de batería y registra con la pantalla apagada.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIBE GALLERY -->
+    <section class="section" id="why">
+      <div class="shell">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Por qué la gente usa GPS Logger</p>
+          <h2 class="display">La aplicación que no sabías que necesitabas — hasta que guardaste tu primer viaje.</h2>
+        </div>
+        <div class="vibe-grid">
+          <figure class="vibe" data-reveal><img src="../assets/es/usecase-01-trail-dog.jpg" alt="Registrando un paseo con el perro por un bosque neblinoso — registra cada sendero, mantenlo privado" loading="lazy"></figure>
+          <figure class="vibe" data-reveal><img src="../assets/es/usecase-02-road-trip.jpg" alt="Un viaje familiar por carretera con ubicación compartida en vivo — sigue a una mascota, persona o vehículo" loading="lazy"></figure>
+          <figure class="vibe" data-reveal><img src="../assets/es/usecase-03-bike-commute.jpg" alt="Un trayecto diario en bicicleta por la ciudad al amanecer — tu trayecto, mapeado automáticamente" loading="lazy"></figure>
+          <figure class="vibe" data-reveal><img src="../assets/es/usecase-04-group-hike.jpg" alt="Amigos en un mirador de montaña — cada viaje se une a tu atlas" loading="lazy"></figure>
+          <figure class="vibe" data-reveal><img src="../assets/es/usecase-05-countries.jpg" alt="Recuerdos de viaje y los países que has visitado" loading="lazy"></figure>
+          <figure class="vibe" data-reveal><img src="../assets/es/usecase-06-globe.jpg" alt="Un globo terráqueo salpicado de pines de toda una vida de viajes" loading="lazy"></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEO -->
+    <section class="section-tight" id="tour">
+      <div class="shell">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Míralo en acción</p>
+          <h2 class="display">Treinta segundos, desde el primer toque hasta tu atlas.</h2>
+        </div>
+        <div class="video-wrap" data-reveal data-yt="NSOkPpQ0TaY">
+          <img class="poster" src="../assets/video-poster.jpg" alt="Video promocional de GPS Logger" loading="lazy">
+          <button class="video-play" type="button" aria-label="Reproducir el video del recorrido por GPS Logger">
+            <span class="ring"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+            <span class="lbl">Ver el recorrido</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS / COMIC -->
+    <section class="section" id="how">
+      <div class="shell">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Cómo funciona</p>
+          <h2 class="display">Registra. Revive. Comparte — a solo tres toques de distancia.</h2>
+        </div>
+        <figure class="comic" data-reveal>
+          <img src="../assets/es/comic.jpg" alt="Cómic de tres paneles: toca registrar y vive tu día; meses después revive todos los lugares donde has estado; comparte tu ubicación en vivo con tu familia" loading="lazy">
+        </figure>
+        <div class="steps">
+          <div class="step" data-reveal><span class="n">1</span><div><h3>Registra</h3><p>Toca una vez y listo. Rastrea en tu bolsillo mientras vives tu día.</p></div></div>
+          <div class="step" data-reveal><span class="n">2</span><div><h3>Revive</h3><p>Meses después, explora un mapa de por vida, tus lugares y tus países.</p></div></div>
+          <div class="step" data-reveal><span class="n">3</span><div><h3>Comparte</h3><p>Envía tu ubicación en vivo con un código restablecible y un límite de seguidores que tú definas.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="section" id="features">
+      <div class="shell">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Conjunto de funciones</p>
+          <h2 class="display">Qué hace realmente la aplicación</h2>
+        </div>
+        <div class="features">
+          <article class="feature" data-reveal>
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <h3>Registra de forma privada</h3>
+            <p>Inicia una grabación para cualquier caminata, excursión, paseo, viaje, carrera o trayecto. Sigue rastreando en segundo plano y guarda tu ruta, distancia, duración y velocidad cuando te detienes.</p>
+          </article>
+          <article class="feature" data-reveal>
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3 3 6v15l6-3 6 3 6-3V3l-6 3-6-3z"/><path d="M9 3v15M15 6v15"/></svg></div>
+            <h3>Tu atlas personal</h3>
+            <p>Un mapa de por vida de todos los lugares en los que has estado, un calendario de días rastreados, los lugares a los que sigues volviendo y mapas por trayecto con vista de velocidad y estadísticas completas.</p>
+          </article>
+          <article class="feature" data-reveal>
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5 15.4 17.5M15.4 6.5 8.6 10.5"/></svg></div>
+            <h3>Comparte en vivo, tú decides</h3>
+            <p>Comparte tu posición actual con un código restablecible y un límite de seguidores que tú elijas (1–20). Solo se almacena tu posición actual y se elimina cuando te detienes.</p>
+          </article>
+          <article class="feature" data-reveal>
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M12 3v13M7 11l5 5 5-5"/></svg></div>
+            <h3>Exporta sin restricciones</h3>
+            <p>Exporta trayectos individuales como GPX o KML, o haz una copia de seguridad de todo tu historial como un archivo GPX ZIP. Formatos abiertos, tus datos, en cualquier momento.</p>
+          </article>
+          <article class="feature" data-reveal>
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="18" height="10" rx="2"/><path d="M22 11v2M6 11v2"/></svg></div>
+            <h3>Adaptable y confiable</h3>
+            <p>El rastreo adaptable al movimiento reduce la frecuencia del GPS cuando estás quieto. Se muestra una notificación en primer plano mientras grabas, con inicio automático opcional tras un reinicio.</p>
+          </article>
+          <article class="feature" data-reveal>
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0"/></svg></div>
+            <h3>Tuyo de principio a fin</h3>
+            <p>No necesitas cuenta para registrar. Las rutas viven en tu teléfono, compartir en vivo es opcional y puedes restablecer tu código para compartir o eliminar trayectos cuando quieras.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCREENSHOTS -->
+    <section class="section" id="screens">
+      <div class="shell">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Pantallas reales de la aplicación</p>
+          <h2 class="display">Un vistazo más cercano a GPS Logger en el uso diario.</h2>
+        </div>
+        <div class="screens">
+          <figure class="device" data-reveal><div class="frame"><img src="../assets/ss-home.png" alt="Pantalla de inicio, lista para registrar" loading="lazy"></div><figcaption>Inicio — un toque para registrar</figcaption></figure>
+          <figure class="device" data-reveal><div class="frame"><img src="../assets/ss-recording.png" alt="Grabación activa con mapa en vivo" loading="lazy"></div><figcaption>Grabando — mapa en vivo y estadísticas</figcaption></figure>
+          <figure class="device" data-reveal><div class="frame"><img src="../assets/ss-atlas.png" alt="Mapa de viajes de por vida" loading="lazy"></div><figcaption>Atlas — toda una vida de rutas</figcaption></figure>
+          <figure class="device" data-reveal><div class="frame"><img src="../assets/ss-places.png" alt="Atlas de lugares" loading="lazy"></div><figcaption>Lugares — sitios a los que vuelves</figcaption></figure>
+          <figure class="device" data-reveal><div class="frame"><img src="../assets/ss-share.png" alt="Controles para compartir en vivo" loading="lazy"></div><figcaption>Compartir en vivo — un código que tú controlas</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- GUIDES -->
+    <section class="section" id="guides">
+      <div class="shell">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Guías de registro GPS</p>
+          <h2 class="display">Aprende sobre el registro GPX, exportación y rastreo privado de rutas.</h2>
+        </div>
+        <div class="guide-grid">
+          <article class="guide-card" data-reveal>
+            <p class="guide-kicker">Tutorial</p>
+            <h3><a href="how-to-record-export-gpx-android.html">Cómo registrar y exportar rutas GPX en Android</a></h3>
+            <p>Registro de rutas paso a paso, rastreo en segundo plano, exportación GPX y copia de seguridad del historial completo.</p>
+          </article>
+          <article class="guide-card" data-reveal>
+            <p class="guide-kicker">Privacidad</p>
+            <h3><a href="offline-gps-logging-privacy.html">Por qué el registro GPS fuera de línea es importante para la privacidad</a></h3>
+            <p>Qué permanece en tu teléfono, cuándo el compartir en vivo envía datos y cómo mantener un mapa de viajes privado.</p>
+          </article>
+          <article class="guide-card" data-reveal>
+            <p class="guide-kicker">Comparación</p>
+            <h3><a href="gps-logger-vs-strava.html">GPS Logger frente a Strava y aplicaciones sociales de fitness</a></h3>
+            <p>Elige entre un diario de rutas privado, una red de entrenamiento o ambos.</p>
+          </article>
+          <article class="guide-card" data-reveal>
+            <p class="guide-kicker">Flujo de trabajo</p>
+            <h3><a href="gpx-openstreetmap-qgis.html">Usa registros GPX con OpenStreetMap y QGIS</a></h3>
+            <p>Exporta rutas portátiles para mapeo, GIS, archivos de viajes y análisis de rutas.</p>
+          </article>
+        </div>
+        <p class="guide-more" data-reveal><a href="guides.html">Ver todas las guías de registro GPS</a></p>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="section" id="pricing">
+      <div class="shell">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Gratis, Pro y De por vida</p>
+          <h2 class="display">Empieza gratis. Sube de nivel solo si quieres más.</h2>
+        </div>
+        <div class="tiers">
+          <article class="tier" data-reveal>
+            <h3>Gratis</h3>
+            <p class="price">Todo lo que necesitas para empezar</p>
+            <ul>
+              <li>Registro GPS con rastreo adaptable</li>
+              <li>Mapa de viajes, calendario y lugares</li>
+              <li>Tus últimos 10 trayectos en la aplicación</li>
+              <li>Exportación GPX y KML, más copia de seguridad ZIP del historial</li>
+              <li>Importación GPX — un trayecto por semana</li>
+              <li>15 min/día de compartir en vivo en cada sentido</li>
+            </ul>
+            <div class="foot"><a class="btn btn-ghost" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger">Obtén la aplicación</a></div>
+          </article>
+          <article class="tier featured" data-reveal>
+            <span class="tag">Más popular</span>
+            <h3>Pro</h3>
+            <p class="price">Suscripción mensual o anual</p>
+            <ul>
+              <li>Todo lo incluido en Gratis</li>
+              <li>Historial de trayectos ilimitado en la aplicación</li>
+              <li>Exportaciones a resolución completa almacenada</li>
+              <li>Importación GPX ilimitada</li>
+              <li>Uso compartido y visualización en vivo ilimitados en App Cloud</li>
+            </ul>
+            <div class="foot"><a class="btn btn-primary" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger">Hazte Pro</a></div>
+          </article>
+          <article class="tier" data-reveal>
+            <h3>De por vida</h3>
+            <p class="price">Pago único</p>
+            <ul>
+              <li>Todo lo incluido en Pro, sin cuotas recurrentes</li>
+              <li>Uso compartido en vivo auto-alojado</li>
+              <li>Envía tu posición en vivo a tu propia URL de servidor</li>
+              <li>Tuyo para siempre</li>
+            </ul>
+            <div class="foot"><a class="btn btn-ghost" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger">Desbloquea De por vida</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRIVACY / RELIABILITY -->
+    <section class="section-tight">
+      <div class="shell split">
+        <div class="panel" data-reveal>
+          <h2>Diseñado para registros largos en segundo plano</h2>
+          <p>GPS Logger se ejecuta como un servicio en primer plano para que la grabación continúe cuando la pantalla esté apagada o cambies de aplicación, con una notificación persistente mientras rastrea. El muestreo adaptable al movimiento mantiene bajo el uso de la batería, y el inicio automático opcional puede reanudar la grabación tras un reinicio.</p>
+        </div>
+        <div class="panel" data-reveal>
+          <h2>Tus rutas, en tu dispositivo</h2>
+          <p>Las rutas permanecen en tu teléfono a menos que elijas compartirlas en vivo o exportarlas. El uso compartido en vivo almacena solo tu posición actual y la elimina cuando te detienes. La visualización de mapas y los diagnósticos utilizan los proveedores de servicios descritos en la <a href="privacy.html">política de privacidad</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="shell">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Preguntas frecuentes</p>
+          <h2 class="display">Preguntas que la gente hace antes de instalar</h2>
+        </div>
+        <div class="faq" data-reveal>
+          <details><summary>¿Registra sin que yo lo active?</summary><p>No. El registro comienza solo cuando tú lo activas y se detiene cuando tú lo detienes. La única excepción es el inicio automático opcional tras un reinicio, que tú mismo habilitas.</p></details>
+          <details><summary>¿Dónde se almacenan mis rutas?</summary><p>En tu dispositivo. Nada se sube a menos que elijas compartir en vivo tu posición actual o exportar un archivo.</p></details>
+          <details><summary>¿Cómo funciona el compartir en vivo?</summary><p>Compartes un código restablecible y eliges un límite de seguidores (1–20). Cualquier persona con el código ve solo tu posición actual en un mapa en vivo. La posición se elimina cuando te detienes, y las posiciones no atendidas se eliminan automáticamente en 7 días.</p></details>
+          <details><summary>¿Puedo sacar mis datos?</summary><p>Sí. Exporta cualquier trayecto como GPX o KML, o haz una copia de seguridad de todo tu historial como un GPX ZIP. No hay restricciones.</p></details>
+          <details><summary>¿Es gratis?</summary><p>Sí. Lo gratuito incluye el registro, tu atlas, calendario y lugares, tus últimos 10 trayectos, exportación, una importación GPX semanal y 15 minutos al día de compartir en vivo en cada sentido. Pro y De por vida eliminan los límites.</p></details>
+          <details><summary>¿Seguirá grabando con la pantalla apagada?</summary><p>Sí. Un servicio en primer plano mantiene el registro en segundo plano. Para sesiones muy largas, sigue la guía de batería de la aplicación para que Android no lo suspenda.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="section-tight">
+      <div class="shell">
+        <div class="cta-band" data-reveal>
+          <h2>Comienza tu atlas hoy mismo.</h2>
+          <p>Registra tu próxima caminata, trayecto o viaje — y observa cómo comienza a llenarse el mapa de tu vida. Gratis para empezar, tuyo para siempre.</p>
+          <a class="play-badge" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger" aria-label="Get it on Google Play"><img src="../assets/badge-es.svg" alt="Get it on Google Play" style="height:60px;width:auto;display:block"></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="shell footer-grid">
+      <div>
+        <div class="brand"><img src="../assets/icon.png" alt="" width="40" height="40"><span><b>GPS Logger</b></span></div>
+        <p>Grabador de rutas privado y mapa de viajes personal para Android.</p>
+        <p>Soporte: <span id="support-email-home">northforceapps [at] protonmail [dot] com</span></p>
+      </div>
+      <nav class="footer-links" aria-label="Pie de página">
+        <a href="#why">Por qué</a>
+        <a href="#tour">Recorrido</a>
+        <a href="#features">Funciones</a>
+        <a href="guides.html">Guías</a>
+        <a href="#pricing">Precios</a>
+        <a href="privacy.html">Privacidad</a>
+        <a href="data-deletion.html">Eliminar datos</a>
+        <a href="https://youtu.be/NSOkPpQ0TaY">Ver el recorrido</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../app.js"></script>
+</body>
+</html>

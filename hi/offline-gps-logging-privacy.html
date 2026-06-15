@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>प्राइवेसी के लिए ऑफ़लाइन GPS लॉगिंग क्यों ज़रूरी है</title>
+  <meta name="description" content="जानें कि Android पर निजी रूट ट्रैकिंग के लिए लोकल GPS ट्रैक स्टोरेज, वैकल्पिक लाइव शेयरिंग, GPX एक्सपोर्ट और स्पष्ट बैकग्राउंड लोकेशन नियंत्रण क्यों मायने रखते हैं।">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#287743">
+  <link rel="canonical" href="https://northforceapps.github.io/gpslogger/hi/offline-gps-logging-privacy.html">
+  <link rel="alternate" hreflang="en" href="https://northforceapps.github.io/gpslogger/offline-gps-logging-privacy.html">
+  <link rel="alternate" hreflang="de" href="https://northforceapps.github.io/gpslogger/de/offline-gps-logging-privacy.html">
+  <link rel="alternate" hreflang="es" href="https://northforceapps.github.io/gpslogger/es/offline-gps-logging-privacy.html">
+  <link rel="alternate" hreflang="fr" href="https://northforceapps.github.io/gpslogger/fr/offline-gps-logging-privacy.html">
+  <link rel="alternate" hreflang="pt" href="https://northforceapps.github.io/gpslogger/pt/offline-gps-logging-privacy.html">
+  <link rel="alternate" hreflang="ja" href="https://northforceapps.github.io/gpslogger/ja/offline-gps-logging-privacy.html">
+  <link rel="alternate" hreflang="hi" href="https://northforceapps.github.io/gpslogger/hi/offline-gps-logging-privacy.html">
+  <link rel="alternate" hreflang="x-default" href="https://northforceapps.github.io/gpslogger/offline-gps-logging-privacy.html">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" type="image/png" href="../assets/icon.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"प्राइवेसी के लिए ऑफ़लाइन GPS लॉगिंग क्यों ज़रूरी है","description":"लोकल GPS रूट स्टोरेज और वैकल्पिक शेयरिंग कैसे लोकेशन डेटा के एक्सपोज़र को घटाते हैं।","author":{"@type":"Organization","name":"NorthforceApps"},"publisher":{"@type":"Organization","name":"NorthforceApps"},"mainEntityOfPage":"https://northforceapps.github.io/gpslogger/hi/offline-gps-logging-privacy.html"}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">सामग्री पर जाएँ</a>
+  <header class="header" id="top">
+    <div class="shell nav">
+      <a class="brand" href="index.html"><img src="../assets/icon.png" alt="" width="46" height="46"><span><b>GPS Logger</b><small>निजी रूट रिकॉर्डर और एटलस</small></span></a>
+      <nav class="nav-links" id="navlinks" aria-label="मुख्य">
+        <a class="navlink" href="index.html#features">फ़ीचर्स</a>
+        <a class="navlink" href="guides.html">गाइड</a>
+        <a class="navlink" href="index.html#pricing">कीमत</a>
+        <a class="navlink" href="privacy.html">प्राइवेसी</a>
+        <details class="lang-menu">
+          <summary aria-label="भाषा"><span class="lang-current"><span class="flag" aria-hidden="true">🇮🇳</span><span>हिन्दी</span></span><span class="lang-caret" aria-hidden="true">▾</span></summary>
+          <div class="lang-menu-list">
+          <a class="lang-option" href="../offline-gps-logging-privacy.html" hreflang="en" lang="en"><span class="flag" aria-hidden="true">🇺🇸</span><span>English</span></a>
+          <a class="lang-option" href="../de/offline-gps-logging-privacy.html" hreflang="de" lang="de"><span class="flag" aria-hidden="true">🇩🇪</span><span>Deutsch</span></a>
+          <a class="lang-option" href="../es/offline-gps-logging-privacy.html" hreflang="es" lang="es"><span class="flag" aria-hidden="true">🇪🇸</span><span>Español</span></a>
+          <a class="lang-option" href="../fr/offline-gps-logging-privacy.html" hreflang="fr" lang="fr"><span class="flag" aria-hidden="true">🇫🇷</span><span>Français</span></a>
+          <a class="lang-option" href="../pt/offline-gps-logging-privacy.html" hreflang="pt" lang="pt"><span class="flag" aria-hidden="true">🇧🇷</span><span>Português</span></a>
+          <a class="lang-option" href="../ja/offline-gps-logging-privacy.html" hreflang="ja" lang="ja"><span class="flag" aria-hidden="true">🇯🇵</span><span>日本語</span></a>
+          <a class="lang-option" href="../hi/offline-gps-logging-privacy.html" hreflang="hi" lang="hi" aria-current="true"><span class="flag" aria-hidden="true">🇮🇳</span><span>हिन्दी</span></a>
+          </div>
+        </details>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="मेन्यू" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </header>
+  <main id="main" class="article-main">
+    <article class="shell prose article">
+      <p class="eyebrow">प्राइवेसी गाइड</p>
+      <h1>प्राइवेसी के लिए ऑफ़लाइन GPS लॉगिंग क्यों ज़रूरी है</h1>
+      <p class="lead">लोकेशन इतिहास संवेदनशील होता है। एक निजी रूट जर्नल को रिकॉर्डिंग उपयोगी बनानी चाहिए, बिना हर सैर, ड्राइव या यात्रा को क्लाउड प्रोफ़ाइल में बदले।</p>
+      <h2>लोकल-फ़र्स्ट रूट इतिहास एक्सपोज़र घटाता है</h2>
+      <p>GPS Logger रिकॉर्ड किए गए ट्रैक आपके डिवाइस पर रखता है। इसका मतलब है कि आपके सेव किए गए पैदल रूट, हाइकिंग ट्रैक, बाइक कम्यूट और रोड ट्रिप डिफ़ॉल्ट रूप से लोकेशन ट्रेल के तौर पर अपलोड नहीं होते।</p>
+      <h2>बैकग्राउंड लोकेशन दिखनी चाहिए और नियंत्रित होनी चाहिए</h2>
+      <p>Android बैकग्राउंड लोकेशन स्क्रीन बंद होने पर भी GPS रिकॉर्डिंग जारी रखने देती है। GPS Logger तभी रिकॉर्ड करता है जब आप इसे शुरू करते हैं, और ट्रैकिंग के दौरान एक चालू नोटिफ़िकेशन दिखता है। रिबूट के बाद वैकल्पिक ऑटो-स्टार्ट मौजूद है, पर उस पर नियंत्रण आपका है।</p>
+      <h2>लाइव शेयरिंग अस्थायी होनी चाहिए</h2>
+      <p>कभी-कभी मौजूदा लोकेशन शेयर करना उपयोगी होता है। GPS Logger का App Cloud लाइव शेयर आपके रीसेट किए जा सकने वाले कोड और फ़ॉलोअर सीमा के साथ मौजूदा पोज़िशन स्वीकृत उपयोगकर्ताओं को भेजता है। यह सर्वर-साइड ट्रेल स्टोर नहीं करता; मौजूदा पोज़िशन ओवरराइट होती है और रोकने के बाद हटा दी जाती है।</p>
+      <h2>एक्सपोर्ट खुला होना चाहिए</h2>
+      <p>निजी होने का मतलब फँसा होना नहीं है। GPX और KML एक्सपोर्ट से आप जब चाहें रूट डेटा को मैपिंग टूल्स, बैकअप या दूसरी ऐप्स में ले जा सकते हैं। देखें <a href="how-to-record-export-gpx-android.html">Android पर GPX ट्रैक कैसे रिकॉर्ड और एक्सपोर्ट करें</a>।</p>
+      <h2>रूट ट्रैकिंग के लिए प्राइवेसी चेकलिस्ट</h2>
+      <ul>
+        <li>रिकॉर्डिंग सिर्फ़ ज़रूरत होने पर इस्तेमाल करें।</li>
+        <li>जब तक शेयरिंग या एक्सपोर्ट का कोई मक़सद न हो, रूट लोकल रखें।</li>
+        <li>जब एक्सेस खत्म करना हो तो लाइव-शेयर कोड रीसेट करें।</li>
+        <li>बैकअप उसी स्टोरेज में एक्सपोर्ट करें जिस पर आप भरोसा करते हैं।</li>
+        <li>लंबे समय के उपयोग से पहले ऐप की प्राइवेसी नीति पढ़ें।</li>
+      </ul>
+      <p>पूरा विवरण <a href="privacy.html">GPS Logger प्राइवेसी नीति</a> में है।</p>
+      <p><a class="btn btn-primary" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger">निजी GPS Logger इंस्टॉल करें</a></p>
+    </article>
+  </main>
+  <footer class="footer"><div class="shell footer-grid"><p>GPS Logger: निजी ट्रैकर</p><nav class="footer-links"><a href="guides.html">गाइड</a><a href="index.html">होम</a><a href="privacy.html">प्राइवेसी</a></nav></div></footer>
+  <script src="../app.js"></script>
+</body>
+</html>

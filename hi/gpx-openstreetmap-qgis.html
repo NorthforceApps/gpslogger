@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GPX लॉग्स को OpenStreetMap और QGIS के साथ उपयोग करें</title>
+  <meta name="description" content="Android से GPX ट्रैक एक्सपोर्ट करें और उन्हें OpenStreetMap जाँच, QGIS मैपिंग, यात्रा आर्काइव, रूट विश्लेषण और व्यक्तिगत एटलस वर्कफ़्लो के लिए उपयोग करें।">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#287743">
+  <link rel="canonical" href="https://northforceapps.github.io/gpslogger/hi/gpx-openstreetmap-qgis.html">
+  <link rel="alternate" hreflang="en" href="https://northforceapps.github.io/gpslogger/gpx-openstreetmap-qgis.html">
+  <link rel="alternate" hreflang="de" href="https://northforceapps.github.io/gpslogger/de/gpx-openstreetmap-qgis.html">
+  <link rel="alternate" hreflang="es" href="https://northforceapps.github.io/gpslogger/es/gpx-openstreetmap-qgis.html">
+  <link rel="alternate" hreflang="fr" href="https://northforceapps.github.io/gpslogger/fr/gpx-openstreetmap-qgis.html">
+  <link rel="alternate" hreflang="pt" href="https://northforceapps.github.io/gpslogger/pt/gpx-openstreetmap-qgis.html">
+  <link rel="alternate" hreflang="ja" href="https://northforceapps.github.io/gpslogger/ja/gpx-openstreetmap-qgis.html">
+  <link rel="alternate" hreflang="hi" href="https://northforceapps.github.io/gpslogger/hi/gpx-openstreetmap-qgis.html">
+  <link rel="alternate" hreflang="x-default" href="https://northforceapps.github.io/gpslogger/gpx-openstreetmap-qgis.html">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" type="image/png" href="../assets/icon.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"OpenStreetMap और QGIS के साथ GPX लॉग्स का उपयोग","description":"GPX ट्रैक एक्सपोर्ट, मैपिंग, OSM जाँच और GIS विश्लेषण के व्यावहारिक वर्कफ़्लो।","author":{"@type":"Organization","name":"NorthforceApps"},"publisher":{"@type":"Organization","name":"NorthforceApps"},"mainEntityOfPage":"https://northforceapps.github.io/gpslogger/hi/gpx-openstreetmap-qgis.html"}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">सामग्री पर जाएँ</a>
+  <header class="header" id="top">
+    <div class="shell nav">
+      <a class="brand" href="index.html"><img src="../assets/icon.png" alt="" width="46" height="46"><span><b>GPS Logger</b><small>निजी रूट रिकॉर्डर और एटलस</small></span></a>
+      <nav class="nav-links" id="navlinks" aria-label="मुख्य">
+        <a class="navlink" href="index.html#features">फ़ीचर्स</a>
+        <a class="navlink" href="guides.html">गाइड</a>
+        <a class="navlink" href="index.html#pricing">कीमत</a>
+        <a class="navlink" href="privacy.html">प्राइवेसी</a>
+        <details class="lang-menu">
+          <summary aria-label="भाषा"><span class="lang-current"><span class="flag" aria-hidden="true">🇮🇳</span><span>हिन्दी</span></span><span class="lang-caret" aria-hidden="true">▾</span></summary>
+          <div class="lang-menu-list">
+          <a class="lang-option" href="../gpx-openstreetmap-qgis.html" hreflang="en" lang="en"><span class="flag" aria-hidden="true">🇺🇸</span><span>English</span></a>
+          <a class="lang-option" href="../de/gpx-openstreetmap-qgis.html" hreflang="de" lang="de"><span class="flag" aria-hidden="true">🇩🇪</span><span>Deutsch</span></a>
+          <a class="lang-option" href="../es/gpx-openstreetmap-qgis.html" hreflang="es" lang="es"><span class="flag" aria-hidden="true">🇪🇸</span><span>Español</span></a>
+          <a class="lang-option" href="../fr/gpx-openstreetmap-qgis.html" hreflang="fr" lang="fr"><span class="flag" aria-hidden="true">🇫🇷</span><span>Français</span></a>
+          <a class="lang-option" href="../pt/gpx-openstreetmap-qgis.html" hreflang="pt" lang="pt"><span class="flag" aria-hidden="true">🇧🇷</span><span>Português</span></a>
+          <a class="lang-option" href="../ja/gpx-openstreetmap-qgis.html" hreflang="ja" lang="ja"><span class="flag" aria-hidden="true">🇯🇵</span><span>日本語</span></a>
+          <a class="lang-option" href="../hi/gpx-openstreetmap-qgis.html" hreflang="hi" lang="hi" aria-current="true"><span class="flag" aria-hidden="true">🇮🇳</span><span>हिन्दी</span></a>
+          </div>
+        </details>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="मेन्यू" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </header>
+  <main id="main" class="article-main">
+    <article class="shell prose article">
+      <p class="eyebrow">मैपिंग वर्कफ़्लो</p>
+      <h1>OpenStreetMap और QGIS के साथ GPX लॉग्स का उपयोग</h1>
+      <p class="lead">GPX ट्रैक फ़िटनेस से कहीं आगे काम आते हैं। ये OpenStreetMap जाँच, QGIS विश्लेषण, यात्रा रिकॉर्ड, फ़ील्ड वर्क, रूट तुलना और लंबे समय के व्यक्तिगत आर्काइव में मदद कर सकते हैं।</p>
+      <h2>साफ़ ट्रैक रिकॉर्ड करें</h2>
+      <p>चलने से पहले GPS Logger शुरू करें, हो सके तो फ़ोन को खुले आसमान के नीचे रखें, और रूट खत्म होने पर रोक दें। बार-बार के रास्तों के लिए, कई GPX ट्रैक किसी पगडंडी के आकार या सड़क तक पहुँच की पुष्टि में मदद कर सकते हैं।</p>
+      <h2>पोर्टेबल फ़ाइलें एक्सपोर्ट करें</h2>
+      <p>किसी सेव किए गए ट्रैक को मैपिंग टूल्स के लिए GPX या मैप व्यूअर के लिए KML के रूप में एक्सपोर्ट करें। लंबे समय के बैकअप के लिए, ऐप से पूरे इतिहास का GPX ZIP बनाएँ। इम्पोर्ट के चरण आज़माने के लिए आप एक छोटी <a href="../downloads/sample-gpslogger-city-walk.gpx">सैंपल GPX फ़ाइल</a> भी डाउनलोड कर सकते हैं।</p>
+      <h2>OpenStreetMap के उपयोग</h2>
+      <ul>
+        <li>जाँचें कि पगडंडियाँ, ट्रैक या सड़कें वहाँ मौजूद हैं या नहीं जहाँ अपेक्षित हैं।</li>
+        <li>मैप ज्यामिति संपादित करने से पहले बार-बार के ट्रेस की तुलना करें।</li>
+        <li>बाद के मैपिंग सेशन के लिए निजी प्रमाण रखें।</li>
+      </ul>
+      <h2>QGIS के उपयोग</h2>
+      <ul>
+        <li>रूट विश्लेषण के लिए GPX को वेक्टर लेयर के रूप में लोड करें।</li>
+        <li>इम्पोर्ट के बाद ट्रैक को यात्रा, तारीख़ या उद्देश्य के अनुसार स्टाइल करें।</li>
+        <li>कम्यूट, हाइक, सर्वे वॉक या यात्रा के दिनों की तुलना करें।</li>
+      </ul>
+      <h2>प्राइवेसी का ध्यान रखें</h2>
+      <p>GPX फ़ाइलें घर, काम और रोज़मर्रा की जगहों को उजागर कर सकती हैं। संवेदनशील हिस्सों को काट दें या साझा करने से बचें। निजी लॉगिंग के सिद्धांतों के लिए पढ़ें <a href="offline-gps-logging-privacy.html">ऑफ़लाइन GPS लॉगिंग क्यों ज़रूरी है</a>।</p>
+      <p><a class="btn btn-primary" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger">Android पर GPX रिकॉर्ड करें</a></p>
+    </article>
+  </main>
+  <footer class="footer"><div class="shell footer-grid"><p>GPS Logger: निजी ट्रैकर</p><nav class="footer-links"><a href="guides.html">गाइड</a><a href="index.html">होम</a><a href="privacy.html">प्राइवेसी</a></nav></div></footer>
+  <script src="../app.js"></script>
+</body>
+</html>

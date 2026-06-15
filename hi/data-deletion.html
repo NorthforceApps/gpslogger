@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>डेटा हटाना | GPS Logger</title>
+  <meta name="description" content="GPS Logger का डेटा कैसे हटाएँ — लोकल ट्रैक्स, App Cloud लाइव शेयर, अपने सर्वर पर अपलोड और एनालिटिक्स।">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#287743">
+  <link rel="canonical" href="https://northforceapps.github.io/gpslogger/hi/data-deletion.html">
+  <link rel="alternate" hreflang="en" href="https://northforceapps.github.io/gpslogger/data-deletion.html">
+  <link rel="alternate" hreflang="de" href="https://northforceapps.github.io/gpslogger/de/data-deletion.html">
+  <link rel="alternate" hreflang="es" href="https://northforceapps.github.io/gpslogger/es/data-deletion.html">
+  <link rel="alternate" hreflang="fr" href="https://northforceapps.github.io/gpslogger/fr/data-deletion.html">
+  <link rel="alternate" hreflang="pt" href="https://northforceapps.github.io/gpslogger/pt/data-deletion.html">
+  <link rel="alternate" hreflang="ja" href="https://northforceapps.github.io/gpslogger/ja/data-deletion.html">
+  <link rel="alternate" hreflang="hi" href="https://northforceapps.github.io/gpslogger/hi/data-deletion.html">
+  <link rel="alternate" hreflang="x-default" href="https://northforceapps.github.io/gpslogger/data-deletion.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../assets/icon.png">
+  <link rel="apple-touch-icon" href="../assets/icon.png">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header class="header" id="top">
+    <div class="shell nav">
+      <a class="brand" href="index.html" aria-label="GPS Logger होम">
+        <img src="../assets/icon.png" alt="" width="46" height="46">
+        <span><b>GPS Logger</b><small>प्राइवेट रूट ट्रैकर और एटलस</small></span>
+      </a>
+      <nav class="nav-links" id="navlinks" aria-label="मुख्य">
+        <a class="navlink" href="index.html#features">फ़ीचर्स</a>
+        <a class="navlink" href="guides.html">गाइड</a>
+        <a class="navlink" href="index.html#pricing">कीमत</a>
+        <a class="navlink" href="privacy.html">प्राइवेसी</a>
+        <details class="lang-menu">
+          <summary aria-label="भाषा"><span class="lang-current"><span class="flag" aria-hidden="true">🇮🇳</span><span>हिन्दी</span></span><span class="lang-caret" aria-hidden="true">▾</span></summary>
+          <div class="lang-menu-list">
+          <a class="lang-option" href="../data-deletion.html" hreflang="en" lang="en"><span class="flag" aria-hidden="true">🇺🇸</span><span>English</span></a>
+          <a class="lang-option" href="../de/data-deletion.html" hreflang="de" lang="de"><span class="flag" aria-hidden="true">🇩🇪</span><span>Deutsch</span></a>
+          <a class="lang-option" href="../es/data-deletion.html" hreflang="es" lang="es"><span class="flag" aria-hidden="true">🇪🇸</span><span>Español</span></a>
+          <a class="lang-option" href="../fr/data-deletion.html" hreflang="fr" lang="fr"><span class="flag" aria-hidden="true">🇫🇷</span><span>Français</span></a>
+          <a class="lang-option" href="../pt/data-deletion.html" hreflang="pt" lang="pt"><span class="flag" aria-hidden="true">🇧🇷</span><span>Português</span></a>
+          <a class="lang-option" href="../ja/data-deletion.html" hreflang="ja" lang="ja"><span class="flag" aria-hidden="true">🇯🇵</span><span>日本語</span></a>
+          <a class="lang-option" href="../hi/data-deletion.html" hreflang="hi" lang="hi" aria-current="true"><span class="flag" aria-hidden="true">🇮🇳</span><span>हिन्दी</span></a>
+          </div>
+        </details>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="मेन्यू" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" class="section">
+    <div class="shell">
+      <article class="prose">
+        <h1>GPS Logger के लिए डेटा हटाना</h1>
+        <p><em>अंतिम अपडेट: 12 जून 2026</em></p>
+        <p>डिफ़ॉल्ट रूप से GPS Logger आपके रिकॉर्ड किए गए ट्रैक्स को आपके डिवाइस पर सेव करता है। NorthforceApps आपकी निजी ट्रैक हिस्ट्री को न प्राप्त करता है और न स्टोर करता है। यह पेज बताता है कि ऐप द्वारा संभाले जाने वाले हर तरह के डेटा को कैसे हटाया जाए।</p>
+        <p>संपर्क: <span id="support-email-deletion">northforceapps [at] protonmail [dot] com</span></p>
+
+        <h2>लोकल डेटा (आपका डिवाइस)</h2>
+        <p>आपकी ट्रैक हिस्ट्री, ट्रैक पॉइंट्स और ऐप सेटिंग्स आपके डिवाइस के ऐप डेटाबेस में रहती हैं। उन्हें हटाने के लिए:</p>
+        <ul>
+          <li>ऐप में अलग-अलग ट्रैक्स हटाएँ।</li>
+          <li>Android Settings &rarr; Apps &rarr; GPS Logger &rarr; Storage में जाकर ऐप स्टोरेज साफ़ करें।</li>
+          <li>लोकल सेव किए गए सभी डेटा को हटाने के लिए ऐप अनइंस्टॉल करें।</li>
+        </ul>
+
+        <h2>लाइव शेयरिंग (App Cloud)</h2>
+        <p>जब लाइव शेयरिंग चालू होती है, तो App Cloud में केवल आपकी <strong>मौजूदा लोकेशन</strong> स्टोर होती है और उसी जगह रिप्लेस होती रहती है। सर्वर-साइड लोकेशन हिस्ट्री नहीं रखी जाती।</p>
+        <ul>
+          <li>App Cloud की मौजूदा लाइव लोकेशन हटाने के लिए GPS Logger खोलें और लाइव शेयरिंग बंद करें।</li>
+          <li>शेयर कोड रद्द करने और क्लाउड शेयर रिकॉर्ड हटाने के लिए Settings खोलें और शेयर कोड को रीसेट/बदलें। इससे पुराना ट्रैकर नोड हट जाता है और मौजूदा दर्शकों का एक्सेस समाप्त हो जाता है।</li>
+          <li>पुरानी लाइव लोकेशन अपने आप <strong>7 दिनों</strong> में हट जाती है, और पुराने viewer slots <strong>10 मिनट</strong> में क्लीनअप टास्क द्वारा हट जाते हैं।</li>
+        </ul>
+
+        <h2>सेल्फ-होस्टेड शेयरिंग (आपका अपना सर्वर)</h2>
+        <p>यदि आप अपना HTTPS सर्वर URL कॉन्फ़िगर करते हैं, तो आपकी मौजूदा लोकेशन केवल उसी सर्वर पर भेजी जाती है। NorthforceApps इसे कभी प्राप्त नहीं करता। इस डेटा को अपने सर्वर से हटाएँ, और आगे भेजना रोकने के लिए Settings में अपलोड URL को डिसेबल करें या खाली छोड़ दें।</p>
+
+        <h2>एनालिटिक्स और क्रैश डायग्नोस्टिक्स</h2>
+        <ul>
+          <li>आप Settings &rarr; About में जाकर बेनामी एनालिटिक्स और क्रैश रिपोर्टिंग बंद कर सकते हैं।</li>
+          <li>ऑप्ट-आउट करने पर भविष्य का डेटा संग्रह बंद हो जाता है। जो डायग्नोस्टिक डेटा पहले से समेकित रूप में प्रोसेस हो चुका है, वह व्यक्तिगत पहचान नहीं कर सकता।</li>
+          <li>डायग्नोस्टिक्स से जुड़े डेटा हटाने के सवालों के लिए ऊपर दिए गए सपोर्ट एड्रेस पर संपर्क करें।</li>
+        </ul>
+
+        <h2>डेटा हटाने का अनुरोध</h2>
+        <p>अधिकांश डेटा या तो लोकल-ओनली है या शेयर बंद करने, शेयर कोड रीसेट करने या stale purge के ज़रिए अपने आप हट जाता है। यदि कोई ऐसा हटाने का अनुरोध बचता है जिसे ऐप के कंट्रोल्स से पूरा नहीं किया जा सकता, तो ऊपर दिए गए सपोर्ट एड्रेस पर NorthforceApps को ईमेल करें और जहाँ तकनीकी रूप से संभव होगा वहाँ हम कार्रवाई करेंगे।</p>
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="shell footer-grid">
+      <div>
+        <div class="brand"><img src="../assets/icon.png" alt="" width="40" height="40"><span><b>GPS Logger</b></span></div>
+        <p>Android के लिए प्राइवेट रूट ट्रैकर और पर्सनल जर्नी मैप।</p>
+      </div>
+      <nav class="footer-links" aria-label="फ़ुटर">
+        <a href="index.html">होम</a>
+        <a href="privacy.html">प्राइवेसी</a>
+        <a href="data-deletion.html">डेटा हटाएँ</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../app.js"></script>
+</body>
+</html>

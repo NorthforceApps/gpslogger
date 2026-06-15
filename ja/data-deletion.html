@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>データの削除 | GPS Logger</title>
+  <meta name="description" content="GPS Loggerのデータを削除する方法 — ローカルの移動記録、App Cloudでのライブ共有、自分のサーバーへのアップロード、およびアナリティクス。">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#287743">
+  <link rel="canonical" href="https://northforceapps.github.io/gpslogger/ja/data-deletion.html">
+  <link rel="alternate" hreflang="en" href="https://northforceapps.github.io/gpslogger/data-deletion.html">
+  <link rel="alternate" hreflang="de" href="https://northforceapps.github.io/gpslogger/de/data-deletion.html">
+  <link rel="alternate" hreflang="es" href="https://northforceapps.github.io/gpslogger/es/data-deletion.html">
+  <link rel="alternate" hreflang="fr" href="https://northforceapps.github.io/gpslogger/fr/data-deletion.html">
+  <link rel="alternate" hreflang="pt" href="https://northforceapps.github.io/gpslogger/pt/data-deletion.html">
+  <link rel="alternate" hreflang="ja" href="https://northforceapps.github.io/gpslogger/ja/data-deletion.html">
+  <link rel="alternate" hreflang="hi" href="https://northforceapps.github.io/gpslogger/hi/data-deletion.html">
+  <link rel="alternate" hreflang="x-default" href="https://northforceapps.github.io/gpslogger/data-deletion.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../assets/icon.png">
+  <link rel="apple-touch-icon" href="../assets/icon.png">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header class="header" id="top">
+    <div class="shell nav">
+      <a class="brand" href="index.html" aria-label="GPS Logger ホーム">
+        <img src="../assets/icon.png" alt="" width="46" height="46">
+        <span><b>GPS Logger</b><small>プライベートな移動記録とアトラス</small></span>
+      </a>
+      <nav class="nav-links" id="navlinks" aria-label="メイン">
+        <a class="navlink" href="index.html#features">機能</a>
+        <a class="navlink" href="guides.html">ガイド</a>
+        <a class="navlink" href="index.html#pricing">料金</a>
+        <a class="navlink" href="privacy.html">プライバシー</a>
+        <details class="lang-menu">
+          <summary aria-label="言語"><span class="lang-current"><span class="flag" aria-hidden="true">🇯🇵</span><span>日本語</span></span><span class="lang-caret" aria-hidden="true">▾</span></summary>
+          <div class="lang-menu-list">
+          <a class="lang-option" href="../data-deletion.html" hreflang="en" lang="en"><span class="flag" aria-hidden="true">🇺🇸</span><span>English</span></a>
+          <a class="lang-option" href="../de/data-deletion.html" hreflang="de" lang="de"><span class="flag" aria-hidden="true">🇩🇪</span><span>Deutsch</span></a>
+          <a class="lang-option" href="../es/data-deletion.html" hreflang="es" lang="es"><span class="flag" aria-hidden="true">🇪🇸</span><span>Español</span></a>
+          <a class="lang-option" href="../fr/data-deletion.html" hreflang="fr" lang="fr"><span class="flag" aria-hidden="true">🇫🇷</span><span>Français</span></a>
+          <a class="lang-option" href="../pt/data-deletion.html" hreflang="pt" lang="pt"><span class="flag" aria-hidden="true">🇧🇷</span><span>Português</span></a>
+          <a class="lang-option" href="../ja/data-deletion.html" hreflang="ja" lang="ja" aria-current="true"><span class="flag" aria-hidden="true">🇯🇵</span><span>日本語</span></a>
+          <a class="lang-option" href="../hi/data-deletion.html" hreflang="hi" lang="hi"><span class="flag" aria-hidden="true">🇮🇳</span><span>हिन्दी</span></a>
+          </div>
+        </details>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="メニュー" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" class="section">
+    <div class="shell">
+      <article class="prose">
+        <h1>GPS Loggerのデータ削除</h1>
+        <p><em>最終更新日: 2026年6月12日</em></p>
+        <p>GPS Loggerは、記録した軌跡を標準でお使いの端末に保存します。NorthforceAppsがお客様のプライベートな軌跡履歴を受け取ったり保存したりすることはありません。本ページでは、アプリが扱う各種データの削除方法を説明します。</p>
+        <p>お問い合わせ先: <span id="support-email-deletion">northforceapps [at] protonmail [dot] com</span></p>
+
+        <h2>ローカルデータ（お使いの端末）</h2>
+        <p>軌跡履歴、トラックポイント、アプリの設定は、お使いの端末内のアプリ用データベースに保存されます。これらを削除するには、次の方法があります。</p>
+        <ul>
+          <li>アプリ内で個別の軌跡を削除します。</li>
+          <li>Androidの設定 &rarr; アプリ &rarr; GPS Logger &rarr; ストレージ から、アプリのストレージを消去します。</li>
+          <li>アプリをアンインストールして、ローカルに保存されたすべてのデータを削除します。</li>
+        </ul>
+
+        <h2>ライブ共有（App Cloud）</h2>
+        <p>ライブ共有が有効な間は、お客様の<strong>現在地</strong>のみがApp Cloudに保存され、その場で上書きされます。サーバー側に位置情報の履歴は残りません。</p>
+        <ul>
+          <li>App Cloud上の現在のライブ位置を削除するには、GPS Loggerを開いてライブ共有を停止します。</li>
+          <li>共有コードを無効化し、そのクラウド共有記録を削除するには、設定を開いて共有コードをリセット（再生成）します。これにより古いトラッカーのノードが削除され、既存のフォロワーのアクセスが取り消されます。</li>
+          <li>残存したライブ位置は<strong>7日以内</strong>に、残存した閲覧者スロットは<strong>10分以内</strong>に、スケジュールされたクリーンアップ処理によって自動的に削除されます。</li>
+        </ul>
+
+        <h2>自分のサーバーへの共有（自分のサーバー）</h2>
+        <p>自分でホストするHTTPSサーバーのURLを設定した場合、お客様の現在地はそのサーバーにのみ送信されます。NorthforceAppsがそれを受け取ることはありません。これらのデータはご自身のサーバーから削除し、それ以上の送信を止めるには、設定でアップロードURLを無効にするか空欄にしてください。</p>
+
+        <h2>分析とクラッシュ診断</h2>
+        <ul>
+          <li>設定 &rarr; アプリについて から、匿名の分析とクラッシュレポートをオフにできます。</li>
+          <li>オフにすると、以降の収集は停止します。すでに集計された形で処理された診断データは、お客様個人を特定できない場合があります。</li>
+          <li>診断に関する削除のご質問は、上記のサポートアドレスまでお問い合わせください。</li>
+        </ul>
+
+        <h2>削除のリクエスト</h2>
+        <p>ほとんどのデータはローカルのみに保存されるか、共有の停止、共有コードのリセット、または残存データの自動消去によって自動的に削除されます。アプリ内の操作では対応できない残りの削除リクエストについては、上記のサポートアドレス宛にNorthforceAppsまでメールでご連絡ください。技術的に可能な範囲で対応いたします。</p>
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="shell footer-grid">
+      <div>
+        <div class="brand"><img src="../assets/icon.png" alt="" width="40" height="40"><span><b>GPS Logger</b></span></div>
+        <p>Android向けのプライベートなルート記録＆移動マップアプリ。</p>
+      </div>
+      <nav class="footer-links" aria-label="フッターナビゲーション">
+        <a href="index.html">ホーム</a>
+        <a href="privacy.html">プライバシーポリシー</a>
+        <a href="data-deletion.html">データの削除</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../app.js"></script>
+</body>
+</html>

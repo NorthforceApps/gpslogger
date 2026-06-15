@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GPS記録ガイド — AndroidでのGPX書き出し、プライバシー、ルート追跡</title>
+  <meta name="description" content="Android向けGPSログ記録の実践ガイド：GPX軌跡の記録、ルートのエクスポート、プライベートなGPS LoggerとStravaの比較、オフライン位置情報のプライバシー保護、OpenStreetMapやQGISでのGPX活用方法。">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#287743">
+  <link rel="canonical" href="https://northforceapps.github.io/gpslogger/ja/guides.html">
+  <link rel="alternate" hreflang="en" href="https://northforceapps.github.io/gpslogger/guides.html">
+  <link rel="alternate" hreflang="de" href="https://northforceapps.github.io/gpslogger/de/guides.html">
+  <link rel="alternate" hreflang="es" href="https://northforceapps.github.io/gpslogger/es/guides.html">
+  <link rel="alternate" hreflang="fr" href="https://northforceapps.github.io/gpslogger/fr/guides.html">
+  <link rel="alternate" hreflang="pt" href="https://northforceapps.github.io/gpslogger/pt/guides.html">
+  <link rel="alternate" hreflang="ja" href="https://northforceapps.github.io/gpslogger/ja/guides.html">
+  <link rel="alternate" hreflang="hi" href="https://northforceapps.github.io/gpslogger/hi/guides.html">
+  <link rel="alternate" hreflang="x-default" href="https://northforceapps.github.io/gpslogger/guides.html">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" type="image/png" href="../assets/icon.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "GPS記録ガイド",
+    "description": "AndroidでのGPS記録、GPXエクスポート、プライベートなルート追跡、OpenStreetMapやQGISとの連携に関する各種ガイド。",
+    "url": "https://northforceapps.github.io/gpslogger/ja/guides.html",
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {"@type":"ListItem","position":1,"url":"https://northforceapps.github.io/gpslogger/ja/how-to-record-export-gpx-android.html","name":"AndroidでGPS軌跡を記録してGPXを書き出す方法"},
+        {"@type":"ListItem","position":2,"url":"https://northforceapps.github.io/gpslogger/ja/gps-logger-vs-strava.html","name":"GPS Logger vs Strava とフィットネスSNSアプリ"},
+        {"@type":"ListItem","position":3,"url":"https://northforceapps.github.io/gpslogger/ja/offline-gps-logging-privacy.html","name":"なぜオフラインでのGPSログ記録がプライバシーにおいて重要なのか"},
+        {"@type":"ListItem","position":4,"url":"https://northforceapps.github.io/gpslogger/ja/gpx-openstreetmap-qgis.html","name":"GPXログをOpenStreetMapやQGISで活用する"}
+      ]
+    }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">メインコンテンツへスキップ</a>
+  <header class="header" id="top">
+    <div class="shell nav">
+      <a class="brand" href="index.html">
+        <img src="../assets/icon.png" alt="" width="46" height="46">
+        <span><b>GPS Logger</b><small>プライベートなルート記録とアトラス</small></span>
+      </a>
+      <nav class="nav-links" id="navlinks" aria-label="メイン">
+        <a class="navlink" href="index.html#features">機能</a>
+        <a class="navlink" href="guides.html">ガイド</a>
+        <a class="navlink" href="index.html#pricing">料金</a>
+        <a class="navlink" href="privacy.html">プライバシー</a>
+        <details class="lang-menu">
+          <summary aria-label="言語"><span class="lang-current"><span class="flag" aria-hidden="true">🇯🇵</span><span>日本語</span></span><span class="lang-caret" aria-hidden="true">▾</span></summary>
+          <div class="lang-menu-list">
+          <a class="lang-option" href="../guides.html" hreflang="en" lang="en"><span class="flag" aria-hidden="true">🇺🇸</span><span>English</span></a>
+          <a class="lang-option" href="../de/guides.html" hreflang="de" lang="de"><span class="flag" aria-hidden="true">🇩🇪</span><span>Deutsch</span></a>
+          <a class="lang-option" href="../es/guides.html" hreflang="es" lang="es"><span class="flag" aria-hidden="true">🇪🇸</span><span>Español</span></a>
+          <a class="lang-option" href="../fr/guides.html" hreflang="fr" lang="fr"><span class="flag" aria-hidden="true">🇫🇷</span><span>Français</span></a>
+          <a class="lang-option" href="../pt/guides.html" hreflang="pt" lang="pt"><span class="flag" aria-hidden="true">🇧🇷</span><span>Português</span></a>
+          <a class="lang-option" href="../ja/guides.html" hreflang="ja" lang="ja" aria-current="true"><span class="flag" aria-hidden="true">🇯🇵</span><span>日本語</span></a>
+          <a class="lang-option" href="../hi/guides.html" hreflang="hi" lang="hi"><span class="flag" aria-hidden="true">🇮🇳</span><span>हिन्दी</span></a>
+          </div>
+        </details>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="メニュー" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" class="article-main">
+    <section class="section-tight">
+      <div class="shell article-hero">
+        <p class="eyebrow">GPS記録ガイド</p>
+        <h1>Androidでのルート追跡、GPX書き出し、プライベートな位置履歴。</h1>
+        <p class="lead">このガイドでは、GPSロガーの選び方、ルート記録、GPXやKMLの書き出し、位置情報のプライバシー保護、そしてマッピングツールでの活用方法を解説します。</p>
+      </div>
+    </section>
+    <section class="section-tight">
+      <div class="shell guide-grid">
+        <article class="guide-card">
+          <p class="guide-kicker">チュートリアル</p>
+          <h2><a href="how-to-record-export-gpx-android.html">AndroidでGPS軌跡を記録してGPXを書き出す方法</a></h2>
+          <p>位置情報の権限設定、バックグラウンドでの安定したルート追跡、そして数タップでGPX/KMLをエクスポートする全手順。</p>
+        </article>
+        <article class="guide-card">
+          <p class="guide-kicker">比較</p>
+          <h2><a href="gps-logger-vs-strava.html">GPS Logger vs Strava とフィットネスSNSアプリ</a></h2>
+          <p>ソーシャル共有中心のワークアウト管理と、スタンドアロン型で完全ローカル運用のプライベートな移動記録の違いを紐解きます。</p>
+        </article>
+        <article class="guide-card">
+          <p class="guide-kicker">プライバシー</p>
+          <h2><a href="offline-gps-logging-privacy.html">なぜオフラインでのGPSログ記録がプライバシーにおいて重要なのか</a></h2>
+          <p>ローカルストレージ、バックグラウンドでの位置情報制御、オプションのライブ共有、そして安全なデータ書き出しの仕組みについて。</p>
+        </article>
+        <article class="guide-card">
+          <p class="guide-kicker">マッピング</p>
+          <h2><a href="gpx-openstreetmap-qgis.html">GPXログをOpenStreetMapやQGISで活用する</a></h2>
+          <p>記録したルート履歴を価値ある地理データへと変換し、地図の改善や高度なGIS分析レイヤーとして活用するワークフロー。</p>
+        </article>
+      </div>
+    </section>
+    <section class="section-tight">
+      <div class="shell cta-band">
+        <h2>今すぐプライベートなGPSトラッキングを始めましょう</h2>
+        <p>AndroidにGPS Loggerをインストールして次のルートを記録すれば、必要なときにいつでもGPXやKMLとして書き出すことができます。</p>
+        <a class="play-badge" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger" aria-label="Get it on Google Play"><img src="../assets/badge-ja.svg" alt="Get it on Google Play" style="height:60px;width:auto;display:block"></a>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><div class="shell footer-grid"><p>GPS Logger: プライベートトラッカー</p><nav class="footer-links" aria-label="フッター"><a href="index.html">ホーム</a><a href="privacy.html">プライバシー</a></nav></div></footer>
+</body>
+</html>

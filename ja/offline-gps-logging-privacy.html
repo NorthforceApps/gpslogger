@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>なぜオフラインでのGPSログ記録がプライバシーにおいて重要なのか</title>
+  <meta name="description" content="GPS軌跡のローカル保存、オプションのリアルタイムなライブ共有、GPX書き出し、そしてバックグラウンド位置情報の明快な制御が、Androidでのプライベートなルート追跡に不可欠である理由を解説。">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#287743">
+  <link rel="canonical" href="https://northforceapps.github.io/gpslogger/ja/offline-gps-logging-privacy.html">
+  <link rel="alternate" hreflang="en" href="https://northforceapps.github.io/gpslogger/offline-gps-logging-privacy.html">
+  <link rel="alternate" hreflang="de" href="https://northforceapps.github.io/gpslogger/de/offline-gps-logging-privacy.html">
+  <link rel="alternate" hreflang="es" href="https://northforceapps.github.io/gpslogger/es/offline-gps-logging-privacy.html">
+  <link rel="alternate" hreflang="fr" href="https://northforceapps.github.io/gpslogger/fr/offline-gps-logging-privacy.html">
+  <link rel="alternate" hreflang="pt" href="https://northforceapps.github.io/gpslogger/pt/offline-gps-logging-privacy.html">
+  <link rel="alternate" hreflang="ja" href="https://northforceapps.github.io/gpslogger/ja/offline-gps-logging-privacy.html">
+  <link rel="alternate" hreflang="hi" href="https://northforceapps.github.io/gpslogger/hi/offline-gps-logging-privacy.html">
+  <link rel="alternate" hreflang="x-default" href="https://northforceapps.github.io/gpslogger/offline-gps-logging-privacy.html">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" type="image/png" href="../assets/icon.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"なぜオフラインでのGPSログ記録がプライバシーにおいて重要なのか","description":"GPSのルートをローカルに保存し、共有をオプション化することで位置情報の露出を最小限に抑える方法。","author":{"@type":"Organization","name":"NorthforceApps"},"publisher":{"@type":"Organization","name":"NorthforceApps"},"mainEntityOfPage":"https://northforceapps.github.io/gpslogger/ja/offline-gps-logging-privacy.html"}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">メインコンテンツへスキップ</a>
+  <header class="header" id="top">
+    <div class="shell nav">
+      <a class="brand" href="index.html"><img src="../assets/icon.png" alt="" width="46" height="46"><span><b>GPS Logger</b><small>プライベートなルート記録とアトラス</small></span></a>
+      <nav class="nav-links" id="navlinks" aria-label="メイン">
+        <a class="navlink" href="index.html#features">機能</a>
+        <a class="navlink" href="guides.html">ガイド</a>
+        <a class="navlink" href="index.html#pricing">料金</a>
+        <a class="navlink" href="privacy.html">プライバシー</a>
+        <details class="lang-menu">
+          <summary aria-label="言語"><span class="lang-current"><span class="flag" aria-hidden="true">🇯🇵</span><span>日本語</span></span><span class="lang-caret" aria-hidden="true">▾</span></summary>
+          <div class="lang-menu-list">
+          <a class="lang-option" href="../offline-gps-logging-privacy.html" hreflang="en" lang="en"><span class="flag" aria-hidden="true">🇺🇸</span><span>English</span></a>
+          <a class="lang-option" href="../de/offline-gps-logging-privacy.html" hreflang="de" lang="de"><span class="flag" aria-hidden="true">🇩🇪</span><span>Deutsch</span></a>
+          <a class="lang-option" href="../es/offline-gps-logging-privacy.html" hreflang="es" lang="es"><span class="flag" aria-hidden="true">🇪🇸</span><span>Español</span></a>
+          <a class="lang-option" href="../fr/offline-gps-logging-privacy.html" hreflang="fr" lang="fr"><span class="flag" aria-hidden="true">🇫🇷</span><span>Français</span></a>
+          <a class="lang-option" href="../pt/offline-gps-logging-privacy.html" hreflang="pt" lang="pt"><span class="flag" aria-hidden="true">🇧🇷</span><span>Português</span></a>
+          <a class="lang-option" href="../ja/offline-gps-logging-privacy.html" hreflang="ja" lang="ja" aria-current="true"><span class="flag" aria-hidden="true">🇯🇵</span><span>日本語</span></a>
+          <a class="lang-option" href="../hi/offline-gps-logging-privacy.html" hreflang="hi" lang="hi"><span class="flag" aria-hidden="true">🇮🇳</span><span>हिन्दी</span></a>
+          </div>
+        </details>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="メニュー" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </header>
+  <main id="main" class="section">
+    <article class="shell prose">
+      <h1>なぜオフラインでのGPSログ記録がプライバシーにおいて重要なのか</h1>
+      <p class="lead">位置情報は、人が持つデータの中で最もデリケートな情報の一つです。どこへ行き、どこに滞在し、どのようなルートを通ったかという記録は、個人の日常を完全に映し出します。本ガイドでは、オフラインファーストによるGPSトラッキングがどのように個人のプライバシーを守るかについて解説します。</p>
+
+      <h2>ローカル保存：データはあなたのデバイスの中に</h2>
+      <p>一般的なフィットネスアプリや地図アプリの多くは、記録したルート情報を即座に企業のリモートサーバーへとアップロードします。これに対し、GPS Loggerはデータを完全にローカルのデバイス内（Androidの安全なアプリストレージ）にのみ保持します。アカウントの作成も、外部サーバーとの強制的な通信もありません。あなたのルートは、あなたの管理下にあるあなただけのデータです。</p>
+
+      <h2>バックグラウンド位置情報の明快な制御</h2>
+      <p>Androidで正確なルート追跡を維持するには、画面をオフにしている間もアプリが位置情報を取得できるように「バックグラウンド位置情報」の権限が必要です。GPS Loggerはこの権限を非常に厳格に扱い、あなたが明示的に記録を開始した瞬間から、停止ボタンを押すまでの間のみ機能します。隠れたバックグラウンドでの追跡や、意図しないデータ収集は一切行われません。</p>
+
+      <h2>必要なときだけ、選べる共有手段</h2>
+      <p>プライベートであることは、隔離されていることと同義ではありません。GPS Loggerでは、データを共有する方法を完全にコントロールできます：</p>
+      <ul>
+        <li><strong>App Cloud（リアルタイム共有）：</strong> 家族や友人に現在地だけをリアルタイムで知らせたい場合に、一時的な共有コードを発行して共有できます。共有を停止すると、直近の位置情報はサーバー上から即座に上書き・消去されます。</li>
+        <li><strong>自分のサーバーへの自動アップロード（Lifetime限定）：</strong> クラウド企業を介さず、完全に自分が所有・管理するプライベートサーバーのURL（WebHookなど）にデータを直接送信することができます。</li>
+      </ul>
+
+      <h2>自由でオープンなエクスポート機能</h2>
+      <p>プライベートだからといって、データをアプリ内に閉じ込める必要はありません。GPX や KML 形式での書き出しに対応しているため、蓄積したルートデータをいつでも別の地図ツールへ移動したり、独自のバックアップを作成したりできます。詳しいエクスポート手順は、<a href="how-to-record-export-gpx-android.html">AndroidでGPS軌跡を記録してGPXを書き出す方法</a>をご覧ください。</p>
+
+      <h2>ルート追跡におけるプライバシーチェックリスト</h2>
+      <ul>
+        <li>ルート記録は、必要なときだけ有効にする。</li>
+        <li>共有やエクスポートの具体的な目的がない限り、データはローカルに留めておく。</li>
+        <li>リアルタイムのライブ共有を終えたら、共有コードを即座にリセットする。</li>
+        <li>エクスポートしたバックアップファイルは、自分が信頼できるストレージに保管する。</li>
+        <li>アプリを長期利用する前に、必ずそのアプリのプライバシーポリシーを一読する。</li>
+      </ul>
+      <p>すべての技術的な詳細とポリシーは、こちらの <a href="privacy.html">GPS Logger プライバシーポリシー</a> からご確認いただけます。</p>
+      <p><a class="btn btn-primary" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger">プライベートな GPS Logger をインストール</a></p>
+    </article>
+  </main>
+  <footer class="footer"><div class="shell footer-grid"><p>GPS Logger: プライベートトラッカー</p><nav class="footer-links"><a href="guides.html">ガイド</a><a href="index.html">ホーム</a><a href="privacy.html">プライバシー</a></nav></div></footer>
+</body>
+</html>

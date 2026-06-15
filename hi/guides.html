@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GPS लॉगिंग गाइड — Android पर GPX एक्सपोर्ट, प्राइवेसी और रूट ट्रैकिंग</title>
+  <meta name="description" content="Android के लिए उपयोगी GPS लॉगिंग गाइड: GPX ट्रैक रिकॉर्ड करें, रूट एक्सपोर्ट करें, GPS Logger की तुलना Strava से करें, ऑफ़लाइन लोकेशन प्राइवेसी समझें, और GPX को OpenStreetMap या QGIS के साथ इस्तेमाल करें।">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#287743">
+  <link rel="canonical" href="https://northforceapps.github.io/gpslogger/hi/guides.html">
+  <link rel="alternate" hreflang="en" href="https://northforceapps.github.io/gpslogger/guides.html">
+  <link rel="alternate" hreflang="de" href="https://northforceapps.github.io/gpslogger/de/guides.html">
+  <link rel="alternate" hreflang="es" href="https://northforceapps.github.io/gpslogger/es/guides.html">
+  <link rel="alternate" hreflang="fr" href="https://northforceapps.github.io/gpslogger/fr/guides.html">
+  <link rel="alternate" hreflang="pt" href="https://northforceapps.github.io/gpslogger/pt/guides.html">
+  <link rel="alternate" hreflang="ja" href="https://northforceapps.github.io/gpslogger/ja/guides.html">
+  <link rel="alternate" hreflang="hi" href="https://northforceapps.github.io/gpslogger/hi/guides.html">
+  <link rel="alternate" hreflang="x-default" href="https://northforceapps.github.io/gpslogger/guides.html">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" type="image/png" href="../assets/icon.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "GPS लॉगिंग गाइड",
+    "description": "Android GPS लॉगिंग, GPX एक्सपोर्ट, प्राइवेट रूट ट्रैकिंग, OpenStreetMap और QGIS वर्कफ़्लो के लिए गाइड।",
+    "url": "https://northforceapps.github.io/gpslogger/hi/guides.html",
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {"@type":"ListItem","position":1,"url":"https://northforceapps.github.io/gpslogger/hi/how-to-record-export-gpx-android.html","name":"Android पर GPX ट्रैक रिकॉर्ड और एक्सपोर्ट कैसे करें"},
+        {"@type":"ListItem","position":2,"url":"https://northforceapps.github.io/gpslogger/hi/gps-logger-vs-strava.html","name":"GPS Logger बनाम Strava और सोशल फ़िटनेस ऐप्स"},
+        {"@type":"ListItem","position":3,"url":"https://northforceapps.github.io/gpslogger/hi/offline-gps-logging-privacy.html","name":"प्राइवेसी के लिए ऑफ़लाइन GPS लॉगिंग क्यों ज़रूरी है"},
+        {"@type":"ListItem","position":4,"url":"https://northforceapps.github.io/gpslogger/hi/gpx-openstreetmap-qgis.html","name":"OpenStreetMap और QGIS के साथ GPX लॉग्स का उपयोग"}
+      ]
+    }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">कंटेंट पर जाएँ</a>
+  <header class="header" id="top">
+    <div class="shell nav">
+      <a class="brand" href="index.html" aria-label="GPS Logger होम"><img src="../assets/icon.png" alt="" width="46" height="46"><span><b>GPS Logger</b><small>प्राइवेट रूट ट्रैकर और एटलस</small></span></a>
+      <nav class="nav-links" id="navlinks" aria-label="मुख्य">
+        <a class="navlink" href="index.html#features">फ़ीचर्स</a>
+        <a class="navlink" href="guides.html">गाइड</a>
+        <a class="navlink" href="index.html#pricing">कीमत</a>
+        <a class="navlink" href="privacy.html">प्राइवेसी</a>
+        <details class="lang-menu">
+          <summary aria-label="भाषा"><span class="lang-current"><span class="flag" aria-hidden="true">🇮🇳</span><span>हिन्दी</span></span><span class="lang-caret" aria-hidden="true">▾</span></summary>
+          <div class="lang-menu-list">
+          <a class="lang-option" href="../guides.html" hreflang="en" lang="en"><span class="flag" aria-hidden="true">🇺🇸</span><span>English</span></a>
+          <a class="lang-option" href="../de/guides.html" hreflang="de" lang="de"><span class="flag" aria-hidden="true">🇩🇪</span><span>Deutsch</span></a>
+          <a class="lang-option" href="../es/guides.html" hreflang="es" lang="es"><span class="flag" aria-hidden="true">🇪🇸</span><span>Español</span></a>
+          <a class="lang-option" href="../fr/guides.html" hreflang="fr" lang="fr"><span class="flag" aria-hidden="true">🇫🇷</span><span>Français</span></a>
+          <a class="lang-option" href="../pt/guides.html" hreflang="pt" lang="pt"><span class="flag" aria-hidden="true">🇧🇷</span><span>Português</span></a>
+          <a class="lang-option" href="../ja/guides.html" hreflang="ja" lang="ja"><span class="flag" aria-hidden="true">🇯🇵</span><span>日本語</span></a>
+          <a class="lang-option" href="../hi/guides.html" hreflang="hi" lang="hi" aria-current="true"><span class="flag" aria-hidden="true">🇮🇳</span><span>हिन्दी</span></a>
+          </div>
+        </details>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="मेन्यू" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </header>
+  <main id="main" class="article-main">
+    <section class="section-tight">
+      <div class="shell article-hero">
+        <p class="eyebrow">GPS लॉगिंग गाइड</p>
+        <h1>Android पर रूट ट्रैकिंग, GPX एक्सपोर्ट और प्राइवेट लोकेशन हिस्ट्री।</h1>
+        <p class="lead">इन गाइड्स की मदद से GPS लॉगर चुनें, रूट रिकॉर्ड करें, खुले GPX या KML फ़ाइलें एक्सपोर्ट करें, लोकेशन डेटा को निजी रखें और ट्रैक्स को मैपिंग टूल्स में ले जाएँ।</p>
+      </div>
+    </section>
+    <section class="section-tight">
+      <div class="shell guide-grid">
+        <article class="guide-card">
+          <p class="guide-kicker">यहीं से शुरू करें</p>
+          <h2><a href="how-to-record-export-gpx-android.html">Android पर GPX ट्रैक रिकॉर्ड और एक्सपोर्ट कैसे करें</a></h2>
+          <p>हाइकिंग, साइक्लिंग, डॉग वॉक, रोड ट्रिप और उन सभी लोगों के लिए उपयोगी जो पोर्टेबल रूट लॉग चाहते हैं।</p>
+        </article>
+        <article class="guide-card">
+          <p class="guide-kicker">तुलना</p>
+          <h2><a href="gps-logger-vs-strava.html">GPS Logger बनाम Strava और सोशल फ़िटनेस ऐप्स</a></h2>
+          <p>ट्रेनिंग नेटवर्क चाहिए या निजी यात्रा मैप? चुनने से पहले वर्कफ़्लो की तुलना करें।</p>
+        </article>
+        <article class="guide-card">
+          <p class="guide-kicker">प्राइवेसी</p>
+          <h2><a href="offline-gps-logging-privacy.html">प्राइवेसी के लिए ऑफ़लाइन GPS लॉगिंग क्यों ज़रूरी है</a></h2>
+          <p>लोकल स्टोरेज, बैकग्राउंड लोकेशन, वैकल्पिक लाइव शेयरिंग और डेटा एक्सपोर्ट को समझें।</p>
+        </article>
+        <article class="guide-card">
+          <p class="guide-kicker">मैपिंग</p>
+          <h2><a href="gpx-openstreetmap-qgis.html">OpenStreetMap और QGIS के साथ GPX लॉग्स का उपयोग</a></h2>
+          <p>रूट हिस्ट्री को उपयोगी मैपिंग डेटा, आर्काइव और GIS लेयर्स में बदलें।</p>
+        </article>
+      </div>
+    </section>
+    <section class="section-tight">
+      <div class="shell cta-band">
+        <h2>अभी प्राइवेट GPS ट्रैकिंग चाहिए?</h2>
+        <p>Android पर GPS Logger इंस्टॉल करें, अपना अगला रूट रिकॉर्ड करें, फिर ज़रूरत पड़ने पर GPX या KML एक्सपोर्ट करें।</p>
+        <a class="play-badge" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger" aria-label="Get it on Google Play"><img src="../assets/badge-hi.svg" alt="Get it on Google Play" style="height:60px;width:auto;display:block"></a>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><div class="shell footer-grid"><p>GPS Logger: प्राइवेट ट्रैकर</p><nav class="footer-links" aria-label="फ़ुटर"><a href="index.html">होम</a><a href="privacy.html">प्राइवेसी</a><a href="data-deletion.html">डेटा हटाएँ</a></nav></div></footer>
+  <script src="../app.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Use Registos GPX com OpenStreetMap e QGIS</title>
+  <meta name="description" content="Exporte faixas GPX do Android e use-as para verificações no OpenStreetMap, mapeamento no QGIS, arquivos de viagens, análise de rotas e fluxos de trabalho de atlas pessoal.">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#287743">
+  <link rel="canonical" href="https://northforceapps.github.io/gpslogger/pt/gpx-openstreetmap-qgis.html">
+  <link rel="alternate" hreflang="en" href="https://northforceapps.github.io/gpslogger/gpx-openstreetmap-qgis.html">
+  <link rel="alternate" hreflang="de" href="https://northforceapps.github.io/gpslogger/de/gpx-openstreetmap-qgis.html">
+  <link rel="alternate" hreflang="es" href="https://northforceapps.github.io/gpslogger/es/gpx-openstreetmap-qgis.html">
+  <link rel="alternate" hreflang="fr" href="https://northforceapps.github.io/gpslogger/fr/gpx-openstreetmap-qgis.html">
+  <link rel="alternate" hreflang="pt" href="https://northforceapps.github.io/gpslogger/pt/gpx-openstreetmap-qgis.html">
+  <link rel="alternate" hreflang="ja" href="https://northforceapps.github.io/gpslogger/ja/gpx-openstreetmap-qgis.html">
+  <link rel="alternate" hreflang="hi" href="https://northforceapps.github.io/gpslogger/hi/gpx-openstreetmap-qgis.html">
+  <link rel="alternate" hreflang="x-default" href="https://northforceapps.github.io/gpslogger/gpx-openstreetmap-qgis.html">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" type="image/png" href="../assets/icon.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Use GPX logs with OpenStreetMap and QGIS","description":"Fluxos de trabalho práticos para exportação de faixas GPX, mapeamento, verificações OSM e análise GIS.","author":{"@type":"Organization","name":"NorthforceApps"},"publisher":{"@type":"Organization","name":"NorthforceApps"},"mainEntityOfPage":"https://northforceapps.github.io/gpslogger/pt/gpx-openstreetmap-qgis.html"}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar para o conteúdo</a>
+  <header class="header" id="top">
+    <div class="shell nav">
+      <a class="brand" href="index.html"><img src="../assets/icon.png" alt="" width="46" height="46"><span><b>GPS Logger</b><small>Gravador de rotas e atlas privado</small></span></a>
+      <nav class="nav-links" id="navlinks" aria-label="Principal">
+        <a class="navlink" href="index.html#features">Funcionalidades</a>
+        <a class="navlink" href="guides.html">Guias</a>
+        <a class="navlink" href="index.html#pricing">Preços</a>
+        <a class="navlink" href="privacy.html">Privacidade</a>
+        <details class="lang-menu">
+          <summary aria-label="Idioma"><span class="lang-current"><span class="flag" aria-hidden="true">🇧🇷</span><span>Português</span></span><span class="lang-caret" aria-hidden="true">▾</span></summary>
+          <div class="lang-menu-list">
+          <a class="lang-option" href="../gpx-openstreetmap-qgis.html" hreflang="en" lang="en"><span class="flag" aria-hidden="true">🇺🇸</span><span>English</span></a>
+          <a class="lang-option" href="../de/gpx-openstreetmap-qgis.html" hreflang="de" lang="de"><span class="flag" aria-hidden="true">🇩🇪</span><span>Deutsch</span></a>
+          <a class="lang-option" href="../es/gpx-openstreetmap-qgis.html" hreflang="es" lang="es"><span class="flag" aria-hidden="true">🇪🇸</span><span>Español</span></a>
+          <a class="lang-option" href="../fr/gpx-openstreetmap-qgis.html" hreflang="fr" lang="fr"><span class="flag" aria-hidden="true">🇫🇷</span><span>Français</span></a>
+          <a class="lang-option" href="../pt/gpx-openstreetmap-qgis.html" hreflang="pt" lang="pt" aria-current="true"><span class="flag" aria-hidden="true">🇧🇷</span><span>Português</span></a>
+          <a class="lang-option" href="../ja/gpx-openstreetmap-qgis.html" hreflang="ja" lang="ja"><span class="flag" aria-hidden="true">🇯🇵</span><span>日本語</span></a>
+          <a class="lang-option" href="../hi/gpx-openstreetmap-qgis.html" hreflang="hi" lang="hi"><span class="flag" aria-hidden="true">🇮🇳</span><span>हिन्दी</span></a>
+          </div>
+        </details>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </header>
+  <main id="main" class="article-main">
+    <article class="shell prose article">
+      <p class="eyebrow">Fluxo de trabalho de mapeamento</p>
+      <h1>Use registos GPX com OpenStreetMap e QGIS</h1>
+      <p class="lead">As faixas GPX são úteis para além do fitness. Elas podem apoiar verificações no OpenStreetMap, análises no QGIS, registos de viagens, trabalho de campo, comparação de rotas e arquivos pessoais de longo prazo.</p>
+      <h2>Grave trajetos limpos</h2>
+      <p>Inicie o GPS Logger antes de se mover, mantenha o celular com uma visão clara do céu sempre que possível e pare após o fim da rota. Para caminhos repetidos, múltiplas faixas GPX podem ajudar a confirmar o formato do trilho ou o acesso à estrada.</p>
+      <h2>Exporte arquivos portáteis</h2>
+      <p>Exporte uma faixa guardada como GPX para ferramentas de mapeamento ou KML para visualizadores de mapas. For backups de longo prazo, crie um arquivo ZIP com todo o histórico de GPX a partir da app. Também pode baixar um pequeno <a href="../downloads/sample-gpslogger-city-walk.gpx">arquivo GPX de amostra</a> para testar os passos de importação.</p>
+      <h2>Casos de uso no OpenStreetMap</h2>
+      <ul>
+        <li>Verifique se caminhos, trilhos ou estradas existem onde esperado.</li>
+        <li>Compare traçados repetidos antes de editar a geometria do mapa.</li>
+        <li>Mantenha evidências privadas para sessões de mapeamento posteriores.</li>
+      </ul>
+      <h2>Casos de uso no QGIS</h2>
+      <ul>
+        <li>Carregue GPX como camadas vetoriais para análise de rotas.</li>
+        <li>Estilize faixas por viagem, data ou propósito após a importação.</li>
+        <li>Compare deslocações diárias, caminhadas, caminhadas de levantamento ou dias de viagem.</li>
+      </ul>
+      <h2>Mantenha a privacidade em mente</h2>
+      <p>Os arquivos GPX podem revelar locais de casa, trabalho e rotinas. Apare ou evite compartilhar partes sensíveis. Para princípios de registo privado, leia <a href="offline-gps-logging-privacy.html">porque é que o registo de GPS offline é importante</a>.</p>
+      <p><a class="btn btn-primary" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger">Gravar GPX no Android</a></p>
+    </article>
+  </main>
+  <footer class="footer"><div class="shell footer-grid"><p>GPS Logger: Rastreador Privado</p><nav class="footer-links"><a href="guides.html">Guias</a><a href="index.html">Início</a><a href="privacy.html">Privacidade</a></nav></div></footer>
+  <script src="../app.js"></script>
+</body>
+</html>

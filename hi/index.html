@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GPS Logger — Android के लिए प्राइवेट रूट ट्रैकर और पर्सनल जर्नी मैप</title>
+  <meta name="description" content="GPS Logger आपके फोन पर आपकी पैदल यात्रा, हाइक, सैर और रोड ट्रिप को प्राइवेट रूप से रिकॉर्ड करता है, आपके द्वारा देखी गई सभी जगहों का एटलस बनाता है, केवल आपकी इच्छा होने पर ही आपकी लाइव लोकेशन शेयर करता है, और बिना किसी लॉक-इन के GPX या KML एक्सपोर्ट करता है। आपका रूट। आपका डेटा।">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#287743">
+  <link rel="canonical" href="https://northforceapps.github.io/gpslogger/pt/">
+  <link rel="alternate" hreflang="en" href="https://northforceapps.github.io/gpslogger/">
+  <link rel="alternate" hreflang="de" href="https://northforceapps.github.io/gpslogger/de/">
+  <link rel="alternate" hreflang="es" href="https://northforceapps.github.io/gpslogger/es/">
+  <link rel="alternate" hreflang="fr" href="https://northforceapps.github.io/gpslogger/fr/">
+  <link rel="alternate" hreflang="pt" href="https://northforceapps.github.io/gpslogger/pt/">
+  <link rel="alternate" hreflang="ja" href="https://northforceapps.github.io/gpslogger/ja/">
+  <link rel="alternate" hreflang="hi" href="https://northforceapps.github.io/gpslogger/hi/">
+  <link rel="alternate" hreflang="x-default" href="https://northforceapps.github.io/gpslogger/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="../assets/icon.png">
+  <link rel="apple-touch-icon" href="../assets/icon.png">
+  <link rel="stylesheet" href="../styles.css">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="GPS Logger — प्राइवेट रूट ट्रैकर और पर्सनल जर्नी मैप">
+  <meta property="og:description" content="रूट को प्राइवेट रूप से रिकॉर्ड करें, जीवन भर का एटलस बनाएं, केवल जब आप चाहें तब अपनी लोकेशन शेयर करें और बिना किसी लॉक-इन के एक्सपोर्ट करें। आपका रूट। आपका डेटा।">
+  <meta property="og:url" content="https://northforceapps.github.io/gpslogger/pt/">
+  <meta property="og:image" content="https://northforceapps.github.io/gpslogger/assets/hi/feature_graphic.png">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="500">
+  <meta property="og:site_name" content="GPS Logger">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="GPS Logger — प्राइवेट रूट ट्रैकर">
+  <meta name="twitter:description" content="आपका रूट। आपका डेटा। एक प्राइवेट जर्नी मैप जिसे आप कंट्रोल करते हैं।">
+  <meta name="twitter:image" content="https://northforceapps.github.io/gpslogger/assets/hi/feature_graphic.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "GPS Logger: प्राइवेट ट्रैकर",
+    "applicationCategory": "TravelApplication",
+    "operatingSystem": "Android",
+    "description": "एक प्राइवेट GPS रूट ट्रैकर और पर्सनल जर्नी मैप। अपने डिवाइस पर रूट रिकॉर्ड करें, उन्हें मैप पर फिर से जिएं, जीवन भर का एटलस बनाएं, केवल अपनी इच्छा होने पर अपनी लोकेशन शेयर करें, और बिना किसी लॉक-इन के GPX या KML एक्सपोर्ट करें।",
+    "image": "https://northforceapps.github.io/gpslogger/assets/hi/feature_graphic.png",
+    "url": "https://northforceapps.github.io/gpslogger/pt/",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Organization", "name": "NorthforceApps" },
+    "video": {
+      "@type": "VideoObject",
+      "name": "GPS Logger — 30 सेकंड का टूर",
+      "description": "आपके पहले टैप से लेकर आपके द्वारा देखी गई सभी जगहों के एटलस तक।",
+      "thumbnailUrl": "https://i.ytimg.com/vi/NSOkPpQ0TaY/maxresdefault.jpg",
+      "contentUrl": "https://youtu.be/NSOkPpQ0TaY",
+      "embedUrl": "https://www.youtube.com/embed/NSOkPpQ0TaY",
+      "uploadDate": "2026-05-29"
+    }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">कंटेंट पर जाएं</a>
+
+  <header class="header" id="top">
+    <div class="shell nav">
+      <a class="brand" href="#top" aria-label="GPS Logger का होम पेज">
+        <img src="../assets/icon.png" alt="" width="46" height="46">
+        <span><b>GPS Logger</b><small>प्राइवेट रूट ट्रैकर और एटलस</small></span>
+      </a>
+      <nav class="nav-links" id="navlinks" aria-label="मुख्य">
+        <a class="navlink" href="#why">क्यों</a>
+        <a class="navlink" href="#tour">टूर</a>
+        <a class="navlink" href="#features">फीचर्स</a>
+        <a class="navlink" href="guides.html">गाइड</a>
+        <a class="navlink" href="#pricing">कीमत</a>
+        <a class="navlink" href="privacy.html">प्राइवेसी</a>
+        <details class="lang-menu">
+          <summary aria-label="भाषा"><span class="lang-current"><span class="flag" aria-hidden="true">🇮🇳</span><span>हिन्दी</span></span><span class="lang-caret" aria-hidden="true">▾</span></summary>
+          <div class="lang-menu-list">
+          <a class="lang-option" href="../index.html" hreflang="en" lang="en"><span class="flag" aria-hidden="true">🇺🇸</span><span>English</span></a>
+          <a class="lang-option" href="../de/index.html" hreflang="de" lang="de"><span class="flag" aria-hidden="true">🇩🇪</span><span>Deutsch</span></a>
+          <a class="lang-option" href="../es/index.html" hreflang="es" lang="es"><span class="flag" aria-hidden="true">🇪🇸</span><span>Español</span></a>
+          <a class="lang-option" href="../fr/index.html" hreflang="fr" lang="fr"><span class="flag" aria-hidden="true">🇫🇷</span><span>Français</span></a>
+          <a class="lang-option" href="../pt/index.html" hreflang="pt" lang="pt"><span class="flag" aria-hidden="true">🇧🇷</span><span>Português</span></a>
+          <a class="lang-option" href="../ja/index.html" hreflang="ja" lang="ja"><span class="flag" aria-hidden="true">🇯🇵</span><span>日本語</span></a>
+          <a class="lang-option" href="../hi/index.html" hreflang="hi" lang="hi" aria-current="true"><span class="flag" aria-hidden="true">🇮🇳</span><span>हिन्दी</span></a>
+          </div>
+        </details>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="मेनू" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero section-tight">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="shell hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">प्राइवेट जर्नी मैप · GPS ट्रैकर</p>
+          <h1>आपका रूट।<br>आपका डेटा<span class="pin">।</span></h1>
+          <p class="lead">
+            GPS Logger आपके फोन पर आपकी पैदल यात्रा, हाइक, सैर और रोड ट्रिप को प्राइवेट रूप से रिकॉर्ड करता है। मैप पर हर यात्रा को फिर से जिएं, उन सभी जगहों का लाइफटाइम एटलस बनते हुए देखें जहां आप गए हैं, और केवल जब आप चाहें तब अपनी लाइव लोकेशन शेयर करें — फिर बिना किसी लॉक-इन के सब कुछ GPX या KML के रूप में एक्सपोर्ट करें।
+          </p>
+          <div class="hero-actions">
+            <a class="play-badge" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger" aria-label="Get it on Google Play"><img src="../assets/badge-hi.svg" alt="Get it on Google Play" style="height:60px;width:auto;display:block"></a>
+            <a class="btn btn-ghost btn-lg" href="#tour">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+              30-सेकंड का टूर देखें
+            </a>
+          </div>
+          <ul class="trust">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>रूट आपके डिवाइस पर रहते हैं</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>कोई लॉक-इन नहीं — कभी भी एक्सपोर्ट करें</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>केवल तभी रिकॉर्ड करता है जब आप शुरू करते हैं</li>
+          </ul>
+        </div>
+        <div class="hero-visual">
+          <img class="hero-feature" src="../assets/hi/feature_graphic_square.png" alt="GPS Logger का लाइफटाइम जर्नी मैप, जिसमें रूट, पिन और रिकॉर्डिंग बैज दिख रहा है" width="1024" height="1024">
+          </div>
+      </div>
+    </section>
+
+    <section class="section-tight">
+      <div class="shell strip">
+        <div class="chip" data-reveal>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <h3>प्राइवेसी-फर्स्ट डिज़ाइन</h3><p>आपके डिवाइस पर रिकॉर्ड और स्टोर किया गया — जब तक आप न चाहें, कुछ भी बाहर नहीं जाता।</p>
+        </div>
+        <div class="chip" data-reveal>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3 3 6v15l6-3 6 3 6-3V3l-6 3-6-3z"/><path d="M9 3v15M15 6v15"/></svg>
+          <h3>समय के साथ आपका एटलस</h3><p>हर ट्रिप से जीवन भर का मैप, कैलेंडर और आपके पसंदीदा स्थानों की सूची बनती है।</p>
+        </div>
+        <div class="chip" data-reveal>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7"/><path d="M12 3v13M7 11l5 5 5-5"/></svg>
+          <h3>एक्सपोर्ट करें, बिना लॉक-इन के</h3><p>प्रति ट्रैक GPX और KML, साथ ही पूरी हिस्ट्री का ZIP बैकअप। हमेशा पोर्टेबल।</p>
+        </div>
+        <div class="chip" data-reveal>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg>
+          <h3>अडेप्टिव और भरोसेमंद</h3><p>मोशन-अवेयर ट्रैकिंग बैटरी की खपत कम रखती है और स्क्रीन बंद होने पर भी रिकॉर्ड करती है।</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="why">
+      <div class="shell">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">लोग GPS Logger का इस्तेमाल क्यों करते हैं</p>
+          <h2 class="display">वह ऐप जिसकी आपको जरूरत थी पर आपको पता नहीं था — जब तक कि आपकी पहली ट्रिप सेव नहीं हो गई।</h2>
+        </div>
+        <div class="vibe-grid">
+          <figure class="vibe" data-reveal><img src="../assets/hi/usecase-01-trail-dog.jpg" alt="धुंध भरे जंगल में कुत्ते को टहलाते हुए रिकॉर्ड करना — हर ट्रेल को रिकॉर्ड करें, उसे प्राइवेट रखें" loading="lazy"></figure>
+          <figure class="vibe" data-reveal><img src="../assets/hi/usecase-02-road-trip.jpg" alt="लाइव लोकेशन शेयरिंग के साथ फैमिली रोड ट्रिप — किसी पालतू जानवर, इंसान या वाहन को ट्रैक करें" loading="lazy"></figure>
+          <figure class="vibe" data-reveal><img src="../assets/hi/usecase-03-bike-commute.jpg" alt="सुबह के समय शहर में साइकिल से सफर — आपका रास्ता, जो अपने आप मैप हो गया" loading="lazy"></figure>
+          <figure class="vibe" data-reveal><img src="../assets/hi/usecase-04-group-hike.jpg" alt="पहाड़ के नज़ारे का आनंद लेते दोस्त — हर ट्रिप आपके एटलस का हिस्सा बन जाती है" loading="lazy"></figure>
+          <figure class="vibe" data-reveal><img src="../assets/hi/usecase-05-countries.jpg" alt="यात्रा की यादें और वे देश जहां आप गए हैं" loading="lazy"></figure>
+          <figure class="vibe" data-reveal><img src="../assets/hi/usecase-06-globe.jpg" alt="जीवन भर की यात्राओं के पिन से भरा हुआ एक ग्लोब" loading="lazy"></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-tight" id="tour">
+      <div class="shell">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">इसे एक्शन में देखें</p>
+          <h2 class="display">तीस सेकंड, पहले टैप से आपके एटलस तक।</h2>
+        </div>
+        <div class="video-wrap" data-reveal data-yt="NSOkPpQ0TaY">
+          <img class="poster" src="../assets/video-poster.jpg" alt="GPS Logger प्रोमो वीडियो" loading="lazy">
+          <button class="video-play" type="button" aria-label="GPS Logger का टूर वीडियो चलाएं">
+            <span class="ring"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+            <span class="lbl">टूर देखें</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="how">
+      <div class="shell">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">यह कैसे काम करता है</p>
+          <h2 class="display">रिकॉर्ड करें। फिर से जिएं। शेयर करें — बस तीन टैप दूर।</h2>
+        </div>
+        <figure class="comic" data-reveal>
+          <img src="../assets/hi/comic.jpg" alt="तीन पैनल वाली कॉमिक स्ट्रिप: रिकॉर्ड पर टैप करें और अपना दिन जिएं; महीनों बाद उन सभी जगहों को फिर से जिएं जहां आप गए थे; अपनी लोकेशन परिवार के साथ शेयर करें" loading="lazy">
+        </figure>
+        <div class="steps">
+          <div class="step" data-reveal><span class="n">1</span><div><h3>रिकॉर्ड करें</h3><p>बस एक बार टैप करें। यह आपकी जेब में रखकर आपके दिन भर को ट्रैक करता है।</p></div></div>
+          <div class="step" data-reveal><span class="n">2</span><div><h3>फिर से जिएं</h3><p>महीनों बाद, अपने जीवन भर के मैप, अपने स्थानों और अपने देशों को ब्राउज़ करें。</p></div></div>
+          <div class="step" data-reveal><span class="n">3</span><div><h3>शेयर करें</h3><p>रीसेट करने योग्य कोड और अपनी तय की गई फॉलोअर लिमिट के साथ अपनी लोकेशन भेजें।</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="shell">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">फीचर्स</p>
+          <h2 class="display">ऐप असल में क्या करता है</h2>
+        </div>
+        <div class="features">
+          <article class="feature" data-reveal>
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <h3>प्राइवेट रूप से रिकॉर्ड करें</h3>
+            <p>किसी भी पैदल यात्रा, हाइक, सैर, ट्रिप, दौड़ या सफर के लिए रिकॉर्डिंग शुरू करें। यह बैकग्राउंड में ट्रैक करता रहता है और आपके रुकने पर आपका रूट, दूरी, समय और गति सेव करता है।</p>
+          </article>
+          <article class="feature" data-reveal>
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3 3 6v15l6-3 6 3 6-3V3l-6 3-6-3z"/><path d="M9 3v15M15 6v15"/></svg></div>
+            <h3>आपका पर्सनल एटलस</h3>
+            <p>आपके द्वारा घूमी गई सभी जगहों का लाइफटाइम मैप, ट्रैक किए गए दिनों का कैलेंडर, बार-बार जाने वाली जगहें और गति देखने और पूरे आँकड़ों के साथ प्रति-ट्रैक मैप।</p>
+          </article>
+          <article class="feature" data-reveal>
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5 15.4 17.5M15.4 6.5 8.6 10.5"/></svg></div>
+            <h3>रियल-टाइम शेयरिंग</h3>
+            <p>रीसेट करने योग्य कोड और अपनी पसंद की फॉलोअर लिमिट (1–20) के साथ अपनी मौजूदा लोकेशन शेयर करें। केवल आपकी मौजूदा लोकेशन स्टोर की जाती है और आपके रुकने पर यह हटा दी जाती है।</p>
+          </article>
+          <article class="feature" data-reveal>
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M12 3v13M7 11l5 5 5-5"/></svg></div>
+            <h3>बिना लॉक-इन के एक्सपोर्ट करें</h3>
+            <p>अलग-अलग ट्रैक को GPX या KML के रूप में एक्सपोर्ट करें, या GPX के ZIP आर्काइव के रूप में अपनी पूरी हिस्ट्री का बैकअप लें। ओपन फॉर्मेट, आपका डेटा, किसी भी समय।</p>
+          </article>
+          <article class="feature" data-reveal>
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="18" height="10" rx="2"/><path d="M22 11v2M6 11v2"/></svg></div>
+            <h3>अडेप्टिव और भरोसेमंद</h3>
+            <p>मोशन-अडेप्टिव ट्रैकिंग आपके रुकने पर GPS की फ्रीक्वेंसी कम कर देती है। रिकॉर्डिंग के दौरान फोरग्राउंड नोटिफिकेशन दिखता है, और रीबूट के बाद ऑटो-स्टार्ट का विकल्प भी है।</p>
+          </article>
+          <article class="feature" data-reveal>
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0"/></svg></div>
+            <h3>पूरी तरह से आपका</h3>
+            <p>रिकॉर्ड करने के लिए कोई अकाउंट नहीं चाहिए। रूट आपके फोन पर रहते हैं, लाइव शेयरिंग वैकल्पिक है, और आप जब चाहें अपना शेयरिंग कोड रीसेट कर सकते हैं या ट्रैक हटा सकते हैं।</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="screens">
+      <div class="shell">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">ऐप की असली स्क्रीन</p>
+          <h2 class="display">रोज़मर्रा की ज़िंदगी में GPS Logger पर एक नज़दीकी नज़र।</h2>
+        </div>
+        <div class="screens">
+          <figure class="device" data-reveal><div class="frame"><img src="../assets/ss-home.png" alt="होम स्क्रीन, रिकॉर्ड करने के लिए तैयार" loading="lazy"></div><figcaption>होम — रिकॉर्ड करने के लिए एक टैप</figcaption></figure>
+          <figure class="device" data-reveal><div class="frame"><img src="../assets/ss-recording.png" alt="लाइव मैप के साथ एक्टिव रिकॉर्डिंग" loading="lazy"></div><figcaption>रिकॉर्डिंग — लाइव मैप और आँकड़े</figcaption></figure>
+          <figure class="device" data-reveal><div class="frame"><img src="../assets/ss-atlas.png" alt="लाइफटाइम जर्नी मैप" loading="lazy"></div><figcaption>एटलस — जीवन भर के रूट</figcaption></figure>
+          <figure class="device" data-reveal><div class="frame"><img src="../assets/ss-places.png" alt="जगहों का एटलस" loading="lazy"></div><figcaption>जगहें — वे स्थान जहाँ आप बार-बार जाते हैं</figcaption></figure>
+          <figure class="device" data-reveal><div class="frame"><img src="../assets/ss-share.png" alt="लाइव शेयरिंग कंट्रोल्स" loading="lazy"></div><figcaption>लाइव शेयरिंग — एक कोड जिसे आप कंट्रोल करते हैं</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="guides">
+      <div class="shell">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">GPS लॉगिंग गाइड</p>
+          <h2 class="display">GPX रिकॉर्डिंग, एक्सपोर्ट और प्राइवेट रूट ट्रैकिंग सीखें।</h2>
+        </div>
+        <div class="guide-grid">
+          <article class="guide-card" data-reveal>
+            <p class="guide-kicker">ट्यूटोरियल</p>
+            <h3><a href="how-to-record-export-gpx-android.html">Android पर GPX ट्रैक कैसे रिकॉर्ड और एक्सपोर्ट करें</a></h3>
+            <p>स्टेप-बाय-स्टेप रूट रिकॉर्डिंग, बैकग्राउंड ट्रैकिंग, GPX एक्सपोर्ट और पूरी हिस्ट्री का बैकअप।</p>
+          </article>
+          <article class="guide-card" data-reveal>
+            <p class="guide-kicker">प्राइवेसी</p>
+            <h3><a href="offline-gps-logging-privacy.html">ऑफलाइन GPS लॉगिंग प्राइवेसी के लिए क्यों महत्वपूर्ण है</a></h3>
+            <p>आपके फोन पर क्या रहता है, लाइव शेयरिंग कब डेटा भेजता है, और प्राइवेट जर्नी मैप कैसे बनाए रखें।</p>
+          </article>
+          <article class="guide-card" data-reveal>
+            <p class="guide-kicker">तुलना</p>
+            <h3><a href="gps-logger-vs-strava.html">GPS Logger vs Strava और सोशल फिटनेस ऐप्स</a></h3>
+            <p>प्राइवेट रूट डायरी, वर्कआउट नेटवर्क, या दोनों के बीच चुनें।</p>
+          </article>
+          <article class="guide-card" data-reveal>
+            <p class="guide-kicker">वर्कफ़्लो</p>
+            <h3><a href="gpx-openstreetmap-qgis.html">OpenStreetMap और QGIS के साथ GPX लॉग का उपयोग करें</a></h3>
+            <p>मैपिंग, GIS, यात्रा आर्काइव और रूट विश्लेषण के लिए पोर्टेबल ट्रैक एक्सपोर्ट करें。</p>
+          </article>
+        </div>
+        <p class="guide-more" data-reveal><a href="guides.html">सभी GPS लॉगिंग गाइड देखें</a></p>
+      </div>
+    </section>
+
+    <section class="section" id="pricing">
+      <div class="shell">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">मुफ़्त, Pro और लाइफटाइम</p>
+          <h2 class="display">मुफ़्त में शुरू करें। केवल तभी अपग्रेड करें जब आप और अधिक चाहें।</h2>
+        </div>
+        <div class="tiers">
+          <article class="tier" data-reveal>
+            <h3>मुफ़्त</h3>
+            <p class="price">शुरुआत करने के लिए आपकी ज़रूरत की हर चीज़</p>
+            <ul>
+              <li>अडेप्टिव ट्रैकिंग के साथ GPS रिकॉर्डिंग</li>
+              <li>जर्नी मैप, कैलेंडर और जगहें</li>
+              <li>ऐप में आपके पिछले 10 ट्रैक</li>
+              <li>GPX और KML एक्सपोर्ट, साथ ही पूरी हिस्ट्री का ZIP बैकअप</li>
+              <li>GPX इम्पोर्ट — प्रति सप्ताह एक ट्रैक</li>
+              <li>दोनों तरफ से हर दिन 15 मिनट लाइव शेयरिंग</li>
+            </ul>
+            <div class="foot"><a class="btn btn-ghost" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger">ऐप डाउनलोड करें</a></div>
+          </article>
+          <article class="tier featured" data-reveal>
+            <span class="tag">सबसे लोकप्रिय</span>
+            <h3>Pro</h3>
+            <p class="price">मासिक या वार्षिक सब्सक्रिप्शन</p>
+            <ul>
+              <li>मुफ़्त प्लान की हर चीज़</li>
+              <li>ऐप में अनलिमिटेड ट्रैक हिस्ट्री</li>
+              <li>फुल स्टोर रिज़ॉल्यूशन में एक्सपोर्ट</li>
+              <li>अनलिमिटेड GPX इम्पोर्ट</li>
+              <li>App Cloud पर अनलिमिटेड लाइव शेयरिंग और व्यूइंग</li>
+            </ul>
+            <div class="foot"><a class="btn btn-primary" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger">Pro बनें</a></div>
+          </article>
+          <article class="tier" data-reveal>
+            <h3>लाइफटाइम</h3>
+            <p class="price">एक बार की खरीदारी</p>
+            <ul>
+              <li>बिना किसी रेकरिंग फीस के Pro की हर चीज़</li>
+              <li>सेल्फ-होस्टेड लाइव शेयरिंग</li>
+              <li>अपनी लाइव लोकेशन अपने खुद के सर्वर URL पर भेजें</li>
+              <li>हमेशा के लिए आपका</li>
+            </ul>
+            <div class="foot"><a class="btn btn-ghost" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger">लाइफटाइम अनलॉक करें</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-tight">
+      <div class="shell split">
+        <div class="panel" data-reveal>
+          <h2>लंबी बैकग्राउंड रिकॉर्डिंग के लिए बनाया गया</h2>
+          <p>GPS Logger एक फोरग्राउंड सर्विस के रूप में काम करता है ताकि स्क्रीन बंद होने पर या जब आप ऐप बदलते हैं तब भी रिकॉर्डिंग जारी रहे, और ट्रैक करते समय एक लगातार नोटिफिकेशन दिखता रहे। मोशन-अडेप्टिव सैंपलिंग बैटरी का उपयोग कम रखती है और वैकल्पिक ऑटो-स्टार्ट रीबूट के बाद रिकॉर्डिंग फिर से शुरू कर सकता है।</p>
+        </div>
+        <div class="panel" data-reveal>
+          <h2>आपके रूट, आपके डिवाइस पर</h2>
+          <p>रूट आपके फोन पर ही रहते हैं, जब तक कि आप उन्हें लाइव शेयर करने या एक्सपोर्ट करने का विकल्प नहीं चुनते। लाइव शेयरिंग केवल आपकी मौजूदा लोकेशन को स्टोर करता है और आपके रुकने पर इसे हटा देता है। मैप व्यू और डायग्नोस्टिक्स <a href="privacy.html">प्राइवेसी पॉलिसी</a> में बताए गए सर्विस प्रोवाइडर का इस्तेमाल करते हैं।</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="shell">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">FAQ</p>
+          <h2 class="display">इंस्टॉल करने से पहले लोगों के सवाल</h2>
+        </div>
+        <div class="faq" data-reveal>
+          <details><summary>क्या यह मेरे शुरू किए बिना ही रिकॉर्ड करता है?</summary><p>नहीं। रिकॉर्डिंग तभी शुरू होती है जब आप इसे शुरू करते हैं और जब आप इसे रोकते हैं तो रुक जाती है। एकमात्र अपवाद रीबूट के बाद वैकल्पिक ऑटो-स्टार्ट है, जिसे आप खुद चालू करते हैं।</p></details>
+          <details><summary>मेरे रूट कहाँ सेव होते हैं?</summary><p>आपके डिवाइस पर। कुछ भी नहीं भेजा जाता है, जब तक कि आप अपनी मौजूदा लोकेशन को लाइव शेयर करना या फ़ाइल एक्सपोर्ट करना नहीं चुनते।</p></details>
+          <details><summary>रियल-टाइम शेयरिंग कैसे काम करती है?</summary><p>आप एक रीसेट करने योग्य कोड शेयर करते हैं और फॉलोअर लिमिट (1–20) चुनते हैं। कोड वाला कोई भी व्यक्ति केवल लाइव मैप पर आपकी मौजूदा लोकेशन देखता है। आपके रुकने पर लोकेशन हटा दी जाती है, और अनफॉलो की गई लोकेशन 7 दिनों में अपने आप मिट जाती हैं。</p></details>
+          <details><summary>क्या मैं अपना डेटा निकाल सकता हूँ?</summary><p>हाँ। किसी भी ट्रैक को GPX या KML के रूप में एक्सपोर्ट करें, या GPX के ZIP के रूप में अपनी पूरी हिस्ट्री का बैकअप लें। कोई लॉक-इन नहीं है।</p></details>
+          <details><summary>क्या यह मुफ़्त है?</summary><p>हाँ। मुफ़्त प्लान में रिकॉर्डिंग, आपका एटलस, कैलेंडर और स्थान, आपके पिछले 10 ट्रैक, एक्सपोर्ट, एक साप्ताहिक GPX इम्पोर्ट और प्रत्येक तरफ दिन में 15 मिनट लाइव शेयरिंग शामिल है। Pro और लाइफटाइम प्लान सीमाओं को हटा देते हैं。</p></details>
+          <details><summary>क्या यह स्क्रीन बंद होने पर भी रिकॉर्ड करना जारी रखेगा?</summary><p>हाँ। एक फोरग्राउंड सर्विस रिकॉर्डिंग को बैकग्राउंड में चालू रखती है। बहुत लंबे सेशन के लिए, ऐप में दी गई बैटरी गाइडेंस का पालन करें ताकि Android इसे सस्पेंड न करे。</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-tight">
+      <div class="shell">
+        <div class="cta-band" data-reveal>
+          <h2>आज ही अपना एटलस शुरू करें।</h2>
+          <p>अपनी अगली पैदल यात्रा, सैर या ट्रिप रिकॉर्ड करें — और अपने जीवन का मैप भरना शुरू करें। शुरू करने के लिए मुफ़्त, हमेशा के लिए आपका।</p>
+          <a class="play-badge" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger" aria-label="Get it on Google Play"><img src="../assets/badge-hi.svg" alt="Get it on Google Play" style="height:60px;width:auto;display:block"></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="shell footer-grid">
+      <div>
+        <div class="brand"><img src="../assets/icon.png" alt="" width="40" height="40"><span><b>GPS Logger</b></span></div>
+        <p>Android के लिए प्राइवेट रूट ट्रैकर और पर्सनल जर्नी मैप।</p>
+        <p>सपोर्ट: <span id="support-email-home">northforceapps [at] protonmail [dot] com</span></p>
+      </div>
+      <nav class="footer-links" aria-label="Rodapé">
+        <a href="#why">क्यों</a>
+        <a href="#tour">टूर</a>
+        <a href="#features">फीचर्स</a>
+        <a href="guides.html">गाइड</a>
+        <a href="#pricing">कीमत</a>
+        <a href="privacy.html">प्राइवेसी</a>
+        <a href="data-deletion.html">डेटा हटाएँ</a>
+        <a href="https://youtu.be/NSOkPpQ0TaY">टूर देखें</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../app.js"></script>
+</body>
+</html>

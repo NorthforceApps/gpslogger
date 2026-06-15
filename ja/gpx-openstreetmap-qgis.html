@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GPXログをOpenStreetMapやQGISで活用する</title>
+  <meta name="description" content="AndroidからGPX軌跡を書き出し、OpenStreetMapでの確認、QGISでのマッピング、旅行のアラカイブ、ルート分析、または個人アトラス（地図帳）の作成ワークフローに活用する方法。">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#287743">
+  <link rel="canonical" href="https://northforceapps.github.io/gpslogger/ja/gpx-openstreetmap-qgis.html">
+  <link rel="alternate" hreflang="en" href="https://northforceapps.github.io/gpslogger/gpx-openstreetmap-qgis.html">
+  <link rel="alternate" hreflang="de" href="https://northforceapps.github.io/gpslogger/de/gpx-openstreetmap-qgis.html">
+  <link rel="alternate" hreflang="es" href="https://northforceapps.github.io/gpslogger/es/gpx-openstreetmap-qgis.html">
+  <link rel="alternate" hreflang="fr" href="https://northforceapps.github.io/gpslogger/fr/gpx-openstreetmap-qgis.html">
+  <link rel="alternate" hreflang="pt" href="https://northforceapps.github.io/gpslogger/pt/gpx-openstreetmap-qgis.html">
+  <link rel="alternate" hreflang="ja" href="https://northforceapps.github.io/gpslogger/ja/gpx-openstreetmap-qgis.html">
+  <link rel="alternate" hreflang="hi" href="https://northforceapps.github.io/gpslogger/hi/gpx-openstreetmap-qgis.html">
+  <link rel="alternate" hreflang="x-default" href="https://northforceapps.github.io/gpslogger/gpx-openstreetmap-qgis.html">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" type="image/png" href="../assets/icon.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"GPXログをOpenStreetMapやQGISで活用する","description":"GPX軌跡の書き出し、マッピング、OSM検証、およびGIS分析のための実践的なワークフロー。","author":{"@type":"Organization","name":"NorthforceApps"},"publisher":{"@type":"Organization","name":"NorthforceApps"},"mainEntityOfPage":"https://northforceapps.github.io/gpslogger/ja/gpx-openstreetmap-qgis.html"}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">メインコンテンツへスキップ</a>
+  <header class="header" id="top">
+    <div class="shell nav">
+      <a class="brand" href="index.html"><img src="../assets/icon.png" alt="" width="46" height="46"><span><b>GPS Logger</b><small>プライベートなルート記録とアトラス</small></span></a>
+      <nav class="nav-links" id="navlinks" aria-label="メイン">
+        <a class="navlink" href="index.html#features">機能</a>
+        <a class="navlink" href="guides.html">ガイド</a>
+        <a class="navlink" href="index.html#pricing">料金</a>
+        <a class="navlink" href="privacy.html">プライバシー</a>
+        <details class="lang-menu">
+          <summary aria-label="言語"><span class="lang-current"><span class="flag" aria-hidden="true">🇯🇵</span><span>日本語</span></span><span class="lang-caret" aria-hidden="true">▾</span></summary>
+          <div class="lang-menu-list">
+          <a class="lang-option" href="../gpx-openstreetmap-qgis.html" hreflang="en" lang="en"><span class="flag" aria-hidden="true">🇺🇸</span><span>English</span></a>
+          <a class="lang-option" href="../de/gpx-openstreetmap-qgis.html" hreflang="de" lang="de"><span class="flag" aria-hidden="true">🇩🇪</span><span>Deutsch</span></a>
+          <a class="lang-option" href="../es/gpx-openstreetmap-qgis.html" hreflang="es" lang="es"><span class="flag" aria-hidden="true">🇪🇸</span><span>Español</span></a>
+          <a class="lang-option" href="../fr/gpx-openstreetmap-qgis.html" hreflang="fr" lang="fr"><span class="flag" aria-hidden="true">🇫🇷</span><span>Français</span></a>
+          <a class="lang-option" href="../pt/gpx-openstreetmap-qgis.html" hreflang="pt" lang="pt"><span class="flag" aria-hidden="true">🇧🇷</span><span>Português</span></a>
+          <a class="lang-option" href="../ja/gpx-openstreetmap-qgis.html" hreflang="ja" lang="ja" aria-current="true"><span class="flag" aria-hidden="true">🇯🇵</span><span>日本語</span></a>
+          <a class="lang-option" href="../hi/gpx-openstreetmap-qgis.html" hreflang="hi" lang="hi"><span class="flag" aria-hidden="true">🇮🇳</span><span>हिन्दी</span></a>
+          </div>
+        </details>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="メニュー" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </header>
+  <main id="main" class="section">
+    <article class="shell prose">
+      <h1>GPXログをOpenStreetMapやQGISで活用する</h1>
+      <p class="lead">GPS Loggerによって生成される高解像度な GPX ファイルは、地理空間データのプロフェッショナルやボランティアコミュニティにとっても非常に有益です。書き出したデータを世界地図の改善や、デスクトップGISでの詳細な空間分析に統合する方法をご紹介します。</p>
+
+      <h2>OpenStreetMap への展開</h2>
+      <p>OpenStreetMap（OSM）は、誰もが自由に編集できる世界地図の共同構築プロジェクトです。Androidデバイス上の GPS Logger で記録した正確な軌跡は、OSMの編集品質を劇的に向上させます。書き出した GPX をiDエディタやJOSMなどの編集ツールにドラッグ＆ドロップするだけで、トレースのベースとして活用可能です。</p>
+      <p>インポート手順の動作確認には、こちらの<a href="../downloads/sample-gpslogger-city-walk.gpx">サンプルのGPXファイル</a>をご自由にダウンロードしてテストしてください。</p>
+
+      <h2>OpenStreetMap での主なユースケース</h2>
+      <ul>
+        <li>山道やハイキングコース、新しい道路が地図上の正しい位置に存在するかどうかを確認・修正する。</li>
+        <li>同じルートを複数回往復したデータを重ね合わせ、衛星写真のズレを補正して正確なジオメトリをマッピングする。</li>
+        <li>現地調査（マッピングパーティーなど）で集めたルート情報をプライベートに保管し、後からデスクワークで地図に反映する。</li>
+      </ul>
+
+      <h2>QGIS でのプロフェッショナルな分析</h2>
+      <p>QGIS は、強力なオープンソースの地理情報システム（GIS）です。GPS Loggerから出力した GPX または KML データをQGISにレイヤーとして追加することで、高度なベクター分析や美しい主題図の作成が可能になります。</p>
+
+      <h2>QGIS での主なユースケース</h2>
+      <ul>
+        <li>GPXデータをベクターレイヤーとして読み込み、移動速度、標高変化、時間経過に沿ったルート分析を行う。</li>
+        <li>インポートした軌跡データを、日付、移動目的、旅程ごとにカラーリングやスタイルを設定して視覚化する。</li>
+        <li>毎日の通勤・通学、長期の旅行、あるいはインフラの巡回調査などで蓄積した複数日分のルートを比較検証する。</li>
+      </ul>
+
+      <h2>プライバシーへの配慮</h2>
+      <p>GPXファイルには、自宅や職場、日々のルーティンといった極めて機密性の高い場所や行動パターンが含まれています。一般に公開したり第三者と共有したりする前に、不要な部分をトリミングするか、重要箇所をカットすることをお勧めします。プライバシーを重視したログ記録の設計原則については、<a href="offline-gps-logging-privacy.html">なぜオフラインでのGPSログ記録が大切なのか</a>をご覧ください。</p>
+      <p><a class="btn btn-primary" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger">AndroidでGPXを記録する</a></p>
+    </article>
+  </main>
+  <footer class="footer"><div class="shell footer-grid"><p>GPS Logger: プライベートトラッカー</p><nav class="footer-links"><a href="guides.html">ガイド</a><a href="index.html">ホーム</a><a href="privacy.html">プライバシー</a></nav></div></footer>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Guías de registro GPS — Exportación GPX, privacidad y rastreo de rutas en Android</title>
+  <meta name="description" content="Guías prácticas de registro GPS para Android: registre rutas GPX, exporte trayectos, compare GPS Logger con Strava, comprenda la privacidad de la ubicación fuera de línea y use GPX con OpenStreetMap o QGIS.">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#287743">
+  <link rel="canonical" href="https://northforceapps.github.io/gpslogger/es/guides.html">
+  <link rel="alternate" hreflang="en" href="https://northforceapps.github.io/gpslogger/guides.html">
+  <link rel="alternate" hreflang="de" href="https://northforceapps.github.io/gpslogger/de/guides.html">
+  <link rel="alternate" hreflang="es" href="https://northforceapps.github.io/gpslogger/es/guides.html">
+  <link rel="alternate" hreflang="fr" href="https://northforceapps.github.io/gpslogger/fr/guides.html">
+  <link rel="alternate" hreflang="pt" href="https://northforceapps.github.io/gpslogger/pt/guides.html">
+  <link rel="alternate" hreflang="ja" href="https://northforceapps.github.io/gpslogger/ja/guides.html">
+  <link rel="alternate" hreflang="hi" href="https://northforceapps.github.io/gpslogger/hi/guides.html">
+  <link rel="alternate" hreflang="x-default" href="https://northforceapps.github.io/gpslogger/guides.html">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" type="image/png" href="../assets/icon.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Guías de registro GPS",
+    "description": "Guías para el registro GPS en Android, exportación GPX, seguimiento privado de rutas, flujos de trabajo con OpenStreetMap y QGIS.",
+    "url": "https://northforceapps.github.io/gpslogger/es/guides.html",
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {"@type":"ListItem","position":1,"url":"https://northforceapps.github.io/gpslogger/es/how-to-record-export-gpx-android.html","name":"Cómo registrar y exportar rutas GPX en Android"},
+        {"@type":"ListItem","position":2,"url":"https://northforceapps.github.io/gpslogger/es/gps-logger-vs-strava.html","name":"GPS Logger frente a Strava y aplicaciones sociales de fitness"},
+        {"@type":"ListItem","position":3,"url":"https://northforceapps.github.io/gpslogger/es/offline-gps-logging-privacy.html","name":"Por qué el registro GPS fuera de línea es importante para la privacidad"},
+        {"@type":"ListItem","position":4,"url":"https://northforceapps.github.io/gpslogger/es/gpx-openstreetmap-qgis.html","name":"Usa registros GPX con OpenStreetMap y QGIS"}
+      ]
+    }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+  <header class="header" id="top">
+    <div class="shell nav">
+      <a class="brand" href="index.html" aria-label="Inicio de GPS Logger"><img src="../assets/icon.png" alt="" width="46" height="46"><span><b>GPS Logger</b><small>Grabador de rutas privado y atlas</small></span></a>
+      <nav class="nav-links" id="navlinks" aria-label="Principal">
+        <a class="navlink" href="index.html#features">Funciones</a>
+        <a class="navlink" href="guides.html">Guías</a>
+        <a class="navlink" href="index.html#pricing">Precios</a>
+        <a class="navlink" href="privacy.html">Privacidad</a>
+        <details class="lang-menu">
+          <summary aria-label="Idioma"><span class="lang-current"><span class="flag" aria-hidden="true">🇪🇸</span><span>Español</span></span><span class="lang-caret" aria-hidden="true">▾</span></summary>
+          <div class="lang-menu-list">
+          <a class="lang-option" href="../guides.html" hreflang="en" lang="en"><span class="flag" aria-hidden="true">🇺🇸</span><span>English</span></a>
+          <a class="lang-option" href="../de/guides.html" hreflang="de" lang="de"><span class="flag" aria-hidden="true">🇩🇪</span><span>Deutsch</span></a>
+          <a class="lang-option" href="../es/guides.html" hreflang="es" lang="es" aria-current="true"><span class="flag" aria-hidden="true">🇪🇸</span><span>Español</span></a>
+          <a class="lang-option" href="../fr/guides.html" hreflang="fr" lang="fr"><span class="flag" aria-hidden="true">🇫🇷</span><span>Français</span></a>
+          <a class="lang-option" href="../pt/guides.html" hreflang="pt" lang="pt"><span class="flag" aria-hidden="true">🇧🇷</span><span>Português</span></a>
+          <a class="lang-option" href="../ja/guides.html" hreflang="ja" lang="ja"><span class="flag" aria-hidden="true">🇯🇵</span><span>日本語</span></a>
+          <a class="lang-option" href="../hi/guides.html" hreflang="hi" lang="hi"><span class="flag" aria-hidden="true">🇮🇳</span><span>हिन्दी</span></a>
+          </div>
+        </details>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Menú" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </header>
+  <main id="main" class="article-main">
+    <section class="section-tight">
+      <div class="shell article-hero">
+        <p class="eyebrow">Guías de registro GPS</p>
+        <h1>Seguimiento de rutas, exportación GPX e historial de ubicación privado en Android.</h1>
+        <p class="lead">Usa estas guías para elegir un registrador GPS, grabar rutas, exportar archivos abiertos GPX o KML, mantener privados tus datos de ubicación y mover trayectos a herramientas de mapeo.</p>
+      </div>
+    </section>
+    <section class="section-tight">
+      <div class="shell guide-grid">
+        <article class="guide-card">
+          <p class="guide-kicker">Empieza aquí</p>
+          <h2><a href="how-to-record-export-gpx-android.html">Cómo registrar y exportar rutas GPX en Android</a></h2>
+          <p>Ideal para excursionistas, ciclistas, personas que pasean a sus perros, viajes por carretera y cualquier persona que quiera un registro de rutas portátil.</p>
+        </article>
+        <article class="guide-card">
+          <p class="guide-kicker">Comparación</p>
+          <h2><a href="gps-logger-vs-strava.html">GPS Logger frente a Strava y aplicaciones sociales de fitness</a></h2>
+          <p>¿Red de entrenamiento o mapa de viajes privado? Compara los flujos de trabajo antes de elegir.</p>
+        </article>
+        <article class="guide-card">
+          <p class="guide-kicker">Privacidad</p>
+          <h2><a href="offline-gps-logging-privacy.html">Por qué el registro GPS fuera de línea es importante para la privacidad</a></h2>
+          <p>Comprende el almacenamiento local, la ubicación en segundo plano, el uso compartido opcional en vivo y la exportación de datos.</p>
+        </article>
+        <article class="guide-card">
+          <p class="guide-kicker">Mapeo</p>
+          <h2><a href="gpx-openstreetmap-qgis.html">Usa registros GPX con OpenStreetMap y QGIS</a></h2>
+          <p>Convierte el historial de rutas en evidencia útil para mapeo, archivos y capas GIS.</p>
+        </article>
+      </div>
+    </section>
+    <section class="section-tight">
+      <div class="shell cta-band">
+        <h2>¿Necesitas seguimiento GPS privado ahora mismo?</h2>
+        <p>Instala GPS Logger en Android, registra tu próxima ruta y exporta GPX o KML cuando lo necesites.</p>
+        <a class="play-badge" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger" aria-label="Get it on Google Play"><img src="../assets/badge-es.svg" alt="Get it on Google Play" style="height:60px;width:auto;display:block"></a>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><div class="shell footer-grid"><p>GPS Logger: Rastreador Privado</p><nav class="footer-links" aria-label="Pie de página"><a href="index.html">Inicio</a><a href="privacy.html">Privacidad</a><a href="data-deletion.html">Eliminar datos</a></nav></div></footer>
+  <script src="../app.js"></script>
+</body>
+</html>
