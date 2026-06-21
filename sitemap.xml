@@ -4,6 +4,7 @@
   <url><loc>https://northforceapps.github.io/gpslogger/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
   <url><loc>https://northforceapps.github.io/gpslogger/guides.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://northforceapps.github.io/gpslogger/how-to-record-export-gpx-android.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://northforceapps.github.io/gpslogger/import-gpx-files-android.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://northforceapps.github.io/gpslogger/offline-gps-logging-privacy.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://northforceapps.github.io/gpslogger/gps-logger-vs-strava.html</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
   <url><loc>https://northforceapps.github.io/gpslogger/gpx-openstreetmap-qgis.html</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
@@ -12,6 +13,7 @@
   <url><loc>https://northforceapps.github.io/gpslogger/de/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://northforceapps.github.io/gpslogger/de/guides.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://northforceapps.github.io/gpslogger/de/how-to-record-export-gpx-android.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://northforceapps.github.io/gpslogger/de/import-gpx-files-android.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://northforceapps.github.io/gpslogger/de/offline-gps-logging-privacy.html</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
   <url><loc>https://northforceapps.github.io/gpslogger/de/gps-logger-vs-strava.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://northforceapps.github.io/gpslogger/de/gpx-openstreetmap-qgis.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -20,6 +22,7 @@
   <url><loc>https://northforceapps.github.io/gpslogger/es/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://northforceapps.github.io/gpslogger/es/guides.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://northforceapps.github.io/gpslogger/es/how-to-record-export-gpx-android.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://northforceapps.github.io/gpslogger/es/import-gpx-files-android.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://northforceapps.github.io/gpslogger/es/offline-gps-logging-privacy.html</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
   <url><loc>https://northforceapps.github.io/gpslogger/es/gps-logger-vs-strava.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://northforceapps.github.io/gpslogger/es/gpx-openstreetmap-qgis.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -28,6 +31,7 @@
   <url><loc>https://northforceapps.github.io/gpslogger/fr/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://northforceapps.github.io/gpslogger/fr/guides.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://northforceapps.github.io/gpslogger/fr/how-to-record-export-gpx-android.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://northforceapps.github.io/gpslogger/fr/import-gpx-files-android.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://northforceapps.github.io/gpslogger/fr/offline-gps-logging-privacy.html</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
   <url><loc>https://northforceapps.github.io/gpslogger/fr/gps-logger-vs-strava.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://northforceapps.github.io/gpslogger/fr/gpx-openstreetmap-qgis.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -36,6 +40,7 @@
   <url><loc>https://northforceapps.github.io/gpslogger/pt/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://northforceapps.github.io/gpslogger/pt/guides.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://northforceapps.github.io/gpslogger/pt/how-to-record-export-gpx-android.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://northforceapps.github.io/gpslogger/pt/import-gpx-files-android.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://northforceapps.github.io/gpslogger/pt/offline-gps-logging-privacy.html</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
   <url><loc>https://northforceapps.github.io/gpslogger/pt/gps-logger-vs-strava.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://northforceapps.github.io/gpslogger/pt/gpx-openstreetmap-qgis.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -44,6 +49,7 @@
   <url><loc>https://northforceapps.github.io/gpslogger/ja/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://northforceapps.github.io/gpslogger/ja/guides.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://northforceapps.github.io/gpslogger/ja/how-to-record-export-gpx-android.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://northforceapps.github.io/gpslogger/ja/import-gpx-files-android.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://northforceapps.github.io/gpslogger/ja/offline-gps-logging-privacy.html</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
   <url><loc>https://northforceapps.github.io/gpslogger/ja/gps-logger-vs-strava.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://northforceapps.github.io/gpslogger/ja/gpx-openstreetmap-qgis.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -52,6 +58,7 @@
   <url><loc>https://northforceapps.github.io/gpslogger/hi/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://northforceapps.github.io/gpslogger/hi/guides.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://northforceapps.github.io/gpslogger/hi/how-to-record-export-gpx-android.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://northforceapps.github.io/gpslogger/hi/import-gpx-files-android.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://northforceapps.github.io/gpslogger/hi/offline-gps-logging-privacy.html</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
   <url><loc>https://northforceapps.github.io/gpslogger/hi/gps-logger-vs-strava.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://northforceapps.github.io/gpslogger/hi/gpx-openstreetmap-qgis.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>

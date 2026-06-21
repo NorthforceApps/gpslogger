@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GPX-Dateien auf Android importieren — ZIP-Backups und große Sammlungen</title>
+  <meta name="description" content="GPX-Dateien auf Android gesammelt importieren: mehrere .gpx-Tracks auf einmal oder ein vollständiges ZIP-Backup laden, Sammlungen aus Garmin, Strava, OsmAnd oder Wikiloc migrieren, sicher erneut importieren und ohne Anbieterbindung weiterverwenden.">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#287743">
+  <link rel="canonical" href="https://northforceapps.github.io/gpslogger/de/import-gpx-files-android.html">
+  <link rel="alternate" hreflang="en" href="https://northforceapps.github.io/gpslogger/import-gpx-files-android.html">
+  <link rel="alternate" hreflang="de" href="https://northforceapps.github.io/gpslogger/de/import-gpx-files-android.html">
+  <link rel="alternate" hreflang="es" href="https://northforceapps.github.io/gpslogger/es/import-gpx-files-android.html">
+  <link rel="alternate" hreflang="fr" href="https://northforceapps.github.io/gpslogger/fr/import-gpx-files-android.html">
+  <link rel="alternate" hreflang="pt" href="https://northforceapps.github.io/gpslogger/pt/import-gpx-files-android.html">
+  <link rel="alternate" hreflang="ja" href="https://northforceapps.github.io/gpslogger/ja/import-gpx-files-android.html">
+  <link rel="alternate" hreflang="hi" href="https://northforceapps.github.io/gpslogger/hi/import-gpx-files-android.html">
+  <link rel="alternate" hreflang="x-default" href="https://northforceapps.github.io/gpslogger/import-gpx-files-android.html">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" type="image/png" href="../assets/icon.png">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"HowTo","name":"GPX-Dateien auf Android importieren","description":"GPX-Tracks oder ein ZIP-Backup gesammelt in GPS Logger auf Android importieren, auch große flache oder strukturierte Sammlungen.","step":[{"@type":"HowToStep","name":"GPS Logger installieren","text":"Installiere GPS Logger: Private Tracker aus Google Play."},{"@type":"HowToStep","name":"Standortzugriff erlauben","text":"Erlaube den Standortzugriff, einschließlich Hintergrundstandort für Aufzeichnung bei ausgeschaltetem Bildschirm."},{"@type":"HowToStep","name":"GPX-Import öffnen","text":"Öffne Verlauf, das Menü und wähle GPX importieren."},{"@type":"HowToStep","name":"Dateien oder ZIP auswählen","text":"Wähle mehrere .gpx-Dateien oder ein ZIP-Backup mit deiner Sammlung."},{"@type":"HowToStep","name":"Sammlung importieren","text":"Starte den Import. Segmente werden zu einzelnen Touren, Duplikate automatisch übersprungen."}],"tool":[{"@type":"HowToTool","name":"Android phone"},{"@type":"HowToTool","name":"GPS Logger: Private Tracker"}],"totalTime":"PT3M"}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Kann ich auf Android mehrere GPX-Dateien gleichzeitig importieren?","acceptedAnswer":{"@type":"Answer","text":"Ja. Mit GPS Logger kannst du viele .gpx-Dateien auf einmal auswählen oder ein einzelnes ZIP-Archiv mit Hunderten GPX-Dateien importieren. Jeder Track wird als eigene Tour zum Verlauf hinzugefügt."}},{"@type":"Question","name":"Funktioniert der GPX-Import auch mit einem ZIP mit Unterordnern?","acceptedAnswer":{"@type":"Answer","text":"Ja. Ein ZIP-Backup wird unabhängig davon importiert, ob die GPX-Dateien direkt auf oberster Ebene liegen oder nach Jahr, Reise oder Gerät in Unterordnern organisiert sind. Jeder .gpx-Eintrag im Archiv wird gefunden und importiert."}},{"@type":"Question","name":"Entstehen beim erneuten Import eines Backups doppelte Tracks?","acceptedAnswer":{"@type":"Answer","text":"Nein. Tracks werden anhand ihrer Startzeit abgeglichen. Beim zweiten Import desselben Backups wird alles übersprungen, was bereits im Verlauf vorhanden ist."}},{"@type":"Question","name":"Bin ich nach dem Import meiner GPX-Sammlung an die App gebunden?","acceptedAnswer":{"@type":"Answer","text":"Nein. Alles bleibt auf deinem Gerät, und du kannst jeden Track jederzeit wieder als Standard-GPX oder KML exportieren, einschließlich eines ZIP-Backups des gesamten Verlaufs."}}]}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+  <header class="header" id="top">
+    <div class="shell nav">
+      <a class="brand" href="index.html" aria-label="GPS Logger home"><img src="../assets/icon.png" alt="" width="46" height="46"><span><b>GPS Logger</b><small>Private route recorder &amp; atlas</small></span></a>
+      <nav class="nav-links" id="navlinks" aria-label="Hauptnavigation">
+        <a class="navlink" href="index.html#features">Funktionen</a>
+        <a class="navlink" href="guides.html">Anleitungen</a>
+        <a class="navlink" href="index.html#pricing">Preise</a>
+        <a class="navlink" href="privacy.html">Datenschutz</a>
+        <details class="lang-menu">
+          <summary aria-label="Sprache"><span class="lang-current"><span class="flag" aria-hidden="true">🇩🇪</span><span>Deutsch</span></span><span class="lang-caret" aria-hidden="true">▾</span></summary>
+          <div class="lang-menu-list">
+          <a class="lang-option" href="../import-gpx-files-android.html" hreflang="en" lang="en"><span class="flag" aria-hidden="true">🇺🇸</span><span>English</span></a>
+          <a class="lang-option" href="import-gpx-files-android.html" hreflang="de" lang="de" aria-current="true"><span class="flag" aria-hidden="true">🇩🇪</span><span>Deutsch</span></a>
+          <a class="lang-option" href="../es/import-gpx-files-android.html" hreflang="es" lang="es"><span class="flag" aria-hidden="true">🇪🇸</span><span>Español</span></a>
+          <a class="lang-option" href="../fr/import-gpx-files-android.html" hreflang="fr" lang="fr"><span class="flag" aria-hidden="true">🇫🇷</span><span>Français</span></a>
+          <a class="lang-option" href="../pt/import-gpx-files-android.html" hreflang="pt" lang="pt"><span class="flag" aria-hidden="true">🇧🇷</span><span>Português</span></a>
+          <a class="lang-option" href="../ja/import-gpx-files-android.html" hreflang="ja" lang="ja"><span class="flag" aria-hidden="true">🇯🇵</span><span>日本語</span></a>
+          <a class="lang-option" href="../hi/import-gpx-files-android.html" hreflang="hi" lang="hi"><span class="flag" aria-hidden="true">🇮🇳</span><span>हिन्दी</span></a>
+          </div>
+        </details>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Menü" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </header>
+  <main id="main" class="article-main">
+    <article class="shell prose article">
+      <p class="eyebrow">GPX-Import-Anleitung</p>
+      <h1>GPX-Dateien auf Android importieren — ZIP-Backups und große Sammlungen</h1>
+      <p class="lead">Liegen jahrelange GPX-Tracks in einem Ordner oder einer alten App? GPS Logger importiert sie auf Android in einem Durchgang: Wähle mehrere <code>.gpx</code>-Dateien oder ein einziges ZIP-Backup, und alle Routen erscheinen in Verlauf, Kalender und persönlichem Atlas. Flache Archive und Ordnerstrukturen werden unterstützt, erneuter Import ist sicher und es gibt keine Anbieterbindung.</p>
+
+      <figure class="article-shot"><img src="../assets/ss-atlas.png" alt="GPS Logger lifetime atlas map on Android showing many imported GPX routes at once" loading="lazy"><figcaption>Importierte Routen erscheinen in Atlas, Kalender und Orten — nicht nur in einer Dateiliste.</figcaption></figure>
+
+      <h2>Kurz erklärt</h2>
+      <p>Öffne GPS Logger → <strong>Verlauf</strong> → Menü → <strong>GPX importieren</strong>. Wähle deine <code>.gpx</code>-Dateien oder ein ZIP-Backup und starte den Import. Ein ZIP kann Hunderte Tracks enthalten; sie werden einzeln gelesen, jedes Segment wird zu einer eigenen Tour und vorhandene Tracks werden übersprungen.</p>
+
+      <h2>1. GPS Logger installieren</h2>
+      <p>Installiere <a data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger">GPS Logger: Private Tracker</a> aus Google Play. Für Import und Anzeige ist kein Konto nötig; alles wird auf deinem Smartphone verarbeitet und gespeichert.</p>
+
+      <h2>2. GPX-Dateien sammeln</h2>
+      <p>GPX (GPS Exchange Format) ist ein universelles Routenformat, das fast jede GPS-App und jedes Gerät unterstützt. Deine Sammlung kann stammen aus:</p>
+      <ul>
+        <li>einem <strong>Export des gesamten Verlaufs</strong> aus einer anderen GPS- oder Tracker-App</li>
+        <li>einem Sammeldownload aus <strong>Strava</strong>, <strong>Garmin Connect</strong>, <strong>Wikiloc</strong>, <strong>Komoot</strong> oder <strong>OsmAnd</strong></li>
+        <li>älteren Exporten von <strong>Hand-GPS-Geräten</strong> wie Garmin eTrex oder GPSMAP</li>
+        <li>einem ZIP-Backup, das du zuvor mit GPS Logger erstellt hast</li>
+      </ul>
+      <p>Lege die Dateien oder das ZIP an einem Ort ab, den Android öffnen kann, etwa interner Speicher, Downloads, Google Drive oder ein Cloudanbieter im Dateiauswahldialog.</p>
+
+      <h2>3. GPX-Import öffnen</h2>
+      <p>Öffne in GPS Logger den Tab <strong>Verlauf</strong>, dann das Menü und wähle <strong>GPX importieren</strong>. Dort siehst du die unterstützten Formate und eine Option zum Optimieren sehr detaillierter Tracks.</p>
+
+      <h2>4. Dateien oder ZIP-Backup auswählen</h2>
+      <p>Tippe auf <strong>Dateien auswählen</strong>. Danach kannst du:</p>
+      <ul>
+        <li><strong>mehrere <code>.gpx</code>-Dateien</strong> gleichzeitig auswählen, oder</li>
+        <li><strong>ein einzelnes ZIP-Archiv</strong> auswählen; alle enthaltenen <code>.gpx</code>-Dateien werden automatisch importiert.</li>
+      </ul>
+
+      <aside class="inline-app-card">
+        <div class="card-header">
+          <img src="../assets/icon.png" alt="GPS Logger logo" class="card-logo">
+          <div class="card-info">
+            <h3>Eine ganze GPX-Sammlung in Minuten übertragen</h3>
+            <p>GPS Logger liest einzelne Dateien und ZIP-Backups, überspringt Duplikate und macht jede Route zu einer Tour in deinem privaten Atlas.</p>
+          </div>
+        </div>
+        <div class="card-features">
+          <span>✓ Bulk &amp; ZIP import</span>
+          <span>✓ Sicher erneut importieren</span>
+          <span>✓ Jederzeit wieder exportieren</span>
+        </div>
+        <a class="btn btn-primary" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M3.6 2.3 13.8 12 3.6 21.7c-.4.2-.9-.1-.9-.6V2.9c0-.5.5-.8.9-.6Zm11.7 6.1 2.9 1.7c.9.5.9 1.8 0 2.3l-2.9 1.7L12.8 12l2.5-3.6ZM16 6.8 6.4 1.4 14 9l2-2.2ZM6.4 22.6 16 17.2 14 15l-7.6 7.6Z"/></svg>
+          Bei Google Play herunterladen
+        </a>
+      </aside>
+
+      <h2>5. Große Sammlungen: Ordner als ZIP</h2>
+      <p>Bei großen, geordneten Sammlungen mit Hunderten oder Tausenden Routen ist ZIP am schnellsten. Der Importer liest jeden GPX-Eintrag, unabhängig davon, ob die Dateien:</p>
+      <ul>
+        <li><strong>flach</strong> direkt auf oberster ZIP-Ebene liegen oder</li>
+        <li><strong>strukturiert</strong> nach Jahr, Land, Aktivität oder Gerät in Unterordnern liegen.</li>
+      </ul>
+      <p>Wenn deine Tracks auf dem Computer sauber in Ordnern liegen, komprimiere einfach den obersten Ordner als <code>.zip</code>, kopiere ihn aufs Smartphone und importiere diese eine Datei. Umbenennen oder Verschieben ist nicht nötig.</p>
+
+      <h2>6. Import starten</h2>
+      <p>Tippe auf <strong>Importieren</strong>. Eine Fortschrittsanzeige zählt Dateien und Tracks. Dabei geschieht automatisch:</p>
+      <ul>
+        <li><strong>Duplikatsicher.</strong> Tracks werden anhand der Startzeit abgeglichen, sodass erneutes Importieren keine Doppelungen erzeugt.</li>
+        <li><strong>Intelligente Aufteilung.</strong> Mehrtägige Sammeldateien werden wieder in einzelne Tagestouren aufgeteilt.</li>
+        <li><strong>Robust.</strong> Beschädigte Dateien werden gemeldet und übersprungen; der Rest des Archivs wird weiter importiert.</li>
+        <li><strong>Optionale Optimierung.</strong> Sehr dichte Tracks können vereinfacht werden, um Speicher zu sparen. Deaktiviere dies, wenn jeder Punkt erhalten bleiben soll.</li>
+      </ul>
+
+      <h2>7. Importierten Atlas prüfen</h2>
+      <p>Nach Abschluss siehst du, wie viele Tracks und Punkte hinzugefügt wurden. Die Routen erscheinen sofort im <strong>Verlauf</strong>, <strong>Kalender</strong>, auf der <strong>Lebenszeitkarte</strong> und im Atlas für <strong>Orte und Länder</strong>. Jeder Track zeigt Distanz, Dauer, Geschwindigkeit, Höhe und erkannte Aktivität.</p>
+
+      <h2>Keine Anbieterbindung</h2>
+      <p>Der Import in GPS Logger bindet deine Daten nicht. Alles wird lokal gespeichert und du kannst <a href="how-to-record-export-gpx-android.html">jeden Track wieder als GPX oder KML exportieren</a> oder ein ZIP-Backup des gesamten Verlaufs erstellen.</p>
+
+      <h2>Kostenloser und unbegrenzter Import</h2>
+      <p>In der kostenlosen Version kannst du den Import mit einem Track pro Woche testen. Pro und Lifetime schalten unbegrenzten GPX-Import frei. Details findest du bei den <a href="index.html#pricing">Preisen</a>.</p>
+
+      <h2>Häufig gestellte Fragen</h2>
+      <h3>Kann ich mehrere GPX-Dateien gleichzeitig importieren?</h3>
+      <p>Ja. Wähle beliebig viele <code>.gpx</code>-Dateien oder ein einzelnes ZIP mit allen Dateien.</p>
+      <h3>Funktioniert ein ZIP mit Unterordnern?</h3>
+      <p>Ja. Flache Archive und ZIPs mit Unterordnern werden unterstützt.</p>
+      <h3>Was passiert, wenn viele Reisen in einer Datei stecken?</h3>
+      <p>Der Importer erkennt große Sprünge und lange Zeitlücken und teilt die Daten in einzelne Touren.</p>
+      <h3>Werden in der App aufgezeichnete Tracks überschrieben?</h3>
+      <p>Nein. Der Import fügt nur neue Tracks hinzu und überspringt bereits vorhandene.</p>
+
+      <h2>Weitere Anleitungen</h2>
+      <ul>
+        <li><a href="how-to-record-export-gpx-android.html">GPX-Tracks auf Android aufzeichnen und exportieren</a></li>
+        <li><a href="gpx-openstreetmap-qgis.html">GPX-Logs mit OpenStreetMap und QGIS verwenden</a></li>
+        <li><a href="offline-gps-logging-privacy.html">Warum Offline-GPS-Aufzeichnung für den Datenschutz wichtig ist</a></li>
+      </ul>
+      <p><a class="btn btn-primary" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger">GPS Logger für Android installieren</a></p>
+    </article>
+  </main>
+  <footer class="footer"><div class="shell footer-grid"><p>GPS Logger: Private Tracker</p><nav class="footer-links"><a href="guides.html">Anleitungen</a><a href="index.html">Startseite</a><a href="privacy.html">Datenschutz</a></nav></div></footer>
+  <script src="../app.js"></script>
+</body>
+</html>

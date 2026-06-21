@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AndroidでGPXファイルをインポートする方法 — ZIPバックアップと大規模コレクション</title>
+  <meta name="description" content="AndroidでGPXファイルを一括インポート。複数の.gpxトラックやZIPバックアップ全体を読み込み、Garmin、Strava、OsmAnd、Wikilocから安全に移行できます。再インポートも重複なしで、データの囲い込みもありません。">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#287743">
+  <link rel="canonical" href="https://northforceapps.github.io/gpslogger/ja/import-gpx-files-android.html">
+  <link rel="alternate" hreflang="en" href="https://northforceapps.github.io/gpslogger/import-gpx-files-android.html">
+  <link rel="alternate" hreflang="de" href="https://northforceapps.github.io/gpslogger/de/import-gpx-files-android.html">
+  <link rel="alternate" hreflang="es" href="https://northforceapps.github.io/gpslogger/es/import-gpx-files-android.html">
+  <link rel="alternate" hreflang="fr" href="https://northforceapps.github.io/gpslogger/fr/import-gpx-files-android.html">
+  <link rel="alternate" hreflang="pt" href="https://northforceapps.github.io/gpslogger/pt/import-gpx-files-android.html">
+  <link rel="alternate" hreflang="ja" href="https://northforceapps.github.io/gpslogger/ja/import-gpx-files-android.html">
+  <link rel="alternate" hreflang="hi" href="https://northforceapps.github.io/gpslogger/hi/import-gpx-files-android.html">
+  <link rel="alternate" hreflang="x-default" href="https://northforceapps.github.io/gpslogger/import-gpx-files-android.html">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" type="image/png" href="../assets/icon.png">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"HowTo","name":"AndroidでGPXファイルをインポートする方法","description":"GPS LoggerでGPXトラックやZIPバックアップを一括インポート。大規模なフラット構成・フォルダ構成のコレクションにも対応します。","step":[{"@type":"HowToStep","name":"GPS Loggerをインストール","text":"Google PlayからGPS Logger: Private Trackerをインストールします。"},{"@type":"HowToStep","name":"位置情報を許可","text":"必要に応じてバックグラウンド位置情報も許可します。"},{"@type":"HowToStep","name":"GPXインポートを開く","text":"履歴からメニューを開き、GPXをインポートを選びます。"},{"@type":"HowToStep","name":"ファイルまたはZIPを選ぶ","text":"複数の.gpxファイルまたはZIPバックアップを選びます。"},{"@type":"HowToStep","name":"コレクションを読み込む","text":"インポートを開始します。セグメントは別々の記録になり、重複は除外されます。"}],"tool":[{"@type":"HowToTool","name":"Android phone"},{"@type":"HowToTool","name":"GPS Logger: Private Tracker"}],"totalTime":"PT3M"}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Androidで複数のGPXファイルを一度にインポートできますか？","acceptedAnswer":{"@type":"Answer","text":"はい。GPS Loggerでは複数の.gpxファイルをまとめて選択するか、数百個のGPXファイルを含むZIPを1つ選んでインポートできます。各トラックは別々の移動記録として履歴に追加されます。"}},{"@type":"Question","name":"フォルダを含むZIPでもGPXをインポートできますか？","acceptedAnswer":{"@type":"Answer","text":"はい。GPXファイルがZIP直下にあっても、年・旅行・端末ごとのサブフォルダ内にあっても読み込めます。アーカイブ内のすべての.gpxファイルが検出されます。"}},{"@type":"Question","name":"同じバックアップを再インポートすると重複しますか？","acceptedAnswer":{"@type":"Answer","text":"いいえ。開始時刻で照合するため、同じバックアップを再度読み込んでも、履歴にあるトラックは自動的にスキップされます。"}},{"@type":"Question","name":"GPXコレクションを取り込むとデータが囲い込まれますか？","acceptedAnswer":{"@type":"Answer","text":"いいえ。すべて端末内に保存され、いつでも標準GPXまたはKMLとして再エクスポートできます。履歴全体のGPX ZIPバックアップも作成できます。"}}]}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="header" id="top">
+    <div class="shell nav">
+      <a class="brand" href="index.html" aria-label="GPS Logger home"><img src="../assets/icon.png" alt="" width="46" height="46"><span><b>GPS Logger</b><small>Private route recorder &amp; atlas</small></span></a>
+      <nav class="nav-links" id="navlinks" aria-label="メインナビゲーション">
+        <a class="navlink" href="index.html#features">機能</a>
+        <a class="navlink" href="guides.html">ガイド</a>
+        <a class="navlink" href="index.html#pricing">料金</a>
+        <a class="navlink" href="privacy.html">プライバシー</a>
+        <details class="lang-menu">
+          <summary aria-label="言語"><span class="lang-current"><span class="flag" aria-hidden="true">🇯🇵</span><span>日本語</span></span><span class="lang-caret" aria-hidden="true">▾</span></summary>
+          <div class="lang-menu-list">
+          <a class="lang-option" href="../import-gpx-files-android.html" hreflang="en" lang="en"><span class="flag" aria-hidden="true">🇺🇸</span><span>English</span></a>
+          <a class="lang-option" href="../de/import-gpx-files-android.html" hreflang="de" lang="de"><span class="flag" aria-hidden="true">🇩🇪</span><span>Deutsch</span></a>
+          <a class="lang-option" href="../es/import-gpx-files-android.html" hreflang="es" lang="es"><span class="flag" aria-hidden="true">🇪🇸</span><span>Español</span></a>
+          <a class="lang-option" href="../fr/import-gpx-files-android.html" hreflang="fr" lang="fr"><span class="flag" aria-hidden="true">🇫🇷</span><span>Français</span></a>
+          <a class="lang-option" href="../pt/import-gpx-files-android.html" hreflang="pt" lang="pt"><span class="flag" aria-hidden="true">🇧🇷</span><span>Português</span></a>
+          <a class="lang-option" href="import-gpx-files-android.html" hreflang="ja" lang="ja" aria-current="true"><span class="flag" aria-hidden="true">🇯🇵</span><span>日本語</span></a>
+          <a class="lang-option" href="../hi/import-gpx-files-android.html" hreflang="hi" lang="hi"><span class="flag" aria-hidden="true">🇮🇳</span><span>हिन्दी</span></a>
+          </div>
+        </details>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="メニュー" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </header>
+  <main id="main" class="article-main">
+    <article class="shell prose article">
+      <p class="eyebrow">GPXインポートガイド</p>
+      <h1>AndroidでGPXファイルをインポートする方法 — ZIPバックアップと大規模コレクション</h1>
+      <p class="lead">何年分ものGPXトラックがフォルダや古いアプリに残っていませんか。GPS Loggerなら、複数の<code>.gpx</code>ファイルまたは1つのZIPバックアップを選ぶだけで、すべてのルートを履歴、カレンダー、個人アトラスへ一括追加できます。フラットなZIPもフォルダ構成も対応し、再インポートしても重複しません。</p>
+
+      <figure class="article-shot"><img src="../assets/ss-atlas.png" alt="GPS Logger lifetime atlas map on Android showing many imported GPX routes at once" loading="lazy"><figcaption>インポートしたルートは一覧だけでなく、アトラス、カレンダー、訪問場所にも表示されます。</figcaption></figure>
+
+      <h2>かんたんな手順</h2>
+      <p>GPS Loggerで<strong>履歴</strong> → メニュー → <strong>GPXをインポート</strong>を開き、<code>.gpx</code>ファイルまたはZIPを選びます。各セグメントは別々の記録になり、重複は自動でスキップされます。</p>
+
+      <h2>1. GPS Loggerをインストール</h2>
+      <p>Google Playから<a data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger">GPS Logger: Private Tracker</a>をインストールします。アカウント不要で、すべて端末内で処理・保存されます。</p>
+
+      <h2>2. GPXファイルを準備</h2>
+      <p>GPXは多くのGPSアプリや端末で使われる標準的なルート形式です。データ元の例:</p>
+      <ul>
+        <li>別のGPSアプリからの<strong>全履歴エクスポート</strong></li>
+        <li><strong>Strava</strong>、<strong>Garmin Connect</strong>、<strong>Wikiloc</strong>、<strong>Komoot</strong>、<strong>OsmAnd</strong>からの一括ダウンロード</li>
+        <li>Garmin eTrexやGPSMAPなどの古い<strong>ハンディGPS</strong>データ</li>
+        <li>以前GPS Loggerで作成したZIPバックアップ</li>
+      </ul>
+      <p>ファイルまたはZIPを、内部ストレージ、ダウンロード、Google DriveなどAndroidから開ける場所に保存します。</p>
+
+      <h2>3. GPXインポート画面を開く</h2>
+      <p>GPS Loggerで<strong>履歴</strong>タブを開き、メニューから<strong>GPXをインポート</strong>を選びます。詳細なトラックを最適化する設定もあります。</p>
+
+      <h2>4. ファイルまたはZIPを選ぶ</h2>
+      <p><strong>ファイルを選択</strong>をタップし、次のいずれかを選びます:</p>
+      <ul>
+        <li><strong>複数の<code>.gpx</code>ファイル</strong>をまとめて選択する</li>
+        <li><strong>1つのZIP</strong>を選択する。中の<code>.gpx</code>は自動で読み込まれます。</li>
+      </ul>
+
+      <aside class="inline-app-card">
+        <div class="card-header">
+          <img src="../assets/icon.png" alt="GPS Logger logo" class="card-logo">
+          <div class="card-info">
+            <h3>GPXライブラリを数分で移行</h3>
+            <p>GPS Loggerは個別ファイルとZIPを読み込み、重複を除外し、各ルートを個人アトラス上の移動記録に変換します。</p>
+          </div>
+        </div>
+        <div class="card-features">
+          <span>✓ Bulk &amp; ZIP import</span>
+          <span>✓ 安全な再インポート</span>
+          <span>✓ いつでも再エクスポート</span>
+        </div>
+        <a class="btn btn-primary" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M3.6 2.3 13.8 12 3.6 21.7c-.4.2-.9-.1-.9-.6V2.9c0-.5.5-.8.9-.6Zm11.7 6.1 2.9 1.7c.9.5.9 1.8 0 2.3l-2.9 1.7L12.8 12l2.5-3.6ZM16 6.8 6.4 1.4 14 9l2-2.2ZM6.4 22.6 16 17.2 14 15l-7.6 7.6Z"/></svg>
+          Google Playで入手
+        </a>
+      </aside>
+
+      <h2>5. 大規模コレクションはZIPにまとめる</h2>
+      <p>数百、数千ルートの大規模コレクションではZIPが最速です。次のどちらの構成でも、すべてのGPXを読み込みます。</p>
+      <ul>
+        <li><strong>フラット</strong>：すべての<code>.gpx</code>がZIP直下にある構成</li>
+        <li><strong>フォルダ構成</strong>：年、国、アクティビティ、端末別に整理された構成</li>
+      </ul>
+      <p>パソコン上でフォルダ整理されている場合は、最上位フォルダを1つの<code>.zip</code>に圧縮して端末へコピーし、そのファイルを読み込むだけです。</p>
+
+      <h2>6. インポートを開始</h2>
+      <p><strong>インポート</strong>をタップします。進行状況には追加されたファイルとトラック数が表示されます。</p>
+      <ul>
+        <li><strong>重複防止。</strong> 開始時刻で照合するため、同じバックアップを再読み込みしても重複しません。</li>
+        <li><strong>自動分割。</strong> 複数日が連結されたファイルは1日ごとの移動記録に分割されます。</li>
+        <li><strong>堅牢。</strong> ZIP内の一部が壊れていても、そのファイルだけをスキップして残りを読み込みます。</li>
+        <li><strong>任意の最適化。</strong> 非常に密なトラックを簡略化して容量を節約できます。すべての点を残す場合はオフにします。</li>
+      </ul>
+
+      <h2>7. インポート結果を確認</h2>
+      <p>完了すると追加されたトラックとポイント数が表示されます。ルートはすぐに<strong>履歴</strong>、<strong>カレンダー</strong>、<strong>全期間マップ</strong>、<strong>場所と国</strong>のアトラスに反映されます。各トラックには距離、時間、速度、高度、推定アクティビティが表示されます。</p>
+
+      <h2>データの囲い込みなし</h2>
+      <p>GPS Loggerへ取り込んでもデータは囲い込まれません。すべて端末内に保存され、いつでも<a href="how-to-record-export-gpx-android.html">GPXまたはKMLとして再エクスポート</a>したり、履歴全体のZIPを作成したりできます。</p>
+
+      <h2>無料版と無制限インポート</h2>
+      <p>無料版では週1トラックまで試せます。ProとLifetimeではGPXを無制限にインポートできます。詳しくは<a href="index.html#pricing">料金</a>をご覧ください。</p>
+
+      <h2>よくある質問</h2>
+      <h3>複数のGPXファイルを一度にインポートできますか？</h3>
+      <p>はい。複数の<code>.gpx</code>ファイル、またはすべてを含む1つのZIPを選べます。</p>
+      <h3>フォルダを含むZIPでも使えますか？</h3>
+      <p>はい。フラットなZIPもサブフォルダ付きZIPも利用できます。</p>
+      <h3>複数の旅行が1ファイルにまとまっている場合は？</h3>
+      <p>大きな位置の飛びや長い時間差を検出し、別々の移動記録に分割します。</p>
+      <h3>アプリで記録したトラックは上書きされますか？</h3>
+      <p>いいえ。新しいトラックだけを追加し、開始時刻が同じ既存データはスキップします。</p>
+
+      <h2>次のガイド</h2>
+      <ul>
+        <li><a href="how-to-record-export-gpx-android.html">AndroidでGPXトラックを記録・エクスポートする方法</a></li>
+        <li><a href="gpx-openstreetmap-qgis.html">GPXログをOpenStreetMapとQGISで使う</a></li>
+        <li><a href="offline-gps-logging-privacy.html">オフラインGPS記録がプライバシーに重要な理由</a></li>
+      </ul>
+      <p><a class="btn btn-primary" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger">Android版GPS Loggerをインストール</a></p>
+    </article>
+  </main>
+  <footer class="footer"><div class="shell footer-grid"><p>GPS Logger: Private Tracker</p><nav class="footer-links"><a href="guides.html">ガイド</a><a href="index.html">ホーム</a><a href="privacy.html">プライバシー</a></nav></div></footer>
+  <script src="../app.js"></script>
+</body>
+</html>

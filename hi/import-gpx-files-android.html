@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Android पर GPX फ़ाइलें कैसे इंपोर्ट करें — ZIP बैकअप और बड़े संग्रह</title>
+  <meta name="description" content="Android पर GPX फ़ाइलें एक साथ इंपोर्ट करें: एक बार में कई .gpx ट्रैक या एक पूरा ZIP बैकअप (फ्लैट या संरचित फ़ोल्डर) लोड करें, Garmin, Strava, OsmAnd या Wikiloc से संग्रह माइग्रेट करें, सुरक्षित री-इंपोर्ट और कोई लॉक-इन नहीं।">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#287743">
+  <link rel="canonical" href="https://northforceapps.github.io/gpslogger/hi/import-gpx-files-android.html">
+  <link rel="alternate" hreflang="en" href="https://northforceapps.github.io/gpslogger/import-gpx-files-android.html">
+  <link rel="alternate" hreflang="de" href="https://northforceapps.github.io/gpslogger/de/import-gpx-files-android.html">
+  <link rel="alternate" hreflang="es" href="https://northforceapps.github.io/gpslogger/es/import-gpx-files-android.html">
+  <link rel="alternate" hreflang="fr" href="https://northforceapps.github.io/gpslogger/fr/import-gpx-files-android.html">
+  <link rel="alternate" hreflang="pt" href="https://northforceapps.github.io/gpslogger/pt/import-gpx-files-android.html">
+  <link rel="alternate" hreflang="ja" href="https://northforceapps.github.io/gpslogger/ja/import-gpx-files-android.html">
+  <link rel="alternate" hreflang="hi" href="https://northforceapps.github.io/gpslogger/hi/import-gpx-files-android.html">
+  <link rel="alternate" hreflang="x-default" href="https://northforceapps.github.io/gpslogger/import-gpx-files-android.html">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" type="image/png" href="../assets/icon.png">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"HowTo","name":"Android पर GPX फ़ाइलें कैसे इंपोर्ट करें","description":"GPS Logger में Android पर GPX ट्रैक या एक ZIP बैकअप एक साथ इंपोर्ट करें, बड़े फ्लैट या संरचित संग्रह सहित।","step":[{"@type":"HowToStep","name":"GPS Logger इंस्टॉल करें","text":"Google Play से GPS Logger: Private Tracker इंस्टॉल करें।"},{"@type":"HowToStep","name":"GPX इंपोर्ट स्क्रीन खोलें","text":"History पर जाएँ, मेन्यू खोलें और Import GPX चुनें।"},{"@type":"HowToStep","name":"फ़ाइलें या ZIP चुनें","text":"एक या अधिक .gpx फ़ाइलें, या आपके पूरे संग्रह वाला एक ZIP बैकअप चुनें।"},{"@type":"HowToStep","name":"संग्रह इंपोर्ट करें","text":"इंपोर्ट शुरू करें। ZIP के अंदर हर GPX पढ़ी जाती है, हर ट्रैक सेगमेंट एक यात्रा बनता है, और डुप्लिकेट अपने आप छोड़ दिए जाते हैं।"},{"@type":"HowToStep","name":"देखें और एक्सपोर्ट करें","text":"इंपोर्ट किए गए रूट आपके इतिहास, कैलेंडर और एटलस में जुड़ जाते हैं। किसी भी ट्रैक को कभी भी GPX या KML में वापस एक्सपोर्ट करें — कोई लॉक-इन नहीं।"}],"tool":[{"@type":"HowToTool","name":"Android phone"},{"@type":"HowToTool","name":"GPS Logger: Private Tracker"}],"totalTime":"PT3M"}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"क्या मैं Android पर एक साथ कई GPX फ़ाइलें इंपोर्ट कर सकता हूँ?","acceptedAnswer":{"@type":"Answer","text":"हाँ। GPS Logger आपको एक बार में कई .gpx फ़ाइलें चुनने देता है, या सैकड़ों GPX फ़ाइलों वाला एक ZIP संग्रह इंपोर्ट करने देता है। हर ट्रैक आपके इतिहास में एक अलग यात्रा के रूप में जुड़ता है।"}},{"@type":"Question","name":"क्या GPX इंपोर्ट फ़ोल्डरों वाले ZIP के साथ काम करता है?","acceptedAnswer":{"@type":"Answer","text":"हाँ। एक ZIP बैकअप तब भी इंपोर्ट होता है चाहे GPX फ़ाइलें ऊपरी स्तर पर फ्लैट पड़ी हों या साल, यात्रा या डिवाइस के अनुसार सबफ़ोल्डरों में व्यवस्थित हों। संग्रह के अंदर हर .gpx एंट्री खोजी और इंपोर्ट की जाती है।"}},{"@type":"Question","name":"क्या किसी बैकअप को दोबारा इंपोर्ट करने से डुप्लिकेट ट्रैक बनेंगे?","acceptedAnswer":{"@type":"Answer","text":"नहीं। ट्रैक प्रारंभ समय से मिलाए जाते हैं, इसलिए वही बैकअप दोबारा इंपोर्ट करने पर जो पहले से इतिहास में है वह छोड़ दिया जाता है। नई फ़ाइलें जोड़ने के बाद इंपोर्ट दोबारा चलाना सुरक्षित है।"}},{"@type":"Question","name":"मेरा GPX संग्रह इंपोर्ट करने के बाद क्या कोई लॉक-इन है?","acceptedAnswer":{"@type":"Answer","text":"नहीं। सब कुछ आपके डिवाइस पर रहता है और आप किसी भी ट्रैक को कभी भी मानक GPX या KML में वापस एक्सपोर्ट कर सकते हैं, पूरे इतिहास का GPX ZIP बैकअप सहित।"}}]}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">सामग्री पर जाएँ</a>
+  <header class="header" id="top">
+    <div class="shell nav">
+      <a class="brand" href="index.html" aria-label="GPS Logger होम"><img src="../assets/icon.png" alt="" width="46" height="46"><span><b>GPS Logger</b><small>निजी रूट रिकॉर्डर और एटलस</small></span></a>
+      <nav class="nav-links" id="navlinks" aria-label="मुख्य">
+        <a class="navlink" href="index.html#features">विशेषताएँ</a>
+        <a class="navlink" href="guides.html">गाइड</a>
+        <a class="navlink" href="index.html#pricing">मूल्य</a>
+        <a class="navlink" href="privacy.html">गोपनीयता</a>
+        <details class="lang-menu">
+          <summary aria-label="भाषा"><span class="lang-current"><span class="flag" aria-hidden="true">🇮🇳</span><span>हिन्दी</span></span><span class="lang-caret" aria-hidden="true">▾</span></summary>
+          <div class="lang-menu-list">
+          <a class="lang-option" href="../import-gpx-files-android.html" hreflang="en" lang="en"><span class="flag" aria-hidden="true">🇺🇸</span><span>English</span></a>
+          <a class="lang-option" href="../de/import-gpx-files-android.html" hreflang="de" lang="de"><span class="flag" aria-hidden="true">🇩🇪</span><span>Deutsch</span></a>
+          <a class="lang-option" href="../es/import-gpx-files-android.html" hreflang="es" lang="es"><span class="flag" aria-hidden="true">🇪🇸</span><span>Español</span></a>
+          <a class="lang-option" href="../fr/import-gpx-files-android.html" hreflang="fr" lang="fr"><span class="flag" aria-hidden="true">🇫🇷</span><span>Français</span></a>
+          <a class="lang-option" href="../pt/import-gpx-files-android.html" hreflang="pt" lang="pt"><span class="flag" aria-hidden="true">🇧🇷</span><span>Português</span></a>
+          <a class="lang-option" href="../ja/import-gpx-files-android.html" hreflang="ja" lang="ja"><span class="flag" aria-hidden="true">🇯🇵</span><span>日本語</span></a>
+          <a class="lang-option" href="import-gpx-files-android.html" hreflang="hi" lang="hi" aria-current="true"><span class="flag" aria-hidden="true">🇮🇳</span><span>हिन्दी</span></a>
+          </div>
+        </details>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="मेन्यू" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </header>
+  <main id="main" class="article-main">
+    <article class="shell prose article">
+      <p class="eyebrow">GPX इंपोर्ट ट्यूटोरियल</p>
+      <h1>Android पर GPX फ़ाइलें कैसे इंपोर्ट करें — ZIP बैकअप और बड़े संग्रह</h1>
+      <p class="lead">क्या वर्षों के GPX ट्रैक किसी फ़ोल्डर या पुराने ऐप में पड़े हैं? GPS Logger उन्हें Android पर एक ही बार में इंपोर्ट कर लेता है — एक साथ कई <code>.gpx</code> फ़ाइलें चुनें, या इसे एक ZIP बैकअप दें और अंदर का हर रूट आपके इतिहास, कैलेंडर और निजी एटलस में आ जाता है। यह फ्लैट संग्रहों और फ़ोल्डरों में व्यवस्थित संग्रहों दोनों के लिए काम करता है, री-इंपोर्ट सुरक्षित है, और कोई लॉक-इन नहीं है।</p>
+
+      <figure class="article-shot"><img src="../assets/ss-atlas.png" alt="Android पर GPS Logger का लाइफटाइम एटलस मानचित्र, एक साथ कई इंपोर्ट किए गए GPX रूट दिखाते हुए" loading="lazy"><figcaption>इंपोर्ट किए गए रूट आपके लाइफटाइम एटलस, कैलेंडर और स्थानों में जुड़ते हैं — सिर्फ़ एक सपाट फ़ाइल सूची में नहीं।</figcaption></figure>
+
+      <h2>त्वरित उत्तर</h2>
+      <p>GPS Logger खोलें → <strong>History</strong> → मेन्यू → <strong>Import GPX</strong>, फिर अपनी <code>.gpx</code> फ़ाइलें या एक ZIP बैकअप चुनें और शुरू करें। एक ZIP में सैकड़ों ट्रैक हो सकते हैं; उन्हें एक-एक करके पढ़ा जाता है, हर ट्रैक सेगमेंट अपनी यात्रा बनता है, और जो ट्रैक पहले से आपके इतिहास में है वह छोड़ दिया जाता है ताकि डुप्लिकेट कभी न बनें।</p>
+
+      <h2>1. GPS Logger इंस्टॉल करें</h2>
+      <p>Google Play से <a data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger">GPS Logger: Private Tracker</a> इंस्टॉल करें। ट्रैक इंपोर्ट करने या देखने के लिए किसी अकाउंट या साइन-इन की ज़रूरत नहीं है — सब कुछ आपके फ़ोन पर प्रोसेस और स्टोर होता है।</p>
+
+      <h2>2. अपनी GPX फ़ाइलें इकट्ठा करें</h2>
+      <p>GPX (GPS Exchange Format) वह सार्वभौमिक रूट फ़ाइल है जिसे लगभग हर GPS ऐप और डिवाइस लिखता है। आपका संग्रह इनसे आ सकता है:</p>
+      <ul>
+        <li>किसी दूसरे GPS लॉगर या ट्रैकर ऐप से <strong>पूरे इतिहास का एक्सपोर्ट</strong></li>
+        <li><strong>Strava</strong>, <strong>Garmin Connect</strong>, <strong>Wikiloc</strong>, <strong>Komoot</strong> या <strong>OsmAnd</strong> से एक थोक डाउनलोड</li>
+        <li>पुराने <strong>हैंडहेल्ड GPS</strong> एक्सपोर्ट (Garmin eTrex, GPSMAP आदि)</li>
+        <li>एक बैकअप ZIP जो आपने पहले GPS Logger से ही बनाया था</li>
+      </ul>
+      <p>फ़ाइलें (या ZIP) ऐसी जगह रखें जहाँ Android पहुँच सके — आंतरिक स्टोरेज, Downloads, Google Drive या कोई भी क्लाउड प्रदाता जो फ़ाइल पिकर में दिखे।</p>
+
+      <h2>3. GPX इंपोर्ट स्क्रीन खोलें</h2>
+      <p>GPS Logger में, <strong>History</strong> टैब पर जाएँ, ओवरफ़्लो मेन्यू खोलें और <strong>Import GPX</strong> चुनें। स्क्रीन बताती है कि यह क्या स्वीकार करती है और बहुत विस्तृत ट्रैक को ऑप्टिमाइज़ करने का विकल्प दिखाती है।</p>
+
+      <h2>4. फ़ाइलें या ZIP बैकअप चुनें</h2>
+      <p><strong>Choose files</strong> पर टैप करें। यहाँ से आप या तो:</p>
+      <ul>
+        <li>एक साथ <strong>कई <code>.gpx</code> फ़ाइलें चुन सकते हैं</strong> — लॉन्ग-प्रेस करें, फिर हर एक को जोड़ने के लिए टैप करें।</li>
+        <li>एक <strong>अकेला ZIP संग्रह चुन सकते हैं</strong> — अंदर की हर <code>.gpx</code> अपने आप इंपोर्ट हो जाती है।</li>
+      </ul>
+
+      <aside class="inline-app-card">
+        <div class="card-header">
+          <img src="../assets/icon.png" alt="GPS Logger लोगो" class="card-logo">
+          <div class="card-info">
+            <h3>पूरी GPX लाइब्रेरी मिनटों में ले जाएँ</h3>
+            <p>GPS Logger अलग फ़ाइलें और ZIP बैकअप दोनों पढ़ता है, डुप्लिकेट छोड़ता है, और हर रूट को आपके निजी एटलस में एक मानचित्र-योग्य यात्रा बनाता है।</p>
+          </div>
+        </div>
+        <div class="card-features">
+          <span>✓ थोक और ZIP इंपोर्ट</span>
+          <span>✓ सुरक्षित री-इंपोर्ट</span>
+          <span>✓ कभी भी वापस एक्सपोर्ट</span>
+        </div>
+        <a class="btn btn-primary" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M3.6 2.3 13.8 12 3.6 21.7c-.4.2-.9-.1-.9-.6V2.9c0-.5.5-.8.9-.6Zm11.7 6.1 2.9 1.7c.9.5.9 1.8 0 2.3l-2.9 1.7L12.8 12l2.5-3.6ZM16 6.8 6.4 1.4 14 9l2-2.2ZM6.4 22.6 16 17.2 14 15l-7.6 7.6Z"/></svg>
+          Google Play पर पाएँ
+        </a>
+      </aside>
+
+      <h2>5. बड़े संग्रह: फ़ोल्डर को ZIP करें</h2>
+      <p>बड़ी, व्यवस्थित लाइब्रेरी वाले लोगों के लिए — सैकड़ों या हज़ारों रूट — ZIP तरीका कहीं अधिक तेज़ है। इंपोर्टर संग्रह के अंदर हर GPX एंट्री पढ़ता है, चाहे फ़ाइलें इस तरह हों:</p>
+      <ul>
+        <li><strong>फ्लैट</strong> — सभी <code>.gpx</code> फ़ाइलें ZIP के ऊपरी स्तर पर पड़ी हों, या</li>
+        <li><strong>संरचित</strong> — साल, देश, गतिविधि या डिवाइस के अनुसार सबफ़ोल्डरों में क्रमित हों (उदाहरण के लिए <code>2023/spain/coast-walk.gpx</code>)।</li>
+      </ul>
+      <p>तो यदि आपके ट्रैक कंप्यूटर पर एक साफ़-सुथरे फ़ोल्डर ट्री में रहते हैं, तो बस ऊपरी फ़ोल्डर को एक <code>.zip</code> में कंप्रेस करें, उसे अपने फ़ोन पर कॉपी करें, और वही एक फ़ाइल इंपोर्ट करें। पहले कुछ भी फ्लैट या रीनेम करने की ज़रूरत नहीं।</p>
+
+      <h2>6. इंपोर्ट शुरू करें</h2>
+      <p><strong>Import</strong> पर टैप करें। एक प्रोग्रेस बार जुड़ती हुई फ़ाइलें और ट्रैक गिनती है। चलते समय कुछ चीज़ें अपने आप होती हैं:</p>
+      <ul>
+        <li><strong>डुप्लिकेट-सुरक्षित।</strong> ट्रैक प्रारंभ समय से मिलाए जाते हैं, इसलिए वही बैकअप दोबारा इंपोर्ट करना — या नई फ़ाइलें जोड़ने के बाद इंपोर्ट फिर चलाना — कभी डुप्लिकेट नहीं बनाता।</li>
+        <li><strong>स्मार्ट विभाजन।</strong> जो एक्सपोर्ट कई दिनों को एक लंबे सेगमेंट में जोड़ देते हैं, उन्हें प्रति दिन एक यात्रा में वापस बाँट दिया जाता है, ताकि कई दिनों की Garmin फ़ाइल एक उलझी हुई रेखा न बने।</li>
+        <li><strong>सहनशील।</strong> यदि किसी ZIP के अंदर एक फ़ाइल खराब है, तो उसकी सूचना देकर छोड़ दिया जाता है — बाक़ी संग्रह फिर भी इंपोर्ट होता है।</li>
+        <li><strong>वैकल्पिक ऑप्टिमाइज़।</strong> बहुत घने ट्रैक को जगह बचाने के लिए सरल किया जा सकता है; बड़ी लाइब्रेरी के लिए इसे चालू रखें, या हर बिंदु रखने के लिए बंद कर दें।</li>
+      </ul>
+
+      <h2>7. अपना इंपोर्ट किया एटलस देखें</h2>
+      <p>समाप्त होने पर आपको दिखेगा कि कितने ट्रैक और बिंदु जोड़े गए। इंपोर्ट किए गए रूट तुरंत आपकी <strong>इतिहास सूची</strong>, <strong>कैलेंडर</strong>, <strong>लाइफटाइम मानचित्र</strong> और <strong>स्थान व देश</strong> एटलस में दिखते हैं — फ़ाइलों के ढेर को आप जहाँ-जहाँ रहे हैं उसके ब्राउज़ करने योग्य मानचित्र में बदल देते हैं। हर ट्रैक दूरी, अवधि, गति और ऊँचाई दिखाता है, साथ में एक पहचानी गई गतिविधि प्रकार।</p>
+
+      <h2>कभी कोई लॉक-इन नहीं</h2>
+      <p>GPS Logger में इंपोर्ट करना आपके डेटा को बंदी नहीं बनाता। सब कुछ स्थानीय और निजी रूप से स्टोर रहता है, और आप किसी भी ट्रैक को <a href="how-to-record-export-gpx-android.html">वापस GPX या KML में एक्सपोर्ट</a> कर सकते हैं — या पूरे इतिहास का GPX ZIP बैकअप बना सकते हैं — जब चाहें। आज़माना सुरक्षित है: अपना संग्रह अंदर लाएँ, देखें-घूमें, और आप उसे हमेशा फिर से बाहर निकाल सकते हैं।</p>
+
+      <h2>फ्री बनाम असीमित इंपोर्ट</h2>
+      <p>कोई भी फ्री टियर पर इंपोर्ट आज़मा सकता है (प्रति सप्ताह एक इंपोर्ट किया ट्रैक), ताकि तय करने से पहले आप पुष्टि कर सकें कि आपकी फ़ाइलें सही लोड होती हैं। Pro और Lifetime पूरे संग्रह को एक बार में ले जाने के लिए असीमित GPX इंपोर्ट खोलते हैं। विवरण के लिए <a href="index.html#pricing">मूल्य</a> देखें।</p>
+
+      <h2>अक्सर पूछे जाने वाले प्रश्न</h2>
+      <h3>क्या मैं एक साथ कई GPX फ़ाइलें इंपोर्ट कर सकता हूँ?</h3>
+      <p>हाँ — फ़ाइल पिकर में जितनी चाहें उतनी <code>.gpx</code> फ़ाइलें चुनें, या उन सभी वाला एक ZIP इंपोर्ट करें।</p>
+      <h3>क्या यह फ़ोल्डरों वाले ZIP के साथ काम करता है?</h3>
+      <p>हाँ। फ्लैट संग्रह और सबफ़ोल्डरों में व्यवस्थित ZIP दोनों काम करते हैं; संग्रह के अंदर उसके फ़ोल्डर पथ की परवाह किए बिना हर GPX एंट्री खोजी जाती है।</p>
+      <h3>यदि मेरा एक्सपोर्ट कई यात्राओं को एक फ़ाइल में बाँध दे तो?</h3>
+      <p>इंपोर्टर बड़े उछाल और लंबे समय-अंतराल का पता लगाकर डेटा को अलग यात्राओं में बाँट देता है, ताकि आपका इतिहास साफ़ रहे।</p>
+      <h3>क्या यह उन ट्रैक को अधिलेखित करेगा जो मैंने ऐप में रिकॉर्ड किए?</h3>
+      <p>नहीं। इंपोर्ट केवल नए ट्रैक जोड़ता है और जो प्रारंभ समय से पहले से मौजूद है उसे छोड़ देता है।</p>
+
+      <h2>अगली गाइड</h2>
+      <ul>
+        <li><a href="how-to-record-export-gpx-android.html">Android पर GPX ट्रैक कैसे रिकॉर्ड और एक्सपोर्ट करें</a></li>
+        <li><a href="gpx-openstreetmap-qgis.html">OpenStreetMap और QGIS के साथ GPX लॉग का उपयोग करें</a></li>
+        <li><a href="offline-gps-logging-privacy.html">ऑफ़लाइन GPS लॉगिंग गोपनीयता के लिए क्यों मायने रखती है</a></li>
+      </ul>
+      <p><a class="btn btn-primary" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger">Android के लिए GPS Logger इंस्टॉल करें</a></p>
+    </article>
+  </main>
+  <footer class="footer"><div class="shell footer-grid"><p>GPS Logger: Private Tracker</p><nav class="footer-links"><a href="guides.html">गाइड</a><a href="index.html">होम</a><a href="privacy.html">गोपनीयता</a></nav></div></footer>
+  <script src="../app.js"></script>
+</body>
+</html>
