@@ -280,9 +280,11 @@ h2.display { font-size: clamp(2.1rem, 4.2vw, 3.6rem); max-width: 18ch; }
 .article-shot figcaption { padding: 14px 18px; color: var(--muted); font-size: 0.9rem; text-align: center; }
 .article-compare {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 18px;
-  margin: 34px 0;
+  grid-template-columns: 1fr;
+  gap: 22px;
+  width: min(var(--maxw), calc(100vw - 40px));
+  margin: 34px 0 34px 50%;
+  transform: translateX(-50%);
 }
 .article-compare figure {
   margin: 0;
@@ -295,8 +297,8 @@ h2.display { font-size: clamp(2.1rem, 4.2vw, 3.6rem); max-width: 18ch; }
 .article-compare img {
   display: block;
   width: 100%;
-  aspect-ratio: 20 / 9;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
 }
 .article-compare figcaption {
   padding: 14px 16px;
@@ -364,7 +366,6 @@ h2.display { font-size: clamp(2.1rem, 4.2vw, 3.6rem); max-width: 18ch; }
   }
   .strip { grid-template-columns: repeat(2, 1fr); }
   .features, .tiers, .steps, .guide-grid { grid-template-columns: 1fr 1fr; }
-  .article-compare { grid-template-columns: 1fr; }
   .screens { grid-template-columns: repeat(3, 1fr); }
   .split { grid-template-columns: 1fr; }
 }

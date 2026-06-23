@@ -27,7 +27,7 @@
   <main id="main" class="article-main"><article class="shell prose article">
     <p class="eyebrow">標高補正</p><h1>AndroidでGPS標高データを補正する方法</h1>
     <p class="lead">このガイドは、ルート自体は自然なのに記録された高度だけが大きく乱れた実例から生まれました。GPS Loggerは保存済みトラックを地形データで補正し、標高プロファイルと獲得標高をより現実的にできます。</p>
-    <div class="article-compare" aria-label="標高補正の前後比較"><figure><img src="../assets/elevation-correction-before.webp" alt="補正前の標高プロファイルを表示したGPS Loggerの3D衛星ルート" width="1600" height="720" loading="lazy"><figcaption>補正前: ルートは自然でも、獲得標高が大きく出ています。</figcaption></figure><figure><img src="../assets/elevation-correction-after.webp" alt="地形標高補正後のGPS Logger 3D衛星ルート" width="1600" height="720" loading="lazy"><figcaption>補正後: 同じルートを、より納得しやすい獲得標高で表示します。</figcaption></figure></div>
+    <div class="article-compare" aria-label="標高補正の前後比較"><figure><img src="../assets/elevation-correction-before.webp" alt="補正前の標高プロファイルを表示したGPS Loggerの3D衛星ルート" width="1600" height="720" loading="lazy"><figcaption>補正前: ルートは自然でも、獲得標高が大きく出ています。</figcaption></figure><figure><img src="../assets/elevation-correction-after.webp" alt="地形標高補正後のGPS Logger 3D衛星ルート" width="2400" height="1080" loading="lazy"><figcaption>補正後: 同じルートを、より納得しやすい獲得標高で表示します。</figcaption></figure></div>
     <h2>GPS高度がずれる理由</h2><p>スマートフォンのGPSは、横方向の位置より高度の精度が落ちやすいです。樹木、建物、衛星配置、天候、気圧センサーのずれで高度が上下します。獲得標高は合計値なので、小さな誤差が何度も積み重なると大きな数字になります。</p>
     <h2>地形補正のしくみ</h2><p>緯度、経度、時刻はそのまま残します。GPS Loggerはルート周辺の公開地形タイルを取得し、ノイズのある高度を地表の標高に置き換えて、プロファイルと獲得標高を再計算します。</p>
     <h2>役立つ場面</h2><ul><li>GPXにありえない急上昇や急降下がある。</li><li>平坦な通勤ルートの獲得標高が大きすぎる。</li><li>同じルートの記録で標高差が大きく違う。</li><li>インポートしたGPXの高度が欠けている、または不自然。</li></ul>

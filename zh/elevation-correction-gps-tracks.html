@@ -27,7 +27,7 @@
   <main id="main" class="article-main"><article class="shell prose article">
     <p class="eyebrow">海拔校正</p><h1>如何在 Android 上校正 GPS 海拔数据</h1>
     <p class="lead">这篇指南来自一条真实保存路线：路线本身没问题，但记录的海拔曲线明显过于嘈杂。GPS Logger 可以用地形数据校正已保存轨迹的海拔，让海拔曲线和累计爬升更接近实际地面。</p>
-    <div class="article-compare" aria-label="海拔校正前后示例"><figure><img src="../assets/elevation-correction-before.webp" alt="校正前显示原始海拔曲线的 GPS Logger 3D 卫星路线" width="1600" height="720" loading="lazy"><figcaption>校正前：路线正常，但海拔数据夸大了爬升。</figcaption></figure><figure><img src="../assets/elevation-correction-after.webp" alt="GPS Logger 3D 卫星路线经过地形海拔校正后" width="1600" height="720" loading="lazy"><figcaption>校正后：同一条路线，累计爬升更可信。</figcaption></figure></div>
+    <div class="article-compare" aria-label="海拔校正前后示例"><figure><img src="../assets/elevation-correction-before.webp" alt="校正前显示原始海拔曲线的 GPS Logger 3D 卫星路线" width="1600" height="720" loading="lazy"><figcaption>校正前：路线正常，但海拔数据夸大了爬升。</figcaption></figure><figure><img src="../assets/elevation-correction-after.webp" alt="GPS Logger 3D 卫星路线经过地形海拔校正后" width="2400" height="1080" loading="lazy"><figcaption>校正后：同一条路线，累计爬升更可信。</figcaption></figure></div>
     <h2>为什么 GPS 海拔容易出错</h2><p>手机 GPS 的水平位置通常比垂直高度更可靠。树木、建筑、卫星几何、天气和气压计漂移都会让海拔上下跳动。累计爬升是把很多点相加，所以许多小误差会变成很大的错误数值。</p>
     <h2>地形校正做什么</h2><p>轨迹的经纬度、时间戳和路线保持不变。GPS Logger 下载路线区域需要的公共地形瓦片，把噪声海拔替换为地面高度，然后重新计算海拔曲线和累计爬升。</p>
     <h2>适合的情况</h2><ul><li>GPX 里有不可能的尖峰或突然下降。</li><li>平坦通勤路线显示过多爬升。</li><li>同一路线多次记录的爬升差异很大。</li><li>导入的 GPX 缺少海拔或海拔质量很差。</li></ul>
