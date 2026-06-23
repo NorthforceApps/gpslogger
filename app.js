@@ -7,12 +7,36 @@
      this single value and every CTA button updates automatically. The same URL
      is also hard-coded as each button's href so links work without JS too. */
   const PLAY_URL = "https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger";
+  const PLAY_CAMPAIGNS = {
+    "how-to-record-export-gpx-android": "guide_gpx_export",
+    "import-gpx-files-android": "guide_import_gpx",
+    "elevation-correction-gps-tracks": "guide_elevation_correction",
+    "offline-gps-logging-privacy": "guide_privacy",
+    "gps-logger-vs-strava": "guide_strava_alternative",
+    "gpx-openstreetmap-qgis": "guide_gis_osm"
+  };
   const YT_ID = "NSOkPpQ0TaY";
   const EMAIL_USER = "northforceapps";
   const EMAIL_HOST = "protonmail.com";
 
-  /* apply Play URL to every [data-play] link */
-  document.querySelectorAll("[data-play]").forEach((a) => { a.href = PLAY_URL; });
+  const getPlayCampaign = () => {
+    const parts = window.location.pathname.split("/").filter(Boolean);
+    const page = parts[parts.length - 1] || "";
+    const homeDirs = new Set(["gpslogger", "de", "es", "fr", "pt", "ja", "hi"]);
+    if (!page || homeDirs.has(page) || page === "index.html") return "site_home";
+    if (page === "guides.html") return "guide_hub";
+    const slug = page.replace(/\.html$/, "");
+    return PLAY_CAMPAIGNS[slug] || "site_other";
+  };
+
+  const playUrl = new URL(PLAY_URL);
+  playUrl.searchParams.set(
+    "referrer",
+    `utm_source=gpslogger_site&utm_medium=organic&utm_campaign=${getPlayCampaign()}`
+  );
+
+  /* apply Play URL with campaign attribution to every [data-play] link */
+  document.querySelectorAll("[data-play]").forEach((a) => { a.href = playUrl.toString(); });
 
   /* sticky-header shrink on scroll */
   const header = document.querySelector(".header");
