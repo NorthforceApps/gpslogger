@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How to Correct GPS Elevation Data on Android</title>
+  <meta name="description" content="Fix noisy GPS altitude and elevation gain by correcting a recorded track against terrain data. Learn when elevation correction helps, when it cannot, and how GPS Logger handles GPX elevation correction on Android.">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#287743">
+  <link rel="canonical" href="https://northforceapps.github.io/gpslogger/elevation-correction-gps-tracks.html">
+  <link rel="alternate" hreflang="en" href="https://northforceapps.github.io/gpslogger/elevation-correction-gps-tracks.html">
+  <link rel="alternate" hreflang="de" href="https://northforceapps.github.io/gpslogger/de/elevation-correction-gps-tracks.html">
+  <link rel="alternate" hreflang="es" href="https://northforceapps.github.io/gpslogger/es/elevation-correction-gps-tracks.html">
+  <link rel="alternate" hreflang="fr" href="https://northforceapps.github.io/gpslogger/fr/elevation-correction-gps-tracks.html">
+  <link rel="alternate" hreflang="pt" href="https://northforceapps.github.io/gpslogger/pt/elevation-correction-gps-tracks.html">
+  <link rel="alternate" hreflang="ja" href="https://northforceapps.github.io/gpslogger/ja/elevation-correction-gps-tracks.html">
+  <link rel="alternate" hreflang="hi" href="https://northforceapps.github.io/gpslogger/hi/elevation-correction-gps-tracks.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://northforceapps.github.io/gpslogger/zh/elevation-correction-gps-tracks.html">
+  <link rel="alternate" hreflang="x-default" href="https://northforceapps.github.io/gpslogger/elevation-correction-gps-tracks.html">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="assets/icon.png">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"How to correct GPS elevation data on Android","description":"A practical guide to fixing noisy GPS altitude and elevation gain by correcting recorded tracks against terrain data.","author":{"@type":"Organization","name":"NorthforceApps"},"publisher":{"@type":"Organization","name":"NorthforceApps"},"mainEntityOfPage":"https://northforceapps.github.io/gpslogger/elevation-correction-gps-tracks.html"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why is GPS elevation often wrong?","acceptedAnswer":{"@type":"Answer","text":"Phone GPS altitude is much noisier than latitude and longitude. Barometric altitude can drift with weather, pressure and sensor calibration, so a route can show false climbs or drops."}},{"@type":"Question","name":"What does terrain elevation correction do?","acceptedAnswer":{"@type":"Answer","text":"Terrain correction replaces each recorded point's altitude with the ground height from a digital elevation model, then recalculates the elevation profile and gain."}},{"@type":"Question","name":"When should I not use terrain correction?","acceptedAnswer":{"@type":"Answer","text":"Terrain correction represents ground height. It is less suitable for bridges, flyovers, multi-storey routes, aircraft, tunnels, ferries or activities where you were intentionally above or below the terrain."}}]}]}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="header" id="top">
+    <div class="shell nav">
+      <a class="brand" href="index.html"><img src="assets/icon.png" alt="" width="46" height="46"><span><b>GPS Logger</b><small>Private route recorder &amp; atlas</small></span></a>
+      <nav class="nav-links" id="navlinks" aria-label="Primary">
+        <a class="navlink" href="index.html#features">Features</a>
+        <a class="navlink" href="guides.html">Guides</a>
+        <a class="navlink" href="index.html#pricing">Pricing</a>
+        <a class="navlink" href="privacy.html">Privacy</a>
+        <details class="lang-menu">
+          <summary aria-label="Language"><span class="lang-current"><span class="flag" aria-hidden="true">🇺🇸</span><span>English</span></span><span class="lang-caret" aria-hidden="true">▾</span></summary>
+          <div class="lang-menu-list">
+          <a class="lang-option" href="./elevation-correction-gps-tracks.html" hreflang="en" lang="en" aria-current="true"><span class="flag" aria-hidden="true">🇺🇸</span><span>English</span></a>
+          <a class="lang-option" href="de/elevation-correction-gps-tracks.html" hreflang="de" lang="de"><span class="flag" aria-hidden="true">🇩🇪</span><span>Deutsch</span></a>
+          <a class="lang-option" href="es/elevation-correction-gps-tracks.html" hreflang="es" lang="es"><span class="flag" aria-hidden="true">🇪🇸</span><span>Español</span></a>
+          <a class="lang-option" href="fr/elevation-correction-gps-tracks.html" hreflang="fr" lang="fr"><span class="flag" aria-hidden="true">🇫🇷</span><span>Français</span></a>
+          <a class="lang-option" href="pt/elevation-correction-gps-tracks.html" hreflang="pt" lang="pt"><span class="flag" aria-hidden="true">🇧🇷</span><span>Português</span></a>
+          <a class="lang-option" href="ja/elevation-correction-gps-tracks.html" hreflang="ja" lang="ja"><span class="flag" aria-hidden="true">🇯🇵</span><span>日本語</span></a>
+          <a class="lang-option" href="hi/elevation-correction-gps-tracks.html" hreflang="hi" lang="hi"><span class="flag" aria-hidden="true">🇮🇳</span><span>हिन्दी</span></a>
+          <a class="lang-option" href="zh/elevation-correction-gps-tracks.html" hreflang="zh-Hans" lang="zh-Hans"><span class="flag" aria-hidden="true">🇨🇳</span><span>简体中文</span></a>
+          </div>
+        </details>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </header>
+  <main id="main" class="article-main">
+    <article class="shell prose article">
+      <p class="eyebrow">Elevation correction</p>
+      <h1>How to correct GPS elevation data on Android</h1>
+      <p class="lead">This guide came from a real saved route where the recorded altitude made the climb total and profile less trustworthy than the route itself. GPS Logger can correct saved track elevations against terrain data, giving walkers, hikers, cyclists and field users a cleaner elevation profile and more realistic elevation gain.</p>
+      <div class="article-compare" aria-label="Before and after elevation correction example">
+        <figure><img src="assets/elevation-correction-before.webp" alt="GPS Logger 3D satellite route with original elevation profile before correction" width="1600" height="720" loading="lazy"><figcaption>Before: the route is fine, but the altitude data overstates the climb.</figcaption></figure>
+        <figure><img src="assets/elevation-correction-after.webp" alt="GPS Logger 3D satellite route after terrain elevation correction with corrected elevation gain" width="1600" height="720" loading="lazy"><figcaption>After: terrain correction keeps the same route, with a more believable elevation gain.</figcaption></figure>
+      </div>
+
+      <h2>Why GPS elevation goes wrong</h2>
+      <p>Phone GPS is usually much better horizontally than vertically. Latitude and longitude may be good enough to draw your path, while altitude jumps up and down because satellite geometry, tree cover, buildings, weather and phone sensors all add noise. Barometers help on some phones, but pressure changes can make a route drift even when you stayed at the same height.</p>
+      <p>That noise matters because elevation gain is cumulative. Small false climbs, repeated over thousands of points, can turn a normal route into a misleading climbing result.</p>
+
+      <h2>What terrain correction does</h2>
+      <p>Terrain correction keeps each recorded latitude, longitude and timestamp, then replaces the noisy altitude with ground elevation from a digital elevation model. GPS Logger downloads the public terrain tiles needed for the route area, samples the height for each point, and recalculates the elevation profile and gain on the phone.</p>
+      <p>This is especially useful for walking, hiking, trail running, cycling, road trips and GPX archives where you want the track to describe the land surface rather than the phone sensor's drift.</p>
+
+      <h2>When it helps most</h2>
+      <ul>
+        <li>A GPX track has impossible spikes or sudden drops.</li>
+        <li>A flat commute reports too much climbing.</li>
+        <li>Several recordings of the same route show very different elevation gain.</li>
+        <li>An imported GPX file has missing or poor altitude values.</li>
+        <li>You want a cleaner elevation chart for a saved route.</li>
+      </ul>
+
+      <h2>When terrain correction is not the right answer</h2>
+      <p>Terrain data is ground height. It cannot know that you were on a bridge, inside a tower, on a ski lift, below ground, on a ferry, in an aircraft or moving through a tunnel. In those cases, the phone's recorded altitude may describe your real position better than terrain height.</p>
+
+      <aside class="inline-app-card">
+        <div class="card-header">
+          <img src="assets/icon.png" alt="GPS Logger logo" class="card-logo">
+          <div class="card-info">
+            <h3>Correct a saved route in GPS Logger</h3>
+            <p>Open a track, use Correct elevation, and GPS Logger recalculates the profile from terrain data. Single-track correction is a Pro feature; batch correction is for longer-term Pro plans.</p>
+          </div>
+        </div>
+        <div class="card-features">
+          <span>✓ Cleaner GPX altitude</span>
+          <span>✓ Recomputed elevation gain</span>
+          <span>✓ Works with saved and imported tracks</span>
+        </div>
+        <a class="btn btn-primary" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger">Get GPS Logger on Google Play</a>
+      </aside>
+
+      <h2>How to correct elevation in GPS Logger</h2>
+      <ol>
+        <li>Record a route or import a GPX file.</li>
+        <li>Open the saved track from History.</li>
+        <li>Choose <strong>Correct elevation</strong>. The app needs an internet connection to download terrain tiles for the route area.</li>
+        <li>Wait for the correction to finish. The elevation profile and gain are recalculated from terrain data.</li>
+        <li>Export GPX or KML if you need a corrected file for another mapping tool.</li>
+      </ol>
+      <p>If your app version offers a limited free trial, it will be shown in the app. Otherwise, elevation correction belongs to Pro, with whole-library batch correction reserved for yearly or Lifetime access.</p>
+
+      <h2>Privacy and export notes</h2>
+      <p>GPS Logger is still built around local track history: your routes are saved on your device unless you export, share live location, or use another feature that clearly sends data out. Elevation correction needs terrain-tile downloads for the route area, but it does not require an account or a proprietary GPX upload workflow.</p>
+      <p>After correction, single-track export remains portable: save the route as GPX or KML, or keep it in your private journey atlas.</p>
+
+      <h2>Next guides</h2>
+      <ul>
+        <li><a href="how-to-record-export-gpx-android.html">How to record and export GPX tracks on Android</a></li>
+        <li><a href="import-gpx-files-android.html">How to import GPX files on Android</a></li>
+        <li><a href="gpx-openstreetmap-qgis.html">Use GPX logs with OpenStreetMap and QGIS</a></li>
+      </ul>
+    </article>
+  </main>
+  <footer class="footer"><div class="shell footer-grid"><p>GPS Logger: Private Tracker</p><nav class="footer-links"><a href="guides.html">Guides</a><a href="index.html">Home</a><a href="privacy.html">Privacy</a></nav></div></footer>
+  <script src="app.js"></script>
+</body>
+</html>

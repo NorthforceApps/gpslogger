@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>如何在 Android 上校正 GPS 海拔数据</title>
+  <meta name="description" content="用地形数据修正 GPS 海拔噪声和不真实的累计爬升。了解 GPS Logger 如何在 Android 上校正 GPX 轨迹海拔。">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#287743">
+  <link rel="canonical" href="https://northforceapps.github.io/gpslogger/zh/elevation-correction-gps-tracks.html">
+  <link rel="alternate" hreflang="en" href="https://northforceapps.github.io/gpslogger/elevation-correction-gps-tracks.html">
+  <link rel="alternate" hreflang="de" href="https://northforceapps.github.io/gpslogger/de/elevation-correction-gps-tracks.html">
+  <link rel="alternate" hreflang="es" href="https://northforceapps.github.io/gpslogger/es/elevation-correction-gps-tracks.html">
+  <link rel="alternate" hreflang="fr" href="https://northforceapps.github.io/gpslogger/fr/elevation-correction-gps-tracks.html">
+  <link rel="alternate" hreflang="pt" href="https://northforceapps.github.io/gpslogger/pt/elevation-correction-gps-tracks.html">
+  <link rel="alternate" hreflang="ja" href="https://northforceapps.github.io/gpslogger/ja/elevation-correction-gps-tracks.html">
+  <link rel="alternate" hreflang="hi" href="https://northforceapps.github.io/gpslogger/hi/elevation-correction-gps-tracks.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://northforceapps.github.io/gpslogger/zh/elevation-correction-gps-tracks.html">
+  <link rel="alternate" hreflang="x-default" href="https://northforceapps.github.io/gpslogger/elevation-correction-gps-tracks.html">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" type="image/png" href="../assets/icon.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"如何在 Android 上校正 GPS 海拔数据","description":"解释 GPS 海拔为什么会有噪声，以及 GPS Logger 如何用地形数据校正保存的轨迹。","author":{"@type":"Organization","name":"NorthforceApps"},"publisher":{"@type":"Organization","name":"NorthforceApps"},"mainEntityOfPage":"https://northforceapps.github.io/gpslogger/zh/elevation-correction-gps-tracks.html"}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到正文</a>
+  <header class="header" id="top"><div class="shell nav"><a class="brand" href="../index.html"><img src="../assets/icon.png" alt="" width="46" height="46"><span><b>GPS Logger</b><small>Private route recorder &amp; atlas</small></span></a><nav class="nav-links" id="navlinks" aria-label="Primary"><a class="navlink" href="../index.html#features">Features</a><a class="navlink" href="../guides.html">Guides</a><a class="navlink" href="../index.html#pricing">Pricing</a><a class="navlink" href="../privacy.html">Privacy</a><details class="lang-menu"><summary aria-label="Language"><span class="lang-current"><span class="flag" aria-hidden="true">🇨🇳</span><span>简体中文</span></span><span class="lang-caret" aria-hidden="true">▾</span></summary><div class="lang-menu-list"><a class="lang-option" href="../elevation-correction-gps-tracks.html" hreflang="en" lang="en"><span class="flag" aria-hidden="true">🇺🇸</span><span>English</span></a><a class="lang-option" href="../de/elevation-correction-gps-tracks.html" hreflang="de" lang="de"><span class="flag" aria-hidden="true">🇩🇪</span><span>Deutsch</span></a><a class="lang-option" href="../es/elevation-correction-gps-tracks.html" hreflang="es" lang="es"><span class="flag" aria-hidden="true">🇪🇸</span><span>Español</span></a><a class="lang-option" href="../fr/elevation-correction-gps-tracks.html" hreflang="fr" lang="fr"><span class="flag" aria-hidden="true">🇫🇷</span><span>Français</span></a><a class="lang-option" href="../pt/elevation-correction-gps-tracks.html" hreflang="pt" lang="pt"><span class="flag" aria-hidden="true">🇧🇷</span><span>Português</span></a><a class="lang-option" href="../ja/elevation-correction-gps-tracks.html" hreflang="ja" lang="ja"><span class="flag" aria-hidden="true">🇯🇵</span><span>日本語</span></a><a class="lang-option" href="../hi/elevation-correction-gps-tracks.html" hreflang="hi" lang="hi"><span class="flag" aria-hidden="true">🇮🇳</span><span>हिन्दी</span></a><a class="lang-option" href="../zh/elevation-correction-gps-tracks.html" hreflang="zh-Hans" lang="zh-Hans" aria-current="true"><span class="flag" aria-hidden="true">🇨🇳</span><span>简体中文</span></a></div></details></nav><button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button></div></header>
+  <main id="main" class="article-main"><article class="shell prose article">
+    <p class="eyebrow">海拔校正</p><h1>如何在 Android 上校正 GPS 海拔数据</h1>
+    <p class="lead">这篇指南来自一条真实保存路线：路线本身没问题，但记录的海拔曲线明显过于嘈杂。GPS Logger 可以用地形数据校正已保存轨迹的海拔，让海拔曲线和累计爬升更接近实际地面。</p>
+    <div class="article-compare" aria-label="海拔校正前后示例"><figure><img src="../assets/elevation-correction-before.webp" alt="校正前显示原始海拔曲线的 GPS Logger 3D 卫星路线" width="1600" height="720" loading="lazy"><figcaption>校正前：路线正常，但海拔数据夸大了爬升。</figcaption></figure><figure><img src="../assets/elevation-correction-after.webp" alt="GPS Logger 3D 卫星路线经过地形海拔校正后" width="1600" height="720" loading="lazy"><figcaption>校正后：同一条路线，累计爬升更可信。</figcaption></figure></div>
+    <h2>为什么 GPS 海拔容易出错</h2><p>手机 GPS 的水平位置通常比垂直高度更可靠。树木、建筑、卫星几何、天气和气压计漂移都会让海拔上下跳动。累计爬升是把很多点相加，所以许多小误差会变成很大的错误数值。</p>
+    <h2>地形校正做什么</h2><p>轨迹的经纬度、时间戳和路线保持不变。GPS Logger 下载路线区域需要的公共地形瓦片，把噪声海拔替换为地面高度，然后重新计算海拔曲线和累计爬升。</p>
+    <h2>适合的情况</h2><ul><li>GPX 里有不可能的尖峰或突然下降。</li><li>平坦通勤路线显示过多爬升。</li><li>同一路线多次记录的爬升差异很大。</li><li>导入的 GPX 缺少海拔或海拔质量很差。</li></ul>
+    <h2>限制</h2><p>地形数据表示地面高度。它无法知道你在桥上、高架、楼内、隧道、渡轮或飞机上。在这些情况下，原始记录的海拔可能更能代表真实位置。</p>
+    <aside class="inline-app-card"><div class="card-header"><img src="../assets/icon.png" alt="GPS Logger logo" class="card-logo"><div class="card-info"><h3>在 GPS Logger 中校正轨迹</h3><p>打开已保存轨迹并使用海拔校正。单条轨迹校正是 Pro 功能；批量校正面向更长期的 Pro 权限。</p></div></div><div class="card-features"><span>✓ 更干净的 GPX 海拔</span><span>✓ 重新计算累计爬升</span><span>✓ 支持保存和导入的轨迹</span></div><a class="btn btn-primary" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger">获取 GPS Logger</a></aside>
+    <h2>操作步骤</h2><ol><li>记录路线或导入 GPX。</li><li>从历史记录打开已保存轨迹。</li><li>选择<strong>校正海拔</strong>。下载地形数据需要网络连接。</li><li>等待海拔曲线和累计爬升重新计算。</li><li>需要时导出 GPX 或 KML。</li></ol>
+    <p>如果你的版本提供有限免费试用，应用内会显示。稳定规则是：海拔校正属于 Pro，整库批量校正保留给 Yearly 或 Lifetime。</p>
+    <h2>更多指南</h2><ul><li><a href="../how-to-record-export-gpx-android.html">在 Android 上记录并导出 GPX</a></li><li><a href="../import-gpx-files-android.html">在 Android 上导入 GPX 文件</a></li><li><a href="../gpx-openstreetmap-qgis.html">在 OpenStreetMap 和 QGIS 中使用 GPX</a></li></ul>
+  </article></main>
+  <footer class="footer"><div class="shell footer-grid"><p>GPS Logger: Private Tracker</p><nav class="footer-links"><a href="../guides.html">Guides</a><a href="../index.html">Home</a><a href="../privacy.html">Privacy</a></nav></div></footer>
+  <script src="../app.js"></script>
+</body>
+</html>

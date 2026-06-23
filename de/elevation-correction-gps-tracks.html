@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GPS-Höhendaten auf Android korrigieren</title>
+  <meta name="description" content="Korrigiere ungenaue GPS-Höhen und unrealistische Höhenmeter mit Geländedaten. So hilft GPS Logger bei GPX-Höhenkorrektur auf Android.">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#287743">
+  <link rel="canonical" href="https://northforceapps.github.io/gpslogger/de/elevation-correction-gps-tracks.html">
+  <link rel="alternate" hreflang="en" href="https://northforceapps.github.io/gpslogger/elevation-correction-gps-tracks.html">
+  <link rel="alternate" hreflang="de" href="https://northforceapps.github.io/gpslogger/de/elevation-correction-gps-tracks.html">
+  <link rel="alternate" hreflang="es" href="https://northforceapps.github.io/gpslogger/es/elevation-correction-gps-tracks.html">
+  <link rel="alternate" hreflang="fr" href="https://northforceapps.github.io/gpslogger/fr/elevation-correction-gps-tracks.html">
+  <link rel="alternate" hreflang="pt" href="https://northforceapps.github.io/gpslogger/pt/elevation-correction-gps-tracks.html">
+  <link rel="alternate" hreflang="ja" href="https://northforceapps.github.io/gpslogger/ja/elevation-correction-gps-tracks.html">
+  <link rel="alternate" hreflang="hi" href="https://northforceapps.github.io/gpslogger/hi/elevation-correction-gps-tracks.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://northforceapps.github.io/gpslogger/zh/elevation-correction-gps-tracks.html">
+  <link rel="alternate" hreflang="x-default" href="https://northforceapps.github.io/gpslogger/elevation-correction-gps-tracks.html">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" type="image/png" href="../assets/icon.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"GPS-Höhendaten auf Android korrigieren","description":"Warum GPS-Höhe rauscht und wie GPS Logger gespeicherte Tracks mit Geländedaten korrigiert.","author":{"@type":"Organization","name":"NorthforceApps"},"publisher":{"@type":"Organization","name":"NorthforceApps"},"mainEntityOfPage":"https://northforceapps.github.io/gpslogger/de/elevation-correction-gps-tracks.html"}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+  <header class="header" id="top"><div class="shell nav"><a class="brand" href="index.html"><img src="../assets/icon.png" alt="" width="46" height="46"><span><b>GPS Logger</b><small>Privater Routen-Rekorder &amp; Atlas</small></span></a><nav class="nav-links" id="navlinks" aria-label="Primär"><a class="navlink" href="index.html#features">Funktionen</a><a class="navlink" href="guides.html">Anleitungen</a><a class="navlink" href="index.html#pricing">Preise</a><a class="navlink" href="privacy.html">Datenschutz</a><details class="lang-menu"><summary aria-label="Sprache"><span class="lang-current"><span class="flag" aria-hidden="true">🇩🇪</span><span>Deutsch</span></span><span class="lang-caret" aria-hidden="true">▾</span></summary><div class="lang-menu-list"><a class="lang-option" href="../elevation-correction-gps-tracks.html" hreflang="en" lang="en"><span class="flag" aria-hidden="true">🇺🇸</span><span>English</span></a><a class="lang-option" href="../de/elevation-correction-gps-tracks.html" hreflang="de" lang="de" aria-current="true"><span class="flag" aria-hidden="true">🇩🇪</span><span>Deutsch</span></a><a class="lang-option" href="../es/elevation-correction-gps-tracks.html" hreflang="es" lang="es"><span class="flag" aria-hidden="true">🇪🇸</span><span>Español</span></a><a class="lang-option" href="../fr/elevation-correction-gps-tracks.html" hreflang="fr" lang="fr"><span class="flag" aria-hidden="true">🇫🇷</span><span>Français</span></a><a class="lang-option" href="../pt/elevation-correction-gps-tracks.html" hreflang="pt" lang="pt"><span class="flag" aria-hidden="true">🇧🇷</span><span>Português</span></a><a class="lang-option" href="../ja/elevation-correction-gps-tracks.html" hreflang="ja" lang="ja"><span class="flag" aria-hidden="true">🇯🇵</span><span>日本語</span></a><a class="lang-option" href="../hi/elevation-correction-gps-tracks.html" hreflang="hi" lang="hi"><span class="flag" aria-hidden="true">🇮🇳</span><span>हिन्दी</span></a><a class="lang-option" href="../zh/elevation-correction-gps-tracks.html" hreflang="zh-Hans" lang="zh-Hans"><span class="flag" aria-hidden="true">🇨🇳</span><span>简体中文</span></a></div></details></nav><button class="nav-toggle" id="navToggle" aria-label="Menü" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button></div></header>
+  <main id="main" class="article-main">
+    <article class="shell prose article">
+      <p class="eyebrow">Höhenkorrektur</p>
+      <h1>GPS-Höhendaten auf Android korrigieren</h1>
+      <p class="lead">Diese Anleitung entstand aus einer echten Route, deren aufgezeichnete Höhe deutlich unruhiger war als die Route selbst. GPS Logger kann gespeicherte Tracks mit Geländedaten korrigieren, damit Höhenprofil und Höhengewinn realistischer werden.</p>
+      <div class="article-compare" aria-label="Vorher-Nachher-Beispiel der Höhenkorrektur">
+        <figure><img src="../assets/elevation-correction-before.webp" alt="GPS Logger 3D-Satellitenroute mit ursprünglichem Höhenprofil vor der Korrektur" width="1600" height="720" loading="lazy"><figcaption>Vorher: Die Route stimmt, aber die Höhendaten überzeichnen den Anstieg.</figcaption></figure>
+        <figure><img src="../assets/elevation-correction-after.webp" alt="GPS Logger 3D-Satellitenroute nach Geländehöhenkorrektur" width="1600" height="720" loading="lazy"><figcaption>Nachher: Dieselbe Route, aber mit glaubwürdigerem Höhengewinn.</figcaption></figure>
+      </div>
+      <h2>Warum GPS-Höhe ungenau ist</h2>
+      <p>Smartphones messen Position horizontal oft deutlich besser als vertikal. Satellitengeometrie, Wald, Gebäude, Wetter und Barometerdrift können die Höhe springen lassen. Weil Höhengewinn aufsummiert wird, erzeugen kleine Fehler über tausende Punkte schnell unrealistische Werte.</p>
+      <h2>Was Geländekorrektur macht</h2>
+      <p>Die Route, Zeitstempel und Punkte bleiben erhalten. GPS Logger lädt die benötigten öffentlichen Geländekacheln für das Routengebiet, ersetzt die fehlerhafte Höhe durch die Geländehöhe und berechnet Profil und Höhenmeter neu.</p>
+      <h2>Wann sie nützlich ist</h2>
+      <ul><li>Ein GPX-Track hat Spitzen oder abrupte Abstürze.</li><li>Eine flache Pendelstrecke meldet zu viele Höhenmeter.</li><li>Mehrere Aufzeichnungen derselben Route liefern sehr unterschiedliche Höhenwerte.</li><li>Importierte GPX-Dateien enthalten fehlende oder schlechte Höhendaten.</li></ul>
+      <h2>Grenzen der Korrektur</h2>
+      <p>Geländedaten beschreiben den Boden. Brücken, Hochstraßen, Gebäude, Tunnel, Fähren oder Flugzeuge kann die Korrektur nicht erkennen. Dort kann die ursprüngliche Sensorhöhe passender sein.</p>
+      <aside class="inline-app-card"><div class="card-header"><img src="../assets/icon.png" alt="GPS Logger Logo" class="card-logo"><div class="card-info"><h3>Track in GPS Logger korrigieren</h3><p>Öffne einen gespeicherten Track und nutze Höhenkorrektur. Einzelne Tracks gehören zu Pro; Stapelkorrektur ist für längerfristige Pro-Pläne gedacht.</p></div></div><div class="card-features"><span>✓ Sauberere GPX-Höhe</span><span>✓ Neuer Höhengewinn</span><span>✓ Für gespeicherte und importierte Tracks</span></div><a class="btn btn-primary" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger">GPS Logger auf Google Play</a></aside>
+      <h2>So geht es</h2>
+      <ol><li>Route aufzeichnen oder GPX importieren.</li><li>Track im Verlauf öffnen.</li><li><strong>Höhe korrigieren</strong> wählen. Dafür ist Internet nötig.</li><li>Warten, bis Profil und Höhengewinn neu berechnet sind.</li><li>Bei Bedarf als GPX oder KML exportieren.</li></ol>
+      <p>Wenn deine App-Version einen begrenzten kostenlosen Test anbietet, erscheint er in der App. Die verlässliche Regel: Höhenkorrektur ist eine Pro-Funktion, die Korrektur der ganzen Bibliothek ist für Yearly oder Lifetime vorgesehen.</p>
+      <h2>Weitere Anleitungen</h2>
+      <ul><li><a href="how-to-record-export-gpx-android.html">GPX-Tracks auf Android aufzeichnen und exportieren</a></li><li><a href="import-gpx-files-android.html">GPX-Dateien auf Android importieren</a></li><li><a href="gpx-openstreetmap-qgis.html">GPX-Logs mit OpenStreetMap und QGIS nutzen</a></li></ul>
+    </article>
+  </main>
+  <footer class="footer"><div class="shell footer-grid"><p>GPS Logger: Privater Tracker</p><nav class="footer-links"><a href="guides.html">Anleitungen</a><a href="index.html">Startseite</a><a href="privacy.html">Datenschutz</a></nav></div></footer>
+  <script src="../app.js"></script>
+</body>
+</html>

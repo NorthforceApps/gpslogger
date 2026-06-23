@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AndroidでGPS標高データを補正する方法</title>
+  <meta name="description" content="ノイズの多いGPS高度や不自然な獲得標高を地形データで補正。AndroidのGPS LoggerでGPXの標高を整える方法。">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#287743">
+  <link rel="canonical" href="https://northforceapps.github.io/gpslogger/ja/elevation-correction-gps-tracks.html">
+  <link rel="alternate" hreflang="en" href="https://northforceapps.github.io/gpslogger/elevation-correction-gps-tracks.html">
+  <link rel="alternate" hreflang="de" href="https://northforceapps.github.io/gpslogger/de/elevation-correction-gps-tracks.html">
+  <link rel="alternate" hreflang="es" href="https://northforceapps.github.io/gpslogger/es/elevation-correction-gps-tracks.html">
+  <link rel="alternate" hreflang="fr" href="https://northforceapps.github.io/gpslogger/fr/elevation-correction-gps-tracks.html">
+  <link rel="alternate" hreflang="pt" href="https://northforceapps.github.io/gpslogger/pt/elevation-correction-gps-tracks.html">
+  <link rel="alternate" hreflang="ja" href="https://northforceapps.github.io/gpslogger/ja/elevation-correction-gps-tracks.html">
+  <link rel="alternate" hreflang="hi" href="https://northforceapps.github.io/gpslogger/hi/elevation-correction-gps-tracks.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://northforceapps.github.io/gpslogger/zh/elevation-correction-gps-tracks.html">
+  <link rel="alternate" hreflang="x-default" href="https://northforceapps.github.io/gpslogger/elevation-correction-gps-tracks.html">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" type="image/png" href="../assets/icon.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"AndroidでGPS標高データを補正する方法","description":"GPS高度が乱れる理由と、GPS Loggerが地形データでトラックの標高を補正する方法。","author":{"@type":"Organization","name":"NorthforceApps"},"publisher":{"@type":"Organization","name":"NorthforceApps"},"mainEntityOfPage":"https://northforceapps.github.io/gpslogger/ja/elevation-correction-gps-tracks.html"}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="header" id="top"><div class="shell nav"><a class="brand" href="index.html"><img src="../assets/icon.png" alt="" width="46" height="46"><span><b>GPS Logger</b><small>プライベートなルート記録 &amp; アトラス</small></span></a><nav class="nav-links" id="navlinks" aria-label="Primary"><a class="navlink" href="index.html#features">機能</a><a class="navlink" href="guides.html">ガイド</a><a class="navlink" href="index.html#pricing">料金</a><a class="navlink" href="privacy.html">プライバシー</a><details class="lang-menu"><summary aria-label="言語"><span class="lang-current"><span class="flag" aria-hidden="true">🇯🇵</span><span>日本語</span></span><span class="lang-caret" aria-hidden="true">▾</span></summary><div class="lang-menu-list"><a class="lang-option" href="../elevation-correction-gps-tracks.html" hreflang="en" lang="en"><span class="flag" aria-hidden="true">🇺🇸</span><span>English</span></a><a class="lang-option" href="../de/elevation-correction-gps-tracks.html" hreflang="de" lang="de"><span class="flag" aria-hidden="true">🇩🇪</span><span>Deutsch</span></a><a class="lang-option" href="../es/elevation-correction-gps-tracks.html" hreflang="es" lang="es"><span class="flag" aria-hidden="true">🇪🇸</span><span>Español</span></a><a class="lang-option" href="../fr/elevation-correction-gps-tracks.html" hreflang="fr" lang="fr"><span class="flag" aria-hidden="true">🇫🇷</span><span>Français</span></a><a class="lang-option" href="../pt/elevation-correction-gps-tracks.html" hreflang="pt" lang="pt"><span class="flag" aria-hidden="true">🇧🇷</span><span>Português</span></a><a class="lang-option" href="../ja/elevation-correction-gps-tracks.html" hreflang="ja" lang="ja" aria-current="true"><span class="flag" aria-hidden="true">🇯🇵</span><span>日本語</span></a><a class="lang-option" href="../hi/elevation-correction-gps-tracks.html" hreflang="hi" lang="hi"><span class="flag" aria-hidden="true">🇮🇳</span><span>हिन्दी</span></a><a class="lang-option" href="../zh/elevation-correction-gps-tracks.html" hreflang="zh-Hans" lang="zh-Hans"><span class="flag" aria-hidden="true">🇨🇳</span><span>简体中文</span></a></div></details></nav><button class="nav-toggle" id="navToggle" aria-label="メニュー" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button></div></header>
+  <main id="main" class="article-main"><article class="shell prose article">
+    <p class="eyebrow">標高補正</p><h1>AndroidでGPS標高データを補正する方法</h1>
+    <p class="lead">このガイドは、ルート自体は自然なのに記録された高度だけが大きく乱れた実例から生まれました。GPS Loggerは保存済みトラックを地形データで補正し、標高プロファイルと獲得標高をより現実的にできます。</p>
+    <div class="article-compare" aria-label="標高補正の前後比較"><figure><img src="../assets/elevation-correction-before.webp" alt="補正前の標高プロファイルを表示したGPS Loggerの3D衛星ルート" width="1600" height="720" loading="lazy"><figcaption>補正前: ルートは自然でも、獲得標高が大きく出ています。</figcaption></figure><figure><img src="../assets/elevation-correction-after.webp" alt="地形標高補正後のGPS Logger 3D衛星ルート" width="1600" height="720" loading="lazy"><figcaption>補正後: 同じルートを、より納得しやすい獲得標高で表示します。</figcaption></figure></div>
+    <h2>GPS高度がずれる理由</h2><p>スマートフォンのGPSは、横方向の位置より高度の精度が落ちやすいです。樹木、建物、衛星配置、天候、気圧センサーのずれで高度が上下します。獲得標高は合計値なので、小さな誤差が何度も積み重なると大きな数字になります。</p>
+    <h2>地形補正のしくみ</h2><p>緯度、経度、時刻はそのまま残します。GPS Loggerはルート周辺の公開地形タイルを取得し、ノイズのある高度を地表の標高に置き換えて、プロファイルと獲得標高を再計算します。</p>
+    <h2>役立つ場面</h2><ul><li>GPXにありえない急上昇や急降下がある。</li><li>平坦な通勤ルートの獲得標高が大きすぎる。</li><li>同じルートの記録で標高差が大きく違う。</li><li>インポートしたGPXの高度が欠けている、または不自然。</li></ul>
+    <h2>向かない場面</h2><p>地形データは地面の高さです。橋、高架、建物内、トンネル、フェリー、飛行機などは表せません。その場合は元の高度のほうが実際に近いことがあります。</p>
+    <aside class="inline-app-card"><div class="card-header"><img src="../assets/icon.png" alt="GPS Loggerロゴ" class="card-logo"><div class="card-info"><h3>GPS Loggerでトラックを補正</h3><p>保存済みトラックを開いて標高補正を使います。単一トラックの補正はPro機能で、まとめて補正する機能は長期Pro向けです。</p></div></div><div class="card-features"><span>✓ きれいなGPX高度</span><span>✓ 獲得標高を再計算</span><span>✓ 保存済み・インポート済みに対応</span></div><a class="btn btn-primary" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger">GPS Loggerを入手</a></aside>
+    <h2>手順</h2><ol><li>ルートを記録するか、GPXをインポートします。</li><li>履歴からトラックを開きます。</li><li><strong>標高を補正</strong>を選びます。地形データの取得にインターネット接続が必要です。</li><li>プロファイルと獲得標高の再計算を待ちます。</li><li>必要ならGPXまたはKMLでエクスポートします。</li></ol>
+    <p>限定的な無料試用があるバージョンでは、アプリ内に表示されます。基本的には標高補正はPro機能で、全履歴の一括補正はYearlyまたはLifetime向けです。</p>
+    <h2>次のガイド</h2><ul><li><a href="how-to-record-export-gpx-android.html">AndroidでGPXトラックを記録・エクスポートする方法</a></li><li><a href="import-gpx-files-android.html">AndroidでGPXファイルをインポートする方法</a></li><li><a href="gpx-openstreetmap-qgis.html">GPXをOpenStreetMapやQGISで使う</a></li></ul>
+  </article></main>
+  <footer class="footer"><div class="shell footer-grid"><p>GPS Logger: Private Tracker</p><nav class="footer-links"><a href="guides.html">ガイド</a><a href="index.html">ホーム</a><a href="privacy.html">プライバシー</a></nav></div></footer>
+  <script src="../app.js"></script>
+</body>
+</html>

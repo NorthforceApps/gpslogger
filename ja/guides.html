@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GPS記録ガイド — AndroidでのGPX書き出し、プライバシー、ルート追跡</title>
-  <meta name="description" content="Android向けGPSログ記録の実践ガイド：GPX軌跡の記録、ルートのエクスポート、プライベートなGPS LoggerとStravaの比較、オフライン位置情報のプライバシー保護、OpenStreetMapやQGISでのGPX活用方法。">
+  <title>GPS記録ガイド — AndroidでのGPX書き出し、標高補正、ルート追跡</title>
+  <meta name="description" content="Android向けGPSログ記録の実践ガイド：GPX軌跡の記録、GPS標高補正、ルートのエクスポート、GPS LoggerとStravaの比較、プライバシー保護、OpenStreetMapやQGISでのGPX活用方法。">
   <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#287743">
   <link rel="canonical" href="https://northforceapps.github.io/gpslogger/ja/guides.html">
@@ -23,16 +23,17 @@
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     "name": "GPS記録ガイド",
-    "description": "AndroidでのGPS記録、GPXエクスポート、プライベートなルート追跡、OpenStreetMapやQGISとの連携に関する各種ガイド。",
+    "description": "AndroidでのGPS記録、GPXエクスポート、標高補正、プライベートなルート追跡、OpenStreetMapやQGISとの連携に関する各種ガイド。",
     "url": "https://northforceapps.github.io/gpslogger/ja/guides.html",
     "mainEntity": {
       "@type": "ItemList",
       "itemListElement": [
         {"@type":"ListItem","position":1,"url":"https://northforceapps.github.io/gpslogger/ja/how-to-record-export-gpx-android.html","name":"AndroidでGPS軌跡を記録してGPXを書き出す方法"},
         {"@type":"ListItem","position":2,"url":"https://northforceapps.github.io/gpslogger/ja/import-gpx-files-android.html","name":"AndroidでGPXファイルをインポートする方法（ZIPバックアップ）"},
-        {"@type":"ListItem","position":3,"url":"https://northforceapps.github.io/gpslogger/ja/gps-logger-vs-strava.html","name":"GPS Logger vs Strava とフィットネスSNSアプリ"},
-        {"@type":"ListItem","position":4,"url":"https://northforceapps.github.io/gpslogger/ja/offline-gps-logging-privacy.html","name":"なぜオフラインでのGPSログ記録がプライバシーにおいて重要なのか"},
-        {"@type":"ListItem","position":5,"url":"https://northforceapps.github.io/gpslogger/ja/gpx-openstreetmap-qgis.html","name":"GPXログをOpenStreetMapやQGISで活用する"}
+        {"@type":"ListItem","position":3,"url":"https://northforceapps.github.io/gpslogger/ja/elevation-correction-gps-tracks.html","name":"AndroidでGPS標高データを補正する方法"},
+        {"@type":"ListItem","position":4,"url":"https://northforceapps.github.io/gpslogger/ja/gps-logger-vs-strava.html","name":"GPS Logger vs Strava とフィットネスSNSアプリ"},
+        {"@type":"ListItem","position":5,"url":"https://northforceapps.github.io/gpslogger/ja/offline-gps-logging-privacy.html","name":"なぜオフラインでのGPSログ記録がプライバシーにおいて重要なのか"},
+        {"@type":"ListItem","position":6,"url":"https://northforceapps.github.io/gpslogger/ja/gpx-openstreetmap-qgis.html","name":"GPXログをOpenStreetMapやQGISで活用する"}
       ]
     }
   }
@@ -89,6 +90,11 @@
           <p class="guide-kicker">インポートと移行</p>
           <h2><a href="import-gpx-files-android.html">AndroidでGPXファイルをインポートする方法（ZIPバックアップ）</a></h2>
           <p>GPXコレクション全体を一度に移行。個別ファイルでもフラット／構造化ZIPでも、安全な再インポートでロックインなし。</p>
+        </article>
+        <article class="guide-card">
+          <p class="guide-kicker">標高</p>
+          <h2><a href="elevation-correction-gps-tracks.html">AndroidでGPS標高データを補正する方法</a></h2>
+          <p>ノイズのある高度、不自然なスパイク、獲得標高を地形データで整えます。</p>
         </article>
         <article class="guide-card">
           <p class="guide-kicker">比較</p>

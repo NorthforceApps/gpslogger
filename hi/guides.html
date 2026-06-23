@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GPS लॉगिंग गाइड — Android पर GPX एक्सपोर्ट, प्राइवेसी और रूट ट्रैकिंग</title>
-  <meta name="description" content="Android के लिए उपयोगी GPS लॉगिंग गाइड: GPX ट्रैक रिकॉर्ड करें, रूट एक्सपोर्ट करें, GPS Logger की तुलना Strava से करें, ऑफ़लाइन लोकेशन प्राइवेसी समझें, और GPX को OpenStreetMap या QGIS के साथ इस्तेमाल करें।">
+  <title>GPS लॉगिंग गाइड — Android पर GPX एक्सपोर्ट, elevation correction और रूट ट्रैकिंग</title>
+  <meta name="description" content="Android के लिए उपयोगी GPS लॉगिंग गाइड: GPX ट्रैक रिकॉर्ड करें, GPS elevation data सुधारें, रूट एक्सपोर्ट करें, GPS Logger की तुलना Strava से करें, और GPX को OpenStreetMap या QGIS के साथ इस्तेमाल करें।">
   <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#287743">
   <link rel="canonical" href="https://northforceapps.github.io/gpslogger/hi/guides.html">
@@ -23,16 +23,17 @@
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     "name": "GPS लॉगिंग गाइड",
-    "description": "Android GPS लॉगिंग, GPX एक्सपोर्ट, प्राइवेट रूट ट्रैकिंग, OpenStreetMap और QGIS वर्कफ़्लो के लिए गाइड।",
+    "description": "Android GPS लॉगिंग, GPX एक्सपोर्ट, elevation correction, प्राइवेट रूट ट्रैकिंग, OpenStreetMap और QGIS वर्कफ़्लो के लिए गाइड।",
     "url": "https://northforceapps.github.io/gpslogger/hi/guides.html",
     "mainEntity": {
       "@type": "ItemList",
       "itemListElement": [
         {"@type":"ListItem","position":1,"url":"https://northforceapps.github.io/gpslogger/hi/how-to-record-export-gpx-android.html","name":"Android पर GPX ट्रैक रिकॉर्ड और एक्सपोर्ट कैसे करें"},
         {"@type":"ListItem","position":2,"url":"https://northforceapps.github.io/gpslogger/hi/import-gpx-files-android.html","name":"Android पर GPX फ़ाइलें इंपोर्ट करें (ZIP बैकअप)"},
-        {"@type":"ListItem","position":3,"url":"https://northforceapps.github.io/gpslogger/hi/gps-logger-vs-strava.html","name":"GPS Logger बनाम Strava और सोशल फ़िटनेस ऐप्स"},
-        {"@type":"ListItem","position":4,"url":"https://northforceapps.github.io/gpslogger/hi/offline-gps-logging-privacy.html","name":"प्राइवेसी के लिए ऑफ़लाइन GPS लॉगिंग क्यों ज़रूरी है"},
-        {"@type":"ListItem","position":5,"url":"https://northforceapps.github.io/gpslogger/hi/gpx-openstreetmap-qgis.html","name":"OpenStreetMap और QGIS के साथ GPX लॉग्स का उपयोग"}
+        {"@type":"ListItem","position":3,"url":"https://northforceapps.github.io/gpslogger/hi/elevation-correction-gps-tracks.html","name":"Android पर GPS elevation data कैसे सुधारें"},
+        {"@type":"ListItem","position":4,"url":"https://northforceapps.github.io/gpslogger/hi/gps-logger-vs-strava.html","name":"GPS Logger बनाम Strava और सोशल फ़िटनेस ऐप्स"},
+        {"@type":"ListItem","position":5,"url":"https://northforceapps.github.io/gpslogger/hi/offline-gps-logging-privacy.html","name":"प्राइवेसी के लिए ऑफ़लाइन GPS लॉगिंग क्यों ज़रूरी है"},
+        {"@type":"ListItem","position":6,"url":"https://northforceapps.github.io/gpslogger/hi/gpx-openstreetmap-qgis.html","name":"OpenStreetMap और QGIS के साथ GPX लॉग्स का उपयोग"}
       ]
     }
   }
@@ -85,6 +86,11 @@
           <p class="guide-kicker">इंपोर्ट और माइग्रेट</p>
           <h2><a href="import-gpx-files-android.html">Android पर GPX फ़ाइलें इंपोर्ट करें (ZIP बैकअप)</a></h2>
           <p>पूरा GPX संग्रह एक बार में लाएँ — अलग फ़ाइलें या फ्लैट/संरचित ZIP, सुरक्षित री-इंपोर्ट और कोई लॉक-इन नहीं।</p>
+        </article>
+        <article class="guide-card">
+          <p class="guide-kicker">Elevation</p>
+          <h2><a href="elevation-correction-gps-tracks.html">Android पर GPS elevation data कैसे सुधारें</a></h2>
+          <p>Noisy altitude, impossible spikes और elevation gain को terrain data से साफ करें।</p>
         </article>
         <article class="guide-card">
           <p class="guide-kicker">तुलना</p>
