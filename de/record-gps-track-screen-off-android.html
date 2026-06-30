@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GPS-Track mit ausgeschaltetem Bildschirm auf Android aufzeichnen</title>
+  <meta name="description" content="GPS-Tracks auf Android aufzeichnen, während der Bildschirm aus ist. Erfahre, wie Vordergrund-Benachrichtigung, Hintergrundstandort, Akku-Einstellungen und GPX-Export in GPS Logger funktionieren.">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#287743">
+  <link rel="canonical" href="https://northforceapps.github.io/gpslogger/de/record-gps-track-screen-off-android.html">
+  <link rel="alternate" hreflang="en" href="https://northforceapps.github.io/gpslogger/record-gps-track-screen-off-android.html">
+  <link rel="alternate" hreflang="de" href="https://northforceapps.github.io/gpslogger/de/record-gps-track-screen-off-android.html">
+  <link rel="alternate" hreflang="x-default" href="https://northforceapps.github.io/gpslogger/record-gps-track-screen-off-android.html">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" type="image/png" href="../assets/icon.png">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"HowTo","name":"GPS-Track mit ausgeschaltetem Bildschirm auf Android aufzeichnen","description":"Zeichne eine Route mit GPS Logger auf, während Android eine Vordergrund-Benachrichtigung anzeigt.","step":[{"@type":"HowToStep","name":"GPS Logger installieren","text":"Installiere GPS Logger von Google Play und öffne die App."},{"@type":"HowToStep","name":"Standort erlauben","text":"Erlaube Standortzugriff. Hintergrundstandort ist nötig, wenn die Aufzeichnung weiterlaufen soll, während die App nicht sichtbar ist oder der Bildschirm aus ist."},{"@type":"HowToStep","name":"Aufzeichnung starten","text":"Tippe vor Spaziergang, Wanderung, Fahrt, Lauf oder Pendelweg auf Aufnahme."},{"@type":"HowToStep","name":"Benachrichtigung prüfen","text":"Android zeigt während der Aufzeichnung eine laufende Standort-Benachrichtigung."},{"@type":"HowToStep","name":"Handy sperren und später stoppen","text":"Sperre den Bildschirm oder wechsle die App. Kehre zu GPS Logger zurück und stoppe die Aufzeichnung, wenn die Route fertig ist."},{"@type":"HowToStep","name":"Route exportieren","text":"Öffne den gespeicherten Track und exportiere GPX oder KML, wenn du eine portable Datei brauchst."}],"tool":[{"@type":"HowToTool","name":"Android-Handy"},{"@type":"HowToTool","name":"GPS Logger"}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Kann Android GPS mit ausgeschaltetem Bildschirm aufzeichnen?","acceptedAnswer":{"@type":"Answer","text":"Ja, wenn die App einen sichtbaren Vordergrunddienst für Standort nutzt und die nötigen Standortrechte gewährt wurden. GPS Logger zeigt während der Aufzeichnung eine laufende Benachrichtigung."}},{"@type":"Question","name":"Warum braucht Android eine Benachrichtigung während der Aufzeichnung?","acceptedAnswer":{"@type":"Answer","text":"Android verlangt, dass länger laufende Hintergrund-Standortnutzung für Nutzer sichtbar ist. Die Benachrichtigung zeigt, dass Aufzeichnung oder Live-Sharing aktiv ist."}},{"@type":"Question","name":"Zeichnet jedes Handy unbegrenzt im Hintergrund auf?","acceptedAnswer":{"@type":"Answer","text":"Nein. Keine App kann das auf allen Android-Marken und Akku-Einstellungen garantieren. Für lange Sessions solltest du Hintergrundaktivität erlauben und aggressive Akku-Beschränkungen vermeiden."}},{"@type":"Question","name":"Kann ich den Track danach als GPX exportieren?","acceptedAnswer":{"@type":"Answer","text":"Ja. Nach dem Stoppen kann GPS Logger den gespeicherten Track als GPX oder KML exportieren."}}]}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+  <header class="header" id="top">
+    <div class="shell nav">
+      <a class="brand" href="index.html" aria-label="GPS Logger Startseite"><img src="../assets/icon.png" alt="" width="46" height="46"><span><b>GPS Logger</b><small>Privater Routen-Rekorder &amp; Atlas</small></span></a>
+      <nav class="nav-links" id="navlinks" aria-label="Primär">
+        <a class="navlink" href="index.html#features">Funktionen</a>
+        <a class="navlink" href="guides.html">Anleitungen</a>
+        <a class="navlink" href="privacy.html">Datenschutz</a>
+        <details class="lang-menu"><summary aria-label="Sprache"><span class="lang-current"><span class="flag" aria-hidden="true">🇩🇪</span><span>Deutsch</span></span><span class="lang-caret" aria-hidden="true">▾</span></summary><div class="lang-menu-list"><a class="lang-option" href="../record-gps-track-screen-off-android.html" hreflang="en" lang="en"><span class="flag" aria-hidden="true">🇺🇸</span><span>English</span></a><a class="lang-option" href="./record-gps-track-screen-off-android.html" hreflang="de" lang="de" aria-current="true"><span class="flag" aria-hidden="true">🇩🇪</span><span>Deutsch</span></a></div></details>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Menü" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    </div>
+  </header>
+  <main id="main" class="article-main">
+    <article class="shell prose article">
+      <p class="eyebrow">Bildschirm-aus-GPS-Aufzeichnung</p>
+      <h1>GPS-Track mit ausgeschaltetem Bildschirm auf Android aufzeichnen</h1>
+      <p class="lead">Ein guter GPS Logger sollte weiter aufzeichnen, nachdem du eine Route gestartet, das Handy in die Tasche gesteckt und den Spaziergang, die Wanderung, die Fahrt oder den Lauf begonnen hast. Auf Android braucht das Vordergrundstandort, klare Berechtigungen und realistische Akku-Einstellungen.</p>
+      <h2>Kurzantwort</h2>
+      <p>Installiere GPS Logger, erlaube Standortzugriff, starte die Aufzeichnung, prüfe die laufende Benachrichtigung und sperre dann den Bildschirm. Die Route läuft weiter, bis du sie stoppst. Danach kannst du Karte, Statistik und GPX/KML-Export nutzen.</p>
+      <figure class="article-shot"><img src="../assets/ss-recording.png" alt="GPS Logger Aufzeichnungsbildschirm mit Live-Karte, Distanz und Zeit" loading="lazy"><figcaption>Starte sichtbar auf dem Bildschirm; Android hält die aktive Sitzung über die Benachrichtigung sichtbar.</figcaption></figure>
+      <h2>Warum Android besondere Regeln hat</h2>
+      <p>Android schützt Akku und Privatsphäre, indem Apps mit dauerhaftem Standort im Hintergrund begrenzt werden. Ein ehrlicher Routenrekorder läuft nicht unsichtbar. Er braucht eine vom Nutzer gestartete Aufnahme, eine sichtbare Vordergrund-Benachrichtigung und die passenden Berechtigungen.</p>
+      <h2>So zeichnest du zuverlässig auf</h2>
+      <ol>
+        <li>Erlaube Standortzugriff und, falls nötig, Benachrichtigungen.</li>
+        <li>Starte die Aufzeichnung, bevor du losgehst.</li>
+        <li>Lass die laufende Benachrichtigung aktiviert.</li>
+        <li>Vermeide aggressive Akku-Beschränkungen für lange Sessions.</li>
+        <li>Stoppe die Route am Ende und exportiere bei Bedarf GPX oder KML.</li>
+      </ol>
+      <aside class="inline-app-card"><div class="card-header"><img src="../assets/icon.png" alt="GPS Logger Logo" class="card-logo"><div class="card-info"><h3>Private GPX-Routen auf Android aufzeichnen</h3><p>GPS Logger zeichnet vom Nutzer gestartete Routen sichtbar auf, speichert sie auf deinem Handy und exportiert GPX/KML, wenn du eine Kopie brauchst.</p></div></div><div class="card-features"><span>✓ Bildschirm-aus-Aufzeichnung</span><span>✓ GPX/KML-Export</span><span>✓ Kein Konto nötig</span></div><a class="btn btn-primary" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger">GPS Logger auf Google Play</a></aside>
+      <h2>Was es nicht ist</h2>
+      <p>Bildschirm-aus-GPS-Logging ist kein verstecktes Tracking. GPS Logger zeichnet auf, nachdem du startest, zeigt eine laufende Benachrichtigung und stoppt, wenn du stoppst. Für wichtige Touren lohnt sich ein kurzer Testlauf mit deinem Gerät.</p>
+      <h2>Weitere Anleitungen</h2>
+      <ul>
+        <li><a href="how-to-record-export-gpx-android.html">GPX-Tracks auf Android aufzeichnen und exportieren</a></li>
+        <li><a href="offline-gps-logging-privacy.html">Warum Offline-GPS-Logging wichtig für den Datenschutz ist</a></li>
+        <li><a href="live-location-sharing-without-history.html">Live-Standort teilen ohne serverseitigen Routenverlauf</a></li>
+        <li><a href="import-gpx-files-android.html">GPX-Dateien auf Android importieren</a></li>
+      </ul>
+    </article>
+  </main>
+  <footer class="footer"><div class="shell footer-grid"><p>GPS Logger: Privater Tracker</p><nav class="footer-links"><a href="guides.html">Anleitungen</a><a href="index.html">Startseite</a><a href="privacy.html">Datenschutz</a></nav></div></footer>
+  <script src="../app.js"></script>
+</body>
+</html>

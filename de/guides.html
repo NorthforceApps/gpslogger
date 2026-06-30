@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GPS-Logging-Anleitungen — GPX-Export, Höhenkorrektur & Routenaufzeichnung auf Android</title>
-  <meta name="description" content="Praktische GPS-Logging-Anleitungen für Android: GPX-Tracks aufzeichnen, GPS-Höhen korrigieren, Routen exportieren, privaten GPS Logger mit Strava vergleichen, Offline-Standort-Datenschutz verstehen und GPX mit OpenStreetMap oder QGIS nutzen.">
+  <title>GPS-Logging-Anleitungen für Android | GPX-Export, Bildschirm-aus-Aufzeichnung &amp; Datenschutz</title>
+  <meta name="description" content="Praktische Android-GPS-Logging-Anleitungen: GPX-Tracks mit ausgeschaltetem Bildschirm aufzeichnen, Routen exportieren, GPX-Backups importieren, privaten Standortverlauf behalten, Live-Standort sicher teilen und GPX mit Karten-Tools nutzen.">
   <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#287743">
   <link rel="canonical" href="https://northforceapps.github.io/gpslogger/de/guides.html">
@@ -23,17 +23,20 @@
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     "name": "GPS-Logging-Anleitungen",
-    "description": "Anleitungen für Android GPS-Logging, GPX-Export, Höhenkorrektur, private Routenaufzeichnung, OpenStreetMap- und QGIS-Workflows.",
+    "description": "Anleitungen für Android GPS-Logging, GPX-Export, Bildschirm-aus-Aufzeichnung, private Routenaufzeichnung, Live-Sharing, OpenStreetMap- und QGIS-Workflows.",
     "url": "https://northforceapps.github.io/gpslogger/de/guides.html",
     "mainEntity": {
       "@type": "ItemList",
       "itemListElement": [
         {"@type":"ListItem","position":1,"url":"https://northforceapps.github.io/gpslogger/de/how-to-record-export-gpx-android.html","name":"Wie man GPX-Tracks auf Android aufzeichnet und exportiert"},
-        {"@type":"ListItem","position":2,"url":"https://northforceapps.github.io/gpslogger/de/import-gpx-files-android.html","name":"GPX-Dateien auf Android importieren (ZIP-Backups gesammelt)"},
-        {"@type":"ListItem","position":3,"url":"https://northforceapps.github.io/gpslogger/de/elevation-correction-gps-tracks.html","name":"GPS-Höhendaten auf Android korrigieren"},
-        {"@type":"ListItem","position":4,"url":"https://northforceapps.github.io/gpslogger/de/gps-logger-vs-strava.html","name":"GPS Logger vs. Strava und Social-Fitness-Apps"},
-        {"@type":"ListItem","position":5,"url":"https://northforceapps.github.io/gpslogger/de/offline-gps-logging-privacy.html","name":"Warum Offline-GPS-Logging für den Datenschutz wichtig ist"},
-        {"@type":"ListItem","position":6,"url":"https://northforceapps.github.io/gpslogger/de/gpx-openstreetmap-qgis.html","name":"GPX-Logs mit OpenStreetMap und QGIS nutzen"}
+        {"@type":"ListItem","position":2,"url":"https://northforceapps.github.io/gpslogger/de/record-gps-track-screen-off-android.html","name":"GPS-Track mit ausgeschaltetem Bildschirm auf Android aufzeichnen"},
+        {"@type":"ListItem","position":3,"url":"https://northforceapps.github.io/gpslogger/de/import-gpx-files-android.html","name":"GPX-Dateien auf Android importieren (ZIP-Backups gesammelt)"},
+        {"@type":"ListItem","position":4,"url":"https://northforceapps.github.io/gpslogger/de/google-timeline-alternative-android.html","name":"Private Google-Timeline-Alternative für Android-Routenverlauf"},
+        {"@type":"ListItem","position":5,"url":"https://northforceapps.github.io/gpslogger/de/live-location-sharing-without-history.html","name":"Live-Standort teilen ohne serverseitigen Routenverlauf"},
+        {"@type":"ListItem","position":6,"url":"https://northforceapps.github.io/gpslogger/de/elevation-correction-gps-tracks.html","name":"GPS-Höhendaten auf Android korrigieren"},
+        {"@type":"ListItem","position":7,"url":"https://northforceapps.github.io/gpslogger/de/gps-logger-vs-strava.html","name":"GPS Logger vs. Strava und Social-Fitness-Apps"},
+        {"@type":"ListItem","position":8,"url":"https://northforceapps.github.io/gpslogger/de/offline-gps-logging-privacy.html","name":"Warum Offline-GPS-Logging für den Datenschutz wichtig ist"},
+        {"@type":"ListItem","position":9,"url":"https://northforceapps.github.io/gpslogger/de/gpx-openstreetmap-qgis.html","name":"GPX-Logs mit OpenStreetMap und QGIS nutzen"}
       ]
     }
   }
@@ -47,7 +50,6 @@
       <nav class="nav-links" id="navlinks" aria-label="Primär">
         <a class="navlink" href="index.html#features">Funktionen</a>
         <a class="navlink" href="guides.html">Anleitungen</a>
-        <a class="navlink" href="index.html#pricing">Preise</a>
         <a class="navlink" href="privacy.html">Datenschutz</a>
         <details class="lang-menu">
           <summary aria-label="Sprache"><span class="lang-current"><span class="flag" aria-hidden="true">🇩🇪</span><span>Deutsch</span></span><span class="lang-caret" aria-hidden="true">▾</span></summary>
@@ -72,7 +74,7 @@
       <div class="shell article-hero">
         <p class="eyebrow">GPS-Logging-Anleitungen</p>
         <h1>Routenaufzeichnung, GPX-Export und privater Standortverlauf auf Android.</h1>
-        <p class="lead">Nutze diese Anleitungen, um einen GPS-Logger auszuwählen, Routen aufzuzeichnen, offene GPX- oder KML-Dateien zu exportieren, Standortdaten privat zu halten und Tracks in Karten-Tools zu übertragen.</p>
+        <p class="lead">Nutze diese Anleitungen, um einen GPS-Logger auszuwählen, Tracks mit ausgeschaltetem Bildschirm aufzuzeichnen, offene GPX- oder KML-Dateien zu exportieren, alte Routensammlungen zu importieren, Standortdaten privat zu halten und Tracks in Karten-Tools zu übertragen.</p>
       </div>
     </section>
     <section class="section-tight">
@@ -83,9 +85,24 @@
           <p>Bestens geeignet für Wandernde, Radfahrende, Hundebesitzer, Roadtrips und alle, die ein portables Routenprotokoll möchten.</p>
         </article>
         <article class="guide-card">
+          <p class="guide-kicker">Bildschirm aus</p>
+          <h2><a href="record-gps-track-screen-off-android.html">GPS-Track mit ausgeschaltetem Bildschirm auf Android aufzeichnen</a></h2>
+          <p>Hintergrundstandort, Vordergrund-Benachrichtigung, Akku-Einstellungen und realistische Zuverlässigkeit.</p>
+        </article>
+        <article class="guide-card">
           <p class="guide-kicker">Importieren &amp; migrieren</p>
           <h2><a href="import-gpx-files-android.html">GPX-Dateien auf Android importieren (ZIP-Backups gesammelt)</a></h2>
           <p>Verschiebe eine ganze GPX-Sammlung auf einmal — einzelne Dateien oder ein flaches/strukturiertes ZIP, mit sicherem Re-Import und ohne Lock-in.</p>
+        </article>
+        <article class="guide-card">
+          <p class="guide-kicker">Standortverlauf</p>
+          <h2><a href="google-timeline-alternative-android.html">Private Google-Timeline-Alternative für Android-Routenverlauf</a></h2>
+          <p>Wenn du ein Routenarchiv willst, das du startest, stoppst, exportierst und auf deinem Handy behältst.</p>
+        </article>
+        <article class="guide-card">
+          <p class="guide-kicker">Live-Sharing</p>
+          <h2><a href="live-location-sharing-without-history.html">Live-Standort teilen ohne serverseitigen Routenverlauf</a></h2>
+          <p>Teile deine aktuelle Position temporär, ohne jede Bewegung in einen Cloud-Verlauf zu verwandeln.</p>
         </article>
         <article class="guide-card">
           <p class="guide-kicker">Höhe</p>

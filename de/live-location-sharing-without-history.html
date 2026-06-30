@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Live-Standort teilen ohne serverseitigen Routenverlauf</title>
+  <meta name="description" content="Live-Standort auf Android teilen, ohne einen serverseitigen Routenverlauf zu erzeugen. GPS Logger App Cloud teilt nur die aktuelle Position, mit zurücksetzbarem Code und Follower-Limit.">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#287743">
+  <link rel="canonical" href="https://northforceapps.github.io/gpslogger/de/live-location-sharing-without-history.html">
+  <link rel="alternate" hreflang="en" href="https://northforceapps.github.io/gpslogger/live-location-sharing-without-history.html">
+  <link rel="alternate" hreflang="de" href="https://northforceapps.github.io/gpslogger/de/live-location-sharing-without-history.html">
+  <link rel="alternate" hreflang="x-default" href="https://northforceapps.github.io/gpslogger/live-location-sharing-without-history.html">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" type="image/png" href="../assets/icon.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Live-Standort teilen ohne serverseitigen Routenverlauf","description":"Wie GPS Logger die aktuelle Position temporär mit App Cloud, zurücksetzbaren Codes und Follower-Limits teilt.","author":{"@type":"Organization","name":"NorthforceApps"},"publisher":{"@type":"Organization","name":"NorthforceApps"},"mainEntityOfPage":"https://northforceapps.github.io/gpslogger/de/live-location-sharing-without-history.html"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Speichert GPS Logger beim Live-Sharing meinen Routenverlauf auf dem Server?","acceptedAnswer":{"@type":"Answer","text":"Nein. App Cloud Live-Sharing speichert nur die aktuelle Position. Sie wird während der Bewegung überschrieben und entfernt, wenn du das Teilen stoppst."}},{"@type":"Question","name":"Wer kann meinen Live-Standort sehen?","acceptedAnswer":{"@type":"Answer","text":"Nur App-Nutzer mit deinem Freigabecode und nur bis zu dem Follower-Limit, das du festlegst."}},{"@type":"Question","name":"Kann ich Zugriff widerrufen?","acceptedAnswer":{"@type":"Answer","text":"Ja. Du kannst das Teilen stoppen oder den Freigabecode zurücksetzen. Das Zurücksetzen löscht den alten Freigabe-Eintrag und entzieht bisherigen Followern den Zugriff."}}]}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+  <header class="header" id="top"><div class="shell nav"><a class="brand" href="index.html" aria-label="GPS Logger Startseite"><img src="../assets/icon.png" alt="" width="46" height="46"><span><b>GPS Logger</b><small>Privater Routen-Rekorder &amp; Atlas</small></span></a><nav class="nav-links" id="navlinks" aria-label="Primär"><a class="navlink" href="index.html#features">Funktionen</a><a class="navlink" href="guides.html">Anleitungen</a><a class="navlink" href="privacy.html">Datenschutz</a><details class="lang-menu"><summary aria-label="Sprache"><span class="lang-current"><span class="flag" aria-hidden="true">🇩🇪</span><span>Deutsch</span></span><span class="lang-caret" aria-hidden="true">▾</span></summary><div class="lang-menu-list"><a class="lang-option" href="../live-location-sharing-without-history.html" hreflang="en" lang="en"><span class="flag" aria-hidden="true">🇺🇸</span><span>English</span></a><a class="lang-option" href="./live-location-sharing-without-history.html" hreflang="de" lang="de" aria-current="true"><span class="flag" aria-hidden="true">🇩🇪</span><span>Deutsch</span></a></div></details></nav><button class="nav-toggle" id="navToggle" aria-label="Menü" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button></div></header>
+  <main id="main" class="article-main">
+    <article class="shell prose article">
+      <p class="eyebrow">Privates Live-Sharing</p>
+      <h1>Live-Standort teilen ohne serverseitigen Routenverlauf</h1>
+      <p class="lead">Manchmal soll jemand wissen, wo du gerade bist: Roadtrip, Solo-Spaziergang, Abholung, Gruppenwanderung oder Heimweg. GPS Logger App Cloud ist für diesen Moment gebaut, ohne deinen gespeicherten Routenverlauf in eine Cloud-Spur zu verwandeln.</p>
+      <h2>Kurzantwort</h2>
+      <p>GPS Logger Live-Sharing sendet deine aktuelle Position an zugelassene Follower, solange das Teilen aktiv ist. Es speichert keinen serverseitigen Routenverlauf. Die aktuelle Position wird überschrieben, beim Stoppen entfernt und durch zurücksetzbaren Code plus Follower-Limit geschützt.</p>
+      <figure class="article-shot"><img src="../assets/ss-share.webp" alt="GPS Logger Live-Sharing mit App-Cloud-Code und Steuerung" loading="lazy"><figcaption>Teile mit einem Code, den du kontrollierst, und setze ihn zurück, wenn der Zugriff enden soll.</figcaption></figure>
+      <h2>Was Follower sehen</h2>
+      <p>Follower mit deinem Code sehen deine aktuelle Position auf einer Karte, solange du teilst. Ihre App kann aus aufeinanderfolgenden Updates eine kurze lokale Spur für die Anzeige bilden, aber App Cloud speichert die aktuelle Position, nicht den Verlauf aller Positionen.</p>
+      <h2>Was du kontrollierst</h2>
+      <ul>
+        <li><strong>Start und Stopp.</strong> Live-Sharing läuft nur, wenn du es einschaltest.</li>
+        <li><strong>Freigabecode.</strong> Der Code ist zurücksetzbar; alte Follower verlieren dann Zugriff.</li>
+        <li><strong>Follower-Limit.</strong> Du wählst, wie viele aktive Follower teilnehmen können.</li>
+        <li><strong>Ziel.</strong> App Cloud für verwaltetes Teilen; optional kann eine eigene HTTPS-Server-URL genutzt werden, wenn die App diese Option freischaltet.</li>
+      </ul>
+      <aside class="inline-app-card"><div class="card-header"><img src="../assets/icon.png" alt="GPS Logger Logo" class="card-logo"><div class="card-info"><h3>Aktuelle Position teilen, nicht den ganzen Verlauf</h3><p>Nutze einen zurücksetzbaren Code, wähle ein Follower-Limit und stoppe das Teilen, wenn der Moment vorbei ist.</p></div></div><div class="card-features"><span>✓ Zurücksetzbarer Code</span><span>✓ Follower-Limit</span><span>✓ Nur aktuelle Position</span></div><a class="btn btn-primary" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger">GPS Logger ausprobieren</a></aside>
+      <h2>Weitere Anleitungen</h2>
+      <ul>
+        <li><a href="offline-gps-logging-privacy.html">Warum Offline-GPS-Logging wichtig für den Datenschutz ist</a></li>
+        <li><a href="record-gps-track-screen-off-android.html">GPS-Track mit ausgeschaltetem Bildschirm auf Android aufzeichnen</a></li>
+        <li><a href="how-to-record-export-gpx-android.html">GPX-Tracks auf Android aufzeichnen und exportieren</a></li>
+        <li><a href="google-timeline-alternative-android.html">Private Google-Timeline-Alternative für Android-Routenverlauf</a></li>
+      </ul>
+    </article>
+  </main>
+  <footer class="footer"><div class="shell footer-grid"><p>GPS Logger: Privater Tracker</p><nav class="footer-links"><a href="guides.html">Anleitungen</a><a href="index.html">Startseite</a><a href="privacy.html">Datenschutz</a></nav></div></footer>
+  <script src="../app.js"></script>
+</body>
+</html>

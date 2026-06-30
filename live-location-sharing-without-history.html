@@ -9,6 +9,7 @@
   <meta name="theme-color" content="#287743">
   <link rel="canonical" href="https://northforceapps.github.io/gpslogger/live-location-sharing-without-history.html">
   <link rel="alternate" hreflang="en" href="https://northforceapps.github.io/gpslogger/live-location-sharing-without-history.html">
+  <link rel="alternate" hreflang="de" href="https://northforceapps.github.io/gpslogger/de/live-location-sharing-without-history.html">
   <link rel="alternate" hreflang="x-default" href="https://northforceapps.github.io/gpslogger/live-location-sharing-without-history.html">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" href="assets/icon.png">
@@ -16,7 +17,7 @@
   {"@context":"https://schema.org","@type":"Article","headline":"Live location sharing without a server-side route history","description":"How GPS Logger shares current position temporarily using App Cloud, resettable share codes and follower limits.","author":{"@type":"Organization","name":"NorthforceApps"},"publisher":{"@type":"Organization","name":"NorthforceApps"},"mainEntityOfPage":"https://northforceapps.github.io/gpslogger/live-location-sharing-without-history.html"}
   </script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does GPS Logger live sharing store my route history on the server?","acceptedAnswer":{"@type":"Answer","text":"No. App Cloud live sharing stores the current position only. It is overwritten as you move and removed when you stop sharing."}},{"@type":"Question","name":"Who can follow my live location?","acceptedAnswer":{"@type":"Answer","text":"Only app users with your share code can follow, and only up to the follower limit you choose."}},{"@type":"Question","name":"Can I revoke access?","acceptedAnswer":{"@type":"Answer","text":"Yes. You can stop sharing or reset the share code. Resetting the code deletes the old share record and revokes existing followers."}},{"@type":"Question","name":"Is live sharing free?","acceptedAnswer":{"@type":"Answer","text":"Free includes a daily App Cloud live sharing and viewing budget. Pro and Lifetime remove the daily time limits."}}]}
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does GPS Logger live sharing store my route history on the server?","acceptedAnswer":{"@type":"Answer","text":"No. App Cloud live sharing stores the current position only. It is overwritten as you move and removed when you stop sharing."}},{"@type":"Question","name":"Who can follow my live location?","acceptedAnswer":{"@type":"Answer","text":"Only app users with your share code can follow, and only up to the follower limit you choose."}},{"@type":"Question","name":"Can I revoke access?","acceptedAnswer":{"@type":"Answer","text":"Yes. You can stop sharing or reset the share code. Resetting the code deletes the old share record and revokes existing followers."}},{"@type":"Question","name":"Can the app explain current live-sharing limits?","acceptedAnswer":{"@type":"Answer","text":"Yes. GPS Logger shows current live-sharing availability and options inside the app before you rely on a longer session."}}]}
   </script>
 </head>
 <body>
@@ -27,12 +28,12 @@
       <nav class="nav-links" id="navlinks" aria-label="Primary">
         <a class="navlink" href="index.html#features">Features</a>
         <a class="navlink" href="guides.html">Guides</a>
-        <a class="navlink" href="index.html#pricing">Free limits</a>
         <a class="navlink" href="privacy.html">Privacy</a>
         <details class="lang-menu">
           <summary aria-label="Language"><span class="lang-current"><span class="flag" aria-hidden="true">🇺🇸</span><span>English</span></span><span class="lang-caret" aria-hidden="true">▾</span></summary>
           <div class="lang-menu-list">
             <a class="lang-option" href="./live-location-sharing-without-history.html" hreflang="en" lang="en" aria-current="true"><span class="flag" aria-hidden="true">🇺🇸</span><span>English</span></a>
+            <a class="lang-option" href="de/live-location-sharing-without-history.html" hreflang="de" lang="de"><span class="flag" aria-hidden="true">🇩🇪</span><span>Deutsch</span></a>
           </div>
         </details>
       </nav>
@@ -64,7 +65,7 @@
         <li><strong>Start and stop.</strong> Live sharing starts only when you turn it on and stops when you stop it.</li>
         <li><strong>Share code.</strong> The code is resettable. Resetting deletes the old share record and revokes old followers.</li>
         <li><strong>Follower limit.</strong> Choose how many active followers can join: 1, 2, 3, 5, 10 or 20.</li>
-        <li><strong>Destination.</strong> Use App Cloud for managed sharing, or Lifetime users can push the same current-position JSON to their own HTTPS server.</li>
+        <li><strong>Destination.</strong> Use App Cloud for managed sharing. If your app has the self-hosted option enabled, it can push the same current-position JSON to your own HTTPS server.</li>
       </ul>
 
       <aside class="inline-app-card">
@@ -86,8 +87,8 @@
       <h2>What happens when sharing stops</h2>
       <p>Stopping an App Cloud share removes the current live position and transient follower records. If a device disconnects unclearly, stale live positions are cleaned up automatically. The share-code ownership binding remains so another app install cannot take over your current code.</p>
 
-      <h2>Free, Pro and Lifetime</h2>
-      <p>Free users get a daily App Cloud live-sharing and viewing budget. Pro and Lifetime remove the daily time limits. Lifetime also unlocks "Your own server" so you can send current live position to a server URL you control instead of App Cloud.</p>
+      <h2>Start in the app</h2>
+      <p>GPS Logger shows live-sharing availability and any current limits before you rely on a longer session. For most people, the important first step is simply testing the share code with someone you trust.</p>
 
       <h2>When live sharing is useful</h2>
       <ul>
