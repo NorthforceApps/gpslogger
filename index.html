@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Private GPS Logger for Android | GPX Recorder &amp; Journey Map</title>
-  <meta name="description" content="Record walks, hikes, rides and road trips privately on Android. Build a personal journey map, import and export GPX/KML, and share live location only when you choose.">
+  <title>Private GPS Logger for Android | Record GPX Tracks &amp; Export Routes</title>
+  <meta name="description" content="Private GPS logger and GPX recorder for Android. Record walks, hikes, rides and road trips with the screen off, build a route history, export GPX/KML, and share live location only when you choose.">
   <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#287743">
   <link rel="canonical" href="https://northforceapps.github.io/gpslogger/">
@@ -40,12 +40,14 @@
   {
     "@context": "https://schema.org",
     "@type": "MobileApplication",
-    "name": "GPS Logger: Private Tracker",
+    "name": "GPS Logger: Private Route Map",
     "applicationCategory": "TravelApplication",
+    "applicationSubCategory": "GPS logger, GPX recorder, route tracker",
     "operatingSystem": "Android",
-    "description": "A private GPS route recorder and personal journey map. Record routes on your device, relive them on a map, build a lifetime atlas, share your live position only when you want, and export GPX or KML with no lock-in.",
+    "description": "A private GPS logger and GPX route recorder for Android. Record tracks with the screen off, keep route history on your device, build a personal journey map, share your current live position only when you choose, and export GPX or KML with no lock-in.",
     "image": "https://northforceapps.github.io/gpslogger/assets/feature_graphic.png",
     "url": "https://northforceapps.github.io/gpslogger/",
+    "downloadUrl": "https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
     "publisher": { "@type": "Organization", "name": "NorthforceApps" },
     "video": {
@@ -57,6 +59,20 @@
       "embedUrl": "https://www.youtube.com/embed/NSOkPpQ0TaY",
       "uploadDate": "2026-05-29T12:00:00+00:00"
     }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"Can GPS Logger record GPX tracks with the screen off?","acceptedAnswer":{"@type":"Answer","text":"Yes. GPS Logger runs a user-visible Android foreground service while recording, so a route can continue while the screen is off or another app is open. Long sessions may still need Android battery settings to allow background activity."}},
+      {"@type":"Question","name":"Where are recorded routes stored?","acceptedAnswer":{"@type":"Answer","text":"Recorded track history is stored on your device by default. Location data is sent only when you choose a feature that needs it, such as live sharing, exporting to another app, or map/elevation services described in the privacy policy."}},
+      {"@type":"Question","name":"Can I export GPX or KML files?","acceptedAnswer":{"@type":"Answer","text":"Yes. You can export individual saved tracks as GPX or KML and create an all-history GPX ZIP backup."}},
+      {"@type":"Question","name":"Does live sharing store a route trail on the server?","acceptedAnswer":{"@type":"Answer","text":"No. App Cloud live sharing relays the current position only. The current position is overwritten as you move and removed when you stop sharing, with stale cleanup if a device disconnects unexpectedly."}},
+      {"@type":"Question","name":"Is an account required?","acceptedAnswer":{"@type":"Answer","text":"No account is required to record, view, import or export tracks. Optional App Cloud live sharing uses anonymous service identity behind the scenes to bind and protect share codes."}},
+      {"@type":"Question","name":"What is free?","acceptedAnswer":{"@type":"Answer","text":"Free includes GPS recording, the atlas/calendar/places views from visible history, the latest 10 tracks in the app, full stored-resolution single-track export, all-history backup, one GPX import per week, and 15 minutes per day each way of live sharing."}}
+    ]
   }
   </script>
 </head>
@@ -74,7 +90,6 @@
         <a class="navlink" href="#tour">Tour</a>
         <a class="navlink" href="#features">Features</a>
         <a class="navlink" href="guides.html">Guides</a>
-        <a class="navlink" href="#pricing">Pricing</a>
         <a class="navlink" href="privacy.html">Privacy</a>
         <details class="lang-menu">
           <summary aria-label="Language"><span class="lang-current"><span class="flag" aria-hidden="true">🇺🇸</span><span>English</span></span><span class="lang-caret" aria-hidden="true">▾</span></summary>
@@ -101,11 +116,12 @@
       <div class="hero-bg" aria-hidden="true"></div>
       <div class="shell hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">Private journey map · GPS recorder</p>
-          <h1>Your route.<br>Your data<span class="pin">.</span></h1>
+          <p class="eyebrow">Private GPS logger · GPX recorder</p>
+          <h1>Private GPS Logger for Android<span class="pin">.</span></h1>
           <p class="lead">
-            Record walks, hikes, rides and road trips privately on Android. Build your personal
-            journey map, export GPX/KML, and share live location only when you choose.
+            Record walks, hikes, rides and road trips with the screen off. Build a private
+            route history on your phone, export GPX/KML anytime, and share live location only
+            when you choose.
           </p>
           <div class="hero-actions">
             <a class="play-badge" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger" aria-label="Get it on Google Play"><img src="assets/badge-en.svg" alt="Get it on Google Play" style="height:60px;width:auto;display:block"></a>
@@ -115,9 +131,9 @@
             </a>
           </div>
           <ul class="trust">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><strong>Privacy-first:</strong> routes are stored on your device. No ads, no account required.</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><strong>No Account Needed:</strong> Install and record instantly</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg><strong>Zero Lock-in:</strong> Export GPX/KML anytime</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span><strong>Private by default:</strong> saved routes stay on your device.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span><strong>No account:</strong> install and record instantly.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg><span><strong>No lock-in:</strong> export GPX/KML anytime.</span></li>
           </ul>
         </div>
         <div class="hero-visual">
@@ -131,19 +147,19 @@
       <div class="shell strip">
         <div class="chip" data-reveal>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          <h3>Private by design</h3><p>Recorded and stored on your device — nothing leaves unless you choose.</p>
+          <h3>Record GPX tracks</h3><p>Tap record before a walk, hike, ride, run, drive or field visit.</p>
         </div>
         <div class="chip" data-reveal>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3 3 6v15l6-3 6 3 6-3V3l-6 3-6-3z"/><path d="M9 3v15M15 6v15"/></svg>
-          <h3>Your atlas over time</h3><p>Every trip builds a lifetime map, calendar and the places you return to.</p>
+          <h3>Keep route history</h3><p>Browse saved tracks as a map, calendar, places atlas and country view.</p>
         </div>
         <div class="chip" data-reveal>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7"/><path d="M12 3v13M7 11l5 5 5-5"/></svg>
-          <h3>Export, no lock-in</h3><p>GPX &amp; KML per track, plus an all-history ZIP backup. Always portable.</p>
+          <h3>Export open files</h3><p>GPX &amp; KML per track, plus an all-history ZIP backup. Always portable.</p>
         </div>
         <div class="chip" data-reveal>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg>
-          <h3>Adaptive &amp; reliable</h3><p>Motion-aware tracking keeps battery low and records with the screen off.</p>
+          <h3>Share only now</h3><p>Optional live sharing relays your current position, not a cloud route trail.</p>
         </div>
       </div>
     </section>
@@ -154,7 +170,7 @@
         <div class="section-head" data-reveal>
           <p class="eyebrow">Why people use GPS Logger</p>
           <h2 class="display">Replace fragile location history with a route archive you control.</h2>
-          <p>Use it when Google Timeline is no longer enough, when another app keeps your GPX behind a wall, or when you need screen-off recording for a hike, commute, road trip or field visit without creating a social fitness profile.</p>
+          <p>Use GPS Logger when Google Timeline is no longer enough, when another app keeps GPX behind a wall, or when you need screen-off route recording for a hike, commute, road trip or field visit without creating a social fitness profile.</p>
         </div>
         <div class="vibe-grid">
           <figure class="vibe" data-reveal><img src="assets/usecase-01-trail-dog.jpg" alt="Recording a misty woodland dog walk — record every trail, keep it private" loading="lazy"></figure>
@@ -163,6 +179,42 @@
           <figure class="vibe" data-reveal><img src="assets/usecase-04-group-hike.jpg" alt="Friends at a ridge viewpoint — every trip joins your atlas" loading="lazy"></figure>
           <figure class="vibe" data-reveal><img src="assets/usecase-05-countries.jpg" alt="Travel memories and the countries you've visited" loading="lazy"></figure>
           <figure class="vibe" data-reveal><img src="assets/usecase-06-globe.jpg" alt="A globe dotted with the pins of a lifetime of journeys" loading="lazy"></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- JOBS -->
+    <section class="section-tight" id="jobs">
+      <div class="shell">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">What people install it for</p>
+          <h2 class="display">Practical GPS logging jobs, not a social network.</h2>
+        </div>
+        <div class="features compact-features">
+          <article class="feature" data-reveal>
+            <h3>Record a route with the screen off</h3>
+            <p>Start a user-visible recording, lock your phone, and keep a clean track for walks, hikes, rides, runs, commutes and drives.</p>
+          </article>
+          <article class="feature" data-reveal>
+            <h3>Build a private location history</h3>
+            <p>Turn saved tracks into a personal atlas: route map, tracked days, repeated places, countries and per-track stats.</p>
+          </article>
+          <article class="feature" data-reveal>
+            <h3>Move GPX files in and out</h3>
+            <p>Import old GPX tracks, export GPX/KML whenever needed, and keep a full-history ZIP backup outside the app.</p>
+          </article>
+          <article class="feature" data-reveal>
+            <h3>Share current location temporarily</h3>
+            <p>Send a resettable code when someone needs to follow your live position. Stop sharing and the live session is removed.</p>
+          </article>
+          <article class="feature" data-reveal>
+            <h3>Keep travel and field records</h3>
+            <p>Use route logs for road trips, field visits, mapping checks, outdoor notes, or simply remembering where you have been.</p>
+          </article>
+          <article class="feature" data-reveal>
+            <h3>Avoid route lock-in</h3>
+            <p>Use open files and local-first storage so your history remains useful even if you later change tools.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -252,11 +304,11 @@
           <h2 class="display">A closer look at GPS Logger in everyday use.</h2>
         </div>
         <div class="screens">
-          <figure class="device" data-reveal><div class="frame"><img src="assets/ss-home.png" alt="Home screen, ready to record" loading="lazy"></div><figcaption>Home — one tap to record</figcaption></figure>
+          <figure class="device" data-reveal><div class="frame"><img src="assets/ss-home.webp" alt="Home screen, ready to record" loading="lazy"></div><figcaption>Home — one tap to record</figcaption></figure>
           <figure class="device" data-reveal><div class="frame"><img src="assets/ss-recording.png" alt="Active recording with live map" loading="lazy"></div><figcaption>Recording — live map &amp; stats</figcaption></figure>
           <figure class="device" data-reveal><div class="frame"><img src="assets/ss-atlas.png" alt="Lifetime journey map" loading="lazy"></div><figcaption>Atlas — a lifetime of routes</figcaption></figure>
           <figure class="device" data-reveal><div class="frame"><img src="assets/ss-places.png" alt="Places atlas" loading="lazy"></div><figcaption>Places — spots you return to</figcaption></figure>
-          <figure class="device" data-reveal><div class="frame"><img src="assets/ss-share.png" alt="Live share controls" loading="lazy"></div><figcaption>Live share — a code you control</figcaption></figure>
+          <figure class="device" data-reveal><div class="frame"><img src="assets/ss-share.webp" alt="Live share controls" loading="lazy"></div><figcaption>Live share — a code you control</figcaption></figure>
         </div>
       </div>
     </section>
@@ -266,13 +318,18 @@
       <div class="shell">
         <div class="section-head" data-reveal>
           <p class="eyebrow">GPS logging guides</p>
-          <h2 class="display">Learn GPX recording, export and private route tracking.</h2>
+          <h2 class="display">Start with the job you searched for.</h2>
         </div>
         <div class="guide-grid">
           <article class="guide-card" data-reveal>
             <p class="guide-kicker">Tutorial</p>
             <h3><a href="how-to-record-export-gpx-android.html">How to record and export GPX tracks on Android</a></h3>
             <p>Step-by-step route recording, background tracking, GPX export and whole-history backup.</p>
+          </article>
+          <article class="guide-card" data-reveal>
+            <p class="guide-kicker">Screen off</p>
+            <h3><a href="record-gps-track-screen-off-android.html">How to record a GPS track with the screen off on Android</a></h3>
+            <p>Background location, foreground notifications and battery settings for reliable route logs.</p>
           </article>
           <article class="guide-card" data-reveal>
             <p class="guide-kicker">Privacy</p>
@@ -290,6 +347,11 @@
             <p>Choose between a private route journal, a training network, or both.</p>
           </article>
           <article class="guide-card" data-reveal>
+            <p class="guide-kicker">Import &amp; migrate</p>
+            <h3><a href="import-gpx-files-android.html">How to import GPX files on Android</a></h3>
+            <p>Bring old routes into one atlas from loose GPX files or ZIP backups.</p>
+          </article>
+          <article class="guide-card" data-reveal>
             <p class="guide-kicker">Workflow</p>
             <h3><a href="gpx-openstreetmap-qgis.html">Use GPX logs with OpenStreetMap and QGIS</a></h3>
             <p>Export portable tracks for mapping, GIS, trip archives and route analysis.</p>
@@ -299,17 +361,18 @@
       </div>
     </section>
 
-    <!-- PRICING -->
+    <!-- LIMITS -->
     <section class="section" id="pricing">
       <div class="shell">
         <div class="section-head" data-reveal>
-          <p class="eyebrow">Free, Pro &amp; Lifetime</p>
-          <h2 class="display">Start free. Upgrade only if you want more.</h2>
+          <p class="eyebrow">Free first</p>
+          <h2 class="display">Try the real GPS logger before deciding anything.</h2>
+          <p>Recording, single-track export and all-history backup are useful from day one. Upgrade only when your archive, import library or live-sharing use grows beyond the free limits.</p>
         </div>
         <div class="tiers">
           <article class="tier" data-reveal>
-            <h3>Free</h3>
-            <p class="price">Everything you need to start</p>
+            <h3>Start recording</h3>
+            <p class="price">Free, no account required</p>
             <ul>
               <li>GPS recording with adaptive tracking</li>
               <li>Journey map, calendar &amp; places</li>
@@ -321,28 +384,26 @@
             <div class="foot"><a class="btn btn-ghost" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger">Get the app</a></div>
           </article>
           <article class="tier featured" data-reveal>
-            <span class="tag">Most popular</span>
-            <h3>Pro</h3>
-            <p class="price">Monthly or yearly subscription</p>
+            <span class="tag">Optional</span>
+            <h3>Keep more history</h3>
+            <p class="price">Pro monthly or yearly</p>
             <ul>
               <li>Everything in Free</li>
               <li>Unlimited in-app track history</li>
-              <li>Full stored-resolution exports</li>
               <li>Unlimited GPX import</li>
               <li>Unlimited App Cloud live sharing &amp; viewing</li>
             </ul>
-            <div class="foot"><a class="btn btn-primary" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger">Go Pro</a></div>
+            <div class="foot"><a class="btn btn-primary" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger">See options</a></div>
           </article>
           <article class="tier" data-reveal>
-            <h3>Lifetime</h3>
+            <h3>Self-host sharing</h3>
             <p class="price">One-time purchase</p>
             <ul>
               <li>Everything in Pro, no recurring fee</li>
               <li>Self-hosted live sharing</li>
               <li>Push your live position to your own server URL</li>
-              <li>Yours to keep, forever</li>
             </ul>
-            <div class="foot"><a class="btn btn-ghost" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger">Unlock Lifetime</a></div>
+            <div class="foot"><a class="btn btn-ghost" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger">See Lifetime</a></div>
           </article>
         </div>
       </div>
@@ -370,12 +431,13 @@
           <h2 class="display">Questions people ask before installing</h2>
         </div>
         <div class="faq" data-reveal>
+          <details><summary>Can it record GPX tracks with the screen off?</summary><p>Yes. GPS Logger runs a foreground location service while recording, so tracking can continue with the screen off or while another app is open. For very long sessions, follow the in-app battery guidance so Android does not suspend it.</p></details>
           <details><summary>Does it record without me starting it?</summary><p>No. Recording starts only when you start it, and stops when you stop. The one exception is optional auto-start after a reboot, which you enable yourself.</p></details>
           <details><summary>Where are my routes stored?</summary><p>On your device. Nothing is uploaded unless you choose to live-share your current position or export a file.</p></details>
           <details><summary>How does live sharing work?</summary><p>You share a resettable code and pick a follower limit (1–20). Anyone with the code sees only your current position on a live map. The position is removed when you stop, and unattended positions auto-delete within 7 days.</p></details>
           <details><summary>Can I get my data out?</summary><p>Yes. Export any track as GPX or KML, or back up your entire history as a GPX ZIP. There's no lock-in.</p></details>
+          <details><summary>Can I import GPX files from another app?</summary><p>Yes. You can import GPX files you choose, including ZIP backups. Free includes one imported track per week; Pro and Lifetime remove that import limit.</p></details>
           <details><summary>Is it free?</summary><p>Yes. Free includes recording, your atlas, calendar and places, your latest 10 tracks, export, a weekly GPX import, and 15 minutes a day of live sharing each way. Pro and Lifetime remove the limits.</p></details>
-          <details><summary>Will it keep recording with the screen off?</summary><p>Yes. A foreground service keeps recording in the background. For very long sessions, follow the in-app battery guidance so Android doesn't suspend it.</p></details>
         </div>
       </div>
     </section>
@@ -384,8 +446,8 @@
     <section class="section-tight">
       <div class="shell">
         <div class="cta-band" data-reveal>
-          <h2>Start your atlas today.</h2>
-          <p>Record your next walk, ride or drive — and watch a map of your life begin to fill in. Free to start, yours to keep.</p>
+          <h2>Record your next route privately.</h2>
+          <p>Start with one walk, ride or drive. Export it as GPX, keep it in your atlas, or simply let your private route history grow over time.</p>
           <a class="play-badge" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger" aria-label="Get it on Google Play"><img src="assets/badge-en.svg" alt="Get it on Google Play" style="height:60px;width:auto;display:block"></a>
         </div>
       </div>
@@ -404,7 +466,7 @@
         <a href="#tour">Tour</a>
         <a href="#features">Features</a>
         <a href="guides.html">Guides</a>
-        <a href="#pricing">Pricing</a>
+        <a href="#pricing">Free limits</a>
         <a href="privacy.html">Privacy</a>
         <a href="data-deletion.html">Delete data</a>
         <a href="https://youtu.be/NSOkPpQ0TaY">Watch the tour</a>

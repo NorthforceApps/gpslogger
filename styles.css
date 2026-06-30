@@ -389,6 +389,9 @@ h2.display { font-size: clamp(2.1rem, 4.2vw, 3.6rem); max-width: 18ch; }
 @media (max-width: 680px) {
   .strip, .features, .tiers, .steps, .vibe-grid, .screens, .guide-grid { grid-template-columns: 1fr; }
   .hero-actions .btn { flex: 1; }
+  .trust { display: grid; gap: 10px; }
+  .trust li { display: grid; grid-template-columns: 20px 1fr; align-items: start; gap: 8px; }
+  .trust svg { margin-top: 3px; }
 }
 
 /* ---------- sticky mobile cta banner ---------- */

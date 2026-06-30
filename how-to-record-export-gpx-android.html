@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>How to Record and Export GPX Tracks on Android</title>
-  <meta name="description" content="Record a GPS route on Android, keep tracking with the screen off, review your route history, and export GPX or KML files from GPS Logger.">
+  <meta name="description" content="Record GPX tracks on Android with GPS Logger: start a route, keep tracking with the screen off, review private route history, export GPX/KML, and make a full-history backup.">
   <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#287743">
   <link rel="canonical" href="https://northforceapps.github.io/gpslogger/how-to-record-export-gpx-android.html">
@@ -21,6 +21,9 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"HowTo","name":"How to record and export GPX tracks on Android","description":"Record a route with GPS Logger and export it as GPX or KML.","step":[{"@type":"HowToStep","name":"Install GPS Logger","text":"Install GPS Logger: Private Tracker from Google Play."},{"@type":"HowToStep","name":"Allow location access","text":"Allow location permission so routes can record, including background location if you want tracking with the screen off."},{"@type":"HowToStep","name":"Start recording","text":"Open the app and press the record control before a walk, hike, ride, run or drive."},{"@type":"HowToStep","name":"Stop and save","text":"Stop recording when done. The app saves route, distance, duration and speed on your device."},{"@type":"HowToStep","name":"Export GPX or KML","text":"Open a saved track and export it as GPX or KML, or create an all-history GPX ZIP backup."}],"tool":[{"@type":"HowToTool","name":"Android phone"},{"@type":"HowToTool","name":"GPS Logger: Private Tracker"}],"totalTime":"PT5M"}
   </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can I record GPX on Android with the screen off?","acceptedAnswer":{"@type":"Answer","text":"Yes. GPS Logger uses a user-visible foreground location service so recording can continue while the screen is off or another app is open, provided Android permissions and battery settings allow it."}},{"@type":"Question","name":"Does GPS Logger export real GPX files?","acceptedAnswer":{"@type":"Answer","text":"Yes. Saved tracks can be exported as GPX or KML, and all-history backup creates a GPX ZIP."}},{"@type":"Question","name":"Do I need an account to record GPX tracks?","acceptedAnswer":{"@type":"Answer","text":"No. GPS Logger does not require an account to record, view, import or export tracks."}},{"@type":"Question","name":"Are free exports limited?","acceptedAnswer":{"@type":"Answer","text":"Single-track export uses the full stored track resolution for every tier. Free tracks are capped at finalize time, not at export time."}}]}
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -30,7 +33,7 @@
       <nav class="nav-links" id="navlinks" aria-label="Primary">
         <a class="navlink" href="index.html#features">Features</a>
         <a class="navlink" href="guides.html">Guides</a>
-        <a class="navlink" href="index.html#pricing">Pricing</a>
+        <a class="navlink" href="index.html#pricing">Free limits</a>
         <a class="navlink" href="privacy.html">Privacy</a>
         <details class="lang-menu">
           <summary aria-label="Language"><span class="lang-current"><span class="flag" aria-hidden="true">🇺🇸</span><span>English</span></span><span class="lang-caret" aria-hidden="true">▾</span></summary>
@@ -56,7 +59,7 @@
       <h1>How to record and export GPX tracks on Android</h1>
       <p class="lead">GPX is a portable route file format used by mapping apps, outdoor tools, GIS software and trip archives. GPS Logger records routes on Android, saves them on your device, then exports GPX or KML when you need a copy.</p>
       <h2>Quick answer</h2>
-      <p>Install GPS Logger, allow location access, tap record before you move, stop when the route is finished, then open the saved track and export GPX or KML. Recording continues with the screen off through Android's foreground service notification.</p>
+      <p>Install GPS Logger, allow location access, tap record before you move, stop when the route is finished, then open the saved track and export GPX or KML. Recording can continue with the screen off through Android's foreground service notification.</p>
       <figure class="article-shot"><img src="assets/ss-recording.png" alt="GPS Logger Android recording screen with live map and route stats" loading="lazy"><figcaption>Start a recording, keep phone in pocket, stop when trip is done.</figcaption></figure>
       <h2>1. Install GPS Logger</h2>
       <p>Install <a data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger">GPS Logger: Private Tracker</a> from Google Play. No account is needed to record routes.</p>
@@ -64,13 +67,14 @@
       <p>GPS recording needs location permission. Background location lets recording continue when the app is not visible, screen is off, or optional auto-start after reboot is enabled. Android also shows a foreground notification while recording.</p>
       <h2>3. Record your route</h2>
       <p>Tap record before a walk, hike, cycle ride, commute, run, road trip or field survey. GPS Logger stores route points, distance, duration and speed locally on your phone.</p>
+      <p>For screen-off recording, leave the ongoing notification enabled and avoid aggressive battery restrictions for long sessions. Android may pause background work on some phones if battery saver or manufacturer optimization is too strict.</p>
 
       <aside class="inline-app-card">
         <div class="card-header">
           <img src="assets/icon.png" alt="GPS Logger logo" class="card-logo">
           <div class="card-info">
-            <h3>Try the Easiest Way to Record GPX</h3>
-            <p>GPS Logger is built to record clean, background GPX/KML paths on Android with adaptive, battery-aware tracking.</p>
+            <h3>Record private GPX tracks on Android</h3>
+            <p>GPS Logger is built for user-started route recording, local history, GPX/KML export and a private atlas without an account.</p>
           </div>
         </div>
         <div class="card-features">
@@ -89,14 +93,39 @@
       <h2>5. Export GPX or KML</h2>
       <p>Open a saved track, choose export, then save or share a GPX or KML file through Android. You can also create a whole-history GPX ZIP backup. Single-track export uses full stored resolution for every tier.</p>
       <p>Testing a mapping workflow before your first recording? Download a small <a href="downloads/sample-gpslogger-city-walk.gpx">sample GPX city walk</a>.</p>
+      <h2>What makes a good GPX recorder?</h2>
+      <p>A useful GPX recorder should do more than draw a line once. Look for these basics:</p>
+      <ul>
+        <li><strong>Visible background recording</strong> so the screen can turn off without hiding location use.</li>
+        <li><strong>Open export</strong> so routes can move to mapping tools, backups or another app.</li>
+        <li><strong>Local history</strong> so old tracks remain browsable, not just scattered files.</li>
+        <li><strong>Import support</strong> so past GPX files can join the same archive.</li>
+        <li><strong>Clear privacy rules</strong> for what stays on the phone and what is sent when live sharing or exporting.</li>
+      </ul>
+      <h2>Common GPX recording problems</h2>
+      <h3>The route stops when the screen is off</h3>
+      <p>Check that location permission is allowed, notifications are enabled, and Android battery settings are not restricting GPS Logger. For longer trips, run a short test route before relying on any phone/app combination.</p>
+      <h3>The exported file looks too large</h3>
+      <p>Detailed GPS tracks can contain many points. GPS Logger gently simplifies saved tracks at finalize time and exports the full stored track. Use GPX for maximum route portability and KML when you want easy viewing in map tools that prefer KML.</p>
+      <h3>I already have GPX files</h3>
+      <p>Use the import screen to bring old tracks into your atlas. GPS Logger can import individual files or ZIP backups, then export them again later so the app does not trap your route archive.</p>
       <h2>Next guides</h2>
       <ul>
+        <li><a href="record-gps-track-screen-off-android.html">How to record a GPS track with the screen off on Android</a></li>
         <li><a href="import-gpx-files-android.html">How to import GPX files on Android (bulk ZIP backups)</a></li>
         <li><a href="elevation-correction-gps-tracks.html">How to correct GPS elevation data on Android</a></li>
         <li><a href="offline-gps-logging-privacy.html">Why offline GPS logging matters for privacy</a></li>
+        <li><a href="google-timeline-alternative-android.html">Private Google Timeline alternative for Android route history</a></li>
         <li><a href="gpx-openstreetmap-qgis.html">Use GPX logs with OpenStreetMap and QGIS</a></li>
         <li><a href="gps-logger-vs-strava.html">GPS Logger vs Strava and social fitness apps</a></li>
       </ul>
+      <h2>FAQ</h2>
+      <div class="faq">
+        <details><summary>Can I record GPX without an account?</summary><p>Yes. GPS Logger does not require an account to record, view, import or export tracks.</p></details>
+        <details><summary>Can recording continue when the screen is off?</summary><p>Yes, when permissions and Android battery settings allow it. GPS Logger uses a foreground service notification for active recording.</p></details>
+        <details><summary>Can I export full-resolution tracks for free?</summary><p>Single-track export uses the full stored track resolution for every tier. Free tracks are capped during track finalization, not during export.</p></details>
+        <details><summary>Can I back up all tracks at once?</summary><p>Yes. The all-history backup exports a GPX ZIP so you can keep a copy outside the app.</p></details>
+      </div>
       <p><a class="btn btn-primary" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger">Install GPS Logger for Android</a></p>
     </article>
   </main>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How to Record a GPS Track with the Screen Off on Android</title>
+  <meta name="description" content="Record GPS tracks on Android while the screen is off. Learn how foreground notifications, background location, battery settings and GPX export work in GPS Logger.">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#287743">
+  <link rel="canonical" href="https://northforceapps.github.io/gpslogger/record-gps-track-screen-off-android.html">
+  <link rel="alternate" hreflang="en" href="https://northforceapps.github.io/gpslogger/record-gps-track-screen-off-android.html">
+  <link rel="alternate" hreflang="x-default" href="https://northforceapps.github.io/gpslogger/record-gps-track-screen-off-android.html">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="assets/icon.png">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"HowTo","name":"How to record a GPS track with the screen off on Android","description":"Record a route with GPS Logger while Android shows a foreground location notification.","step":[{"@type":"HowToStep","name":"Install GPS Logger","text":"Install GPS Logger from Google Play and open the app."},{"@type":"HowToStep","name":"Allow location permissions","text":"Allow location permission. Background location is needed if you want recording to continue while the app is not visible or the screen is off."},{"@type":"HowToStep","name":"Start a recording","text":"Tap record before you begin your walk, hike, ride, run, commute or drive."},{"@type":"HowToStep","name":"Check the foreground notification","text":"Android shows an ongoing notification while GPS Logger records location in the background."},{"@type":"HowToStep","name":"Lock the phone and finish later","text":"Lock the screen or switch apps. Return to GPS Logger and stop recording when the route is complete."},{"@type":"HowToStep","name":"Export the route","text":"Open the saved track and export GPX or KML if you need a portable route file."}],"tool":[{"@type":"HowToTool","name":"Android phone"},{"@type":"HowToTool","name":"GPS Logger"}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can Android record GPS with the screen off?","acceptedAnswer":{"@type":"Answer","text":"Yes, if the app uses a user-visible foreground location service and the user has granted the needed location permission. GPS Logger shows an ongoing notification while recording."}},{"@type":"Question","name":"Why does Android need a notification while recording?","acceptedAnswer":{"@type":"Answer","text":"Android requires long-running background location work to be visible to the user. The notification shows that recording or live sharing is active and lets the user return to the app."}},{"@type":"Question","name":"Will every phone record forever in the background?","acceptedAnswer":{"@type":"Answer","text":"No app can guarantee that across every Android brand and battery setting. For long sessions, allow background activity and avoid aggressive battery restrictions for the app."}},{"@type":"Question","name":"Can I export the recorded track as GPX?","acceptedAnswer":{"@type":"Answer","text":"Yes. After stopping a recording, GPS Logger can export the saved track as GPX or KML."}}]}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="header" id="top">
+    <div class="shell nav">
+      <a class="brand" href="index.html" aria-label="GPS Logger home"><img src="assets/icon.png" alt="" width="46" height="46"><span><b>GPS Logger</b><small>Private route recorder &amp; atlas</small></span></a>
+      <nav class="nav-links" id="navlinks" aria-label="Primary">
+        <a class="navlink" href="index.html#features">Features</a>
+        <a class="navlink" href="guides.html">Guides</a>
+        <a class="navlink" href="index.html#pricing">Free limits</a>
+        <a class="navlink" href="privacy.html">Privacy</a>
+        <details class="lang-menu">
+          <summary aria-label="Language"><span class="lang-current"><span class="flag" aria-hidden="true">🇺🇸</span><span>English</span></span><span class="lang-caret" aria-hidden="true">▾</span></summary>
+          <div class="lang-menu-list">
+            <a class="lang-option" href="./record-gps-track-screen-off-android.html" hreflang="en" lang="en" aria-current="true"><span class="flag" aria-hidden="true">🇺🇸</span><span>English</span></a>
+          </div>
+        </details>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </header>
+  <main id="main" class="article-main">
+    <article class="shell prose article">
+      <p class="eyebrow">Screen-off GPS recording</p>
+      <h1>How to record a GPS track with the screen off on Android</h1>
+      <p class="lead">A useful GPS logger should keep recording after you start a route, put the phone in your pocket, and get on with the walk, hike, ride or drive. On Android, that means foreground location, clear permissions and realistic battery settings.</p>
+
+      <h2>Quick answer</h2>
+      <p>Install GPS Logger, allow location access, tap record, confirm the ongoing recording notification, then lock the screen. The route continues while the phone is in your pocket. When you stop, the app saves the track so you can review the map, stats and export GPX or KML.</p>
+
+      <figure class="article-shot"><img src="assets/ss-recording.png" alt="GPS Logger recording screen showing live route map, distance and elapsed time" loading="lazy"><figcaption>Start recording on screen, then let Android's foreground notification keep the session visible while the screen is off.</figcaption></figure>
+
+      <h2>Why screen-off GPS recording needs special handling</h2>
+      <p>Android protects battery and privacy by limiting apps that keep using location in the background. A proper route logger cannot quietly run forever in the dark. It needs a user-started recording, a visible foreground-service notification and the right location permission for your use case.</p>
+      <p>GPS Logger is built around that model: you start recording, Android shows an ongoing notification, and you stop recording when the route is done. Optional auto-start after reboot exists, but only if you enable it yourself.</p>
+
+      <h2>Step 1: allow the right permissions</h2>
+      <p>Location permission is required for any GPS route. If you want recording to continue when the app is not on screen, background location lets Android keep providing fixes while the phone is locked or another app is open. On newer Android versions, notification permission may also be needed so the active recording notification can appear.</p>
+
+      <h2>Step 2: start recording before you move</h2>
+      <p>Open GPS Logger and tap record before the route begins. This works for normal trips such as:</p>
+      <ul>
+        <li>Walking, hiking and trail routes</li>
+        <li>Cycling, commuting and running</li>
+        <li>Road trips, field visits and site surveys</li>
+        <li>Dog walks or everyday route memory</li>
+      </ul>
+
+      <aside class="inline-app-card">
+        <div class="card-header">
+          <img src="assets/icon.png" alt="GPS Logger logo" class="card-logo">
+          <div class="card-info">
+            <h3>Record private GPX routes on Android</h3>
+            <p>GPS Logger records user-started routes with a visible notification, saves them on your phone, and exports GPX/KML when you need a copy.</p>
+          </div>
+        </div>
+        <div class="card-features">
+          <span>✓ Screen-off recording</span>
+          <span>✓ GPX/KML export</span>
+          <span>✓ No account required</span>
+        </div>
+        <a class="btn btn-primary" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger">Get GPS Logger on Google Play</a>
+      </aside>
+
+      <h2>Step 3: check the notification</h2>
+      <p>When recording is active, Android shows a persistent notification. That notification is not just cosmetic: it is the visible signal that a foreground location service is running. If the notification is missing, check notification permission and battery restrictions before relying on a long recording.</p>
+
+      <h2>Step 4: avoid aggressive battery restrictions</h2>
+      <p>Most Android phones handle foreground location well, but some brands aggressively pause background work. If you are recording a long hike, ride or road trip, open Android's app battery settings and allow GPS Logger to run in the background. This is especially important after system updates, battery-saver mode, or on phones that automatically optimize newly installed apps.</p>
+
+      <h2>Step 5: stop, review and export</h2>
+      <p>When the route is finished, return to GPS Logger and stop recording. The app saves the route, distance, duration, speed, map and stats in your local history. You can export the track as GPX or KML, or create a full-history GPX ZIP backup later.</p>
+
+      <h2>What this is not</h2>
+      <p>Screen-off GPS logging is not hidden tracking. GPS Logger records after you start it, shows an ongoing notification, and stops when you stop. It also is not a guarantee that every Android device will survive every battery policy without setup. For important trips, do a short test route first.</p>
+
+      <h2>Related guides</h2>
+      <ul>
+        <li><a href="how-to-record-export-gpx-android.html">How to record and export GPX tracks on Android</a></li>
+        <li><a href="offline-gps-logging-privacy.html">Why offline GPS logging matters for privacy</a></li>
+        <li><a href="live-location-sharing-without-history.html">Live location sharing without a server-side route history</a></li>
+        <li><a href="import-gpx-files-android.html">How to import GPX files on Android</a></li>
+      </ul>
+
+      <h2>FAQ</h2>
+      <div class="faq">
+        <details><summary>Can GPS Logger record while the phone is locked?</summary><p>Yes. Start a recording first, then lock the phone. Android keeps the foreground location service visible with an ongoing notification.</p></details>
+        <details><summary>Do I need background location?</summary><p>Background location is needed when you want recording to continue while the app is not visible, the screen is off, or optional auto-start after reboot is enabled.</p></details>
+        <details><summary>Will battery saver affect recording?</summary><p>It can. For long sessions, allow GPS Logger to run in the background and avoid aggressive battery saver modes.</p></details>
+        <details><summary>Can I export the track afterward?</summary><p>Yes. Open the saved track and export GPX or KML, or make a full-history GPX ZIP backup.</p></details>
+      </div>
+    </article>
+  </main>
+  <footer class="footer"><div class="shell footer-grid"><p>GPS Logger: Private Tracker</p><nav class="footer-links"><a href="guides.html">Guides</a><a href="index.html">Home</a><a href="privacy.html">Privacy</a></nav></div></footer>
+  <script src="app.js"></script>
+</body>
+</html>

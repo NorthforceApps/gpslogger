@@ -9,7 +9,10 @@
   const PLAY_URL = "https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger";
   const PLAY_CAMPAIGNS = {
     "how-to-record-export-gpx-android": "guide_gpx_export",
+    "record-gps-track-screen-off-android": "guide_screen_off_recording",
     "import-gpx-files-android": "guide_import_gpx",
+    "google-timeline-alternative-android": "guide_timeline_alternative",
+    "live-location-sharing-without-history": "guide_live_share_privacy",
     "elevation-correction-gps-tracks": "guide_elevation_correction",
     "offline-gps-logging-privacy": "guide_privacy",
     "gps-logger-vs-strava": "guide_strava_alternative",

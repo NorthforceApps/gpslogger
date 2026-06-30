@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Why Offline GPS Logging Matters for Privacy</title>
-  <meta name="description" content="Learn why local GPS track storage, opt-in live sharing, GPX export, and clear background location controls matter for private route tracking on Android.">
+  <title>Private GPS Logging on Android | Why Local Route History Matters</title>
+  <meta name="description" content="Learn why private GPS logging matters: local route history, opt-in live sharing, GPX/KML export, clear background location controls, and no account required for recording.">
   <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#287743">
   <link rel="canonical" href="https://northforceapps.github.io/gpslogger/offline-gps-logging-privacy.html">
@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" href="assets/icon.png">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Why offline GPS logging matters for privacy","description":"How local GPS route storage and opt-in sharing reduce location data exposure.","author":{"@type":"Organization","name":"NorthforceApps"},"publisher":{"@type":"Organization","name":"NorthforceApps"},"mainEntityOfPage":"https://northforceapps.github.io/gpslogger/offline-gps-logging-privacy.html"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is GPS Logger offline-only?","acceptedAnswer":{"@type":"Answer","text":"No. Saved tracks are local by default, but the app uses online services for maps, optional App Cloud live sharing, analytics/crash diagnostics if enabled, purchases, and optional elevation features."}},{"@type":"Question","name":"Does GPS Logger upload saved route history?","acceptedAnswer":{"@type":"Answer","text":"No saved route trail is uploaded by default. Data leaves the device only when you choose export, live sharing, self-hosted upload, or a feature/service described in the privacy policy."}},{"@type":"Question","name":"Do I need an account?","acceptedAnswer":{"@type":"Answer","text":"No account is required to record, view, import or export tracks."}},{"@type":"Question","name":"Can I delete route history?","acceptedAnswer":{"@type":"Answer","text":"Yes. You can delete saved tracks in the app, reset live-share codes, clear app data, or uninstall the app."}}]}</script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -28,7 +29,7 @@
       <nav class="nav-links" id="navlinks" aria-label="Primary">
         <a class="navlink" href="index.html#features">Features</a>
         <a class="navlink" href="guides.html">Guides</a>
-        <a class="navlink" href="index.html#pricing">Pricing</a>
+        <a class="navlink" href="index.html#pricing">Free limits</a>
         <a class="navlink" href="privacy.html">Privacy</a>
         <details class="lang-menu">
           <summary aria-label="Language"><span class="lang-current"><span class="flag" aria-hidden="true">🇺🇸</span><span>English</span></span><span class="lang-caret" aria-hidden="true">▾</span></summary>
@@ -54,15 +55,28 @@
       <h1>Why offline GPS logging matters for privacy</h1>
       <p class="lead">Location history is sensitive. A private route journal should make recording useful without turning every walk, drive or trip into a cloud profile.</p>
       <h2>Quick answer</h2>
-      <p>Offline-first GPS logging reduces exposure because saved routes stay on your phone by default. GPS Logger only sends location data when you choose a feature that needs it, such as App Cloud live sharing, export to another app, or terrain downloads for elevation correction.</p>
+      <p>Local-first GPS logging reduces exposure because saved routes stay on your phone by default. GPS Logger only sends location data when you choose a feature that needs it, such as App Cloud live sharing, export to another app, self-hosted live upload, map services, or terrain downloads for elevation correction.</p>
       <h2>Local-first route history lowers exposure</h2>
       <p>GPS Logger stores recorded tracks on your device. That means your saved walking routes, hiking tracks, bike commutes and road trips are not uploaded as a location trail by default.</p>
+      <p>This matters because route history reveals habits: home and work areas, school runs, repeated walks, travel dates and quiet routines. Keeping the archive local by default gives you a smaller privacy footprint than a system where every saved trip becomes part of a cloud account.</p>
       <h2>Background location should be visible and controlled</h2>
       <p>Android background location lets a GPS recording continue while screen is off. GPS Logger records only when you start it, with an ongoing notification during tracking. Optional auto-start after reboot exists, but you control it.</p>
+      <p>A visible notification is part of the privacy model. You should be able to tell when an app is recording or sharing location. Hidden tracking is not the goal; complete user-started route logs are.</p>
       <h2>Live sharing should be temporary</h2>
       <p>Sometimes sharing current location is useful. GPS Logger App Cloud live share sends current position to admitted users with your resettable code and follower limit. It does not store a server-side trail; current position is overwritten and removed after stopping.</p>
       <h2>Exports should be open</h2>
       <p>Private does not mean trapped. GPX and KML export let you move route data into mapping tools, backups or other apps when you decide. See <a href="how-to-record-export-gpx-android.html">how to record and export GPX tracks on Android</a>.</p>
+      <h2>Private does not mean pretending the internet is never used</h2>
+      <p>A privacy-first GPS app still has real dependencies. GPS Logger uses Google Maps to display maps, Google Play for purchases, Firebase services for optional App Cloud live sharing and optional diagnostics, and online terrain data for elevation correction features. The important distinction is whether saved route history is uploaded as a location trail by default. In GPS Logger, it is not.</p>
+      <h2>Good privacy questions before choosing a GPS logger</h2>
+      <ul>
+        <li>Can I record without an account?</li>
+        <li>Where are saved tracks stored by default?</li>
+        <li>Can I export standard GPX or KML files?</li>
+        <li>Does live sharing store a route history or only current position?</li>
+        <li>Can I reset access and delete local history?</li>
+        <li>Does the app explain background location clearly?</li>
+      </ul>
       <h2>Privacy checklist for route tracking</h2>
       <ul>
         <li>Use recording only when needed.</li>
@@ -75,9 +89,19 @@
       <h2>Related guides</h2>
       <ul>
         <li><a href="how-to-record-export-gpx-android.html">How to record and export GPX tracks on Android</a></li>
+        <li><a href="record-gps-track-screen-off-android.html">How to record a GPS track with the screen off on Android</a></li>
+        <li><a href="live-location-sharing-without-history.html">Live location sharing without a server-side route history</a></li>
+        <li><a href="google-timeline-alternative-android.html">Private Google Timeline alternative for Android route history</a></li>
         <li><a href="import-gpx-files-android.html">How to import GPX files on Android</a></li>
         <li><a href="gps-logger-vs-strava.html">GPS Logger vs Strava and social fitness apps</a></li>
       </ul>
+      <h2>FAQ</h2>
+      <div class="faq">
+        <details><summary>Is GPS Logger offline-only?</summary><p>No. Saved tracks are local by default, but maps, optional App Cloud live sharing, purchases, diagnostics and elevation features can use online services.</p></details>
+        <details><summary>Does recording require an account?</summary><p>No. Recording, viewing, importing and exporting tracks do not require an account.</p></details>
+        <details><summary>Does live sharing expose my old tracks?</summary><p>No. App Cloud live sharing relays current position while sharing is active. It does not upload your saved route history.</p></details>
+        <details><summary>Can I leave the app later with my data?</summary><p>Yes. Export individual tracks as GPX/KML or make a full-history GPX ZIP backup.</p></details>
+      </div>
       <p><a class="btn btn-primary" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger">Install private GPS Logger</a></p>
     </article>
   </main>
