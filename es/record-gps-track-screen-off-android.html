@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grabar un track GPS con la pantalla apagada en Android</title>
+  <meta name="description" content="Graba tracks GPS en Android con la pantalla apagada. Aprende cómo funcionan la notificación visible, la ubicación en segundo plano, la batería y la exportación GPX en GPS Logger.">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#287743">
+  <link rel="canonical" href="https://northforceapps.github.io/gpslogger/es/record-gps-track-screen-off-android.html">
+  <link rel="alternate" hreflang="en" href="https://northforceapps.github.io/gpslogger/record-gps-track-screen-off-android.html">
+  <link rel="alternate" hreflang="de" href="https://northforceapps.github.io/gpslogger/de/record-gps-track-screen-off-android.html">
+  <link rel="alternate" hreflang="es" href="https://northforceapps.github.io/gpslogger/es/record-gps-track-screen-off-android.html">
+  <link rel="alternate" hreflang="fr" href="https://northforceapps.github.io/gpslogger/fr/record-gps-track-screen-off-android.html">
+  <link rel="alternate" hreflang="x-default" href="https://northforceapps.github.io/gpslogger/record-gps-track-screen-off-android.html">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" type="image/png" href="../assets/icon.png">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"HowTo","name":"Grabar un track GPS con la pantalla apagada en Android","description":"Graba una ruta con GPS Logger mientras Android muestra una notificación de ubicación en primer plano.","step":[{"@type":"HowToStep","name":"Instala GPS Logger","text":"Instala GPS Logger desde Google Play y abre la app."},{"@type":"HowToStep","name":"Permite la ubicación","text":"Permite el acceso a la ubicación. La ubicación en segundo plano es necesaria si quieres que la grabación continúe cuando la app no está visible o la pantalla está apagada."},{"@type":"HowToStep","name":"Inicia una grabación","text":"Toca grabar antes de empezar una caminata, ruta, salida, trayecto o viaje."},{"@type":"HowToStep","name":"Comprueba la notificación","text":"Android muestra una notificación activa mientras GPS Logger registra ubicación en segundo plano."},{"@type":"HowToStep","name":"Bloquea el teléfono y termina después","text":"Bloquea la pantalla o cambia de app. Vuelve a GPS Logger y detén la grabación cuando la ruta termine."},{"@type":"HowToStep","name":"Exporta la ruta","text":"Abre el track guardado y exporta GPX o KML si necesitas un archivo portátil."}],"tool":[{"@type":"HowToTool","name":"Teléfono Android"},{"@type":"HowToTool","name":"GPS Logger"}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Puede Android grabar GPS con la pantalla apagada?","acceptedAnswer":{"@type":"Answer","text":"Sí, si la app usa un servicio de ubicación visible en primer plano y has concedido los permisos necesarios. GPS Logger muestra una notificación continua mientras graba."}},{"@type":"Question","name":"¿Por qué Android necesita una notificación al grabar?","acceptedAnswer":{"@type":"Answer","text":"Android exige que el uso prolongado de ubicación en segundo plano sea visible para el usuario. La notificación muestra que la grabación o el compartir en vivo está activo."}},{"@type":"Question","name":"¿Todos los teléfonos graban indefinidamente en segundo plano?","acceptedAnswer":{"@type":"Answer","text":"No. Ninguna app puede garantizarlo en todas las marcas y ajustes de batería. Para sesiones largas, permite la actividad en segundo plano y evita restricciones agresivas."}},{"@type":"Question","name":"¿Puedo exportar el track como GPX después?","acceptedAnswer":{"@type":"Answer","text":"Sí. Después de detener la grabación, GPS Logger puede exportar el track guardado como GPX o KML."}}]}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+  <header class="header" id="top"><div class="shell nav"><a class="brand" href="index.html" aria-label="Inicio de GPS Logger"><img src="../assets/icon.png" alt="" width="46" height="46"><span><b>GPS Logger</b><small>Grabador de rutas privado y atlas</small></span></a><nav class="nav-links" id="navlinks" aria-label="Principal"><a class="navlink" href="index.html#features">Funciones</a><a class="navlink" href="guides.html">Guías</a><a class="navlink" href="privacy.html">Privacidad</a><details class="lang-menu"><summary aria-label="Idioma"><span class="lang-current"><span class="flag" aria-hidden="true">🇪🇸</span><span>Español</span></span><span class="lang-caret" aria-hidden="true">▾</span></summary><div class="lang-menu-list"><a class="lang-option" href="../record-gps-track-screen-off-android.html" hreflang="en" lang="en"><span class="flag" aria-hidden="true">🇺🇸</span><span>English</span></a><a class="lang-option" href="../de/record-gps-track-screen-off-android.html" hreflang="de" lang="de"><span class="flag" aria-hidden="true">🇩🇪</span><span>Deutsch</span></a><a class="lang-option" href="./record-gps-track-screen-off-android.html" hreflang="es" lang="es" aria-current="true"><span class="flag" aria-hidden="true">🇪🇸</span><span>Español</span></a><a class="lang-option" href="../fr/record-gps-track-screen-off-android.html" hreflang="fr" lang="fr"><span class="flag" aria-hidden="true">🇫🇷</span><span>Français</span></a></div></details></nav><button class="nav-toggle" id="navToggle" aria-label="Menú" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button></div></header>
+  <main id="main" class="article-main">
+    <article class="shell prose article">
+      <p class="eyebrow">Grabación GPS con pantalla apagada</p>
+      <h1>Grabar un track GPS con la pantalla apagada en Android</h1>
+      <p class="lead">Un GPS Logger útil debe seguir grabando después de iniciar una ruta, guardar el teléfono en el bolsillo y continuar con la caminata, ruta, salida o viaje. En Android eso requiere ubicación en primer plano, permisos claros y ajustes de batería realistas.</p>
+      <h2>Respuesta rápida</h2>
+      <p>Instala GPS Logger, permite la ubicación, inicia la grabación, comprueba la notificación continua y bloquea la pantalla. La ruta sigue hasta que la detienes. Después puedes revisar el mapa, las estadísticas y exportar GPX o KML.</p>
+      <figure class="article-shot"><img src="../assets/ss-recording.png" alt="Pantalla de grabación de GPS Logger con mapa en vivo, distancia y tiempo" loading="lazy"><figcaption>Empieza desde la pantalla y deja que la notificación de Android mantenga visible la sesión activa.</figcaption></figure>
+      <h2>Por qué Android necesita reglas especiales</h2>
+      <p>Android protege la batería y la privacidad limitando las apps que usan ubicación durante mucho tiempo en segundo plano. Un registrador de rutas honesto no debe ejecutarse de forma invisible: necesita una grabación iniciada por el usuario, una notificación visible y los permisos adecuados.</p>
+      <h2>Cómo grabar con más fiabilidad</h2>
+      <ol>
+        <li>Permite la ubicación y, si hace falta, las notificaciones.</li>
+        <li>Inicia la grabación antes de moverte.</li>
+        <li>Mantén activa la notificación de grabación.</li>
+        <li>Evita restricciones agresivas de batería en sesiones largas.</li>
+        <li>Detén la ruta al final y exporta GPX o KML si lo necesitas.</li>
+      </ol>
+      <aside class="inline-app-card"><div class="card-header"><img src="../assets/icon.png" alt="Logo de GPS Logger" class="card-logo"><div class="card-info"><h3>Graba rutas GPX privadas en Android</h3><p>GPS Logger graba rutas iniciadas por el usuario con notificación visible, las guarda en tu teléfono y exporta GPX/KML cuando necesitas una copia.</p></div></div><div class="card-features"><span>✓ Pantalla apagada</span><span>✓ Exportación GPX/KML</span><span>✓ Sin cuenta</span></div><a class="btn btn-primary" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger">Instalar GPS Logger</a></aside>
+      <h2>Lo que no es</h2>
+      <p>Grabar GPS con pantalla apagada no es seguimiento oculto. GPS Logger graba después de que tú lo inicias, muestra una notificación continua y se detiene cuando tú lo paras. Para rutas importantes, haz primero una prueba corta con tu teléfono.</p>
+      <h2>Guías relacionadas</h2>
+      <ul>
+        <li><a href="how-to-record-export-gpx-android.html">Cómo registrar y exportar rutas GPX en Android</a></li>
+        <li><a href="offline-gps-logging-privacy.html">Por qué el registro GPS fuera de línea es importante para la privacidad</a></li>
+        <li><a href="live-location-sharing-without-history.html">Compartir ubicación en vivo sin historial de rutas en servidor</a></li>
+        <li><a href="import-gpx-files-android.html">Cómo importar archivos GPX en Android</a></li>
+      </ul>
+    </article>
+  </main>
+  <footer class="footer"><div class="shell footer-grid"><p>GPS Logger: Rastreador privado</p><nav class="footer-links"><a href="guides.html">Guías</a><a href="index.html">Inicio</a><a href="privacy.html">Privacidad</a></nav></div></footer>
+  <script src="../app.js"></script>
+</body>
+</html>

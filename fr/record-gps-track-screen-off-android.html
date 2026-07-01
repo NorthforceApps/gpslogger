@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Enregistrer une trace GPS écran éteint sur Android</title>
+  <meta name="description" content="Enregistrez des traces GPS sur Android écran éteint. Comprenez la notification visible, la localisation en arrière-plan, les réglages batterie et l'export GPX dans GPS Logger.">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#287743">
+  <link rel="canonical" href="https://northforceapps.github.io/gpslogger/fr/record-gps-track-screen-off-android.html">
+  <link rel="alternate" hreflang="en" href="https://northforceapps.github.io/gpslogger/record-gps-track-screen-off-android.html">
+  <link rel="alternate" hreflang="de" href="https://northforceapps.github.io/gpslogger/de/record-gps-track-screen-off-android.html">
+  <link rel="alternate" hreflang="es" href="https://northforceapps.github.io/gpslogger/es/record-gps-track-screen-off-android.html">
+  <link rel="alternate" hreflang="fr" href="https://northforceapps.github.io/gpslogger/fr/record-gps-track-screen-off-android.html">
+  <link rel="alternate" hreflang="x-default" href="https://northforceapps.github.io/gpslogger/record-gps-track-screen-off-android.html">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" type="image/png" href="../assets/icon.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"Enregistrer une trace GPS écran éteint sur Android","description":"Enregistrez un parcours avec GPS Logger pendant qu'Android affiche une notification de localisation au premier plan.","step":[{"@type":"HowToStep","name":"Installer GPS Logger","text":"Installez GPS Logger depuis Google Play et ouvrez l'app."},{"@type":"HowToStep","name":"Autoriser la localisation","text":"Autorisez l'accès à la localisation. La localisation en arrière-plan est nécessaire si vous voulez continuer l'enregistrement quand l'app n'est pas visible ou que l'écran est éteint."},{"@type":"HowToStep","name":"Lancer l'enregistrement","text":"Touchez enregistrer avant de commencer marche, randonnée, sortie, trajet ou voyage."},{"@type":"HowToStep","name":"Vérifier la notification","text":"Android affiche une notification active pendant que GPS Logger enregistre la localisation en arrière-plan."},{"@type":"HowToStep","name":"Verrouiller le téléphone","text":"Verrouillez l'écran ou changez d'app. Revenez à GPS Logger et arrêtez l'enregistrement quand le parcours est terminé."},{"@type":"HowToStep","name":"Exporter le parcours","text":"Ouvrez la trace enregistrée et exportez en GPX ou KML si vous avez besoin d'un fichier portable."}],"tool":[{"@type":"HowToTool","name":"Téléphone Android"},{"@type":"HowToTool","name":"GPS Logger"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Android peut-il enregistrer le GPS écran éteint ?","acceptedAnswer":{"@type":"Answer","text":"Oui, si l'app utilise un service de localisation visible au premier plan et si les permissions nécessaires sont accordées. GPS Logger affiche une notification continue pendant l'enregistrement."}},{"@type":"Question","name":"Pourquoi Android demande-t-il une notification pendant l'enregistrement ?","acceptedAnswer":{"@type":"Answer","text":"Android exige que les longues utilisations de localisation en arrière-plan soient visibles pour l'utilisateur. La notification indique que l'enregistrement ou le partage en direct est actif."}},{"@type":"Question","name":"Tous les téléphones enregistrent-ils indéfiniment en arrière-plan ?","acceptedAnswer":{"@type":"Answer","text":"Non. Aucune app ne peut le garantir sur toutes les marques et tous les réglages batterie. Pour les longues sessions, autorisez l'activité en arrière-plan et évitez les restrictions agressives."}},{"@type":"Question","name":"Puis-je exporter la trace en GPX ensuite ?","acceptedAnswer":{"@type":"Answer","text":"Oui. Après l'arrêt, GPS Logger peut exporter la trace enregistrée en GPX ou KML."}}]}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Passer au contenu</a>
+  <header class="header" id="top"><div class="shell nav"><a class="brand" href="index.html" aria-label="Accueil GPS Logger"><img src="../assets/icon.png" alt="" width="46" height="46"><span><b>GPS Logger</b><small>Enregistreur de parcours privé &amp; atlas</small></span></a><nav class="nav-links" id="navlinks" aria-label="Navigation principale"><a class="navlink" href="index.html#features">Fonctionnalités</a><a class="navlink" href="guides.html">Guides</a><a class="navlink" href="privacy.html">Confidentialité</a><details class="lang-menu"><summary aria-label="Langue"><span class="lang-current"><span class="flag" aria-hidden="true">🇫🇷</span><span>Français</span></span><span class="lang-caret" aria-hidden="true">▾</span></summary><div class="lang-menu-list"><a class="lang-option" href="../record-gps-track-screen-off-android.html" hreflang="en" lang="en"><span class="flag" aria-hidden="true">🇺🇸</span><span>English</span></a><a class="lang-option" href="../de/record-gps-track-screen-off-android.html" hreflang="de" lang="de"><span class="flag" aria-hidden="true">🇩🇪</span><span>Deutsch</span></a><a class="lang-option" href="../es/record-gps-track-screen-off-android.html" hreflang="es" lang="es"><span class="flag" aria-hidden="true">🇪🇸</span><span>Español</span></a><a class="lang-option" href="./record-gps-track-screen-off-android.html" hreflang="fr" lang="fr" aria-current="true"><span class="flag" aria-hidden="true">🇫🇷</span><span>Français</span></a></div></details></nav><button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button></div></header>
+  <main id="main" class="article-main">
+    <article class="shell prose article">
+      <p class="eyebrow">Enregistrement GPS écran éteint</p>
+      <h1>Enregistrer une trace GPS écran éteint sur Android</h1>
+      <p class="lead">Un bon GPS Logger doit continuer après le lancement d'un parcours, une fois le téléphone dans la poche. Sur Android, cela implique localisation au premier plan, permissions claires et réglages batterie réalistes.</p>
+      <h2>Réponse rapide</h2>
+      <p>Installez GPS Logger, autorisez la localisation, lancez l'enregistrement, vérifiez la notification active puis verrouillez l'écran. Le parcours continue jusqu'à l'arrêt. Ensuite, vous pouvez consulter la carte, les statistiques et exporter GPX ou KML.</p>
+      <figure class="article-shot"><img src="../assets/ss-recording.png" alt="Écran d'enregistrement GPS Logger avec carte en direct, distance et durée" loading="lazy"><figcaption>Démarrez visiblement à l'écran ; Android garde la session active visible via la notification.</figcaption></figure>
+      <h2>Pourquoi Android impose des règles</h2>
+      <p>Android protège batterie et vie privée en limitant les apps qui utilisent longtemps la localisation en arrière-plan. Un enregistreur de parcours honnête ne fonctionne pas en cachette : il a besoin d'un lancement par l'utilisateur, d'une notification visible et des bonnes permissions.</p>
+      <h2>Comment enregistrer plus sûrement</h2>
+      <ol>
+        <li>Autorisez la localisation et, si nécessaire, les notifications.</li>
+        <li>Lancez l'enregistrement avant de partir.</li>
+        <li>Gardez la notification d'enregistrement active.</li>
+        <li>Évitez les restrictions batterie agressives pour les longues sessions.</li>
+        <li>Arrêtez le parcours à la fin et exportez GPX ou KML si besoin.</li>
+      </ol>
+      <aside class="inline-app-card"><div class="card-header"><img src="../assets/icon.png" alt="Logo GPS Logger" class="card-logo"><div class="card-info"><h3>Enregistrer des parcours GPX privés sur Android</h3><p>GPS Logger enregistre des parcours lancés par l'utilisateur avec notification visible, les garde sur votre téléphone et exporte GPX/KML si vous avez besoin d'une copie.</p></div></div><div class="card-features"><span>✓ Écran éteint</span><span>✓ Export GPX/KML</span><span>✓ Sans compte</span></div><a class="btn btn-primary" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger">Installer GPS Logger</a></aside>
+      <h2>Ce que ce n'est pas</h2>
+      <p>L'enregistrement GPS écran éteint n'est pas du suivi caché. GPS Logger enregistre après votre lancement, affiche une notification continue et s'arrête quand vous l'arrêtez. Pour les sorties importantes, faites d'abord un court test avec votre téléphone.</p>
+      <h2>Guides liés</h2>
+      <ul>
+        <li><a href="how-to-record-export-gpx-android.html">Comment enregistrer et exporter des traces GPX sur Android</a></li>
+        <li><a href="offline-gps-logging-privacy.html">Pourquoi le suivi GPS hors ligne est important pour la vie privée</a></li>
+        <li><a href="live-location-sharing-without-history.html">Partager la position en direct sans historique serveur</a></li>
+        <li><a href="import-gpx-files-android.html">Importer des fichiers GPX sur Android</a></li>
+      </ul>
+    </article>
+  </main>
+  <footer class="footer"><div class="shell footer-grid"><p>GPS Logger: suivi privé</p><nav class="footer-links"><a href="guides.html">Guides</a><a href="index.html">Accueil</a><a href="privacy.html">Confidentialité</a></nav></div></footer>
+  <script src="../app.js"></script>
+</body>
+</html>
