@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Private Google Timeline Alternative for Android Route History</title>
-  <meta name="description" content="Looking for a private Google Timeline alternative on Android? GPS Logger records user-started routes, keeps history on your phone, builds an atlas, and exports GPX/KML without lock-in.">
+  <title>Private Google Timeline Alternative for Android | Daily Route Timeline</title>
+  <meta name="description" content="Looking for a private Google Timeline alternative on Android? GPS Logger records user-started routes, shows each day as stops and movements, keeps history on your phone, and exports GPX/KML.">
   <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#287743">
   <link rel="canonical" href="https://northforceapps.github.io/gpslogger/google-timeline-alternative-android.html">
@@ -12,14 +12,17 @@
   <link rel="alternate" hreflang="de" href="https://northforceapps.github.io/gpslogger/de/google-timeline-alternative-android.html">
   <link rel="alternate" hreflang="es" href="https://northforceapps.github.io/gpslogger/es/google-timeline-alternative-android.html">
   <link rel="alternate" hreflang="fr" href="https://northforceapps.github.io/gpslogger/fr/google-timeline-alternative-android.html">
+  <link rel="alternate" hreflang="pt" href="https://northforceapps.github.io/gpslogger/pt/google-timeline-alternative-android.html">
+  <link rel="alternate" hreflang="ja" href="https://northforceapps.github.io/gpslogger/ja/google-timeline-alternative-android.html">
+  <link rel="alternate" hreflang="hi" href="https://northforceapps.github.io/gpslogger/hi/google-timeline-alternative-android.html">
   <link rel="alternate" hreflang="x-default" href="https://northforceapps.github.io/gpslogger/google-timeline-alternative-android.html">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" href="assets/icon.png">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Article","headline":"Private Google Timeline alternative for Android route history","description":"How to build a private route history on Android with user-started GPS recordings, local storage and GPX export.","author":{"@type":"Organization","name":"NorthforceApps"},"publisher":{"@type":"Organization","name":"NorthforceApps"},"mainEntityOfPage":"https://northforceapps.github.io/gpslogger/google-timeline-alternative-android.html"}
+  {"@context":"https://schema.org","@type":"Article","headline":"Private Google Timeline alternative for Android route history","description":"How to build a private daily route timeline on Android with user-started GPS recordings, local storage and GPX export.","author":{"@type":"Organization","name":"NorthforceApps"},"publisher":{"@type":"Organization","name":"NorthforceApps"},"mainEntityOfPage":"https://northforceapps.github.io/gpslogger/google-timeline-alternative-android.html"}
   </script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is GPS Logger a Google Timeline replacement?","acceptedAnswer":{"@type":"Answer","text":"GPS Logger can replace the parts of location history where you want deliberate, private route recordings, maps and GPX export. It does not silently record every movement unless you start recording, or enable optional auto-start after reboot."}},{"@type":"Question","name":"Where is my route history stored?","acceptedAnswer":{"@type":"Answer","text":"Saved tracks are stored on your Android device by default. They are not uploaded as a location trail unless you choose to export or live-share."}},{"@type":"Question","name":"Can I export my location history?","acceptedAnswer":{"@type":"Answer","text":"Yes. GPS Logger exports individual tracks as GPX or KML and can create an all-history GPX ZIP backup."}},{"@type":"Question","name":"Do I need an account?","acceptedAnswer":{"@type":"Answer","text":"No account is needed to record, view, import or export route history in GPS Logger."}}]}
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is GPS Logger a Google Timeline replacement?","acceptedAnswer":{"@type":"Answer","text":"GPS Logger can replace the parts of location history where you want deliberate, private route recordings, day-by-day route timelines, maps and GPX export. It does not silently record every movement unless you start recording, or enable optional auto-start after reboot."}},{"@type":"Question","name":"What does the daily timeline show?","acceptedAnswer":{"@type":"Answer","text":"A tracked day can show a map, moving distance, moving time, stops, tracks, movements such as walks or rides, named places and saved moments."}},{"@type":"Question","name":"Where is my route history stored?","acceptedAnswer":{"@type":"Answer","text":"Saved tracks are stored on your Android device by default. They are not uploaded as a location trail unless you choose to export or live-share."}},{"@type":"Question","name":"Can I export my location history?","acceptedAnswer":{"@type":"Answer","text":"Yes. GPS Logger exports individual tracks as GPX or KML and can create an all-history GPX ZIP backup."}},{"@type":"Question","name":"Do I need an account?","acceptedAnswer":{"@type":"Answer","text":"No account is needed to record, view, import or export route history in GPS Logger."}}]}
   </script>
 </head>
 <body>
@@ -38,6 +41,9 @@
             <a class="lang-option" href="de/google-timeline-alternative-android.html" hreflang="de" lang="de"><span class="flag" aria-hidden="true">🇩🇪</span><span>Deutsch</span></a>
             <a class="lang-option" href="es/google-timeline-alternative-android.html" hreflang="es" lang="es"><span class="flag" aria-hidden="true">🇪🇸</span><span>Español</span></a>
             <a class="lang-option" href="fr/google-timeline-alternative-android.html" hreflang="fr" lang="fr"><span class="flag" aria-hidden="true">🇫🇷</span><span>Français</span></a>
+            <a class="lang-option" href="pt/google-timeline-alternative-android.html" hreflang="pt" lang="pt"><span class="flag" aria-hidden="true">🇧🇷</span><span>Português</span></a>
+            <a class="lang-option" href="ja/google-timeline-alternative-android.html" hreflang="ja" lang="ja"><span class="flag" aria-hidden="true">🇯🇵</span><span>日本語</span></a>
+            <a class="lang-option" href="hi/google-timeline-alternative-android.html" hreflang="hi" lang="hi"><span class="flag" aria-hidden="true">🇮🇳</span><span>हिन्दी</span></a>
           </div>
         </details>
       </nav>
@@ -50,20 +56,25 @@
     <article class="shell prose article">
       <p class="eyebrow">Private location history</p>
       <h1>Private Google Timeline alternative for Android route history</h1>
-      <p class="lead">If you want a record of where you have been, but you do not want every trip tied to a cloud profile, GPS Logger gives you a more deliberate model: start a route, save it on your phone, browse it later, and export it whenever you need.</p>
+      <p class="lead">If you want to remember where you have been, but you do not want every trip tied to a cloud profile, GPS Logger gives you a deliberate model: start a route, save it on your phone, tap any tracked day for a timeline of stops and movements, and export it whenever you need.</p>
 
       <h2>Quick answer</h2>
-      <p>GPS Logger is a private route-history app for Android. It is best when you want user-started GPS recordings, a personal atlas, GPX/KML export and no account. It is not a silent always-on copy of every movement; you decide when recording starts and stops.</p>
+      <p>GPS Logger is a private route-history app for Android. It is best when you want user-started GPS recordings, a day-by-day route timeline, a personal atlas, GPX/KML export and no account. It is not a silent always-on copy of every movement; you decide when recording starts and stops.</p>
 
-      <figure class="article-shot wide"><img src="assets/ss-atlas.png" alt="GPS Logger lifetime atlas showing many saved private routes on Android" loading="lazy"><figcaption>A private route archive you can browse as maps, tracked days, places and countries.</figcaption></figure>
+      <figure class="article-shot"><img src="assets/ss-day-story.webp" alt="GPS Logger daily route timeline showing walks, stops, distance and moving time on Android" loading="lazy"><figcaption>Day Story turns one tracked day into a map plus a readable timeline of walks, stops and saved places.</figcaption></figure>
 
       <h2>Why people look beyond automatic location history</h2>
-      <p>Automatic location history can be convenient, but it often comes with trade-offs: cloud dependence, unclear export paths, missing trips, or a feeling that the record is not fully yours. For many people, the better answer is not recording everything. It is recording the routes that matter and keeping the files portable.</p>
+      <p>Automatic location history can be convenient, but it often comes with trade-offs: cloud dependence, unclear export paths, missing trips, device migration risk, or a feeling that the record is not fully yours. For many people, the better answer is not recording everything. It is recording the routes that matter and keeping the files portable.</p>
+
+      <h2>The Timeline-shaped part: Day Story</h2>
+      <p>GPS Logger's Day Story screen is the daily memory view. Tap a recorded day in the calendar and the app builds a virtual timeline from your saved tracks: movements, stops, named places, moving distance, moving time and moments. It is a read model, so browsing a day does not split, rewrite or upload your tracks.</p>
+      <p>That makes it useful for travel days, hikes, field visits, city walks, commutes and everyday route memory: not just one line on a map, but the shape of the day.</p>
 
       <h2>What GPS Logger does differently</h2>
       <ul>
         <li><strong>You start the recording.</strong> Walks, hikes, rides, road trips, commutes and field visits become explicit saved tracks.</li>
         <li><strong>History stays local by default.</strong> Saved routes live in the app database on your phone.</li>
+        <li><strong>Days become readable.</strong> Browse a map plus chronological stops, movements, named places and moments.</li>
         <li><strong>The archive is visual.</strong> Browse a lifetime map, calendar, repeated places, countries and individual route stats.</li>
         <li><strong>Data is portable.</strong> Export individual tracks as GPX or KML, or create a whole-history GPX ZIP backup.</li>
         <li><strong>Live sharing is separate.</strong> When enabled, App Cloud shares current position only, not a server-side trail of saved trips.</li>
@@ -73,20 +84,20 @@
         <div class="card-header">
           <img src="assets/icon.png" alt="GPS Logger logo" class="card-logo">
           <div class="card-info">
-            <h3>Build a route history you control</h3>
-            <p>Record the trips you care about, keep them on your phone, then export GPX/KML or a full backup when you need it.</p>
+            <h3>Build a route timeline you control</h3>
+            <p>Record the trips you care about, relive each tracked day, then export GPX/KML or a full backup when you need it.</p>
           </div>
         </div>
         <div class="card-features">
           <span>✓ No account required</span>
-          <span>✓ Private atlas</span>
+          <span>✓ Daily timeline</span>
           <span>✓ GPX/KML export</span>
         </div>
         <a class="btn btn-primary" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger">Install GPS Logger for Android</a>
       </aside>
 
       <h2>When GPS Logger is a good fit</h2>
-      <p>Use it if you want a private travel log, outdoor route journal, commute archive, road-trip memory, site-visit record or GPX collection that you can export. It is especially useful if your goal is remembering and owning route data rather than sharing workouts or building a social profile.</p>
+      <p>Use it if you want a private travel log, outdoor route journal, commute archive, road-trip memory, site-visit record or GPX collection that you can export. It is especially useful if your goal is remembering and owning route data rather than sharing workouts, feeding a cloud profile or building a public social identity.</p>
 
       <h2>When it is not the right fit</h2>
       <p>If you want a fully automatic timeline of every shop, train station, cafe and short movement with no manual start, GPS Logger is intentionally more controlled than that. Optional auto-start after reboot helps specific users who want persistent recording, but normal recording is still a visible action you control.</p>
@@ -94,19 +105,24 @@
       <h2>How to migrate old tracks</h2>
       <p>If you already have GPX files from another app or device, import them into GPS Logger and see them in one atlas. Bulk import accepts multiple GPX files or a ZIP backup, and the app shows any current import limits before you start.</p>
 
+      <h2>What to search for if you miss Timeline</h2>
+      <p>The useful terms are <strong>private Google Timeline alternative</strong>, <strong>Android location history app</strong>, <strong>daily route timeline</strong>, <strong>GPX recorder</strong>, and <strong>route history export</strong>. GPS Logger sits in that lane: a private route journal with export, not a navigation app or social fitness network.</p>
+
       <h2>Related guides</h2>
       <ul>
         <li><a href="how-to-record-export-gpx-android.html">How to record and export GPX tracks on Android</a></li>
         <li><a href="import-gpx-files-android.html">How to import GPX files on Android</a></li>
         <li><a href="offline-gps-logging-privacy.html">Why offline GPS logging matters for privacy</a></li>
         <li><a href="gps-logger-vs-strava.html">GPS Logger vs Strava and social fitness apps</a></li>
+        <li><a href="record-gps-track-screen-off-android.html">How to record a GPS track with the screen off on Android</a></li>
       </ul>
 
       <h2>FAQ</h2>
       <div class="faq">
         <details><summary>Does GPS Logger upload my route history?</summary><p>Saved tracks stay on your device by default. Data leaves only when you choose a feature that needs it, such as export, App Cloud live sharing or self-hosted live upload.</p></details>
         <details><summary>Can I export everything?</summary><p>Yes. You can export individual tracks as GPX or KML and create a full-history GPX ZIP backup.</p></details>
-        <details><summary>Can I import old GPX files?</summary><p>Yes. GPS Logger imports GPX files and ZIP archives, then adds the routes to your history and atlas.</p></details>
+        <details><summary>What does the daily timeline show?</summary><p>It can show a map, moving distance, moving time, stops, tracks, walks or rides, named places and saved moments for a tracked day.</p></details>
+        <details><summary>Can I import old GPX files?</summary><p>Yes. GPS Logger imports GPX files and ZIP archives, then adds the routes to your history, calendar, daily timelines and atlas.</p></details>
         <details><summary>Does it work without an account?</summary><p>Yes. Recording, history, import and export do not require an account.</p></details>
       </div>
     </article>

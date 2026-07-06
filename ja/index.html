@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GPS Logger — Android向けプライベートなルート記録と個人の旅マップ</title>
-  <meta name="description" content="GPS Loggerは、散歩、ハイキング、ドライブなどのルートをスマートフォンにプライベートに記録します。移動履歴を自分だけのアトラスとして残し、必要な時だけ現在地をライブ共有できます。GPXやKML形式で自由に書き出し可能。あなたのルート、あなたのデータ。">
+  <title>Android向けプライベートGPS Logger・Timeline代替</title>
+  <meta name="description" content="Android向けのプライベートGPS Logger／Google Timeline代替。画面オフでルートを記録し、記録済みの日をタップして1日のタイムラインを確認。GPX/KMLを書き出し、履歴は端末に保存できます。">
   <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#287743">
   <link rel="canonical" href="https://northforceapps.github.io/gpslogger/ja/">
@@ -24,16 +24,16 @@
   <link rel="stylesheet" href="../styles.css">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="GPS Logger — プライベートなルート記録と個人の旅マップ">
-  <meta property="og:description" content="ルートをプライベートに記録し、自分だけのアトラスを構築。必要な時だけ現在地を共有し、自由にデータを書き出し。あなたのルート、あなたのデータ。">
+  <meta property="og:title" content="GPS Logger — プライベートなルート記録と日別タイムライン">
+  <meta property="og:description" content="ルートをプライベートに記録し、日ごとの停止と移動を見返し、必要な時だけライブ位置共有。GPX/KMLで書き出せます。">
   <meta property="og:url" content="https://northforceapps.github.io/gpslogger/ja/">
   <meta property="og:image" content="https://northforceapps.github.io/gpslogger/assets/ja/feature_graphic.png">
   <meta property="og:image:width" content="1024">
   <meta property="og:image:height" content="500">
   <meta property="og:site_name" content="GPS Logger">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="GPS Logger — プライベートなルート記録">
-  <meta name="twitter:description" content="あなたのルート、あなたのデータ。あなたがコントロールするプライベートな旅のマップ。">
+  <meta name="twitter:title" content="GPS Logger — プライベートなルートタイムライン">
+  <meta name="twitter:description" content="あなたのルート。あなたのデータ。自分で管理できる日別ルート履歴。">
   <meta name="twitter:image" content="https://northforceapps.github.io/gpslogger/assets/ja/feature_graphic.png">
 
   <script type="application/ld+json">
@@ -43,7 +43,7 @@
     "name": "GPS Logger: Private Tracker",
     "applicationCategory": "TravelApplication",
     "operatingSystem": "Android",
-    "description": "プライベートなGPSルート記録と自分だけのアトラス。デバイスにルートを記録し、マップ上で振り返り、必要な時だけ現在地を共有し、GPXやKML形式で自由に書き出せます。",
+    "description": "Android向けのプライベートGPS Logger／GPXルートレコーダー。画面オフでトラックを記録し、履歴を端末に保存。記録済みの日をタップすると停止と移動のタイムラインを表示でき、必要な時だけライブ位置を共有し、GPXまたはKMLで書き出せます。",
     "image": "https://northforceapps.github.io/gpslogger/assets/ja/feature_graphic.png",
     "url": "https://northforceapps.github.io/gpslogger/ja/",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
@@ -101,18 +101,16 @@
       <div class="hero-bg" aria-hidden="true"></div>
       <div class="shell hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">プライベートな旅のマップ · GPSレコーダー</p>
-          <h1>あなたのルート。<br>あなたのデータ<span class="pin">.</span></h1>
+          <p class="eyebrow">プライベートGPS Logger · Google Timeline代替</p>
+          <h1>Androidのプライベートなルート履歴<span class="pin">.</span></h1>
           <p class="lead">
-            GPS Loggerは、散歩、ハイキング、サイクリング、ドライブをスマートフォンにプライベートに記録します。
-            マップ上ですべての旅を振り返り、移動履歴が自分だけのアトラスとして積み重なっていきます。
-            必要な時だけ現在地を共有でき、データはGPXやKML形式でいつでも自由にエクスポート可能です。
+            散歩、ハイキング、サイクリング、ドライブを画面オフで記録。記録済みの日をタップすると、停止、移動、出来事をプライベートなタイムラインで見返せます。必要な時はGPX/KMLを書き出せます。
           </p>
           <div class="hero-actions">
             <a class="play-badge" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger" aria-label="Get it on Google Play"><img src="../assets/badge-ja.svg" alt="Get it on Google Play" style="height:60px;width:auto;display:block"></a>
-            <a class="btn btn-ghost btn-lg" href="#tour">
-              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
-              30秒ツアーを見る
+            <a class="btn btn-ghost btn-lg" href="google-timeline-alternative-android.html">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 5h16v2H4zm0 6h16v2H4zm0 6h10v2H4z"/></svg>
+              Timeline代替を見る
             </a>
           </div>
           <ul class="trust">
@@ -122,7 +120,17 @@
           </ul>
         </div>
         <div class="hero-visual">
-          <img class="hero-feature" src="../assets/ja/feature_graphic_square.png" alt="GPS Logger のアトラス表示。ルート、ピン、記録バッジが表示されたマップ" width="1024" height="1024">
+          <div class="hero-phone">
+            <img src="../assets/ss-day-story.webp" alt="GPS Logger daily route timeline" width="1080" height="2400">
+          </div>
+          <div class="proof">
+            <p>1日の記録</p>
+            <ul>
+              <li>地図 + 日別タイムライン</li>
+              <li>停止・移動・出来事</li>
+              <li>保存トラックから作成</li>
+            </ul>
+          </div>
           </div>
       </div>
     </section>
@@ -196,7 +204,7 @@
         </figure>
         <div class="steps">
           <div class="step" data-reveal><span class="n">1</span><div><h3>記録</h3><p>タップして出発。ポケットの中で一日中トラッキングします。</p></div></div>
-          <div class="step" data-reveal><span class="n">2</span><div><h3>振り返り</h3><p>数ヶ月後、ライフタイム・マップや訪れた場所、国々を眺めましょう。</p></div></div>
+          <div class="step" data-reveal><span class="n">2</span><div><h3>振り返り</h3><p>日をタップして、その日のルート、停止、移動、メモを確認します。</p></div></div>
           <div class="step" data-reveal><span class="n">3</span><div><h3>共有</h3><p>リセット可能なコードと設定した閲覧者数の上限で現在地を共有できます。</p></div></div>
         </div>
       </div>
@@ -217,8 +225,13 @@
           </article>
           <article class="feature" data-reveal>
             <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3 3 6v15l6-3 6 3 6-3V3l-6 3-6-3z"/><path d="M9 3v15M15 6v15"/></svg></div>
-            <h3>あなただけの個人アトラス</h3>
-            <p>これまでの全行程を示すマップ、記録した日のカレンダー、繰り返し訪れる場所、そして詳細な統計が見られる個別マップを提供します。</p>
+            <h3>日別ルートタイムライン</h3>
+            <p>カレンダーの日をタップすると、歩行、移動、停止、出来事を時系列で地図と一緒に表示します。保存済みトラックから作られ、ファイルは変更しません。</p>
+          </article>
+          <article class="feature" data-reveal>
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 6h13M8 12h13M8 18h13"/><circle cx="4" cy="6" r="1.5"/><circle cx="4" cy="12" r="1.5"/><circle cx="4" cy="18" r="1.5"/></svg></div>
+            <h3>自分だけのアトラス</h3>
+            <p>これまでのルート全体の地図、記録した日のカレンダー、何度も訪れた場所、通過した国を確認できます。</p>
           </article>
           <article class="feature" data-reveal>
             <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5 15.4 17.5M15.4 6.5 8.6 10.5"/></svg></div>
@@ -252,9 +265,10 @@
         </div>
         <div class="screens">
           <figure class="device" data-reveal><div class="frame"><img src="../assets/ss-home.png" alt="ホーム画面、記録準備完了" loading="lazy"></div><figcaption>ホーム — 1タップで記録開始</figcaption></figure>
-          <figure class="device" data-reveal><div class="frame"><img src="../assets/ss-recording.png" alt="記録中のライブマップ" loading="lazy"></div><figcaption>記録中 — ライブマップと統計</figcaption></figure>
-          <figure class="device" data-reveal><div class="frame"><img src="../assets/ss-atlas.png" alt="ライフタイム・ジャーニー・マップ" loading="lazy"></div><figcaption>アトラス — 生涯のルート</figcaption></figure>
-          <figure class="device" data-reveal><div class="frame"><img src="../assets/ss-places.png" alt="お気に入りの場所のアトラス" loading="lazy"></div><figcaption>場所 — 繰り返し訪れるスポット</figcaption></figure>
+          <figure class="device" data-reveal><div class="frame"><img src="../assets/ss-recording.webp" alt="記録中のライブマップ" loading="lazy"></div><figcaption>記録中 — ライブマップと統計</figcaption></figure>
+          <figure class="device" data-reveal><div class="frame"><img src="../assets/ss-day-story.webp" alt="Daily route timeline" loading="lazy"></div><figcaption>1日の記録 — 停止と移動</figcaption></figure>
+          <figure class="device" data-reveal><div class="frame"><img src="../assets/ss-atlas.webp" alt="ライフタイム・ジャーニー・マップ" loading="lazy"></div><figcaption>アトラス — 生涯のルート</figcaption></figure>
+          <figure class="device" data-reveal><div class="frame"><img src="../assets/ss-places.webp" alt="お気に入りの場所のアトラス" loading="lazy"></div><figcaption>場所 — 繰り返し訪れるスポット</figcaption></figure>
           <figure class="device" data-reveal><div class="frame"><img src="../assets/ss-share.png" alt="ライブ共有コントロール" loading="lazy"></div><figcaption>ライブ共有 — あなたが管理するコード</figcaption></figure>
         </div>
       </div>
@@ -268,6 +282,11 @@
           <h2 class="display">GPXの記録、エクスポート、プライベートな追跡方法を学ぶ。</h2>
         </div>
         <div class="guide-grid">
+          <article class="guide-card" data-reveal>
+            <p class="guide-kicker">Timeline</p>
+            <h3><a href="google-timeline-alternative-android.html">Androidのルート履歴に使えるプライベートなGoogle Timeline代替</a></h3>
+            <p>開始、停止、書き出し、端末保存を自分で管理できる日別ルートタイムラインを作れます。</p>
+          </article>
           <article class="guide-card" data-reveal>
             <p class="guide-kicker">チュートリアル</p>
             <h3><a href="how-to-record-export-gpx-android.html">AndroidでGPXトラックを記録・エクスポートする方法</a></h3>

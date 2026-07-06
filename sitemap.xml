@@ -5,7 +5,7 @@
   <url><loc>https://northforceapps.github.io/gpslogger/how-to-record-export-gpx-android.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://northforceapps.github.io/gpslogger/record-gps-track-screen-off-android.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://northforceapps.github.io/gpslogger/import-gpx-files-android.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://northforceapps.github.io/gpslogger/google-timeline-alternative-android.html</loc><changefreq>monthly</changefreq><priority>0.82</priority></url>
+  <url><loc>https://northforceapps.github.io/gpslogger/google-timeline-alternative-android.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://northforceapps.github.io/gpslogger/live-location-sharing-without-history.html</loc><changefreq>monthly</changefreq><priority>0.82</priority></url>
   <url><loc>https://northforceapps.github.io/gpslogger/elevation-correction-gps-tracks.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://northforceapps.github.io/gpslogger/offline-gps-logging-privacy.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -56,6 +56,7 @@
   <url><loc>https://northforceapps.github.io/gpslogger/pt/guides.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://northforceapps.github.io/gpslogger/pt/how-to-record-export-gpx-android.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://northforceapps.github.io/gpslogger/pt/import-gpx-files-android.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://northforceapps.github.io/gpslogger/pt/google-timeline-alternative-android.html</loc><changefreq>monthly</changefreq><priority>0.78</priority></url>
   <url><loc>https://northforceapps.github.io/gpslogger/pt/elevation-correction-gps-tracks.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://northforceapps.github.io/gpslogger/pt/offline-gps-logging-privacy.html</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
   <url><loc>https://northforceapps.github.io/gpslogger/pt/gps-logger-vs-strava.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -66,6 +67,7 @@
   <url><loc>https://northforceapps.github.io/gpslogger/ja/guides.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://northforceapps.github.io/gpslogger/ja/how-to-record-export-gpx-android.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://northforceapps.github.io/gpslogger/ja/import-gpx-files-android.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://northforceapps.github.io/gpslogger/ja/google-timeline-alternative-android.html</loc><changefreq>monthly</changefreq><priority>0.78</priority></url>
   <url><loc>https://northforceapps.github.io/gpslogger/ja/elevation-correction-gps-tracks.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://northforceapps.github.io/gpslogger/ja/offline-gps-logging-privacy.html</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
   <url><loc>https://northforceapps.github.io/gpslogger/ja/gps-logger-vs-strava.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -76,6 +78,7 @@
   <url><loc>https://northforceapps.github.io/gpslogger/hi/guides.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://northforceapps.github.io/gpslogger/hi/how-to-record-export-gpx-android.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://northforceapps.github.io/gpslogger/hi/import-gpx-files-android.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://northforceapps.github.io/gpslogger/hi/google-timeline-alternative-android.html</loc><changefreq>monthly</changefreq><priority>0.78</priority></url>
   <url><loc>https://northforceapps.github.io/gpslogger/hi/elevation-correction-gps-tracks.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://northforceapps.github.io/gpslogger/hi/offline-gps-logging-privacy.html</loc><changefreq>monthly</changefreq><priority>0.75</priority></url>
   <url><loc>https://northforceapps.github.io/gpslogger/hi/gps-logger-vs-strava.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
