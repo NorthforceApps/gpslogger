@@ -156,10 +156,10 @@ h2.display { font-size: clamp(2.1rem, 4.2vw, 3.6rem); max-width: 18ch; }
 .hero-visual { position: relative; display: grid; justify-items: center; }
 .hero-feature { width: min(100%, 560px); height: auto; border-radius: 22px; border: 1px solid var(--line); box-shadow: var(--shadow); }
 .hero-phone {
+  position: relative;
   width: min(58vw, 330px);
   aspect-ratio: 1080/2400;
   display: grid;
-  overflow: hidden;
   border-radius: 38px;
   padding: 10px;
   background: linear-gradient(155deg, #23251f, #0c0d0b);
@@ -174,12 +174,17 @@ h2.display { font-size: clamp(2.1rem, 4.2vw, 3.6rem); max-width: 18ch; }
   border-radius: 29px;
 }
 .proof {
-  position: absolute; left: clamp(-122px, -8vw, -82px); bottom: 112px;
-  background: rgba(255, 255, 255, 0.94); border: 1px solid var(--line); border-radius: 16px; padding: 12px 14px;
-  box-shadow: var(--shadow-md); width: clamp(280px, 21vw, 320px);
+  position: absolute; left: -50px; bottom: 16px; z-index: 5;
+  background: rgba(255, 255, 255, 0.94); border: 1px solid var(--line); border-radius: 16px; padding: 14px 16px;
+  box-shadow: var(--shadow-md); width: clamp(240px, 78vw, 300px);
 }
-.proof p { margin: 0 0 8px; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--amber-deep); }
-.proof ul { margin: 0; padding-left: 15px; color: var(--ink-soft); font-size: 0.8rem; line-height: 1.5; }
+.proof p { margin: 0 0 8px; font-size: 0.74rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--amber-deep); }
+.proof ul { margin: 0; padding-left: 15px; color: var(--ink-soft); font-size: 0.86rem; line-height: 1.5; }
+
+@media (min-width: 1041px) {
+  .proof p { font-size: 0.82rem; }
+  .proof ul { font-size: 0.98rem; }
+}
 
 /* ---------- value strip ---------- */
 .strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
@@ -377,13 +382,6 @@ h2.display { font-size: clamp(2.1rem, 4.2vw, 3.6rem); max-width: 18ch; }
   .hero-visual { margin-top: 10px; }
   .hero-feature { width: min(100%, 620px); }
   .hero-phone { width: min(64vw, 300px); transform: none; }
-  .proof {
-    position: relative; left: auto; bottom: auto;
-    width: auto;
-    margin: 20px auto 0; max-width: min(100%, 480px);
-    background: rgba(40, 119, 67, 0.05); border: 1px dashed rgba(40, 119, 67, 0.25);
-    border-radius: 16px; padding: 16px 20px; box-shadow: none;
-  }
   .strip { grid-template-columns: repeat(2, 1fr); }
   .features, .tiers, .steps, .guide-grid { grid-template-columns: 1fr 1fr; }
   .screens { grid-template-columns: repeat(3, 1fr); }
