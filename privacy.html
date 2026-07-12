@@ -57,7 +57,7 @@
     <div class="shell">
       <article class="prose">
         <h1>Privacy Policy for GPS Logger</h1>
-        <p><em>Last updated: July 11, 2026</em></p>
+        <p><em>Last updated: July 12, 2026</em></p>
         <p>GPS Logger is a private GPS track recording app published by NorthforceApps. This policy explains what data the app handles, how it is used, and what choices you have.</p>
         <p>Contact: <span id="support-email-privacy">northforceapps [at] protonmail [dot] com</span></p>
 
@@ -89,21 +89,19 @@
         <p>You are responsible for the server URL you configure. If you do not configure self-hosted sharing, GPS Logger does not use this feature.</p>
 
         <h3>Optional Elevation Correction</h3>
-        <p>If you run elevation correction on a track, the app downloads public terrain elevation tiles from the AWS Open Data terrain dataset (hosted on Amazon S3). These requests contain map-tile coordinates that cover the approximate areas of the track being corrected (each tile spans a few kilometres); they carry no account identifier, though the tile server sees your IP address like any web download. Your track points are never uploaded &mdash; elevation values are computed on your device. Elevation correction runs only when you request it.</p>
+        <p>If you request elevation correction, GPS Logger uses online terrain data to calculate corrected elevations on your device. Your track points are not uploaded for this feature.</p>
 
         <h3>Purchases</h3>
         <p>GPS Logger uses Google Play Billing for Pro subscriptions and a lifetime unlock. Purchase processing is handled by Google Play. The app receives purchase status so it can unlock paid features, but it does not receive your full payment card details.</p>
 
         <h3>Analytics and Diagnostics</h3>
-        <p>GPS Logger includes Firebase Analytics and Firebase Crashlytics. These services may collect app-instance identifiers, device or other identifiers, app interactions, in-app purchase events, approximate location derived from masked IP address, crash logs, and diagnostic information. This data is used to understand app usage, diagnose crashes, improve performance, and maintain app quality.</p>
-        <p>The app may also log events such as track started, track stopped, track exported, which screens and features are used, upgrade tapped, and upgrade completed. These events do not include your precise GPS coordinates, track or place names, notes, or search text.</p>
-        <p>Release builds also include Firebase App Check with Google Play Integrity, which asks Google Play services to verify that App Cloud requests come from a genuine app install. Google processes device integrity signals to provide this verification.</p>
+        <p>GPS Logger can use Firebase Analytics and Firebase Crashlytics to understand app usage, diagnose crashes, improve reliability, and maintain app quality.</p>
+        <p>The app may log events such as track started, track stopped, track exported, screens and features used, and upgrades. GPS Logger does not intentionally send GPS coordinates, route history, track or place names, notes, or search text to these services.</p>
         <p>Analytics and crash reporting are on by default but optional. You can turn them off at any time in Settings &rarr; About &rarr; "Share usage &amp; crash data"; doing so disables both Firebase Analytics and Crashlytics collection on your device.</p>
 
         <h3>Maps and Geocoding</h3>
-        <p>GPS Logger uses Google Maps components to display routes. Google Maps and Google Play services may process technical data needed to provide map functionality under Google's applicable terms and privacy practices.</p>
-        <p>To label tracks with a country and to suggest names or addresses for places and moments, the app uses the device's geocoding service (typically provided by Google Play services). A geocoding lookup sends the coordinates being looked up to the geocoding provider. If you scan a follow QR code, the scan is handled on your device by Google Play services' code scanner.</p>
-        <p>If you choose an OpenStreetMap-based map, tiles are fetched from OpenFreeMap for the standard OpenStreetMap layer, OpenTopoMap for the topo layer, or CyclOSM for the cycle layer, instead of Google Maps. Tile requests reveal the map areas you view and your IP address to the selected service, like any web download; no account identifier is attached. Offline map areas you download are stored on your device until you delete them, and let that selected OpenStreetMap-based layer work without a connection.</p>
+        <p>GPS Logger uses online map and geocoding services when you view online maps or ask the app to look up country and place names. Those services process the information needed to provide their functionality under their own privacy policies.</p>
+        <p>Offline OpenStreetMap areas you download stay on your device until you delete them.</p>
 
         <h2>How Data Is Used</h2>
         <p>GPS Logger uses data to:</p>
@@ -127,12 +125,10 @@
           <li>You choose to export or share a GPX or KML file through Android's share sheet.</li>
           <li>You enable App Cloud live sharing, which relays your current location through Firebase, our service provider, to admitted app users who know your share code.</li>
           <li>You enable self-hosted sharing and provide a server URL.</li>
-          <li>You run elevation correction, which downloads public terrain elevation tiles covering the approximate areas of the corrected track from the AWS Open Data terrain dataset.</li>
+          <li>You request elevation correction, which uses online terrain data to calculate corrected elevations on your device.</li>
           <li>Google Play processes purchase information for Pro/lifetime unlocks.</li>
-          <li>Firebase Analytics and Crashlytics process analytics, crash, diagnostic, and identifier data as service providers for app quality.</li>
-          <li>Firebase App Check with Google Play Integrity processes device integrity signals to protect the App Cloud service.</li>
-          <li>Google Maps and Google Play services process data needed to display maps, look up country and place names (geocoding), provide location-related services, and process purchases.</li>
-          <li>If you choose an OpenStreetMap-based map, OpenFreeMap, OpenTopoMap, or CyclOSM serves tiles for the areas you view, depending on the layer selected.</li>
+          <li>You enable usage and crash-data sharing, which uses Firebase Analytics and Crashlytics for app quality.</li>
+          <li>You use online maps or ask the app to look up country or place names.</li>
           <li>Data may be disclosed if required by law or to protect legal rights, safety, or security.</li>
         </ul>
 
@@ -140,7 +136,7 @@
         <p>Track history and settings are stored on your device. Tracks remain stored until you delete them, uninstall the app, or clear the app's data. Export files are created in the app cache for sharing and may be removed by the app or the Android system.</p>
         <p>Android backup may back up app settings depending on your device settings and Google account backup settings. GPS Logger excludes the local track database and live-share device identity from Android cloud backup. You can manage Android backup in your device settings.</p>
         <p>For App Cloud live sharing, your current position is overwritten as you move; no history trail is retained. Your position and transient follower-presence records are removed when you stop broadcasting. Resetting your share code deletes the old App Cloud share record and revokes existing followers. Any position left by an unclean disconnect is automatically and permanently deleted within 7 days. An anonymous share-code ownership identifier remains stored for your current code to prevent code hijacking.</p>
-        <p>Firebase Analytics, Crashlytics, Google Play, Google Maps, and any self-hosted server you configure may have their own retention practices for the service-provider processing they perform.</p>
+        <p>Services you choose to use, including Google Play and any self-hosted server you configure, may have their own retention practices.</p>
 
         <h2>Your Choices</h2>
         <p>You can:</p>
@@ -161,7 +157,7 @@
         <p>GPS Logger is not directed to children. Do not use the app to collect or share another person's location without appropriate permission.</p>
 
         <h2>Security</h2>
-        <p>GPS Logger uses Android app storage for local data. Data transmitted to Firebase, Google services, Google Play, and self-hosted upload URLs is encrypted in transit by those services or protocols. Release builds require HTTPS for self-hosted upload URLs.</p>
+        <p>GPS Logger uses Android app storage for local data. Data sent through optional online services and self-hosted upload URLs is encrypted in transit. Release builds require HTTPS for self-hosted upload URLs.</p>
         <p>No method of storage or transmission is completely secure.</p>
 
         <h2>Changes to This Policy</h2>
