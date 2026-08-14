@@ -16,6 +16,11 @@ pushed independently of the app repo. The app repo's `publishing/` directory (re
 material, docs) is the private source that feeds images and copy here; this directory
 is the deployed result.
 
+Live URL: `https://northforceapps.com/gpslogger/` (GitHub Pages project site).
+The apex custom domain `northforceapps.com` is configured on the user Pages repo
+`NorthforceApps/NorthforceApps.github.io`, not here. Do **not** add a `CNAME` file
+to this repo — that would steal the company domain for GPS Logger alone.
+
 ## Local Contracts
 - Never claim a capability the app doesn't have — every feature claim must trace to
   actual app behavior (mirrors the app repo's `publishing/AGENTS.md` rule #2).

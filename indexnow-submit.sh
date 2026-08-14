@@ -4,7 +4,7 @@
 set -euo pipefail
 cd "$(dirname "$0")"
 
-HOST="northforceapps.github.io"
+HOST="northforceapps.com"
 KEY="2fae948dc2e225c4b275c605bad784aa"
 KEY_LOCATION="https://${HOST}/gpslogger/${KEY}.txt"
 
