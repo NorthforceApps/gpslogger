@@ -15,6 +15,7 @@
     "live-location-sharing-without-history": "guide_live_share_privacy",
     "elevation-correction-gps-tracks": "guide_elevation_correction",
     "offline-gps-logging-privacy": "guide_privacy",
+    "offline-android-maps": "guide_offline_maps",
     "gps-logger-vs-strava": "guide_strava_alternative",
     "gpx-openstreetmap-qgis": "guide_gis_osm"
   };
