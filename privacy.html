@@ -95,8 +95,8 @@
         <p>If you enable the lifetime "Your own server" option and enter a server URL, GPS Logger sends your current live position directly to that URL as a small JSON object while sharing is active. This data bypasses our cloud infrastructure entirely; it is routed solely to the destination you provide, and we have no oversight, access, or liability for how that server stores or processes it. The payload may include a share code, latitude, longitude, timestamp, speed, bearing, and accuracy. If you enter an API key, it is sent as an <code>X-Api-Key</code> request header.</p>
         <p>You are responsible for the server URL you configure. If you do not configure self-hosted sharing, GPS Logger does not use this feature.</p>
 
-        <h3>Optional Elevation Correction</h3>
-        <p>If you request elevation correction, GPS Logger uses online terrain data to calculate corrected elevations on your device. Your track points are not uploaded for this feature.</p>
+        <h3>Optional Terrain Elevation</h3>
+        <p>If you switch a track's elevation source to terrain, the app downloads public terrain elevation tiles from the AWS Open Data terrain dataset (hosted on Amazon S3). These requests contain map-tile coordinates that cover the approximate areas of that track (each tile spans a few kilometres); they carry no account identifier, though the tile server sees your IP address like any web download. Your track points are never uploaded &mdash; elevation values are computed on your device. Downloaded tiles are kept in the app's cache so the same area is not fetched again, and the OS may clear that cache at any time. This happens only when you request it, and it never changes the altitude stored in your track.</p>
 
         <h3>Purchases</h3>
         <p>GPS Logger uses Google Play Billing for Pro subscriptions and a lifetime unlock. Purchase processing is handled by Google Play. The app receives purchase status so it can unlock paid features, but it does not receive your full payment card details.</p>
@@ -117,7 +117,7 @@
           <li>Show current and saved routes in the app.</li>
           <li>Calculate track statistics such as distance, duration, speed, and point count.</li>
           <li>Import GPX files or Google Timeline exports that you select and export tracks as GPX or KML files.</li>
-          <li>Correct track elevations against public terrain elevation data when you request it.</li>
+          <li>Show a track's elevation profile against public terrain elevation data when you request it, without changing the track's own recorded altitude.</li>
           <li>Label tracks and places with country and place names.</li>
           <li>Provide optional live sharing when enabled by you.</li>
           <li>Provide optional self-hosted upload when configured by you.</li>
@@ -132,7 +132,7 @@
           <li>You choose to export or share a GPX or KML file through Android's share sheet.</li>
           <li>You enable App Cloud live sharing, which relays your current location through Firebase, our service provider, to admitted app users who know your share code.</li>
           <li>You enable self-hosted sharing and provide a server URL.</li>
-          <li>You request elevation correction, which uses online terrain data to calculate corrected elevations on your device.</li>
+          <li>You switch a track's elevation source to terrain, which downloads public terrain elevation tiles covering the approximate areas of that track from the AWS Open Data terrain dataset.</li>
           <li>Google Play processes purchase information for Pro/lifetime unlocks.</li>
           <li>You enable usage and crash-data sharing, which uses Firebase Analytics and Crashlytics for app quality.</li>
           <li>You use online maps or ask the app to look up country or place names.</li>

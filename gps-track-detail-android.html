@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y7WZWQ9PQ7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Y7WZWQ9PQ7');
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Split, Colour and Read a GPS Track on Android</title>
+  <meta name="description" content="What to do with one saved GPS track: change the route colour and line width, colour it by speed, read the elevation and speed profile, find where you stopped, and split or crop a GPX track into separate trips.">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#287743">
+  <link rel="canonical" href="https://northforceapps.com/gpslogger/gps-track-detail-android.html">
+  <link rel="alternate" hreflang="en" href="https://northforceapps.com/gpslogger/gps-track-detail-android.html">
+  <link rel="alternate" hreflang="x-default" href="https://northforceapps.com/gpslogger/gps-track-detail-android.html">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="assets/icon.png">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Split, Colour and Read a GPS Track on Android">
+  <meta property="og:description" content="Change a route's colour and width, colour it by speed, read its elevation profile, browse its stops, and split or crop it — all on one saved GPS track.">
+  <meta property="og:url" content="https://northforceapps.com/gpslogger/gps-track-detail-android.html">
+  <meta property="og:image" content="https://northforceapps.com/gpslogger/assets/ss-track-detail.webp">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","headline":"Split, colour and read a GPS track on Android","description":"A guide to working with a single saved GPS track: route appearance, speed colouring, elevation and speed profiles, stop detection, and splitting or cropping a GPX track.","author":{"@type":"Organization","name":"NorthforceApps"},"publisher":{"@type":"Organization","name":"NorthforceApps"},"mainEntityOfPage":"https://northforceapps.com/gpslogger/gps-track-detail-android.html"}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I change the colour of a GPS route on Android?","acceptedAnswer":{"@type":"Answer","text":"In GPS Logger, open a saved track and tap the palette button on the map. Pick one of ten route colours and one of three line widths; the route redraws immediately and the choice is remembered for that base map. It is free on every tier."}},{"@type":"Question","name":"How do I see an elevation profile from a GPX file?","acceptedAnswer":{"@type":"Answer","text":"Import the GPX file, open the track and switch to the Profile view. It draws elevation, speed, or both together, against distance or against time, and you can read any point by dragging along the graph."}},{"@type":"Question","name":"How do I split a GPX track into separate trips?","acceptedAnswer":{"@type":"Answer","text":"Open the track, choose Split or crop, and the app proposes cuts at the stops, mode changes and recording gaps it found. Adjust any cut on the map or with a per-fix stepper, drop the parts you do not want, and commit. The result can be undone."}},{"@type":"Question","name":"Can I remove a section from the middle of a recorded track?","acceptedAnswer":{"@type":"Answer","text":"Yes. Splitting lets you keep some parts and drop others, so a long recording can become just the outings inside it. Dropped parts are not saved to any track, and undo restores the whole original recording."}}]}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="header" id="top">
+    <div class="shell nav">
+      <a class="brand" href="index.html" aria-label="GPS Logger home"><img src="assets/icon.png" alt="" width="46" height="46"><span><b>GPS Logger</b><small>Private route recorder &amp; atlas</small></span></a>
+      <nav class="nav-links" id="navlinks" aria-label="Primary">
+        <a class="navlink" href="index.html#features">Features</a>
+        <a class="navlink" href="guides.html">Guides</a>
+        <a class="navlink" href="privacy.html">Privacy</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </header>
+  <main id="main" class="article-main">
+    <article class="shell prose article">
+      <p class="eyebrow">Track detail</p>
+      <h1>Split, colour and read a GPS track on Android</h1>
+      <p class="lead">Most GPS loggers stop being interesting the moment the recording is saved: you get a line on a map and a distance. This guide is about the other half &mdash; what you can do with one saved track afterwards. Restyle it, read its elevation and speed profile, find every place you stood still, and cut a long recording into the trips that were actually inside it. Everything below happens on one screen in GPS Logger, and works the same on a recorded track and on an imported GPX file.</p>
+      <p><a class="btn btn-primary" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger&amp;referrer=utm_source%3Dgpslogger_site%26utm_medium%3Dorganic%26utm_campaign%3Dguide_track_detail">Get GPS Logger on Google Play</a></p>
+
+      <h2>Change a route&rsquo;s colour and line width</h2>
+      <p>The default magenta line is chosen to survive any map background, not to be pretty. If it fights with your map, tap the palette button on the track map and pick something else: ten route colours, and three line widths &mdash; slim, standard or bold &mdash; so a thin GPS trace can be made readable at arm&rsquo;s length.</p>
+      <p>Two details make this more useful than a theme setting:</p>
+      <ul>
+        <li><strong>It is per map view.</strong> The satellite view and the plain map view are separate entries, so the colour that reads well over imagery is not forced onto the one that reads well over a street map.</li>
+        <li><strong>The halo follows the colour.</strong> A near-white or near-black route flips its outline to the opposite side, so a white route over satellite imagery stays visible instead of disappearing into the ground.</li>
+      </ul>
+      <p>Route appearance is free on every tier &mdash; it is not a Pro upsell.</p>
+
+      <h2>Colour the route by speed instead</h2>
+      <p>The same palette panel switches the line from one flat colour to a speed colouring, so the route itself shows where you were quick and where you crawled. There are two palettes: <strong>Classic</strong>, the familiar warm-to-cool ramp, and <strong>Colour-vision safe</strong>, which stays readable with red&ndash;green colour blindness. Whichever you choose is used both on the map and in the speed graph, so the two agree.</p>
+      <p>You are choosing per view here too, so the Track view can stay a plain line while the Speed view is coloured by speed &mdash; the app remembers both rather than making you re-pick.</p>
+
+      <h2>Read the elevation and speed profile</h2>
+      <p>The Profile view draws <strong>Elev</strong>, <strong>Speed</strong>, or <strong>Both</strong> on one graph, and can take the whole panel when you want to actually study it. Drag along the graph and the matching point is marked on the map, so a strange spike in the data has a place attached to it.</p>
+      <p>Under the chart options there are four things worth knowing:</p>
+      <ul>
+        <li><strong>Axis</strong> &mdash; distance or time. Time shows stops as flat stretches; distance skips them, so one piece of route compares fairly with another.</li>
+        <li><strong>Speed smoothing</strong> &mdash; how hard the curve is averaged. More smoothing shows the shape of a leg; less keeps every sprint, and every GPS wobble.</li>
+        <li><strong>Speed source</strong> &mdash; the speed each fix arrived with, or speed worked out from the distance and time between fixes. Try the calculated one on an imported track that carries no speed of its own.</li>
+        <li><strong>Elevation source</strong> &mdash; the altitude that came with the track, or the height of the ground beneath it. See <a href="elevation-correction-gps-tracks.html">recorded altitude or terrain data?</a> for which to trust; either way your recording is never rewritten.</li>
+      </ul>
+
+      <h2>Find where you actually stopped</h2>
+      <p>A long recording is mostly waiting. The Stops view finds the places you stayed put &mdash; you set the radius and the dwell time that count as a stop &mdash; and then walks you through them one at a time, one card per stop, with the map framed on the stay rather than jumping to a fixed zoom, so two stops near each other still resolve apart.</p>
+      <p>A toggle decides whether paging through stops moves the map at all, which matters when you are comparing a stop against the route around it rather than inspecting it on its own.</p>
+
+      <aside class="inline-app-card">
+        <div class="card-header">
+          <img src="assets/icon.png" alt="GPS Logger logo" class="card-logo">
+          <div class="card-info">
+            <h3>One track, properly examined</h3>
+            <p>Restyle the route, read its profile, browse its stops, and split it into the trips it really contains &mdash; on recorded tracks and imported GPX alike.</p>
+          </div>
+        </div>
+        <div class="card-features">
+          <span>&#10003; Free route colour and width</span>
+          <span>&#10003; Elevation and speed profiles</span>
+          <span>&#10003; Split, crop and undo</span>
+        </div>
+        <a class="btn btn-primary" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger&amp;referrer=utm_source%3Dgpslogger_site%26utm_medium%3Dorganic%26utm_campaign%3Dguide_track_detail">Get GPS Logger on Google Play</a>
+      </aside>
+
+      <h2>Split a GPX track into separate trips</h2>
+      <p>Tracks arrive at the wrong size all the time: one recording that ran all day and holds a commute, a lunch walk and a drive home, or an imported file that someone else merged. Splitting them by hand in a desktop editor is tedious. In GPS Logger it is a dedicated screen with one map:</p>
+      <ol>
+        <li>Open the track and choose <strong>Split or crop</strong>.</li>
+        <li>Tap <strong>Suggest</strong>. The app proposes cuts where it found stops, changes of activity, and gaps in the recording &mdash; the boundaries you would have looked for anyway.</li>
+        <li>Add your own cut by tapping the route, or remove a proposed one.</li>
+        <li>Open any cut to adjust it at seam scale: snap it to the moment movement starts or ends, scrub along the speed graph, or step fix by fix with &lsaquo; &rsaquo; while the app tells you how much route each nudge moves between the two parts.</li>
+        <li>Name the parts you want, mark the ones you don&rsquo;t as dropped, and commit.</li>
+      </ol>
+      <p>The result is previewed before you accept it, and there is an undo that puts the whole original recording back &mdash; dropped parts included.</p>
+
+      <h2>Crop a track by dropping the parts you don&rsquo;t want</h2>
+      <p>Cropping is the same tool used differently. Cut around the section you care about, drop everything else, and a nine-hour recording becomes the ninety-minute walk that was inside it. Dropped parts are not saved to any track, so this is how you get rid of the drive to the trailhead without hand-editing a GPX file.</p>
+      <p>If you would rather keep the whole day intact and simply <em>read</em> it as separate visits and journeys, the app can do that instead, without cutting anything &mdash; see the <a href="google-timeline-alternative-android.html">Google Timeline alternative</a> guide.</p>
+      <p>Committing a split or crop is free once a week; Pro removes the limit.</p>
+
+      <h2>It works the same on imported files</h2>
+      <p>None of this is limited to tracks you recorded on the phone. Import a GPX file and it gets the same detail screen: profile, stops, appearance, splitting. That is often the fastest way to clean up an archive that came out of another app &mdash; see <a href="import-gpx-files-android.html">how to import GPX files on Android</a>.</p>
+
+      <h2>Next guides</h2>
+      <ul>
+        <li><a href="elevation-correction-gps-tracks.html">GPS elevation: recorded altitude or terrain data?</a></li>
+        <li><a href="import-gpx-files-android.html">How to import GPX files on Android</a></li>
+        <li><a href="how-to-record-export-gpx-android.html">How to record and export GPX tracks on Android</a></li>
+        <li><a href="google-timeline-alternative-android.html">A private Google Timeline alternative for Android</a></li>
+        <li><a href="gpx-openstreetmap-qgis.html">Use GPX logs with OpenStreetMap and QGIS</a></li>
+      </ul>
+      <p><a class="btn btn-primary" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger&amp;referrer=utm_source%3Dgpslogger_site%26utm_medium%3Dorganic%26utm_campaign%3Dsite_gps_track_detail">Install GPS Logger for Android</a></p>
+    </article>
+  </main>
+  <footer class="footer"><div class="shell footer-grid"><p>GPS Logger: Private Tracker</p><nav class="footer-links"><a href="guides.html">Guides</a><a href="index.html">Home</a><a href="privacy.html">Privacy</a></nav></div><div class="shell footer-more"><span class="footer-more-label">More from Northforce Apps</span><nav class="footer-links" aria-label="Other Northforce Apps"><a href="https://northforceapps.com/cue-loop/">CueLoop</a><a href="https://northforceapps.com/remotemic/">RemoteMic</a><a href="https://northforceapps.com/webcam/">WebCam</a></nav></div>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>

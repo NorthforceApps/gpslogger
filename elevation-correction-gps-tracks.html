@@ -10,8 +10,8 @@
   </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>How to Correct GPS Elevation Data on Android</title>
-  <meta name="description" content="Fix noisy GPS altitude and elevation gain by correcting a recorded track against terrain data. Learn when elevation correction helps, when it cannot, and how GPS Logger handles GPX elevation correction on Android.">
+  <title>GPS Elevation Correction on Android: Recorded vs Terrain</title>
+  <meta name="description" content="Phone GPS altitude is noisy, so elevation gain is often wrong. Learn when to trust your recorded altitude, when to read ground height from terrain data instead, and how GPS Logger switches the view on Android without ever rewriting your track.">
   <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#287743">
   <link rel="canonical" href="https://northforceapps.com/gpslogger/elevation-correction-gps-tracks.html">
@@ -27,7 +27,7 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" href="assets/icon.png">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"How to correct GPS elevation data on Android","description":"A practical guide to fixing noisy GPS altitude and elevation gain by correcting recorded tracks against terrain data.","author":{"@type":"Organization","name":"NorthforceApps"},"publisher":{"@type":"Organization","name":"NorthforceApps"},"mainEntityOfPage":"https://northforceapps.com/gpslogger/elevation-correction-gps-tracks.html"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why is GPS elevation often wrong?","acceptedAnswer":{"@type":"Answer","text":"Phone GPS altitude is much noisier than latitude and longitude. Barometric altitude can drift with weather, pressure and sensor calibration, so a route can show false climbs or drops."}},{"@type":"Question","name":"What does terrain elevation correction do?","acceptedAnswer":{"@type":"Answer","text":"Terrain correction replaces each recorded point's altitude with the ground height from a digital elevation model, then recalculates the elevation profile and gain."}},{"@type":"Question","name":"When should I not use terrain correction?","acceptedAnswer":{"@type":"Answer","text":"Terrain correction represents ground height. It is less suitable for bridges, flyovers, multi-storey routes, aircraft, tunnels, ferries or activities where you were intentionally above or below the terrain."}}]}]}
+  {"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"GPS elevation on Android: recorded altitude or terrain data?","description":"Why phone GPS altitude is noisy, how terrain elevation differs from recorded altitude, and which of the two to trust for a given route.","author":{"@type":"Organization","name":"NorthforceApps"},"publisher":{"@type":"Organization","name":"NorthforceApps"},"mainEntityOfPage":"https://northforceapps.com/gpslogger/elevation-correction-gps-tracks.html"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why is GPS elevation often wrong?","acceptedAnswer":{"@type":"Answer","text":"Phone GPS altitude is much noisier than latitude and longitude. Barometric altitude drifts with weather, pressure and sensor calibration, so a route can show climbs and drops that never happened. Elevation gain is cumulative, so small errors repeated over thousands of points add up to a badly wrong total."}},{"@type":"Question","name":"What is terrain elevation and how does it differ from recorded altitude?","acceptedAnswer":{"@type":"Answer","text":"Recorded altitude is the height that came with the track, from the phone barometer or GPS or from the device that recorded an imported file. Terrain elevation is the height of the ground itself at each coordinate, read from a global elevation model. Terrain is weather-proof and repeats exactly on the same route, but it flattens anything above or below ground."}},{"@type":"Question","name":"Which elevation source should I trust?","acceptedAnswer":{"@type":"Answer","text":"Neither is universally right. Terrain suits walks, hikes, trail runs and rides that follow the ground, and imported files with missing or spiky altitude. Recorded altitude is better where you were deliberately not at ground level: bridges, flyovers, tunnels, multi-storey buildings, ski lifts, ferries and flights."}},{"@type":"Question","name":"Does switching elevation source change my recorded track?","acceptedAnswer":{"@type":"Answer","text":"In GPS Logger it does not. The elevation source is a view setting on one track: it redraws the profile and recalculates the displayed gain, but the recording keeps its own altitude and GPX and KML exports always carry the recorded values."}}]}]}
   </script>
 </head>
 <body>
@@ -60,66 +60,84 @@
   </header>
   <main id="main" class="article-main">
     <article class="shell prose article">
-      <p class="eyebrow">Elevation correction</p>
-      <h1>How to correct GPS elevation data on Android</h1>
-      <p class="lead">This guide came from a real saved route where the recorded altitude made the climb total and profile less trustworthy than the route itself. GPS Logger can correct saved track elevations against terrain data, giving walkers, hikers, cyclists and field users a cleaner elevation profile and more realistic elevation gain.</p>
-      <div class="article-compare" aria-label="Before and after elevation correction example">
-        <figure><img src="assets/elevation-correction-before.webp" alt="GPS Logger 3D satellite route with original elevation profile before correction" width="1600" height="720" loading="lazy"><figcaption>Before: the route is fine, but the altitude data overstates the climb.</figcaption></figure>
-        <figure><img src="assets/elevation-correction-after.webp" alt="GPS Logger 3D satellite route after terrain elevation correction with corrected elevation gain" width="2400" height="1080" loading="lazy"><figcaption>After: terrain correction keeps the same route, with a more believable elevation gain.</figcaption></figure>
+      <p class="eyebrow">Elevation sources</p>
+      <h1>GPS elevation on Android: recorded altitude or terrain data?</h1>
+      <p class="lead">This guide came from a real saved route where the climb total looked far less trustworthy than the route itself. The usual advice is to &ldquo;correct&rdquo; the elevation against terrain data &mdash; but that quietly assumes terrain height is the true answer, and for a bridge, a tunnel or a ski lift it is not. The honest question is which of the two heights describes <em>your</em> trip. GPS Logger answers it by letting you switch the view between them, on one track, without rewriting anything.</p>
+      <div class="article-compare" aria-label="The same route read with recorded altitude and with terrain elevation">
+        <figure><img src="assets/elevation-recorded.webp" alt="GPS Logger track detail showing a route with its recorded altitude profile" width="1600" height="720" loading="lazy"><figcaption>Recorded: the altitude that came with the track. It follows what the phone measured &mdash; including the weather.</figcaption></figure>
+        <figure><img src="assets/elevation-terrain.webp" alt="The same GPS Logger route with the elevation profile read from terrain data" width="2400" height="1080" loading="lazy"><figcaption>Terrain: the height of the ground under the same route, and a different elevation gain.</figcaption></figure>
       </div>
 
       <h2>Why GPS elevation goes wrong</h2>
-      <p>Phone GPS is usually much better horizontally than vertically. Latitude and longitude may be good enough to draw your path, while altitude jumps up and down because satellite geometry, tree cover, buildings, weather and phone sensors all add noise. Barometers help on some phones, but pressure changes can make a route drift even when you stayed at the same height.</p>
-      <p>That noise matters because elevation gain is cumulative. Small false climbs, repeated over thousands of points, can turn a normal route into a misleading climbing result.</p>
+      <p>Phone GPS is usually much better horizontally than vertically. Latitude and longitude may be good enough to draw your path, while altitude jumps up and down because satellite geometry, tree cover, buildings, weather and phone sensors all add noise. Barometers help on some phones, but pressure changes can make a route drift upwards over an afternoon even when you stayed at the same height.</p>
+      <p>That noise matters because elevation gain is cumulative. Small false climbs, repeated over thousands of points, turn a flat commute into a mountain stage. A good tracker has to smooth the profile and ignore movement below the noise floor before it adds anything to the total &mdash; GPS Logger does, which is why its gain figure is usually lower and steadier than a raw sum of the ups.</p>
 
-      <h2>What terrain correction does</h2>
-      <p>Terrain correction keeps each recorded latitude, longitude and timestamp, then replaces the noisy altitude with ground elevation from a digital elevation model. GPS Logger downloads the public terrain tiles needed for the route area, samples the height for each point, and recalculates the elevation profile and gain on the phone.</p>
-      <p>This is especially useful for walking, hiking, trail running, cycling, road trips and GPX archives where you want the track to describe the land surface rather than the phone sensor's drift.</p>
+      <h2>Two different heights, not a right one and a wrong one</h2>
+      <p><strong>Recorded altitude</strong> is the height that came with the track: from your phone&rsquo;s barometer or GPS, or from the watch or device that recorded a file you imported. It knows you were on a bridge, in a tunnel, on the fourth floor or in a plane &mdash; and it drifts with the weather.</p>
+      <p><strong>Terrain elevation</strong> is the height of the ground itself at each coordinate, read from a global elevation model. It is weather-proof and repeats exactly on the same route, so two recordings of your usual loop finally agree with each other. In exchange it flattens everything above or below ground: a bridge over a valley reads as the valley floor.</p>
 
-      <h2>When it helps most</h2>
+      <h2>Which one should you trust?</h2>
+      <p>Pick whichever matches the trip you actually made.</p>
+      <h3>Terrain usually reads better when</h3>
       <ul>
-        <li>A GPX track has impossible spikes or sudden drops.</li>
-        <li>A flat commute reports too much climbing.</li>
-        <li>Several recordings of the same route show very different elevation gain.</li>
-        <li>An imported GPX file has missing or poor altitude values.</li>
-        <li>You want a cleaner elevation chart for a saved route.</li>
+        <li>The recorded profile has impossible spikes or sudden drops.</li>
+        <li>A flat walk or commute reports far too much climbing.</li>
+        <li>Several recordings of the same route disagree about the elevation gain.</li>
+        <li>An imported GPX file has missing, flat or clearly poor altitude values.</li>
+        <li>You are walking, hiking, trail running, cycling or driving along the ground.</li>
+      </ul>
+      <h3>Recorded altitude is the better answer when</h3>
+      <ul>
+        <li>The route crosses bridges, flyovers or viaducts.</li>
+        <li>It runs through tunnels, underpasses or below ground.</li>
+        <li>You were on a ski lift, cable car, ferry or aircraft.</li>
+        <li>The trip climbed inside a building, tower or multi-storey car park.</li>
+        <li>Your phone has a barometer, the weather was stable, and the recorded curve already looks sane.</li>
       </ul>
 
-      <h2>When terrain correction is not the right answer</h2>
-      <p>Terrain data is ground height. It cannot know that you were on a bridge, inside a tower, on a ski lift, below ground, on a ferry, in an aircraft or moving through a tunnel. In those cases, the phone's recorded altitude may describe your real position better than terrain height.</p>
+      <h2>Nothing is overwritten</h2>
+      <p>Earlier versions of GPS Logger offered a destructive <em>elevation correction</em> that replaced a track&rsquo;s altitude with terrain values, plus a batch job to do it to a whole library at once. Both are gone. What replaced them is a per-track view switch:</p>
+      <ul>
+        <li>Switching to Terrain redraws the profile and recalculates the elevation gain <strong>on screen</strong>.</li>
+        <li>The saved recording keeps its own altitude, always.</li>
+        <li>GPX and KML exports always carry the <strong>recorded</strong> altitude, whichever view you were looking at.</li>
+        <li>You can switch back and forth as often as you like, because there is nothing to undo.</li>
+      </ul>
+      <p>If a track was corrected by one of those older versions, its original altitude is genuinely gone and the app says so rather than pretending there is something to switch back to.</p>
 
       <aside class="inline-app-card">
         <div class="card-header">
           <img src="assets/icon.png" alt="GPS Logger logo" class="card-logo">
           <div class="card-info">
-            <h3>Correct a saved route in GPS Logger</h3>
-            <p>Open a track, use Correct elevation, and GPS Logger recalculates the profile from terrain data. The app shows current correction limits and options before you run larger cleanup jobs.</p>
+            <h3>Read both profiles in GPS Logger</h3>
+            <p>Open a saved or imported track, switch the elevation source between Recorded and Terrain, and compare the two profiles and gain figures. Your recording is never changed.</p>
           </div>
         </div>
         <div class="card-features">
-          <span>✓ Cleaner GPX altitude</span>
-          <span>✓ Recomputed elevation gain</span>
-          <span>✓ Works with saved and imported tracks</span>
+          <span>&#10003; Recorded and terrain profiles</span>
+          <span>&#10003; Recalculated elevation gain</span>
+          <span>&#10003; Exports keep the recorded altitude</span>
         </div>
         <a class="btn btn-primary" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger&amp;referrer=utm_source%3Dgpslogger_site%26utm_medium%3Dorganic%26utm_campaign%3Dsite_elevation_correction_gps_tracks">Get GPS Logger on Google Play</a>
       </aside>
 
-      <h2>How to correct elevation in GPS Logger</h2>
+      <h2>How to switch elevation source in GPS Logger</h2>
       <ol>
-        <li>Record a route or import a GPX file.</li>
-        <li>Open the saved track from History.</li>
-        <li>Choose <strong>Correct elevation</strong>. The app needs an internet connection to download terrain tiles for the route area.</li>
-        <li>Wait for the correction to finish. The elevation profile and gain are recalculated from terrain data.</li>
-        <li>Export GPX or KML if you need a corrected file for another mapping tool.</li>
+        <li>Record a route, or import a GPX file.</li>
+        <li>Open the track from History.</li>
+        <li>Open the <strong>Profile</strong> view, which draws elevation, speed, or both together.</li>
+        <li>Open the chart options and set <strong>Elevation source</strong> to <strong>Terrain</strong>. The app needs a connection the first time, to read the ground heights along that route.</li>
+        <li>Compare the profile shape and the elevation gain against <strong>Recorded</strong>, and leave it on whichever describes the trip.</li>
       </ol>
-      <p>The app shows any current correction limits before you start. Batch correction is useful when you want to clean up a whole saved library rather than one route at a time.</p>
+      <p>Reading terrain elevation is free for one track per day; Pro switches any track, any time. Either way it is per track, so a route you never look at never costs a lookup.</p>
 
       <h2>Privacy and export notes</h2>
-      <p>GPS Logger is still built around local track history: your routes are saved on your device unless you export, share live location, or use another feature that clearly sends data out. Elevation correction needs terrain-tile downloads for the route area, but it does not require an account or a proprietary GPX upload workflow.</p>
-      <p>After correction, single-track export remains portable: save the route as GPX or KML, or keep it in your private journey atlas.</p>
+      <p>GPS Logger is built around local track history: your routes stay on your device unless you export them, share your live location, or use another feature that clearly sends data out. Reading terrain elevation looks up ground heights for the area a track covers, and needs no account and no GPX upload workflow.</p>
+      <p>Because the recording is never rewritten, export stays honest as well: save the route as GPX or KML and it carries the altitude your device actually recorded, ready for any other mapping tool to interpret its own way.</p>
 
       <h2>Next guides</h2>
       <ul>
+        <li><a href="gps-track-detail-android.html">Split, colour and read a saved GPS track</a></li>
         <li><a href="how-to-record-export-gpx-android.html">How to record and export GPX tracks on Android</a></li>
         <li><a href="record-gps-track-screen-off-android.html">How to record a GPS track with the screen off on Android</a></li>
         <li><a href="import-gpx-files-android.html">How to import GPX files on Android</a></li>
