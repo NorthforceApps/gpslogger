@@ -35,9 +35,9 @@
       <p class="eyebrow">海拔来源</p>
       <h1>Android 的 GPS 海拔：记录海拔还是地形数据？</h1>
       <p class="lead">这篇指南来自一条真实轨迹：路线本身没问题，累计爬升却明显不可信。常见建议是用地形数据“校正”海拔——可这等于默认地面高度就是真相，而在桥上、隧道里或缆车上并非如此。更诚实的问题是：两个高度里，哪一个描述的是<em>你</em>这趟行程。GPS Logger 的答案是让你在两者之间切换视图，而不改写任何东西。</p>
-      <div class="article-compare" aria-label="同一条路线分别以记录海拔与地形高度读取">
-        <figure><img src="../assets/elevation-recorded.webp" alt="显示记录海拔剖面的 GPS Logger 轨迹" width="1600" height="720" loading="lazy"><figcaption>记录：随轨迹一同保存的海拔。它忠实反映手机测到的值——包括天气的影响。</figcaption></figure>
-        <figure><img src="../assets/elevation-terrain.webp" alt="以地形数据读取海拔剖面的同一条 GPS Logger 路线" width="2400" height="1080" loading="lazy"><figcaption>地形：同一路线下方地面的高度，累计爬升也随之不同。</figcaption></figure>
+      <div class="article-compare" aria-label="以记录海拔与地形高度分别读取的峰顶山脊">
+        <figure><img src="../assets/elevation-recorded.webp" alt="显示记录海拔剖面的 GPS Logger 轨迹，峰顶处 1095 m" width="2312" height="1080" loading="lazy"><figcaption>此刻<strong>记录</strong>为 1095 m &mdash; 手机测得的海拔，天气的影响也一并在内。</figcaption></figure>
+        <figure><img src="../assets/elevation-terrain.webp" alt="同一时刻同一路线以地形数据读取的海拔剖面，1000 m" width="2312" height="1080" loading="lazy"><figcaption>同一条路线、同一秒，<strong>地形</strong>为 1000 m。该峰的图载高程是 1038.6 m &mdash; 两者都不准，且方向相反。</figcaption></figure>
       </div>
       <h2>为什么 GPS 海拔容易出错</h2>
       <p>手机的水平定位通常比垂直定位准得多。卫星几何、树冠、建筑、天气和传感器噪声都会让海拔跳动。气压计有帮助，但气压变化会让一条轨迹在一个下午里整体上漂，哪怕你始终待在同一高度。</p>
@@ -51,6 +51,15 @@
       <ul><li>记录剖面出现不可能的尖峰或骤降。</li><li>一段平坦的散步或通勤报出过多爬升。</li><li>同一条路线的多次记录彼此对不上。</li><li>导入的 GPX 海拔缺失、全平或明显有误。</li><li>你是步行、跑步、骑行或驾车沿地面移动。</li></ul>
       <h3>记录海拔是更好的答案，当</h3>
       <ul><li>路线经过桥梁、高架或高架桥。</li><li>路线穿过隧道、地下通道或位于地下。</li><li>你在缆车、索道、渡轮或飞机上。</li><li>爬升发生在建筑、塔楼或多层停车场内部。</li><li>手机带气压计、天气稳定，而记录曲线看起来已经合理。</li></ul>
+      <h2>地形数据同样有分辨率</h2>
+      <p>地形高度比气压计稳定，但稳定不等于准确。它取自全球高程模型的固定网格：在 GPS Logger 中，爱尔兰纬度下每个采样覆盖约十二米地面，而网格背后的模型还要更平滑。凡是比网格更窄的地物，在你看到之前就被平均掉了 &mdash; 而山顶正是如此：一个比所在网格更窄的锥体。</p>
+      <p>上面这条路线翻越爱尔兰最高点 Carrauntoohil，图载高程为 <strong>1038.6 m</strong>。在同一条轨迹的同一秒：</p>
+      <ul><li><strong>记录</strong>为 1095 m &mdash; 高出约 56 m，那天傍晚气压计偏高。</li><li><strong>地形</strong>为 1000 m &mdash; 低了约 39 m，峰顶锥体被网格抹平。</li></ul>
+      <p>两者都不是这座山本身。这就是手机海拔数据的真实状况，也是应用提供切换而非“校正”的原因：贴着地面行进的路线以地形为默认更合适，但它并不是一个有待还原的真值，而在尖峰上它一定读低。</p>
+      <div class="article-compare" aria-label="以记录海拔与地形高度分别读取的峰顶山脊">
+        <figure><img src="../assets/elevation-peaks-recorded.webp" alt="记录海拔下峰顶山脊的放大剖面，锯齿状曲线" width="2312" height="1080" loading="lazy"><figcaption>放大到山脊，<strong>记录</strong>海拔呈锯齿状 &mdash; 其中大部分细节是传感器噪声，而非地形。</figcaption></figure>
+        <figure><img src="../assets/elevation-peaks-terrain.webp" alt="以地形数据绘制的同一山脊，低约九十米的平滑曲线" width="2312" height="1080" loading="lazy"><figcaption><strong>地形</strong>在同一段给出干净的形状，并且整条山脊约低 90 m。</figcaption></figure>
+      </div>
       <h2>什么都不会被覆盖</h2>
       <p>早期版本的 GPS Logger 提供过一种破坏性的<em>海拔校正</em>，会用地形数值替换轨迹的海拔，还有针对整个库的批量处理。两者都已移除。取而代之的是按轨迹生效的视图开关：</p>
       <ul><li>切换到地形只会<strong>在屏幕上</strong>重绘剖面并重算累计爬升。</li><li>保存的记录始终保留自己的海拔。</li><li>GPX 与 KML 导出始终携带<strong>记录</strong>海拔，无论你当时看的是哪个视图。</li><li>你可以随意来回切换，因为根本没有需要撤销的东西。</li></ul>

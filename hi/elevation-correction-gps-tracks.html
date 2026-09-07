@@ -35,9 +35,9 @@
       <p class="eyebrow">Altitude के स्रोत</p>
       <h1>Android पर GPS altitude: recorded altitude या terrain data?</h1>
       <p class="lead">यह guide एक असली route से निकली है, जिसमें route से कहीं ज़्यादा संदिग्ध उसका elevation gain लग रहा था। आम सलाह यही होती है कि altitude को terrain data से “correct” कर लो — पर उसमें यह मान लिया जाता है कि ज़मीन की ऊँचाई ही सच है, और पुल, सुरंग या ski lift पर यह सच नहीं होता। असली सवाल है कि दोनों में से कौन-सी ऊँचाई <em>आपकी</em> यात्रा बताती है। GPS Logger इसका जवाब देता है — बिना कुछ बदले, दोनों के बीच view बदलकर।</p>
-      <div class="article-compare" aria-label="वही route, recorded altitude और terrain ऊँचाई के साथ">
-        <figure><img src="../assets/elevation-recorded.webp" alt="Recorded altitude profile दिखाता GPS Logger का track" width="1600" height="720" loading="lazy"><figcaption>Recorded: वह altitude जो track के साथ आई। फ़ोन ने जो मापा वही दिखाती है — मौसम समेत।</figcaption></figure>
-        <figure><img src="../assets/elevation-terrain.webp" alt="Terrain data से पढ़ा गया altitude profile दिखाता वही GPS Logger route" width="2400" height="1080" loading="lazy"><figcaption>Terrain: उसी route के नीचे ज़मीन की ऊँचाई, और एक अलग elevation gain।</figcaption></figure>
+      <div class="article-compare" aria-label="चोटी की धार, recorded altitude और terrain ऊँचाई के साथ">
+        <figure><img src="../assets/elevation-recorded.webp" alt="Recorded altitude profile दिखाता GPS Logger track, चोटी पर 1095 m" width="2312" height="1080" loading="lazy"><figcaption>इस पल <strong>Recorded</strong> 1095 m दिखाता है &mdash; वही altitude जो फ़ोन ने मापी, मौसम समेत।</figcaption></figure>
+        <figure><img src="../assets/elevation-terrain.webp" alt="उसी पल का वही route, terrain data से पढ़ा गया profile, 1000 m" width="2312" height="1080" loading="lazy"><figcaption>उसी सेकंड, उसी route पर <strong>Terrain</strong> 1000 m दिखाता है। चोटी की मैप ऊँचाई 1038.6 m है &mdash; दोनों गलत हैं, उल्टी दिशाओं में।</figcaption></figure>
       </div>
       <h2>GPS altitude गलत क्यों होता है</h2>
       <p>फ़ोन horizontal में vertical से कहीं बेहतर मापता है। Satellite geometry, पेड़, इमारतें, मौसम और sensor noise altitude को उछाल देते हैं। Barometer मदद करता है, पर दबाव बदलने से पूरी दोपहर में route ऊपर की ओर drift कर सकता है, जबकि आप एक ही ऊँचाई पर रहे।</p>
@@ -51,6 +51,15 @@
       <ul><li>recorded profile में असंभव spikes या अचानक गिरावट हो।</li><li>सपाट walk या commute बहुत ज़्यादा चढ़ाई बताए।</li><li>एक ही route की कई recordings आपस में मेल न खाएँ।</li><li>imported GPX में altitude गायब, सपाट या साफ़ तौर पर ख़राब हो।</li><li>आप ज़मीन के साथ चल, दौड़, साइकिल चला या गाड़ी चला रहे हों।</li></ul>
       <h3>Recorded altitude बेहतर जवाब है जब</h3>
       <ul><li>route पुल, flyover या viaduct पार करता हो।</li><li>सुरंग, underpass या ज़मीन के नीचे से जाता हो।</li><li>आप ski lift, ropeway, ferry या विमान में थे।</li><li>चढ़ाई किसी इमारत, टावर या multi-storey parking के भीतर हुई हो।</li><li>आपके फ़ोन में barometer है, मौसम स्थिर था और recorded curve पहले से ठीक लगती है।</li></ul>
+      <h2>Terrain data का भी एक resolution होता है</h2>
+      <p>Terrain की ऊँचाई barometer से ज़्यादा स्थिर है, पर इसका मतलब ज़्यादा सटीक नहीं। यह एक global model से तय grid पर पढ़ी जाती है: GPS Logger में आयरलैंड के अक्षांश पर हर sample लगभग बारह मीटर ज़मीन घेरता है, और उसके पीछे का model और भी smooth किया हुआ है। grid से पतली हर चीज़ आप तक पहुँचने से पहले औसत में घुल जाती है &mdash; और चोटी ठीक यही है: उस खाने से पतला एक शंकु जिसमें वह बैठी है।</p>
+      <p>ऊपर वाला route Carrauntoohil से होकर जाता है, आयरलैंड का सबसे ऊँचा बिंदु, जिसे मैप <strong>1038.6 m</strong> बताता है। उसी track के उसी सेकंड पर:</p>
+      <ul><li><strong>Recorded</strong>: 1095 m &mdash; करीब 56 m <em>ज़्यादा</em>; उस शाम barometer ऊँचा चल रहा था।</li><li><strong>Terrain</strong>: 1000 m &mdash; करीब 39 m <em>कम</em>; चोटी का शंकु grid ने चपटा कर दिया।</li></ul>
+      <p>इनमें से कोई भी पहाड़ नहीं है। फ़ोन की ऊँचाई का यही ईमानदार हाल है, और इसीलिए app correction नहीं, एक switch देता है: ज़मीन के साथ चलने वाले route के लिए terrain बेहतर शुरुआत है, पर यह लौटाई जाने वाली सच्चाई नहीं &mdash; और तीखी चोटी पर यह कम ही पढ़ेगा।</p>
+      <div class="article-compare" aria-label="चोटी की धार, recorded altitude और terrain ऊँचाई के साथ">
+        <figure><img src="../assets/elevation-peaks-recorded.webp" alt="Recorded altitude से चोटी की धार का ज़ूम किया profile, दाँतेदार रेखा" width="2312" height="1080" loading="lazy"><figcaption>धार पर zoom करने पर <strong>recorded</strong> altitude दाँतेदार है &mdash; उस बारीकी का अधिकांश हिस्सा sensor noise है, ज़मीन नहीं।</figcaption></figure>
+        <figure><img src="../assets/elevation-peaks-terrain.webp" alt="Terrain data से वही धार, करीब नब्बे मीटर नीचे चिकनी रेखा" width="2312" height="1080" loading="lazy"><figcaption><strong>Terrain</strong> उसी हिस्से में साफ़ आकार देता है, और पूरी धार पर करीब 90 m नीचे रहता है।</figcaption></figure>
+      </div>
       <h2>कुछ भी overwrite नहीं होता</h2>
       <p>GPS Logger के पुराने versions में एक destructive <em>elevation correction</em> थी जो track की altitude को terrain values से बदल देती थी, साथ में पूरी library के लिए batch भी। दोनों हटा दिए गए हैं। उनकी जगह अब per-track view switch है:</p>
       <ul><li>Terrain पर जाने से profile और elevation gain <strong>स्क्रीन पर</strong> दोबारा बनते हैं।</li><li>सहेजी गई recording हमेशा अपनी altitude रखती है।</li><li>GPX और KML export हमेशा <strong>recorded</strong> altitude ले जाते हैं, चाहे आप कोई भी view देख रहे हों।</li><li>जितनी बार चाहें बदलें — undo करने को कुछ है ही नहीं।</li></ul>

@@ -35,9 +35,9 @@
       <p class="eyebrow">標高のソース</p>
       <h1>Android の GPS 標高：記録された標高か、地形データか</h1>
       <p class="lead">このガイドは、ルート自体よりも獲得標高のほうがはるかに怪しく見えた実際の記録から生まれました。よくある助言は地形データで標高を「補正」することですが、それは地形の高さが正解だと決めつけています。橋の上、トンネルの中、リフトの上ではそうではありません。正しい問いは、二つの高さのうちどちらが<em>あなたの</em>行程を表しているか、です。GPS Logger は、何も書き換えずに両者を切り替えられるようにして答えます。</p>
-      <div class="article-compare" aria-label="同じルートを記録標高と地形標高で読んだ比較">
-        <figure><img src="../assets/elevation-recorded.webp" alt="記録された標高プロファイルを表示した GPS Logger の track" width="1600" height="720" loading="lazy"><figcaption>記録：track に付いてきた標高。端末が測った値をそのまま追います — 天候の影響も含めて。</figcaption></figure>
-        <figure><img src="../assets/elevation-terrain.webp" alt="地形データから読んだ標高プロファイルを表示した同じ GPS Logger のルート" width="2400" height="1080" loading="lazy"><figcaption>地形：同じルートの下にある地面の高さ。獲得標高も変わります。</figcaption></figure>
+      <div class="article-compare" aria-label="山頂の稜線を記録標高と地形標高で読んだ比較">
+        <figure><img src="../assets/elevation-recorded.webp" alt="記録された標高プロファイルを表示した GPS Logger のトラック、山頂で 1095 m" width="2312" height="1080" loading="lazy"><figcaption>この瞬間、<strong>記録</strong>は 1095 m。端末が測った高度で、天候の影響もそのまま含みます。</figcaption></figure>
+        <figure><img src="../assets/elevation-terrain.webp" alt="同じ瞬間の同じルートを地形データで読んだ標高プロファイル、1000 m" width="2312" height="1080" loading="lazy"><figcaption>同じルートの同じ秒で、<strong>地形</strong>は 1000 m。山頂の標高は 1038.6 m とされています &mdash; 両方とも、反対方向にずれています。</figcaption></figure>
       </div>
       <h2>GPS 標高がずれる理由</h2>
       <p>スマートフォンは水平方向のほうが垂直方向よりずっと正確です。衛星配置、樹冠、建物、天候、センサーノイズが標高を跳ねさせます。気圧計は助けになりますが、気圧の変化で、同じ高さにいた午後のあいだにルートが上へドリフトすることがあります。</p>
@@ -51,6 +51,15 @@
       <ul><li>記録されたプロファイルにあり得ない尖りや急落がある。</li><li>平坦な散歩や通勤で獲得標高が明らかに大きすぎる。</li><li>同じルートの複数の記録が食い違う。</li><li>取り込んだ GPX の標高が欠けている、平坦、または明らかに悪い。</li><li>徒歩・ランニング・自転車・車で地面に沿って移動している。</li></ul>
       <h3>記録された標高が適するのは</h3>
       <ul><li>ルートが橋・高架・陸橋を渡る。</li><li>トンネル、地下道、地下を通る。</li><li>リフト、ロープウェイ、フェリー、航空機に乗っていた。</li><li>建物・塔・立体駐車場の中で高度が変わった。</li><li>端末に気圧計があり、天候が安定し、記録された曲線がすでに妥当に見える。</li></ul>
+      <h2>地形データにも解像度がある</h2>
+      <p>地形標高は気圧計より安定していますが、それは正確という意味ではありません。全球モデルを一定の格子で読み取るもので、GPS Logger ではアイルランドの緯度で 1 サンプルがおよそ 12 m の地面を覆い、その背後のモデルはさらに平滑化されています。格子より細いものは、表示される前に平均化されて消えます &mdash; 山頂とはまさにそれ、格子の升目より細い円錐です。</p>
+      <p>上のルートはアイルランド最高峰カラントゥーヒルを通ります。地図の標高は <strong>1038.6 m</strong>。同じトラックの同じ秒で：</p>
+      <ul><li><strong>記録</strong>は 1095 m &mdash; 約 56 m <em>高い</em>。その夕方は気圧計が高く出ていました。</li><li><strong>地形</strong>は 1000 m &mdash; 約 39 m <em>低い</em>。山頂の円錐が格子にならされています。</li></ul>
+      <p>どちらも山そのものではありません。それがスマートフォンの標高データの正直な姿であり、アプリが「補正」ではなく「切り替え」を用意している理由です。地面沿いのルートなら地形が既定として優れていますが、取り戻すべき真実ではなく、鋭い頂では低く出ます。</p>
+      <div class="article-compare" aria-label="山頂の稜線を記録標高と地形標高で読んだ比較">
+        <figure><img src="../assets/elevation-peaks-recorded.webp" alt="記録標高による山頂稜線の拡大プロファイル、ぎざぎざの線" width="2312" height="1080" loading="lazy"><figcaption>稜線を拡大すると、<strong>記録</strong>標高はぎざぎざです &mdash; その細部のほとんどは地形ではなくセンサーのノイズです。</figcaption></figure>
+        <figure><img src="../assets/elevation-peaks-terrain.webp" alt="地形データによる同じ稜線、約 90 m 低いなめらかな線" width="2312" height="1080" loading="lazy"><figcaption><strong>地形</strong>は同じ区間をなめらかな形で描き、稜線全体でおよそ 90 m 低くなります。</figcaption></figure>
+      </div>
       <h2>何も上書きされない</h2>
       <p>以前の GPS Logger には、track の標高を地形の値で置き換える破壊的な<em>標高補正</em>と、ライブラリ全体を一括処理する機能がありました。どちらも廃止されています。代わりにあるのは track ごとの表示切り替えです。</p>
       <ul><li>地形に切り替えると、プロファイルと獲得標高が<strong>画面上で</strong>描き直されます。</li><li>保存された記録は常に自分の標高を保ちます。</li><li>GPX と KML の書き出しは、どの表示を見ていても常に<strong>記録された</strong>標高を含みます。</li><li>元に戻すものが何もないので、何度でも行き来できます。</li></ul>
