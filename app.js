@@ -17,26 +17,34 @@
     "offline-gps-logging-privacy": "guide_privacy",
     "offline-android-maps": "guide_offline_maps",
     "gps-logger-vs-strava": "guide_strava_alternative",
-    "gpx-openstreetmap-qgis": "guide_gis_osm"
+    "gpx-openstreetmap-qgis": "guide_gis_osm",
+    "gps-track-detail-android": "guide_track_detail",
+    "data-deletion": "site_data_deletion"
   };
   const YT_ID = "NSOkPpQ0TaY";
   const EMAIL_USER = "northforceapps";
   const EMAIL_HOST = "protonmail.com";
 
+  const getLocale = () => {
+    const parts = window.location.pathname.split("/").filter(Boolean);
+    const locales = new Set(["de", "es", "fr", "pt", "ja", "hi", "zh"]);
+    for (const p of parts) if (locales.has(p)) return p;
+    return "en";
+  };
   const getPlayCampaign = () => {
     const parts = window.location.pathname.split("/").filter(Boolean);
     const page = parts[parts.length - 1] || "";
-    const homeDirs = new Set(["gpslogger", "de", "es", "fr", "pt", "ja", "hi"]);
+    const homeDirs = new Set(["gpslogger", "de", "es", "fr", "pt", "ja", "hi", "zh"]);
     if (!page || homeDirs.has(page) || page === "index.html") return "site_home";
     if (page === "guides.html") return "guide_hub";
     const slug = page.replace(/\.html$/, "");
-    return PLAY_CAMPAIGNS[slug] || "site_other";
+    return PLAY_CAMPAIGNS[slug] || (slug ? `site_${slug.replace(/-/g, "_")}` : "site_other");
   };
 
   const playUrl = new URL(PLAY_URL);
   playUrl.searchParams.set(
     "referrer",
-    `utm_source=gpslogger_site&utm_medium=organic&utm_campaign=${getPlayCampaign()}`
+    `utm_source=gpslogger_site&utm_medium=organic&utm_campaign=${getPlayCampaign()}&utm_content=${getLocale()}`
   );
 
   /* apply Play URL with campaign attribution to every [data-play] link */
