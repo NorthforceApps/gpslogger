@@ -20,6 +20,10 @@ Live URL: `https://northforceapps.com/gpslogger/` (GitHub Pages project site).
 The apex custom domain `northforceapps.com` is configured on the user Pages repo
 `NorthforceApps/NorthforceApps.github.io`, not here. Do **not** add a `CNAME` file
 to this repo — that would steal the company domain for GPS Logger alone.
+Canonicals, sitemaps, hreflang and OG URLs in this repo must use
+`https://northforceapps.com/gpslogger/...` only, never `northforceapps.github.io`.
+After Google’s selected canonical matches that host, leftover github.io
+URL-prefix properties in Search Console can be removed.
 
 ## Local Contracts
 - Never claim a capability the app doesn't have — every feature claim must trace to
