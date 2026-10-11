@@ -26,7 +26,7 @@
   <link rel="stylesheet" href="../styles.css">
   <link rel="icon" type="image/png" href="../assets/icon.png">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"HowTo","name":"AndroidでGPXファイルをインポートする方法","description":"GPS LoggerでGPXトラックやZIPバックアップを一括インポート。大規模なフラット構成・フォルダ構成のコレクションにも対応します。","step":[{"@type":"HowToStep","name":"GPS Loggerをインストール","text":"Google PlayからGPS Logger: Private Trackerをインストールします。"},{"@type":"HowToStep","name":"位置情報を許可","text":"必要に応じてバックグラウンド位置情報も許可します。"},{"@type":"HowToStep","name":"GPXインポートを開く","text":"履歴からメニューを開き、GPXをインポートを選びます。"},{"@type":"HowToStep","name":"ファイルまたはZIPを選ぶ","text":"複数の.gpxファイルまたはZIPバックアップを選びます。"},{"@type":"HowToStep","name":"コレクションを読み込む","text":"インポートを開始します。セグメントは別々の記録になり、重複は除外されます。"}],"tool":[{"@type":"HowToTool","name":"Android phone"},{"@type":"HowToTool","name":"GPS Logger: Private Tracker"}],"totalTime":"PT3M"}
+  {"@context":"https://schema.org","@type":"HowTo","name":"AndroidでGPXファイルをインポートする方法","description":"GPS LoggerでGPXトラックやZIPバックアップを一括インポート。大規模なフラット構成・フォルダ構成のコレクションにも対応します。","step":[{"@type":"HowToStep","name":"GPS Loggerをインストール","text":"Google PlayからGPS Logger: Private Trackerをインストールします。"},{"@type":"HowToStep","name":"GPXインポートを開く","text":"GPS Loggerで設定 → Google TimelineまたはGPXをインポートを開き、.gpxファイルまたはZIPバックアップを選んでインポートを開始します。"},{"@type":"HowToStep","name":"ファイルまたはZIPを選ぶ","text":"複数の.gpxファイルまたはZIPバックアップを選びます。"},{"@type":"HowToStep","name":"コレクションを読み込む","text":"インポートを開始します。セグメントは別々の記録になり、重複は除外されます。"}],"tool":[{"@type":"HowToTool","name":"Android phone"},{"@type":"HowToTool","name":"GPS Logger: Private Tracker"}]}
   </script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Androidで複数のGPXファイルを一度にインポートできますか？","acceptedAnswer":{"@type":"Answer","text":"はい。GPS Loggerでは複数の.gpxファイルをまとめて選択するか、数百個のGPXファイルを含むZIPを1つ選んでインポートできます。各トラックは別々の移動記録として履歴に追加されます。"}},{"@type":"Question","name":"フォルダを含むZIPでもGPXをインポートできますか？","acceptedAnswer":{"@type":"Answer","text":"はい。GPXファイルがZIP直下にあっても、年・旅行・端末ごとのサブフォルダ内にあっても読み込めます。アーカイブ内のすべての.gpxファイルが検出されます。"}},{"@type":"Question","name":"同じバックアップを再インポートすると重複しますか？","acceptedAnswer":{"@type":"Answer","text":"いいえ。開始時刻で照合するため、同じバックアップを再度読み込んでも、履歴にあるトラックは自動的にスキップされます。"}},{"@type":"Question","name":"GPXコレクションを取り込むとデータが囲い込まれますか？","acceptedAnswer":{"@type":"Answer","text":"いいえ。すべて端末内に保存され、いつでも標準GPXまたはKMLとして再エクスポートできます。履歴全体のGPX ZIPバックアップも作成できます。"}}]}
@@ -65,11 +65,12 @@
       <p class="eyebrow">GPXインポートガイド</p>
       <h1>AndroidでGPXファイルをインポートする方法 — ZIPバックアップと大規模コレクション</h1>
       <p class="lead">何年分ものGPXトラックがフォルダや古いアプリに残っていませんか。GPS Loggerなら、複数の<code>.gpx</code>ファイルまたは1つのZIPバックアップを選ぶだけで、すべてのルートを履歴、カレンダー、個人アトラスへ一括追加できます。フラットなZIPもフォルダ構成も対応し、再インポートしても重複しません。</p>
+      <p>時刻付きの記録済みGPXトラック（<code>trkpt</code>と<code>time</code>）に対応しています。<code>rtept</code>だけの計画ルートや、<code>wpt</code>だけのウェイポイントファイルには対応していません。</p>
 
       <figure class="article-shot"><img src="../assets/ss-atlas.webp" alt="GPS Logger lifetime atlas map on Android showing many imported GPX routes at once" loading="lazy"><figcaption>インポートしたルートは一覧だけでなく、アトラス、カレンダー、訪問場所にも表示されます。</figcaption></figure>
 
       <h2>かんたんな手順</h2>
-      <p>GPS Loggerで<strong>履歴</strong> → メニュー → <strong>GPXをインポート</strong>を開き、<code>.gpx</code>ファイルまたはZIPを選びます。各セグメントは別々の記録になり、重複は自動でスキップされます。</p>
+      <p>GPS Loggerで<strong>設定 → Google TimelineまたはGPXをインポート</strong>を開き、<code>.gpx</code>ファイルまたはZIPバックアップを選んでインポートを開始します。</p>
 
       <h2>1. GPS Loggerをインストール</h2>
       <p>Google Playから<a data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger&amp;referrer=utm_source%3Dgpslogger_site%26utm_medium%3Dorganic%26utm_campaign%3Dsite_import_gpx_files_android">GPS Logger: Private Tracker</a>をインストールします。アカウント不要で、すべて端末内で処理・保存されます。</p>
@@ -85,7 +86,7 @@
       <p>ファイルまたはZIPを、内部ストレージ、ダウンロード、Google DriveなどAndroidから開ける場所に保存します。</p>
 
       <h2>3. GPXインポート画面を開く</h2>
-      <p>GPS Loggerで<strong>履歴</strong>タブを開き、メニューから<strong>GPXをインポート</strong>を選びます。詳細なトラックを最適化する設定もあります。</p>
+      <p>GPS Loggerで<strong>設定 → Google TimelineまたはGPXをインポート</strong>を開き、<code>.gpx</code>ファイルまたはZIPバックアップを選んでインポートを開始します。</p>
 
       <h2>4. ファイルまたはZIPを選ぶ</h2>
       <p><strong>ファイルを選択</strong>をタップし、次のいずれかを選びます:</p>
@@ -125,7 +126,6 @@
       <p><strong>インポート</strong>をタップします。進行状況には追加されたファイルとトラック数が表示されます。</p>
       <ul>
         <li><strong>重複防止。</strong> 開始時刻で照合するため、同じバックアップを再読み込みしても重複しません。</li>
-        <li><strong>自動分割。</strong> 複数日が連結されたファイルは1日ごとの移動記録に分割されます。</li>
         <li><strong>堅牢。</strong> ZIP内の一部が壊れていても、そのファイルだけをスキップして残りを読み込みます。</li>
         <li><strong>任意の最適化。</strong> 非常に密なトラックを簡略化して容量を節約できます。すべての点を残す場合はオフにします。</li>
       </ul>
@@ -136,8 +136,8 @@
       <h2>データの囲い込みなし</h2>
       <p>GPS Loggerへ取り込んでもデータは囲い込まれません。すべて端末内に保存され、いつでも<a href="how-to-record-export-gpx-android.html">GPXまたはKMLとして再エクスポート</a>したり、履歴全体のZIPを作成したりできます。</p>
 
-      <h2>無料版と無制限インポート</h2>
-      <p>無料版では週1トラックまで試せます。ProとLifetimeではGPXを無制限にインポートできます。詳しくは<a href="index.html#pricing">料金</a>をご覧ください。</p>
+      <h2>どのプランでもインポートは無制限</h2>
+      <p>インポートはどのプランでも無料・無制限なので、GPXのコレクションやGoogle Timelineをまとめて取り込めます。無料版ではアプリに最新10件のトラックが表示され、ProとLifetimeではすべて表示されます。詳しくは<a href="index.html#pricing">料金</a>をご覧ください。</p>
 
       <h2>よくある質問</h2>
       <h3>複数のGPXファイルを一度にインポートできますか？</h3>

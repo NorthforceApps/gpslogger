@@ -26,7 +26,7 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" href="assets/icon.png">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"HowTo","name":"How to open a GPX file on Android","description":"Bulk-import GPX tracks or a ZIP backup into GPS Logger on Android, including large flat or structured collections.","step":[{"@type":"HowToStep","name":"Install GPS Logger","text":"Install GPS Logger: Private Tracker from Google Play."},{"@type":"HowToStep","name":"Open the GPX import screen","text":"Go to History, open the menu and choose Import GPX."},{"@type":"HowToStep","name":"Choose files or a ZIP","text":"Pick one or more .gpx files, or a single ZIP backup that holds your whole collection."},{"@type":"HowToStep","name":"Import the collection","text":"Start the import. Every GPX inside the ZIP is read, each track segment becomes one journey, and duplicates are skipped automatically."},{"@type":"HowToStep","name":"Review and export","text":"Imported routes join your history, calendar and atlas. Export any track back to GPX or KML at any time — no lock-in."}],"tool":[{"@type":"HowToTool","name":"Android phone"},{"@type":"HowToTool","name":"GPS Logger: Private Tracker"}],"totalTime":"PT3M"}
+  {"@context":"https://schema.org","@type":"HowTo","name":"How to open a GPX file on Android","description":"Bulk-import GPX tracks or a ZIP backup into GPS Logger on Android, including large flat or structured collections.","step":[{"@type":"HowToStep","name":"Install GPS Logger","text":"Install GPS Logger: Private Tracker from Google Play."},{"@type":"HowToStep","name":"Open the GPX import screen","text":"Open GPS Logger → Settings → Import Google Timeline or GPX. Tap Choose files, select your .gpx files or a ZIP backup, then tap Import."},{"@type":"HowToStep","name":"Choose files or a ZIP","text":"Pick one or more .gpx files, or a single ZIP backup that holds your whole collection."},{"@type":"HowToStep","name":"Import the collection","text":"Start the import. Every GPX inside the ZIP is read, each track segment becomes one journey, and duplicates are skipped automatically."},{"@type":"HowToStep","name":"Review and export","text":"Imported routes join your history, calendar and atlas. Export any track back to GPX or KML at any time — no lock-in."}],"tool":[{"@type":"HowToTool","name":"Android phone"},{"@type":"HowToTool","name":"GPS Logger: Private Tracker"}]}
   </script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can I import multiple GPX files at once on Android?","acceptedAnswer":{"@type":"Answer","text":"Yes. GPS Logger lets you select many .gpx files in one go, or import a single ZIP archive containing hundreds of GPX files. Each track is added to your history as a separate journey."}},{"@type":"Question","name":"Does GPX import work with a ZIP of folders?","acceptedAnswer":{"@type":"Answer","text":"Yes. A ZIP backup imports whether the GPX files sit flat at the top level or are organised into subfolders by year, trip or device. Every .gpx entry inside the archive is found and imported."}},{"@type":"Question","name":"Will re-importing a backup create duplicate tracks?","acceptedAnswer":{"@type":"Answer","text":"No. Tracks are matched by start time, so importing the same backup twice skips anything already in your history. You can safely re-run an import after adding new files."}},{"@type":"Question","name":"Is there any lock-in after I import my GPX collection?","acceptedAnswer":{"@type":"Answer","text":"No. Everything stays on your device and you can export any track back to standard GPX or KML at any time, including an all-history GPX ZIP backup."}}]}
@@ -64,11 +64,12 @@
       <p class="eyebrow">GPX import tutorial</p>
       <h1>How to open a GPX file on Android</h1>
       <p class="lead">To open a GPX file on Android, import it into GPS Logger — one <code>.gpx</code> or a whole ZIP of tracks. Routes from Garmin, Strava, OsmAnd or Wikiloc land in your history, calendar and personal atlas. Re-import is safe, and there is zero lock-in.</p>
+      <p>This guide covers recorded GPX tracks with timestamps (<code>trkpt</code> and <code>time</code>). Planned routes containing only <code>rtept</code>, and waypoint-only files containing <code>wpt</code>, are not supported by this importer.</p>
 
       <figure class="article-shot"><img src="assets/ss-atlas.webp" alt="GPS Logger lifetime atlas map on Android showing many imported GPX routes at once" loading="lazy"><figcaption>Imported routes join your lifetime atlas, calendar and places — not just a flat file list.</figcaption></figure>
 
       <h2>Quick answer</h2>
-      <p>Open GPS Logger → <strong>History</strong> → menu → <strong>Import GPX</strong>, then choose your <code>.gpx</code> files or a ZIP backup and start. A ZIP can hold hundreds of tracks; they are read one by one, each track segment becomes its own journey, and any track already in your history is skipped so you never get duplicates.</p>
+      <p>Open GPS Logger → <strong>Settings → Import Google Timeline or GPX</strong>. Tap <strong>Choose files</strong>, select your <code>.gpx</code> files or a ZIP backup, then tap <strong>Import</strong>.</p>
 
       <h2>1. Install GPS Logger</h2>
       <p>Install <a data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger&amp;referrer=utm_source%3Dgpslogger_site%26utm_medium%3Dorganic%26utm_campaign%3Dsite_import_gpx_files_android">GPS Logger: Private Tracker</a> from Google Play. No account or sign-in is needed to import or view your tracks — everything is processed and stored on your phone.</p>
@@ -84,7 +85,7 @@
       <p>Drop the files (or the ZIP) somewhere Android can reach — internal storage, Downloads, Google Drive or any cloud provider that shows up in the file picker.</p>
 
       <h2>3. Open the GPX import screen</h2>
-      <p>In GPS Logger, go to the <strong>History</strong> tab, open the overflow menu and choose <strong>Import GPX</strong>. The screen explains what it accepts and shows an option to optimize very detailed tracks.</p>
+      <p>Open GPS Logger → <strong>Settings → Import Google Timeline or GPX</strong>. Tap <strong>Choose files</strong>, select your <code>.gpx</code> files or a ZIP backup, then tap <strong>Import</strong>.</p>
 
       <h2>4. Pick files or a ZIP backup</h2>
       <p>Tap <strong>Choose files</strong>. From here you can either:</p>
@@ -124,7 +125,6 @@
       <p>Tap <strong>Import</strong>. A progress bar counts files and tracks as they are added. A few things happen automatically as it runs:</p>
       <ul>
         <li><strong>Duplicate-safe.</strong> Tracks are matched by start time, so re-importing the same backup — or running an import again after adding new files — never creates duplicates.</li>
-        <li><strong>Smart splitting.</strong> Exports that concatenate many days into one long segment are split back into one journey per day, so a multi-day Garmin file doesn't become a single tangled line.</li>
         <li><strong>Resilient.</strong> If one file inside a ZIP is corrupted, it's reported and skipped — the rest of the archive still imports.</li>
         <li><strong>Optional optimize.</strong> Extremely dense tracks can be simplified to save space; leave it on for big libraries, or switch it off to keep every point.</li>
       </ul>
@@ -136,7 +136,7 @@
       <p>Importing into GPS Logger doesn't trap your data. Everything is stored locally and privately, and you can <a href="how-to-record-export-gpx-android.html">export any track back to GPX or KML</a> — or make a full-history GPX ZIP backup — whenever you like. It's safe to try: bring your collection in, look around, and you can always take it out again.</p>
 
       <h2>Test before moving a whole library</h2>
-      <p>You can test import with a small GPX file first, confirm your files load correctly, and then move a larger collection when you are ready. The app shows any current import limits before you start.</p>
+      <p>You can test import with a small GPX file first, confirm your files load correctly, and then move a larger collection when you are ready. Import is unlimited on every plan; the free version shows your 10 most recent trips in the app, and Pro shows all of them.</p>
 
       <h2>Frequently asked questions</h2>
       <h3>Can I import multiple GPX files at once?</h3>
@@ -144,9 +144,16 @@
       <h3>Does it work with a ZIP of folders?</h3>
       <p>Yes. Flat archives and ZIPs organised into subfolders both work; every GPX entry is found regardless of its folder path inside the archive.</p>
       <h3>What if my export bundles many trips into one file?</h3>
-      <p>The importer detects large jumps and long time gaps and splits the data into separate journeys, so your history stays clean.</p>
+      <p>The importer can split a recorded track at implausible jumps or long gaps. A continuous recording is not necessarily split at midnight.</p>
       <h3>Will it overwrite tracks I recorded in the app?</h3>
       <p>No. Import only adds new tracks and skips anything that's already present by start time.</p>
+
+      <h2>If the GPX file opens but no tracks are imported</h2>
+      <p>A <code>.gpx</code> extension alone does not tell you what is inside. GPS Logger reads recorded track points (<code>trkpt</code>) with valid timestamps (<code>time</code>). A planned route containing only <code>rtept</code>, a list of waypoints (<code>wpt</code>), or track points without times will not produce a recorded trip. Export the recorded activity with timestamps from the source app, if available; renaming a file cannot add missing data.</p>
+      <p>Ordinary GPX imports also skip pieces with fewer than 20 timed points after splitting at jumps and gaps. The import summary reports skipped short tracks, duplicates and file errors. Keep your original files until you have checked that the trips you need are present.</p>
+      <p>To check the workflow with a known example, download the <a href="downloads/sample-gpslogger-city-walk.gpx">sample city-walk GPX</a>, choose it in the import screen and review the result in History. Re-importing that same sample should be reported as a duplicate. This checks the import path; it does not establish compatibility with every other GPX file.</p>
+      <h2>Why only ten trips appear after a large import</h2>
+      <p>Import is unlimited on every plan. Free displays the ten most recent trips in the app; older saved trips remain on the device. Pro or Lifetime shows the full history, and an all-history ZIP backup lets you keep your saved routes outside the app. Importing a second time will not unlock the older trips.</p>
 
       <h2>Next guides</h2>
       <ul>

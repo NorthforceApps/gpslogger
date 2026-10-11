@@ -26,7 +26,7 @@
   <link rel="stylesheet" href="../styles.css">
   <link rel="icon" type="image/png" href="../assets/icon.png">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"HowTo","name":"Como importar arquivos GPX no Android","description":"Importe em massa trajetos GPX ou um backup ZIP no GPS Logger para Android, inclusive coleções grandes, planas ou estruturadas.","step":[{"@type":"HowToStep","name":"Instalar o GPS Logger","text":"Instale GPS Logger: Private Tracker pelo Google Play."},{"@type":"HowToStep","name":"Permitir localização","text":"Autorize o acesso à localização, inclusive em segundo plano se necessário."},{"@type":"HowToStep","name":"Abrir a importação GPX","text":"Vá ao Histórico, abra o menu e escolha Importar GPX."},{"@type":"HowToStep","name":"Escolher arquivos ou ZIP","text":"Selecione vários arquivos .gpx ou um backup ZIP."},{"@type":"HowToStep","name":"Importar a coleção","text":"Inicie a importação. Os segmentos viram jornadas e os duplicados são ignorados."}],"tool":[{"@type":"HowToTool","name":"Android phone"},{"@type":"HowToTool","name":"GPS Logger: Private Tracker"}],"totalTime":"PT3M"}
+  {"@context":"https://schema.org","@type":"HowTo","name":"Como importar arquivos GPX no Android","description":"Importe em massa trajetos GPX ou um backup ZIP no GPS Logger para Android, inclusive coleções grandes, planas ou estruturadas.","step":[{"@type":"HowToStep","name":"Instalar o GPS Logger","text":"Instale GPS Logger: Private Tracker pelo Google Play."},{"@type":"HowToStep","name":"Abrir a importação GPX","text":"Abra o GPS Logger → Configurações → Importar Google Timeline ou GPX. Selecione seus arquivos .gpx ou um backup ZIP e inicie a importação."},{"@type":"HowToStep","name":"Escolher arquivos ou ZIP","text":"Selecione vários arquivos .gpx ou um backup ZIP."},{"@type":"HowToStep","name":"Importar a coleção","text":"Inicie a importação. Os segmentos viram jornadas e os duplicados são ignorados."}],"tool":[{"@type":"HowToTool","name":"Android phone"},{"@type":"HowToTool","name":"GPS Logger: Private Tracker"}]}
   </script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Posso importar vários arquivos GPX de uma vez no Android?","acceptedAnswer":{"@type":"Answer","text":"Sim. O GPS Logger permite selecionar vários arquivos .gpx de uma só vez ou importar um único ZIP com centenas de arquivos GPX. Cada trajeto é adicionado ao histórico como uma jornada separada."}},{"@type":"Question","name":"A importação GPX funciona com um ZIP contendo pastas?","acceptedAnswer":{"@type":"Answer","text":"Sim. O backup ZIP é importado tanto se os arquivos GPX estiverem na raiz quanto organizados em subpastas por ano, viagem ou dispositivo. Cada entrada .gpx do arquivo é encontrada e importada."}},{"@type":"Question","name":"Reimportar um backup cria trajetos duplicados?","acceptedAnswer":{"@type":"Answer","text":"Não. Os trajetos são comparados pelo horário de início, então importar o mesmo backup novamente ignora tudo que já estiver no histórico."}},{"@type":"Question","name":"Existe aprisionamento depois de importar minha coleção GPX?","acceptedAnswer":{"@type":"Answer","text":"Não. Tudo permanece no seu dispositivo e você pode exportar qualquer trajeto novamente em GPX ou KML padrão a qualquer momento, inclusive como backup ZIP de todo o histórico."}}]}
@@ -65,11 +65,12 @@
       <p class="eyebrow">Tutorial de importação GPX</p>
       <h1>Como importar arquivos GPX no Android — backups ZIP e coleções grandes</h1>
       <p class="lead">Tem anos de trajetos GPX em uma pasta ou app antigo? O GPS Logger importa tudo no Android de uma vez: selecione vários arquivos <code>.gpx</code> ou um único backup ZIP e cada rota aparece no histórico, calendário e atlas pessoal. Funciona com arquivos simples e coleções em pastas, a reimportação é segura e não há aprisionamento.</p>
+      <p>A importação aceita trajetos GPX gravados com horários (<code>trkpt</code> e <code>time</code>). Rotas planejadas que contêm apenas <code>rtept</code> e arquivos de pontos de referência com <code>wpt</code> não são compatíveis.</p>
 
       <figure class="article-shot"><img src="../assets/ss-atlas.webp" alt="GPS Logger lifetime atlas map on Android showing many imported GPX routes at once" loading="lazy"><figcaption>As rotas importadas entram no seu atlas, calendário e lugares, não apenas em uma lista de arquivos.</figcaption></figure>
 
       <h2>Resposta rápida</h2>
-      <p>Abra o GPS Logger → <strong>Histórico</strong> → menu → <strong>Importar GPX</strong>, escolha seus arquivos <code>.gpx</code> ou um backup ZIP e inicie. Cada segmento vira uma jornada e os duplicados são ignorados.</p>
+      <p>Abra o GPS Logger → <strong>Configurações → Importar Google Timeline ou GPX</strong>. Selecione seus arquivos <code>.gpx</code> ou um backup ZIP e inicie a importação.</p>
 
       <h2>1. Instale o GPS Logger</h2>
       <p>Instale <a data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger&amp;referrer=utm_source%3Dgpslogger_site%26utm_medium%3Dorganic%26utm_campaign%3Dsite_import_gpx_files_android">GPS Logger: Private Tracker</a> no Google Play. Não é preciso conta; tudo é processado e salvo no celular.</p>
@@ -85,7 +86,7 @@
       <p>Coloque os arquivos ou o ZIP em um local acessível pelo Android: armazenamento interno, Downloads, Google Drive ou outro provedor exibido no seletor.</p>
 
       <h2>3. Abra a tela de importação GPX</h2>
-      <p>No GPS Logger, vá para <strong>Histórico</strong>, abra o menu e escolha <strong>Importar GPX</strong>. A tela informa os formatos aceitos e oferece uma opção para otimizar trajetos muito detalhados.</p>
+      <p>Abra o GPS Logger → <strong>Configurações → Importar Google Timeline ou GPX</strong>. Selecione seus arquivos <code>.gpx</code> ou um backup ZIP e inicie a importação.</p>
 
       <h2>4. Escolha arquivos ou um backup ZIP</h2>
       <p>Toque em <strong>Escolher arquivos</strong>. Você pode:</p>
@@ -125,7 +126,6 @@
       <p>Toque em <strong>Importar</strong>. Uma barra acompanha os arquivos e trajetos adicionados. Algumas tarefas acontecem automaticamente:</p>
       <ul>
         <li><strong>Sem duplicatas.</strong> Os trajetos são comparados pelo horário de início, então reimportar nunca cria cópias.</li>
-        <li><strong>Divisão inteligente.</strong> Exportações de vários dias são separadas em uma jornada por dia.</li>
         <li><strong>Resiliente.</strong> Se um arquivo do ZIP estiver corrompido, ele é informado e ignorado; o restante continua sendo importado.</li>
         <li><strong>Otimização opcional.</strong> Trajetos muito densos podem ser simplificados para economizar espaço. Desative para manter todos os pontos.</li>
       </ul>
@@ -136,8 +136,8 @@
       <h2>Sem aprisionamento</h2>
       <p>Importar no GPS Logger não prende seus dados. Tudo fica armazenado localmente e você pode <a href="how-to-record-export-gpx-android.html">exportar qualquer trajeto novamente em GPX ou KML</a>, ou criar um ZIP de todo o histórico, quando quiser.</p>
 
-      <h2>Importação gratuita ou ilimitada</h2>
-      <p>Qualquer pessoa pode testar a importação grátis com um trajeto por semana. Pro e Lifetime liberam importação GPX ilimitada. Veja os <a href="index.html#pricing">preços</a>.</p>
+      <h2>Importação ilimitada em todos os planos</h2>
+      <p>A importação é gratuita e ilimitada em todos os planos, então você pode trazer toda a sua coleção GPX ou o seu Google Timeline de uma vez. A versão gratuita mostra suas 10 faixas mais recentes no app; Pro e Lifetime mostram todas. Veja os <a href="index.html#pricing">preços</a>.</p>
 
       <h2>Perguntas frequentes</h2>
       <h3>Posso importar vários arquivos GPX de uma vez?</h3>
