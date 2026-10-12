@@ -247,8 +247,10 @@ h2.display { font-size: clamp(2.1rem, 4.2vw, 3.6rem); max-width: 18ch; }
 /* ---------- screenshots ---------- */
 .screens { display: grid; grid-template-columns: repeat(6, 1fr); gap: 18px; }
 .device { margin: 0; }
+.device-lead { width: min(100%, 400px); margin: 0 auto 28px; }
 .device .frame { border-radius: 30px; padding: 8px; background: linear-gradient(155deg, #23251f, #0c0d0b); box-shadow: var(--shadow-md); }
-.device img { width: 100%; aspect-ratio: 1080/2400; object-fit: cover; border-radius: 23px; }
+.device picture { display: block; }
+.device img { width: 100%; height: auto; aspect-ratio: 1080/2400; object-fit: cover; border-radius: 23px; }
 .device figcaption { margin-top: 12px; text-align: center; font-size: 0.86rem; color: var(--muted); }
 
 /* ---------- pricing tiers ---------- */
@@ -298,7 +300,8 @@ h2.display { font-size: clamp(2.1rem, 4.2vw, 3.6rem); max-width: 18ch; }
   margin: 34px 0; border: 1px solid var(--line); border-radius: var(--radius);
   background: var(--panel); box-shadow: var(--shadow-sm); overflow: hidden;
 }
-.article-shot img { width: min(100%, 420px); margin-inline: auto; }
+.article-shot picture { display: block; }
+.article-shot img { display: block; width: min(100%, 420px); height: auto; margin-inline: auto; }
 .article-shot.wide img { width: min(100%, 620px); }
 .article-shot figcaption { padding: 14px 18px; color: var(--muted); font-size: 0.9rem; text-align: center; }
 .article-compare {

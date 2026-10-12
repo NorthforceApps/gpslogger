@@ -11,7 +11,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Android向けプライベートGPS Logger・Timeline代替</title>
-  <meta name="description" content="Android向けのプライベートGPS Logger／Google Timeline代替。画面オフでルートを記録し、記録済みの日をタップして1日のタイムラインを確認。GPX/KMLを書き出し、履歴は端末に保存できます。">
+  <meta name="description" content="Android向けのプライベートGPS Logger／Google Timeline代替。その日の写真を見て、旅を地球儀で回し、履歴は端末に残せます。">
   <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#287743">
   <link rel="canonical" href="https://northforceapps.com/gpslogger/ja/">
@@ -32,7 +32,7 @@
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="GPS Logger — プライベートなルート記録と日別タイムライン">
-  <meta property="og:description" content="ルートをプライベートに記録し、日ごとの停止と移動を見返し、必要な時だけライブ位置共有。GPX/KMLで書き出せます。">
+  <meta property="og:description" content="ルートをプライベートに記録し、その日の写真を見て、旅を地球儀で回し、必要な時だけ現在地を共有。GPX/KMLで書き出せます。">
   <meta property="og:url" content="https://northforceapps.com/gpslogger/ja/">
   <meta property="og:image" content="https://northforceapps.com/gpslogger/assets/ja/feature_graphic.png">
   <meta property="og:image:width" content="1024">
@@ -40,7 +40,7 @@
   <meta property="og:site_name" content="GPS Logger">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="GPS Logger — プライベートなルートタイムライン">
-  <meta name="twitter:description" content="あなたのルート。あなたのデータ。自分で管理できる日別ルート履歴。">
+  <meta name="twitter:description" content="あなたのルート。あなたのデータ。その日の写真、回せる地球儀、端末に残る履歴。">
   <meta name="twitter:image" content="https://northforceapps.com/gpslogger/assets/ja/feature_graphic.png">
 
   <script type="application/ld+json">
@@ -50,7 +50,7 @@
     "name": "GPS Logger: Private Tracker",
     "applicationCategory": "TravelApplication",
     "operatingSystem": "Android",
-    "description": "Android向けのプライベートGPS Logger／GPXルートレコーダー。画面オフでトラックを記録し、履歴を端末に保存。記録済みの日をタップすると停止と移動のタイムラインを表示でき、必要な時だけライブ位置を共有し、GPXまたはKMLで書き出せます。",
+    "description": "Android向けのプライベートGPS Logger／GPXルートレコーダー。画面オフでトラックを記録し、履歴を端末に保存。記録済みの日をタップすると停止、移動、その日の写真のタイムラインと、地球儀を表示でき、必要な時だけライブ位置を共有し、GPXまたはKMLで書き出せます。",
     "image": "https://northforceapps.com/gpslogger/assets/ja/feature_graphic.png",
     "url": "https://northforceapps.com/gpslogger/ja/",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
@@ -65,6 +65,9 @@
       "uploadDate": "2026-05-29T12:00:00+00:00"
     }
   }
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"ルートはどこに保存されますか？","acceptedAnswer":{"@type":"Answer","text":"あなたのデバイス上です。エクスポートはスマホにファイルを書きます。一つのトラックをGPXまたはKMLとして、あるいは履歴をバックアップZIPとして。そのファイルは手元に置くか、自分で渡します。サーバーへ送られることはありません。ライブ共有は別で、オンにしているあいだ現在地だけを送ります。"}},{"@type":"Question","name":"無料ですか？","acceptedAnswer":{"@type":"Answer","text":"はい。無料版にはGPS記録、開ける旅の写真（写真だけの上限はありません）、その見える履歴のアトラス、カレンダー、場所、そして最新10件のトラックが含まれます。一つの旅を地球儀で開くのは無料です。無料版はアトラスの地球儀で履歴全体を3回回せます。そのあと表示されるのは同じ最新10件です。Proはそこでも履歴全体を残せます。保存された解像度での単一トラックの書き出し、履歴全体のバックアップ、無制限の分割と切り取り、Google TimelineとGPXの無制限インポート、ライブ共有は行きと帰りで1日15分ずつ、そして通信があるときのOpenStreetMap、OSM Topo、OSM Cycleも入ります。オフライン用に地図を保存できるのは、無料版では見本の一区域、Proでは区域全体です。"}}]}
   </script>
 </head>
 <body>
@@ -170,6 +173,7 @@
         <div class="section-head" data-reveal>
           <p class="eyebrow">GPS Loggerが選ばれる理由</p>
           <h2 class="display">最初の旅を保存した瞬間に、その必要性に気づくはずです。</h2>
+          <p>残した旅は、地図のレイヤーメニューから地球儀として回せます。通信がなくても動きます。</p>
         </div>
         <div class="vibe-grid">
           <figure class="vibe" data-reveal><img src="../assets/ja/usecase-01-trail-dog.jpg" alt="霧がかった森の中での犬の散歩を記録 — すべての道をプライベートに保存" loading="lazy"></figure>
@@ -177,7 +181,7 @@
           <figure class="vibe" data-reveal><img src="../assets/ja/usecase-03-bike-commute.jpg" alt="夜明けの街中サイクリング通勤 — 通勤ルートを自動でマッピング" loading="lazy"></figure>
           <figure class="vibe" data-reveal><img src="../assets/ja/usecase-04-group-hike.jpg" alt="尾根の展望台にいる友人たち — すべての旅がアトラスの一部に" loading="lazy"></figure>
           <figure class="vibe" data-reveal><img src="../assets/ja/usecase-05-countries.jpg" alt="旅の思い出と、訪れた国々の記録" loading="lazy"></figure>
-          <figure class="vibe" data-reveal><img src="../assets/ja/usecase-06-globe.jpg" alt="生涯の旅路を示すピンが散りばめられた地球儀" loading="lazy"></figure>
+          <figure class="vibe" data-reveal><img src="../assets/ja/usecase-06-globe.jpg" alt="机の上の地球儀。赤いピンが刺してあり、その横のスマホにこれまでの地図が開いている" loading="lazy"></figure>
         </div>
       </div>
     </section>
@@ -226,6 +230,16 @@
         </div>
         <div class="features">
           <article class="feature" data-reveal>
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="12" cy="12" r="3.2"/><path d="M8 5.5 9.2 3.5h5.6L16 5.5"/></svg></div>
+            <h3>ルートの上の写真</h3>
+            <p>旅を思い出させる写真が、ルートの上に戻ってきます。保存したトラックの写真タブは、撮影した時刻で一枚ずつルートに置きます。写真にGPSがなくても置けます。写真を選択で画像を選ぶか、自分で指定したフォルダに対してフォルダから探すを使います。写真そのものはギャラリーに残ります。</p>
+          </article>
+          <article class="feature" data-reveal>
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/></svg></div>
+            <h3>旅を地球儀で回す</h3>
+            <p>地図のレイヤーメニューから地球儀を開き、一つの旅を回すか、履歴マップのアトラスを回します。通信がなくても動きます。スマホが電波を保っているとき、フライトは飛んだ航路そのものです。都市から都市への推測の曲線ではありません。長く静かな区間は、記録できた位置のあいだをつなぐ滑らかな線にすぎません。フライトだけを表示することも、外すこともできます。</p>
+          </article>
+          <article class="feature" data-reveal>
             <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
             <h3>プライベートに記録</h3>
             <p>散歩、ハイキング、サイクリング、ドライブなど、あらゆる旅を記録。バックグラウンドで動作し、停止時にルート、距離、時間、速度を保存します。</p>
@@ -233,7 +247,7 @@
           <article class="feature" data-reveal>
             <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3 3 6v15l6-3 6 3 6-3V3l-6 3-6-3z"/><path d="M9 3v15M15 6v15"/></svg></div>
             <h3>日別ルートタイムライン</h3>
-            <p>カレンダーの日をタップすると、歩行、移動、停止、出来事を時系列で地図と一緒に表示します。保存済みトラックから作られ、ファイルは変更しません。</p>
+            <p>カレンダーの日をタップすると、歩行、移動、停止、出来事とその日の写真を時系列で地図と一緒に表示します。保存済みトラックから作られ、ファイルは変更しません。</p>
           </article>
           <article class="feature" data-reveal>
             <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 6h13M8 12h13M8 18h13"/><circle cx="4" cy="6" r="1.5"/><circle cx="4" cy="12" r="1.5"/><circle cx="4" cy="18" r="1.5"/></svg></div>
@@ -381,7 +395,7 @@
         </div>
         <div class="panel" data-reveal>
           <h2>ルートはあなたのデバイスに</h2>
-          <p>あなたがライブ共有やエクスポートを選択しない限り、ルートはスマホ内に留まります。ライブ共有では最新の現在地のみを保存し、停止後に削除します。マップ表示や診断には、<a href="privacy.html">プライバシーポリシー</a>に記載されているサービスプロバイダーを使用します。</p>
+          <p>ルートはスマホ内に留まります。エクスポートはそこにファイルを書くだけで、あなたが手元に置くか、自分で渡します。ライブ共有は別で、オンのあいだ現在地だけを送ります。ライブ共有では最新の現在地のみを保存し、停止後に削除します。マップ表示や診断には、<a href="privacy.html">プライバシーポリシー</a>に記載されているサービスプロバイダーを使用します。</p>
         </div>
       </div>
     </section>
@@ -395,10 +409,10 @@
         </div>
         <div class="faq" data-reveal>
           <details><summary>操作しなくても自動で記録されますか？</summary><p>いいえ。記録はあなたが開始した時だけ始まり、停止した時に終わります。唯一の例外は、あなたが自身で有効にした場合の「再起動後の自動開始」です。</p></details>
-          <details><summary>ルートはどこに保存されますか？</summary><p>あなたのデバイス上です。あなたが現在地のライブ共有やファイルのエクスポートを選択しない限り、アップロードされることはありません。</p></details>
+          <details><summary>ルートはどこに保存されますか？</summary><p>あなたのデバイス上です。エクスポートはスマホにファイルを書きます。一つのトラックをGPXまたはKMLとして、あるいは履歴をバックアップZIPとして。そのファイルは手元に置くか、自分で渡します。サーバーへ送られることはありません。ライブ共有は別で、オンにしているあいだ現在地だけを送ります。</p></details>
           <details><summary>ライブ共有の仕組みを教えてください。</summary><p>リセット可能なコードを共有し、閲覧者数の上限（1〜20人）を選択します。コードを知っている人だけがライブマップ上であなたの現在地を確認できます。停止時に現在地は削除され、一定期間アクセスのない現在地も自動削除されます。</p></details>
           <details><summary>データを取り出すことはできますか？</summary><p>はい。個別のトラックをGPXやKMLで出力したり、全履歴をGPX ZIPとしてバックアップしたりできます。ロックイン（囲い込み）はありません。</p></details>
-          <details><summary>無料ですか？</summary><p>はい。無料版には記録、アトラス、カレンダー、場所、最新10件のトラック、エクスポート、無制限のインポート、1日15分のライブ共有が含まれます。Proやライフタイムでは制限が解除されます。</p></details>
+          <details><summary>無料ですか？</summary><p>はい。無料版にはGPS記録、開ける旅の写真（写真だけの上限はありません）、その見える履歴のアトラス、カレンダー、場所、そして最新10件のトラックが含まれます。一つの旅を地球儀で開くのは無料です。無料版はアトラスの地球儀で履歴全体を3回回せます。そのあと表示されるのは同じ最新10件です。Proはそこでも履歴全体を残せます。保存された解像度での単一トラックの書き出し、履歴全体のバックアップ、無制限の分割と切り取り、Google TimelineとGPXの無制限インポート、ライブ共有は行きと帰りで1日15分ずつ、そして通信があるときのOpenStreetMap、OSM Topo、OSM Cycleも入ります。オフライン用に地図を保存できるのは、無料版では見本の一区域、Proでは区域全体です。</p></details>
           <details><summary>画面をオフにしても記録し続けますか？</summary><p>はい。フォアグラウンドサービスによりバックグラウンドでも記録を続けます。長時間のセッションでは、Androidによって停止されないようアプリ内のバッテリー設定ガイドに従ってください。</p></details>
         </div>
       </div>

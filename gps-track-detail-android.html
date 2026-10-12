@@ -11,7 +11,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Split, Colour and Read a GPS Track on Android</title>
-  <meta name="description" content="What to do with one saved GPS track: change the route colour and line width, colour it by speed, read the elevation and speed profile, find where you stopped, and split or crop a GPX track into separate trips.">
+  <meta name="description" content="What to do with one saved GPS track: restyle the route, read its climb, see the photos you took along it, spin it on a globe, and split or crop it.">
   <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#287743">
   <link rel="canonical" href="https://northforceapps.com/gpslogger/gps-track-detail-android.html">
@@ -21,11 +21,11 @@
   <link rel="icon" type="image/png" href="assets/icon.png">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Split, Colour and Read a GPS Track on Android">
-  <meta property="og:description" content="Change a route's colour and width, colour it by speed, read its elevation profile, browse its stops, and split or crop it — all on one saved GPS track.">
+  <meta property="og:description" content="Restyle one saved GPS track, read its climb, see the photos you took along it, spin it on a globe, and split or crop it.">
   <meta property="og:url" content="https://northforceapps.com/gpslogger/gps-track-detail-android.html">
   <meta property="og:image" content="https://northforceapps.com/gpslogger/assets/ss-track-detail.webp">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Article","headline":"Split, colour and read a GPS track on Android","description":"A guide to working with a single saved GPS track: route appearance, speed colouring, elevation and speed profiles, stop detection, and splitting or cropping a GPX track.","author":{"@type":"Organization","name":"NorthforceApps"},"publisher":{"@type":"Organization","name":"NorthforceApps"},"mainEntityOfPage":"https://northforceapps.com/gpslogger/gps-track-detail-android.html"}
+  {"@context":"https://schema.org","@type":"Article","headline":"Split, colour and read a GPS track on Android","description":"A guide to one saved GPS track: route appearance, speed colouring, elevation and speed profiles, the photos taken along the route, a globe you can spin, stop detection, and splitting or cropping.","author":{"@type":"Organization","name":"NorthforceApps"},"publisher":{"@type":"Organization","name":"NorthforceApps"},"mainEntityOfPage":"https://northforceapps.com/gpslogger/gps-track-detail-android.html"}
   </script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I change the colour of a GPS route on Android?","acceptedAnswer":{"@type":"Answer","text":"In GPS Logger, open a saved track and tap the palette button on the map. Pick one of ten route colours and one of three line widths; the route redraws immediately and the choice is remembered for that base map. It is free on every tier."}},{"@type":"Question","name":"How do I see an elevation profile from a GPX file?","acceptedAnswer":{"@type":"Answer","text":"Import the GPX file, open the track and switch to the Profile view. It draws elevation, speed, or both together, against distance or against time, and you can read any point by dragging along the graph."}},{"@type":"Question","name":"How do I split a GPX track into separate trips?","acceptedAnswer":{"@type":"Answer","text":"Open the track, choose Split or crop, and the app proposes cuts at the stops, mode changes and recording gaps it found. Adjust any cut on the map or with a per-fix stepper, drop the parts you do not want, and commit. The result can be undone."}},{"@type":"Question","name":"Can I remove a section from the middle of a recorded track?","acceptedAnswer":{"@type":"Answer","text":"Yes. Splitting lets you keep some parts and drop others, so a long recording can become just the outings inside it. Dropped parts are not saved to any track, and undo restores the whole original recording."}}]}
@@ -50,7 +50,7 @@
     <article class="shell prose article">
       <p class="eyebrow">Track detail</p>
       <h1>Split, colour and read a GPS track on Android</h1>
-      <p class="lead">Most GPS loggers stop being interesting the moment the recording is saved: you get a line on a map and a distance. This guide is about the other half &mdash; what you can do with one saved track afterwards. Restyle it, read its elevation and speed profile, find every place you stood still, and cut a long recording into the trips that were actually inside it. Everything below happens on one screen in GPS Logger, and works the same on a recorded track and on an imported GPX file.</p>
+      <p class="lead">Most GPS loggers stop being interesting the moment the recording is saved: you get a line on a map and a distance. This guide is about the other half &mdash; what you can do with one saved track afterwards. Restyle it, read its elevation and speed profile, see the photos you took along it, spin that trip on a globe, find every place you stood still, and cut a long recording into the trips that were actually inside it. Everything below happens on one screen in GPS Logger, and works the same on a recorded track and on an imported GPX file.</p>
       <p><a class="btn btn-primary" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger&amp;referrer=utm_source%3Dgpslogger_site%26utm_medium%3Dorganic%26utm_campaign%3Dguide_track_detail">Get GPS Logger on Google Play</a></p>
 
       <h2>Change a route&rsquo;s colour and line width</h2>
@@ -64,7 +64,7 @@
 
       <h2>Colour the route by speed instead</h2>
       <p>The same palette panel switches the line from one flat colour to a speed colouring, so the route itself shows where you were quick and where you crawled. There are two palettes: <strong>Classic</strong>, the familiar warm-to-cool ramp, and <strong>Colour-vision safe</strong>, which stays readable with red&ndash;green colour blindness. Whichever you choose is used both on the map and in the speed graph, so the two agree.</p>
-      <p>You are choosing per view here too, so the Track view can stay a plain line while the Speed view is coloured by speed &mdash; the app remembers both rather than making you re-pick.</p>
+      <p>You are choosing per view here too, so Track can stay a plain line while Profile is coloured by speed &mdash; the app remembers both rather than making you re-pick.</p>
 
       <h2>Read the elevation and speed profile</h2>
       <p>The Profile view draws <strong>Elev</strong>, <strong>Speed</strong>, or <strong>Both</strong> on one graph, and can take the whole panel when you want to actually study it. Drag along the graph and the matching point is marked on the map, so a strange spike in the data has a place attached to it.</p>
@@ -76,6 +76,26 @@
         <li><strong>Elevation source</strong> &mdash; the altitude that came with the track, or the height of the ground beneath it. See <a href="elevation-correction-gps-tracks.html">recorded altitude or terrain data?</a> for which to trust; either way your recording is never rewritten.</li>
       </ul>
 
+      <h2>See the photos you took along the route</h2>
+      <p>On a saved track, the <strong>Photos</strong> tab puts each picture where you were when you took it. The time in the photo is enough, so a picture with no GPS still lands on the route. Choose the photos yourself, or tap <strong>Find in folders</strong> and the app looks only in folders you picked, and only when you ask.</p>
+      <figure class="article-shot">
+        <img src="assets/ss-photos-tokyo.webp" alt="Photos tab of a saved walk: the route on the map and the pictures placed along it" width="1080" height="2400" loading="lazy" decoding="async">
+        <figcaption>Photos &mdash; the pictures from the walk, on the route</figcaption>
+      </figure>
+      <p>The pictures stay in your gallery. GPS Logger keeps a link, the time, and a small thumbnail on the phone. Nothing is uploaded, copied or changed. <strong>Remove from journey</strong> only drops that link, and you can undo it. <strong>Open photo</strong> hands the picture to the phone&rsquo;s photo app. If one sits in the wrong place, choose <strong>Place on the route</strong> and tap the spot where you took it.</p>
+      <p>A recording that is still running has no Photos tab &mdash; the pictures belong to a saved trip. Free shows them on the trips you can open, with no separate photo limit.</p>
+
+      <h2>Spin the trip on a globe</h2>
+      <p>Open <strong>Globe</strong> from the map&rsquo;s layers menu and the trip turns in your hand. The base map is in the app, so it works with no connection. When the phone kept a signal, a flight is the route you flew. A long quiet stretch is only a smooth join between the positions it did record. Show just the flights, or leave them off.</p>
+      <figure class="article-shot">
+        <picture>
+          <source media="(prefers-reduced-motion: reduce)" srcset="assets/globe-hike-poster.webp">
+          <img src="assets/globe-hike.webp" alt="The globe turns through saved trips and opens a recorded hike, then the position moves along its elevation profile" width="540" height="1200" loading="lazy" decoding="async">
+        </picture>
+        <figcaption>Globe &mdash; a hike, then the climb as you move along it</figcaption>
+      </figure>
+      <p>The same globe, opened from the History map, turns the trips on your atlas. Opening one trip on the globe is free.</p>
+
       <h2>Find where you actually stopped</h2>
       <p>A long recording is mostly waiting. The Stops view finds the places you stayed put &mdash; you set the radius and the dwell time that count as a stop &mdash; and then walks you through them one at a time, one card per stop, with the map framed on the stay rather than jumping to a fixed zoom, so two stops near each other still resolve apart.</p>
       <p>A toggle decides whether paging through stops moves the map at all, which matters when you are comparing a stop against the route around it rather than inspecting it on its own.</p>
@@ -85,12 +105,14 @@
           <img src="assets/icon.png" alt="GPS Logger logo" class="card-logo">
           <div class="card-info">
             <h3>One track, properly examined</h3>
-            <p>Restyle the route, read its profile, browse its stops, and split it into the trips it really contains &mdash; on recorded tracks and imported GPX alike.</p>
+            <p>Restyle the route, read its profile, see the photos from the trip, spin it on a globe, and split it into the trips it really contains &mdash; on recorded tracks and imported GPX alike.</p>
           </div>
         </div>
         <div class="card-features">
           <span>&#10003; Free route colour and width</span>
           <span>&#10003; Elevation and speed profiles</span>
+          <span>&#10003; Photos along the route</span>
+          <span>&#10003; Spin the trip on a globe</span>
           <span>&#10003; Split, crop and undo</span>
         </div>
         <a class="btn btn-primary" data-play href="https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger&amp;referrer=utm_source%3Dgpslogger_site%26utm_medium%3Dorganic%26utm_campaign%3Dguide_track_detail">Get GPS Logger on Google Play</a>
