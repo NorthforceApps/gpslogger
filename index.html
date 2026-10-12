@@ -11,7 +11,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Private GPS Logger &amp; Timeline Alternative for Android</title>
-  <meta name="description" content="Private GPS logger and Google Timeline alternative for Android. Record routes with the screen off, tap any tracked day for a daily timeline, export GPX/KML, and keep history on your phone.">
+  <meta name="description" content="Private GPS logger and Google Timeline alternative for Android. See each day with its photos, spin your trips on a globe, and keep history on your phone.">
   <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#287743">
   <link rel="canonical" href="https://northforceapps.com/gpslogger/">
@@ -32,7 +32,7 @@
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="GPS Logger — Private Route Recorder &amp; Daily Timeline">
-  <meta property="og:description" content="Record routes privately, browse days as stops and movements, share your live dot only when you want, and export with no lock-in. Your route. Your data.">
+  <meta property="og:description" content="Record routes privately, see your photos along the day, spin your trips on a globe, share your live dot only when you want, and export with no lock-in. Your route. Your data.">
   <meta property="og:url" content="https://northforceapps.com/gpslogger/">
   <meta property="og:image" content="https://northforceapps.com/gpslogger/assets/feature_graphic.png">
   <meta property="og:image:width" content="1024">
@@ -40,7 +40,7 @@
   <meta property="og:site_name" content="GPS Logger">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="GPS Logger — Private Route Timeline">
-  <meta name="twitter:description" content="Your route. Your data. A private day-by-day route history you control.">
+  <meta name="twitter:description" content="Your route. Your data. Days with their photos, a globe you can spin, and history that stays on your phone.">
   <meta name="twitter:image" content="https://northforceapps.com/gpslogger/assets/feature_graphic.png">
 
   <script type="application/ld+json">
@@ -51,7 +51,7 @@
     "applicationCategory": "TravelApplication",
     "applicationSubCategory": "GPS logger, GPX recorder, route tracker, Google Timeline alternative",
     "operatingSystem": "Android",
-    "description": "A private GPS logger and GPX route recorder for Android. Record tracks with the screen off, keep route history on your device, tap tracked days to see a timeline of stops and movements, share your current live position only when you choose, and export GPX or KML with no lock-in.",
+    "description": "A private GPS logger and GPX route recorder for Android. Record tracks with the screen off, keep route history on your device, tap tracked days to see a timeline of stops, movements and photos, spin your trips on an offline globe, share your current live position only when you choose, and export GPX or KML with no lock-in.",
     "image": "https://northforceapps.com/gpslogger/assets/feature_graphic.png",
     "url": "https://northforceapps.com/gpslogger/",
     "downloadUrl": "https://play.google.com/store/apps/details?id=com.northforceapps.gpslogger",
@@ -74,12 +74,12 @@
     "@type": "FAQPage",
     "mainEntity": [
       {"@type":"Question","name":"Can GPS Logger record GPX tracks with the screen off?","acceptedAnswer":{"@type":"Answer","text":"Yes. GPS Logger runs a user-visible Android foreground service while recording, so a route can continue while the screen is off or another app is open. Long sessions may still need Android battery settings to allow background activity."}},
-      {"@type":"Question","name":"Where are recorded routes stored?","acceptedAnswer":{"@type":"Answer","text":"Recorded track history is stored on your device by default. Location data is sent only when you choose a feature that needs it, such as live sharing, exporting to another app, or map/elevation services described in the privacy policy."}},
+      {"@type":"Question","name":"Where are my routes stored?","acceptedAnswer":{"@type":"Answer","text":"On your device. Export makes a file on the phone: one track as GPX or KML, or your history as a backup ZIP. You keep that file, or you hand it to someone yourself. The file is never sent to a server. Live sharing is separate, and it sends only your current position while you leave it on."}},
       {"@type":"Question","name":"Is GPS Logger a Google Maps Timeline alternative?","acceptedAnswer":{"@type":"Answer","text":"GPS Logger can replace the parts of Timeline where you want deliberate, private route recordings, daily timelines, maps and exportable files. It is not a hidden always-on recorder; normal recording starts and stops when you choose."}},
       {"@type":"Question","name":"Can I export GPX or KML files?","acceptedAnswer":{"@type":"Answer","text":"Yes. You can export individual saved tracks as GPX or KML and create an all-history GPX ZIP backup."}},
       {"@type":"Question","name":"Does live sharing store a route trail on the server?","acceptedAnswer":{"@type":"Answer","text":"No. App Cloud live sharing relays the current position only. The current position is overwritten as you move and removed when you stop sharing, with stale cleanup if a device disconnects unexpectedly."}},
       {"@type":"Question","name":"Is an account required?","acceptedAnswer":{"@type":"Answer","text":"No account is required to record, view, import or export tracks. Optional App Cloud live sharing uses anonymous service identity behind the scenes to bind and protect share codes."}},
-      {"@type":"Question","name":"What is free?","acceptedAnswer":{"@type":"Answer","text":"Free includes GPS recording, the atlas/calendar/places views from visible history, the latest 10 tracks in the app, full stored-resolution single-track export, all-history backup, unlimited track splitting and cropping, unlimited Google Timeline and GPX import, 15 minutes per day each way of live sharing, and one OpenStreetMap sample tile to try offline maps."}},
+      {"@type":"Question","name":"What is free?","acceptedAnswer":{"@type":"Answer","text":"Free includes GPS recording, photos on the trips you can open (no separate photo limit), the atlas, calendar and places from that visible history, and the latest 10 tracks. Opening one trip on the globe is free. Free can spin the whole history on the atlas globe three times, then the same latest 10 trips; Pro keeps the whole history there. You also get full stored-resolution single-track export, an all-history backup, unlimited splitting and cropping, unlimited Google Timeline and GPX import, 15 minutes a day each way of live sharing, and OpenStreetMap, OSM Topo and OSM Cycle whenever the phone has a connection. Saving maps for offline use is one sample area on Free and full areas on Pro."}},
       {"@type":"Question","name":"Can I download OpenStreetMap offline?","acceptedAnswer":{"@type":"Answer","text":"Yes. On the Recording screen, switch to OpenStreetMap, OSM Topo or OSM Cycle and download the area you need before a hike or while roaming. Free includes one sample tile; Pro saves full areas and neighbouring patches."}}
     ]
   }
@@ -189,7 +189,7 @@
         <div class="section-head" data-reveal>
           <p class="eyebrow">Why people use GPS Logger</p>
           <h2 class="display">Replace fragile location history with daily route memory you control.</h2>
-          <p>Use GPS Logger when Google Timeline is no longer enough, when another app keeps GPX behind a wall, or when you need screen-off route recording for a hike, commute, road trip or field visit without creating a social fitness profile.</p>
+          <p>Use GPS Logger when Google Timeline is no longer enough, when another app keeps GPX behind a wall, or when you need screen-off route recording for a hike, commute, road trip or field visit without creating a social fitness profile. The trips you keep also open as a globe you can spin, from the map's layers menu, and it works with no connection.</p>
         </div>
         <div class="vibe-grid">
           <figure class="vibe" data-reveal><img src="assets/usecase-01-trail-dog.jpg" alt="Recording a misty woodland dog walk — record every trail, keep it private" loading="lazy"></figure>
@@ -197,7 +197,7 @@
           <figure class="vibe" data-reveal><img src="assets/usecase-03-bike-commute.jpg" alt="A city bike commute at dawn — your commute, mapped automatically" loading="lazy"></figure>
           <figure class="vibe" data-reveal><img src="assets/usecase-04-group-hike.jpg" alt="Friends at a ridge viewpoint — every trip joins your atlas" loading="lazy"></figure>
           <figure class="vibe" data-reveal><img src="assets/usecase-05-countries.jpg" alt="Travel memories and the countries you've visited" loading="lazy"></figure>
-          <figure class="vibe" data-reveal><img src="assets/usecase-06-globe.jpg" alt="A globe dotted with the pins of a lifetime of journeys" loading="lazy"></figure>
+          <figure class="vibe" data-reveal><img src="assets/usecase-06-globe.jpg" alt="A desk globe with red pins beside GPS Logger's lifetime atlas on a phone" loading="lazy"></figure>
         </div>
       </div>
     </section>
@@ -216,7 +216,7 @@
           </article>
           <article class="feature" data-reveal>
             <h3>Build a daily route timeline</h3>
-            <p>Turn saved tracks into a private day-by-day history: maps, stops, movements, repeated places, countries and per-track stats.</p>
+            <p>Turn saved tracks into a private day-by-day history: maps, stops, movements, the photos from that day, repeated places, countries and per-track stats.</p>
           </article>
           <article class="feature" data-reveal>
             <h3>Move GPX files in and out</h3>
@@ -286,6 +286,16 @@
         </div>
         <div class="features">
           <article class="feature" data-reveal>
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="12" cy="12" r="3.2"/><path d="M8 5.5 9.2 3.5h5.6L16 5.5"/></svg></div>
+            <h3>Photos on your routes</h3>
+            <p>Your journeys, with the photos that bring them back. On a saved track, the Photos tab places each picture along the route by the time you took it, even when the photo has no GPS. Choose photos, or search a folder you pick. They stay in your gallery.</p>
+          </article>
+          <article class="feature" data-reveal>
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/></svg></div>
+            <h3>Spin your trips on a globe</h3>
+            <p>Open Globe from the map's layers menu and turn one trip, or the atlas on your History map. It works with no connection. When the phone keeps a signal, a flight is the route you flew, not a guessed curve from city to city. A long quiet stretch is only a smooth join between the positions it did record. Show just the flights, or leave them off.</p>
+          </article>
+          <article class="feature" data-reveal>
             <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
             <h3>Record privately</h3>
             <p>Start a recording for any walk, hike, ride, drive, run or trip. It keeps tracking in the background and saves your route, distance, duration and speed when you stop.</p>
@@ -298,7 +308,7 @@
           <article class="feature" data-reveal>
             <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3 3 6v15l6-3 6 3 6-3V3l-6 3-6-3z"/><path d="M9 3v15M15 6v15"/></svg></div>
             <h3>Daily route timeline</h3>
-            <p>Tap a calendar day to see a map plus a chronological story of walks, rides, stops and moments. It is built live from saved tracks; it does not edit your files.</p>
+            <p>Tap a calendar day to see a map plus a chronological story of walks, rides, stops and moments, including the photos taken that day. It is built live from saved tracks; it does not edit your files.</p>
           </article>
           <article class="feature" data-reveal>
             <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 6h13M8 12h13M8 18h13"/><circle cx="4" cy="6" r="1.5"/><circle cx="4" cy="12" r="1.5"/><circle cx="4" cy="18" r="1.5"/></svg></div>
@@ -319,11 +329,6 @@
             <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="18" height="10" rx="2"/><path d="M22 11v2M6 11v2"/></svg></div>
             <h3>Adaptive &amp; reliable</h3>
             <p>Motion-adaptive tracking reduces GPS frequency when you're still. A foreground notification shows while recording, with optional auto-start after a reboot.</p>
-          </article>
-          <article class="feature" data-reveal>
-            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0"/></svg></div>
-            <h3>Yours, end to end</h3>
-            <p>No account to record. Routes live on your phone, live sharing is opt-in, and you can reset your share code or delete tracks whenever you like.</p>
           </article>
         </div>
       </div>
@@ -419,7 +424,7 @@
         </div>
         <div class="panel" data-reveal>
           <h2>Your routes, on your device</h2>
-          <p>Routes stay on your phone unless you choose to live-share or export them. Live sharing stores only your current position and removes it after you stop. Map display and diagnostics use service providers described in the <a href="privacy.html">privacy policy</a>.</p>
+          <p>No account is required to record. Routes stay on your phone. Export makes a file there — a track as GPX or KML, or a backup ZIP — which you keep or pass on yourself. You can delete a track whenever you like. Live sharing is separate and sends only your current position while it is on. Map display and diagnostics use service providers described in the <a href="privacy.html">privacy policy</a>.</p>
         </div>
       </div>
     </section>
@@ -435,11 +440,12 @@
           <details><summary>Can it record GPX tracks with the screen off?</summary><p>Yes. GPS Logger runs a foreground location service while recording, so tracking can continue with the screen off or while another app is open. For very long sessions, follow the in-app battery guidance so Android does not suspend it.</p></details>
           <details><summary>Is this a Google Maps Timeline replacement?</summary><p>It replaces the route-memory parts for people who want user-started recordings, daily timelines, local-first storage and exportable GPX/KML files. It is not a silent always-on copy of every movement.</p></details>
           <details><summary>Does it record without me starting it?</summary><p>No. Recording starts only when you start it, and stops when you stop. The one exception is optional auto-start after a reboot, which you enable yourself.</p></details>
-          <details><summary>Where are my routes stored?</summary><p>On your device. Nothing is uploaded unless you choose to live-share your current position or export a file.</p></details>
+          <details><summary>Where are my routes stored?</summary><p>On your device. Export makes a file on the phone: one track as GPX or KML, or your history as a backup ZIP. You keep that file, or you hand it to someone yourself. The file is never sent to a server. Live sharing is separate, and it sends only your current position while you leave it on.</p></details>
           <details><summary>How does live sharing work?</summary><p>You share a resettable code and pick a follower limit (1–20). Anyone with the code sees only your current position on a live map. The position is removed when you stop, and unattended positions auto-delete within 7 days.</p></details>
           <details><summary>Can I get my data out?</summary><p>Yes. Export any track as GPX or KML, or back up your entire history as a GPX ZIP. There's no lock-in.</p></details>
           <details><summary>Can I import GPX files from another app?</summary><p>Yes. You can import GPX files and Google Timeline exports you choose, including ZIP backups — unlimited on every plan. The free version shows your 10 most recent trips in the app; Pro shows all of them.</p></details>
           <details><summary>Can I try it before paying?</summary><p>Yes. Install the app and record real routes first. If you later need more capacity, the app explains the available options in context.</p></details>
+          <details><summary>What is free?</summary><p>Free includes GPS recording, photos on the trips you can open (no separate photo limit), the atlas, calendar and places from that visible history, and the latest 10 tracks. Opening one trip on the globe is free. Free can spin the whole history on the atlas globe three times, then the same latest 10 trips; Pro keeps the whole history there. You also get full stored-resolution single-track export, an all-history backup, unlimited splitting and cropping, unlimited Google Timeline and GPX import, 15 minutes a day each way of live sharing, and OpenStreetMap, OSM Topo and OSM Cycle whenever the phone has a connection. Saving maps for offline use is one sample area on Free and full areas on Pro.</p></details>
           <details><summary>Can I download OpenStreetMap offline?</summary><p>Yes, on the Recording screen: switch to OpenStreetMap, OSM Topo or OSM Cycle and tap Download this area. Free includes one sample tile to try with radios off; Pro downloads full areas and neighbouring patches. This is not a worldwide Google Maps offline pack.</p></details>
         </div>
       </div>
